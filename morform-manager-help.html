@@ -635,15 +635,28 @@
             <tr><td>Time entries</td><td>Every hour by date and job site, with OT and stat holiday flags</td></tr>
             <tr><td>Expenses</td><td>All amounts by category with reimbursable total</td></tr>
             <tr><td>Safety summary</td><td>Count of each form type — not the actual PDFs</td></tr>
+            <tr><td>Incident reports</td><td>Full incident details included when present — triggers the sign-off workflow</td></tr>
             <tr><td>Job statuses</td><td>Current status of dispatched jobs — your pipeline updates on approval</td></tr>
             <tr><td>Trade scope completions</td><td>Which trades have had their scope marked complete by the supervisor</td></tr>
             <tr><td>Unmatched jobs</td><td>Hours on jobs not dispatched from your app — flagged but still visible</td></tr>
           </tbody>
         </table>
+
+        <h3>Incident Report Sign-off</h3>
+        <div class="callout callout-imp"><span class="ico">🚨</span><span>When a report contains an incident report, a red <strong>🚨 INCIDENT</strong> badge appears on the report card. Alberta OH&S requires the employer to investigate and document corrective actions. The sign-off in MorForm creates this record.</span></div>
+        <p>Open the report — a dedicated red sign-off section appears below the safety documents. For each incident:</p>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div><div class="step-title">Review the incident description</div><div class="step-desc">The supervisor's incident details, date, location, and notes are shown.</div></div></div>
+          <div class="step"><div class="step-num">2</div><div><div class="step-title">Enter corrective actions</div><div class="step-desc">Describe what was done, root cause, who is responsible for follow-up, and by when.</div></div></div>
+          <div class="step"><div class="step-num">3</div><div><div class="step-title">Tap ✅ Sign Off</div><div class="step-desc">Records your name, timestamp, and notes permanently. This is your investigation record — it can be provided to an OHS officer on request.</div></div></div>
+        </div>
+        <div class="callout callout-note"><span class="ico">ℹ️</span><span>Incident sign-off is separate from report approval. Sign off the incident first, then approve the full report. Sign-off cannot be undone.</span></div>
+
         <h3>Approving a Report</h3>
         <div class="steps">
           <div class="step"><div class="step-num">1</div><div><div class="step-title">Review the report</div><div class="step-desc">Check hours by job, expense amounts, and any unmatched job warnings.</div></div></div>
-          <div class="step"><div class="step-num">2</div><div><div class="step-title">Tap ✓ Approve &amp; Commit</div><div class="step-desc">Hours and expenses commit to job actuals. Job statuses update. Supervisor is auto-added to Crew directory if new. Report is marked reviewed.</div></div></div>
+          <div class="step"><div class="step-num">2</div><div><div class="step-title">Sign off any incidents first</div><div class="step-desc">If a red 🚨 section appears, complete the incident sign-off before approving.</div></div></div>
+          <div class="step"><div class="step-num">3</div><div><div class="step-title">Tap ✓ Approve &amp; Commit</div><div class="step-desc">Hours and expenses commit to job actuals. Job statuses update. Supervisor is auto-added to Crew directory if new. Report is marked reviewed.</div></div></div>
         </div>
         <div class="callout callout-imp"><span class="ico">🚨</span><span>Approval cannot be undone. Hours and expenses lock into the job cost record permanently. Review carefully before approving — especially check for unmatched job IDs and unusually large expenses.</span></div>
       </div>
@@ -701,7 +714,8 @@
         <table class="tbl">
           <thead><tr><th>What</th><th>Goes to</th></tr></thead>
           <tbody>
-            <tr><td>Safety form PDFs (FLHA, ERP, Incident, Inspection)</td><td>Their Safety Manager</td></tr>
+            <tr><td>Safety form PDFs (FLHA, ERP, Inspection)</td><td>Their Safety Manager</td></tr>
+            <tr><td>Incident Report PDFs</td><td>Their Safety Manager <strong>and</strong> you (Project Manager) — triggers sign-off workflow in your app</td></tr>
             <tr><td>Timesheet PDF + CSV</td><td>Their Manager/Supervisor email</td></tr>
             <tr><td>Expense report PDF + CSV</td><td>Their Accounting email</td></tr>
             <tr><td>Progress photos + notes</td><td>You (Project Manager)</td></tr>
