@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — MorForm</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --blue: #325a81;
+    --blue-light: #4a7aab;
+    --blue-dim: #e8f0f8;
+    --ink: #1a1a1a;
+    --muted: #555;
+    --border: #d0dce8;
+    --bg: #f7f9fc;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.75;
+  }
+
+  header {
+    background: var(--blue);
+    color: white;
+    padding: 48px 32px 40px;
+    border-bottom: 4px solid var(--blue-light);
+  }
+
+  header .label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  header .meta {
+    font-size: 0.85rem;
+    opacity: 0.65;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 32px 80px;
+  }
+
+  .intro {
+    background: var(--blue-dim);
+    border-left: 4px solid var(--blue);
+    padding: 20px 24px;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 48px;
+    font-size: 0.95rem;
+  }
+
+  h2 {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-top: 48px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  p { margin-bottom: 14px; font-size: 0.95rem; color: #222; }
+
+  ul {
+    margin: 12px 0 14px 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  ul li {
+    padding: 6px 0 6px 20px;
+    position: relative;
+    font-size: 0.95rem;
+    color: #222;
+    border-bottom: 1px solid var(--border);
+  }
+
+  ul li:last-child { border-bottom: none; }
+
+  ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--blue-light);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .highlight-box {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+
+  .highlight-box strong {
+    font-weight: 500;
+    color: var(--blue);
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+  }
+
+  a { color: var(--blue-light); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 24px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 600px) {
+    header { padding: 32px 20px; }
+    main { padding: 32px 20px 60px; }
+    header h1 { font-size: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="label">Privacy Policy</div>
+  <h1>MorForm</h1>
+  <div class="meta">Effective date: May 22, 2025 &nbsp;·&nbsp; Developer: Bryce Duhamel</div>
+</header>
+
+<main>
+
+  <div class="intro">
+    MorForm is a field tool for construction supervisors. It does not collect, transmit, or sell your personal data to any server, third party, or analytics platform. All data stays on your device and is shared only when you choose to send it by email.
+  </div>
+
+  <h2>1. Who We Are</h2>
+  <p>MorForm is developed and maintained by <strong>Bryce Duhamel</strong>, based in Edmonton, Alberta, Canada. For privacy inquiries, contact: <a href="mailto:bryce.appdeveloper@gmail.com">bryce.appdeveloper@gmail.com</a></p>
+
+  <h2>2. What Data the App Collects</h2>
+  <p>MorForm stores the following information locally on your device only:</p>
+  <ul>
+    <li>Your name and email address (entered during setup)</li>
+    <li>Time entries — dates, hours worked, job codes, overtime and stat flags</li>
+    <li>Expense records — amounts, descriptions, and receipt photos</li>
+    <li>Safety form data — FLHA, site hazard inspections, incident reports, emergency response records</li>
+    <li>Job information received from your project manager via .morjob files</li>
+    <li>Photos taken or selected for safety documents and expense receipts</li>
+  </ul>
+  <p>None of this data is transmitted to any server operated by the developer or any third party.</p>
+
+  <h2>3. How Data Leaves Your Device</h2>
+  <p>Data only leaves your device when you explicitly choose to send a report. MorForm communicates exclusively through email:</p>
+  <div class="highlight-box">
+    <strong>Outgoing (.morrep files)</strong>
+    When you tap the Send button on a job, MorForm packages your time entries, expenses, and safety records into a .morrep file and opens your device's email client. You control the recipient and whether to send.
+  </div>
+  <div class="highlight-box">
+    <strong>Incoming (.morjob files)</strong>
+    Job assignments arrive as .morjob email attachments from your project manager. MorForm reads these files locally — no data is sent back automatically.
+  </div>
+  <p>MorForm does not operate any server, API, or cloud storage. No background data transmission occurs.</p>
+
+  <h2>4. Device Permissions</h2>
+  <p>MorForm requests the following device permissions:</p>
+  <ul>
+    <li><strong>Camera</strong> — to photograph receipts and job site conditions for safety documents</li>
+    <li><strong>Photo Library</strong> — to attach existing photos to safety forms and expense reports</li>
+    <li><strong>Microphone</strong> — for optional video recording at job sites</li>
+    <li><strong>Location</strong> — only used if you tap the "Use My Location" button to auto-fill a job site address on the Jobs screen. Location is not stored persistently, not tracked, and not used for any other purpose</li>
+    <li><strong>Notifications</strong> — for reminders you set within the app (stored locally, never sent externally)</li>
+    <li><strong>Storage</strong> — to save and read report files on your device</li>
+  </ul>
+  <p>Permissions are only used for the features described. Location data is never stored persistently or transmitted.</p>
+
+  <h2>5. Third-Party Services</h2>
+  <p>MorForm does not integrate with any analytics platforms, advertising networks, crash reporting services, or social media SDKs. The app is built entirely on Expo / React Native standard libraries.</p>
+  <p>When you send a report, it travels through your own email account and provider — subject to your email provider's privacy policy.</p>
+
+  <h2>6. Data Storage and Security</h2>
+  <p>All app data is stored in your device's local storage using AsyncStorage. Data is protected by your device's own security (screen lock, encryption). The developer has no ability to access, view, or retrieve data stored on your device.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>MorForm is a professional tool intended for adults working in the construction industry. It is not directed at children under 13 and does not knowingly collect information from minors.</p>
+
+  <h2>8. Your Rights (PIPEDA — Canada)</h2>
+  <p>Under Canada's Personal Information Protection and Electronic Documents Act, you have the right to access, correct, or request deletion of your personal information. Since all data is stored locally on your device, you can delete it at any time by clearing the app's data or uninstalling MorForm. For any concerns, contact <a href="mailto:bryce.appdeveloper@gmail.com">bryce.appdeveloper@gmail.com</a>.</p>
+
+  <h2>9. Changes to This Policy</h2>
+  <p>If this privacy policy changes, the updated version will be posted at this URL with a revised effective date. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+  <h2>10. Contact</h2>
+  <p>
+    Bryce Duhamel<br>
+    Edmonton, Alberta, Canada<br>
+    <a href="mailto:bryce.appdeveloper@gmail.com">bryce.appdeveloper@gmail.com</a>
+  </p>
+
+</main>
+
+<footer>
+  © 2025 Bryce Duhamel &nbsp;·&nbsp; MorForm &nbsp;·&nbsp; Edmonton, Alberta, Canada
+</footer>
+
+</body>
+</html>
