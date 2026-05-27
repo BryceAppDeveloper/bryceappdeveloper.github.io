@@ -208,7 +208,7 @@
     margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
   }
   .ss-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-  .ss-strip { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+  .ss-strip { display: flex; gap: 12px; overflow-x: auto; padding: 12px 4px 16px; scrollbar-width: none; }
   .ss-strip::-webkit-scrollbar { display: none; }
 
   /* Phone frame */
@@ -250,12 +250,12 @@
   .df-wrap { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
 
   /* Lightbox */
-  .lb { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92);
+  .lb { display: none; position: fixed; inset: 0; background: rgba(255,255,255,0.88); backdrop-filter: blur(8px);
     z-index: 999; align-items: center; justify-content: center; cursor: zoom-out; }
   .lb.open { display: flex; }
   .lb img { max-width: 92vw; max-height: 92vh; border-radius: 12px; object-fit: contain;
-    box-shadow: 0 24px 80px rgba(0,0,0,0.6); }
-  .lb-close { position: absolute; top: 20px; right: 28px; color: white; font-size: 32px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.25); border: 1px solid rgba(0,0,0,0.1); }
+  .lb-close { position: absolute; top: 20px; right: 28px; color: #333; font-size: 32px;
     cursor: pointer; line-height: 1; opacity: 0.7; }
   .lb-close:hover { opacity: 1; }
 
@@ -458,19 +458,19 @@
     <div class="ss-label">MorForm — Supervisor App</div>
     <div class="ss-strip">
       <div class="pf-wrap">
-        <div class="pf" onclick="openLb('mf-screenshot/time.jpg')"><img src="mf-screenshot/time.jpg" alt="Time Tracking" /></div>
+        <div class="pf" onclick="openLb('mf-screenshot/time.jpg')"><img loading="lazy" src="mf-screenshot/time.jpg" alt="Time Tracking" /></div>
         <div class="pf-cap">Time Tracking</div>
       </div>
       <div class="pf-wrap">
-        <div class="pf" onclick="openLb('mf-screenshot/jobs.jpg')"><img src="mf-screenshot/jobs.jpg" alt="Job Sites" /></div>
+        <div class="pf" onclick="openLb('mf-screenshot/jobs.jpg')"><img loading="lazy" src="mf-screenshot/jobs.jpg" alt="Job Sites" /></div>
         <div class="pf-cap">Job Sites</div>
       </div>
       <div class="pf-wrap">
-        <div class="pf" onclick="openLb('mf-screenshot/safety.jpg')"><img src="mf-screenshot/safety.jpg" alt="Safety Forms" /></div>
+        <div class="pf" onclick="openLb('mf-screenshot/safety.jpg')"><img loading="lazy" src="mf-screenshot/safety.jpg" alt="Safety Forms" /></div>
         <div class="pf-cap">Safety Forms</div>
       </div>
       <div class="pf-wrap">
-        <div class="pf" onclick="openLb('mf-screenshot/reports.jpg')"><img src="mf-screenshot/reports.jpg" alt="Reports" /></div>
+        <div class="pf" onclick="openLb('mf-screenshot/reports.jpg')"><img loading="lazy" src="mf-screenshot/reports.jpg" alt="Reports" /></div>
         <div class="pf-cap">Reports</div>
       </div>
     </div>
@@ -481,19 +481,19 @@
     <div class="ss-label">MorForm Manager — Project Manager App</div>
     <div class="ss-strip">
       <div class="pf-wrap">
-        <div class="pf" onclick="openLb('mm-screenshot/jobs.jpg')"><img src="mm-screenshot/jobs.jpg" alt="Jobs Pipeline" /></div>
+        <div class="pf" onclick="openLb('mm-screenshot/jobs.jpg')"><img loading="lazy" src="mm-screenshot/jobs.jpg" alt="Jobs Pipeline" /></div>
         <div class="pf-cap">Jobs Pipeline</div>
       </div>
       <div class="pf-wrap">
-        <div class="pf" onclick="openLb('mm-screenshot/detail.jpg')"><img src="mm-screenshot/detail.jpg" alt="Job Detail" /></div>
+        <div class="pf" onclick="openLb('mm-screenshot/detail.jpg')"><img loading="lazy" src="mm-screenshot/detail.jpg" alt="Job Detail" /></div>
         <div class="pf-cap">Job Detail</div>
       </div>
       <div class="pf-wrap">
-        <div class="pf" onclick="openLb('mm-screenshot/estimate.jpg')"><img src="mm-screenshot/estimate.jpg" alt="Estimate" /></div>
+        <div class="pf" onclick="openLb('mm-screenshot/estimate.jpg')"><img loading="lazy" src="mm-screenshot/estimate.jpg" alt="Estimate" /></div>
         <div class="pf-cap">Estimate</div>
       </div>
       <div class="pf-wrap">
-        <div class="pf" onclick="openLb('mm-screenshot/budget.jpg')"><img src="mm-screenshot/budget.jpg" alt="Budget vs Actuals" /></div>
+        <div class="pf" onclick="openLb('mm-screenshot/budget.jpg')"><img loading="lazy" src="mm-screenshot/budget.jpg" alt="Budget vs Actuals" /></div>
         <div class="pf-cap">Budget vs Actuals</div>
       </div>
     </div>
@@ -506,14 +506,14 @@
       <div class="df-wrap">
         <div class="df" onclick="openLb('mo-screenshot/dashboard.png')">
           <div class="df-bar"><span></span><span></span><span></span></div>
-          <img src="mo-screenshot/dashboard.png" alt="Job Dashboard" />
+          <img loading="lazy" src="mo-screenshot/dashboard.png" alt="Job Dashboard" />
         </div>
         <div class="df-cap">Job Dashboard</div>
       </div>
       <div class="df-wrap">
         <div class="df" onclick="openLb('mo-screenshot/estimates.png')">
           <div class="df-bar"><span></span><span></span><span></span></div>
-          <img src="mo-screenshot/estimates.png" alt="Estimates" />
+          <img loading="lazy" src="mo-screenshot/estimates.png" alt="Estimates" />
         </div>
         <div class="df-cap">Estimates</div>
       </div>
