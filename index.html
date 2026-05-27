@@ -200,82 +200,66 @@
   .store-btn .coming-tag { margin-left: auto; font-size: 10px; font-family: 'IBM Plex Mono', monospace; color: #aaa; letter-spacing: 0.06em; text-transform: uppercase; }
 
 
-  /* ── Screenshots ── */
-  .app-screenshots {
-    padding: 16px 24px;
-    background: #f7f9fc;
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    overflow-x: auto;
-    display: flex;
-    gap: 10px;
-    scrollbar-width: none;
+  /* ── Screenshot strips ── */
+  .ss-section { max-width: 1060px; margin: 0 auto; padding: 0 32px 48px; }
+  .ss-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.2em; text-transform: uppercase; color: #888;
+    margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
   }
-  .app-screenshots::-webkit-scrollbar { display: none; }
+  .ss-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .ss-strip { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+  .ss-strip::-webkit-scrollbar { display: none; }
 
-  /* Phone frame for mobile app screenshots */
-  .phone-frame {
-    flex-shrink: 0;
-    width: 88px;
-    height: 176px;
-    border-radius: 14px;
-    border: 2.5px solid #c0cdd8;
-    background: #1a1a2e;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  /* Phone frame */
+  .pf {
+    flex-shrink: 0; width: 120px; border-radius: 18px;
+    border: 3px solid #c8d4e0; background: #0d0d1a;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+    overflow: hidden; position: relative; cursor: zoom-in;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
-  .phone-frame::before {
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 22px;
-    height: 3px;
-    background: #c0cdd8;
-    border-radius: 2px;
-    z-index: 2;
+  .pf:hover { transform: scale(1.06); box-shadow: 0 12px 32px rgba(0,0,0,0.28); }
+  .pf::before {
+    content: ''; position: absolute; top: 7px; left: 50%;
+    transform: translateX(-50%); width: 28px; height: 4px;
+    background: #c8d4e0; border-radius: 2px; z-index: 2;
   }
-  .phone-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    display: block;
+  .pf img { width: 100%; display: block; object-fit: cover; object-position: top; }
+  .pf-cap {
+    font-size: 10px; color: #666; text-align: center; margin-top: 6px;
+    font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.03em;
   }
+  .pf-wrap { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
 
-  /* Desktop frame for Office screenshots */
-  .desktop-frame {
-    flex-shrink: 0;
-    border-radius: 8px;
-    border: 2px solid #c0cdd8;
-    background: #1a1a2e;
-    overflow: hidden;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    width: 100%;
-    max-width: 220px;
+  /* Desktop frame */
+  .df {
+    flex-shrink: 0; border-radius: 8px; border: 2px solid #c8d4e0;
+    background: #0d0d1a; overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18); cursor: zoom-in;
+    transition: transform 0.2s, box-shadow 0.2s; width: 280px;
   }
-  .desktop-frame-bar {
-    height: 12px;
-    background: #2a2a3e;
-    display: flex;
-    align-items: center;
-    padding: 0 6px;
-    gap: 4px;
-    flex-shrink: 0;
+  .df:hover { transform: scale(1.04); box-shadow: 0 12px 32px rgba(0,0,0,0.28); }
+  .df-bar {
+    height: 14px; background: #1e1e2e; display: flex;
+    align-items: center; padding: 0 8px; gap: 5px;
   }
-  .desktop-frame-bar span {
-    width: 5px; height: 5px; border-radius: 50%;
-    background: #555;
-    display: inline-block;
-  }
-  .desktop-frame img {
-    width: 100%;
-    display: block;
-    object-fit: cover;
-    object-position: top;
-  }
+  .df-bar span { width: 6px; height: 6px; border-radius: 50%; background: #444; display: inline-block; }
+  .df img { width: 100%; display: block; }
+  .df-cap { font-size: 10px; color: #666; text-align: center; margin-top: 6px; font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.03em; }
+  .df-wrap { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+
+  /* Lightbox */
+  .lb { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92);
+    z-index: 999; align-items: center; justify-content: center; cursor: zoom-out; }
+  .lb.open { display: flex; }
+  .lb img { max-width: 92vw; max-height: 92vh; border-radius: 12px; object-fit: contain;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.6); }
+  .lb-close { position: absolute; top: 20px; right: 28px; color: white; font-size: 32px;
+    cursor: pointer; line-height: 1; opacity: 0.7; }
+  .lb-close:hover { opacity: 1; }
+
+  @media (max-width: 860px) { .ss-section { padding: 0 20px 36px; } .pf { width: 100px; } }
   /* ── No BS section ── */
   .nobs { background: var(--ink); color: white; padding: 80px 32px; text-align: center; }
   .nobs-inner { max-width: 760px; margin: 0 auto; }
@@ -466,6 +450,76 @@
     <h2 style="font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1.2;">One purchase. Yours forever.</h2>
   </div>
 
+
+  <!-- ── Screenshot strips ── -->
+
+  <!-- MorForm Supervisor -->
+  <div class="ss-section" style="padding-bottom:32px;">
+    <div class="ss-label">MorForm — Supervisor App</div>
+    <div class="ss-strip">
+      <div class="pf-wrap">
+        <div class="pf" onclick="openLb('mf-screenshot/time.jpg')"><img src="mf-screenshot/time.jpg" alt="Time Tracking" /></div>
+        <div class="pf-cap">Time Tracking</div>
+      </div>
+      <div class="pf-wrap">
+        <div class="pf" onclick="openLb('mf-screenshot/jobs.jpg')"><img src="mf-screenshot/jobs.jpg" alt="Job Sites" /></div>
+        <div class="pf-cap">Job Sites</div>
+      </div>
+      <div class="pf-wrap">
+        <div class="pf" onclick="openLb('mf-screenshot/safety.jpg')"><img src="mf-screenshot/safety.jpg" alt="Safety Forms" /></div>
+        <div class="pf-cap">Safety Forms</div>
+      </div>
+      <div class="pf-wrap">
+        <div class="pf" onclick="openLb('mf-screenshot/reports.jpg')"><img src="mf-screenshot/reports.jpg" alt="Reports" /></div>
+        <div class="pf-cap">Reports</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MorForm Manager -->
+  <div class="ss-section" style="padding-bottom:32px;">
+    <div class="ss-label">MorForm Manager — Project Manager App</div>
+    <div class="ss-strip">
+      <div class="pf-wrap">
+        <div class="pf" onclick="openLb('mm-screenshot/jobs.jpg')"><img src="mm-screenshot/jobs.jpg" alt="Jobs Pipeline" /></div>
+        <div class="pf-cap">Jobs Pipeline</div>
+      </div>
+      <div class="pf-wrap">
+        <div class="pf" onclick="openLb('mm-screenshot/detail.jpg')"><img src="mm-screenshot/detail.jpg" alt="Job Detail" /></div>
+        <div class="pf-cap">Job Detail</div>
+      </div>
+      <div class="pf-wrap">
+        <div class="pf" onclick="openLb('mm-screenshot/estimate.jpg')"><img src="mm-screenshot/estimate.jpg" alt="Estimate" /></div>
+        <div class="pf-cap">Estimate</div>
+      </div>
+      <div class="pf-wrap">
+        <div class="pf" onclick="openLb('mm-screenshot/budget.jpg')"><img src="mm-screenshot/budget.jpg" alt="Budget vs Actuals" /></div>
+        <div class="pf-cap">Budget vs Actuals</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MorForm Office -->
+  <div class="ss-section" style="padding-bottom:40px;">
+    <div class="ss-label">MorForm Office — Windows Desktop App</div>
+    <div class="ss-strip">
+      <div class="df-wrap">
+        <div class="df" onclick="openLb('mo-screenshot/dashboard.png')">
+          <div class="df-bar"><span></span><span></span><span></span></div>
+          <img src="mo-screenshot/dashboard.png" alt="Job Dashboard" />
+        </div>
+        <div class="df-cap">Job Dashboard</div>
+      </div>
+      <div class="df-wrap">
+        <div class="df" onclick="openLb('mo-screenshot/estimates.png')">
+          <div class="df-bar"><span></span><span></span><span></span></div>
+          <img src="mo-screenshot/estimates.png" alt="Estimates" />
+        </div>
+        <div class="df-cap">Estimates</div>
+      </div>
+    </div>
+  </div>
+
   <div class="apps-grid">
 
     <!-- MorForm (Supervisor) -->
@@ -485,12 +539,6 @@
         <div class="feature-row"><span class="dot"></span>Send interactive safety forms to subtrades — no app needed on their end</div>
         <div class="feature-row"><span class="dot"></span>Canadian &amp; US OHS jurisdiction support built in</div>
         <div class="feature-row"><span class="dot"></span>Send job reports to PM in one tap. Export PDF + CSV.</div>
-      </div>
-      <div class="app-screenshots">
-        <div class="phone-frame"><img src="mf-screenshot/time.jpg" alt="Time Tracking" /></div>
-        <div class="phone-frame"><img src="mf-screenshot/jobs.jpg" alt="Job Sites" /></div>
-        <div class="phone-frame"><img src="mf-screenshot/reports.jpg" alt="Reports" /></div>
-        <div class="phone-frame"><img src="mf-screenshot/safety.jpg" alt="Safety" /></div>
       </div>
       <div class="app-card-footer">
         <a href="#" class="store-btn coming-soon">
@@ -528,12 +576,6 @@
         <div class="feature-row"><span class="dot gold"></span>Dispatch jobs to supervisors — plans, permits, scope in one email</div>
         <div class="feature-row"><span class="dot gold"></span>Approve supervisor reports — hours and expenses lock to actuals</div>
         <div class="feature-row"><span class="dot gold"></span>Crew directory with safety compliance tracking</div>
-      </div>
-      <div class="app-screenshots">
-        <div class="phone-frame"><img src="mm-screenshot/jobs.jpg" alt="Jobs" /></div>
-        <div class="phone-frame"><img src="mm-screenshot/detail.jpg" alt="Job Detail" /></div>
-        <div class="phone-frame"><img src="mm-screenshot/estimate.jpg" alt="Estimate" /></div>
-        <div class="phone-frame"><img src="mm-screenshot/budget.jpg" alt="Budget" /></div>
       </div>
       <div class="app-card-footer">
         <a href="#" class="store-btn coming-soon">
@@ -573,16 +615,6 @@
         <div class="feature-row"><span class="dot teal"></span>Review and approve supervisor .morrep reports on a full screen</div>
         <div class="feature-row"><span class="dot teal"></span>Budget vs. actuals dashboard across all active jobs</div>
         <div class="feature-row"><span class="dot teal"></span>Contacts &amp; vendor directory linked to estimate rows</div>
-      </div>
-      <div class="app-screenshots" style="gap:12px;">
-        <div class="desktop-frame">
-          <div class="desktop-frame-bar"><span></span><span></span><span></span></div>
-          <img src="mo-screenshot/dashboard.png" alt="Job Dashboard" />
-        </div>
-        <div class="desktop-frame">
-          <div class="desktop-frame-bar"><span></span><span></span><span></span></div>
-          <img src="mo-screenshot/estimates.png" alt="Estimates" />
-        </div>
       </div>
       <div class="app-card-footer">
         <a href="#" class="store-btn coming-soon">
@@ -709,6 +741,24 @@
       clearBg();
     }
   });
+</script>
+
+<!-- Lightbox -->
+<div class="lb" id="lb" onclick="closeLb()">
+  <span class="lb-close" onclick="closeLb()">✕</span>
+  <img id="lb-img" src="" alt="" onclick="event.stopPropagation()" />
+</div>
+<script>
+function openLb(src) {
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLb() {
+  document.getElementById('lb').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLb(); });
 </script>
 </body>
 </html>
