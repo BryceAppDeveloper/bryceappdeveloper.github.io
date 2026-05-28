@@ -50,14 +50,74 @@
     background: rgba(15,25,35,0.93); backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255,255,255,0.07);
     padding: 0 32px; height: 56px;
-    display: flex; align-items: center; justify-content: space-between;
+    display: flex; align-items: center;
   }
-  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-logo-wrap { position: relative; display: inline-flex; }
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; cursor: pointer;
+    padding: 8px 12px 8px 0; border-radius: 8px;
+    transition: background 0.15s;
+    user-select: none;
+  }
+  .nav-logo:hover { background: rgba(255,255,255,0.06); }
   .nav-logo img { width: 28px; height: 28px; border-radius: 7px; }
   .nav-logo-text { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 600; color: white; letter-spacing: 0.02em; }
-  .nav-links { display: flex; gap: 24px; align-items: center; }
-  .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; letter-spacing: 0.03em; transition: color 0.2s; }
-  .nav-links a:hover { color: white; }
+  .nav-logo-caret { font-size: 10px; color: rgba(255,255,255,0.3); margin-left: 2px; transition: transform 0.2s; }
+  .nav-logo-wrap.open .nav-logo-caret { transform: rotate(180deg); }
+
+  /* Nav dropdown */
+  .nav-dropdown {
+    position: absolute; top: calc(100% + 6px); left: 0;
+    background: rgba(12,20,30,0.98); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px; padding: 6px; min-width: 220px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.55);
+    opacity: 0; pointer-events: none;
+    transform: translateY(-6px) scaleY(0.95);
+    transform-origin: top left;
+    transition: opacity 0.18s, transform 0.18s cubic-bezier(.34,1.3,.64,1);
+    z-index: 200;
+  }
+  .nav-logo-wrap.open .nav-dropdown { opacity: 1; pointer-events: all; transform: translateY(0) scaleY(1); }
+
+  /* Accordion headers */
+  .nd-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 12px; border-radius: 8px; cursor: pointer;
+    transition: background 0.12s; user-select: none;
+    gap: 10px;
+  }
+  .nd-header:hover { background: rgba(255,255,255,0.06); }
+  .nd-header-left { display: flex; align-items: center; gap: 10px; }
+  .nd-header-icon { font-size: 16px; width: 20px; text-align: center; flex-shrink: 0; }
+  .nd-header-title { font-size: 13px; font-weight: 700; color: white; letter-spacing: -0.01em; }
+  .nd-header-sub { font-size: 10px; color: rgba(255,255,255,0.3); font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.04em; }
+  .nd-header-caret { font-size: 10px; color: rgba(255,255,255,0.25); transition: transform 0.2s; flex-shrink: 0; }
+  .nd-group.open .nd-header-caret { transform: rotate(180deg); }
+  .nd-group.open .nd-header { background: rgba(255,255,255,0.05); }
+
+  /* Accordion body */
+  .nd-body { overflow: hidden; max-height: 0; transition: max-height 0.22s ease; }
+  .nd-group.open .nd-body { max-height: 200px; }
+  .nd-body-inner { padding: 2px 0 6px 0; }
+
+  .nav-dropdown a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 12px 8px 42px; border-radius: 7px;
+    text-decoration: none; color: rgba(255,255,255,0.55);
+    font-size: 12.5px; font-weight: 400;
+    transition: background 0.12s, color 0.12s; white-space: nowrap;
+  }
+  .nav-dropdown a:hover { background: rgba(255,255,255,0.07); color: white; }
+  .nav-dropdown a .nd-icon { font-size: 13px; width: 16px; text-align: center; flex-shrink: 0; }
+  .nav-dropdown .nd-divider { height: 1px; background: rgba(255,255,255,0.07); margin: 4px 6px; }
+  .nav-dropdown .nd-contact {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 12px; border-radius: 7px;
+    text-decoration: none; color: rgba(255,255,255,0.4);
+    font-size: 12px; transition: background 0.12s, color 0.12s; white-space: nowrap;
+  }
+  .nav-dropdown .nd-contact:hover { background: rgba(255,255,255,0.07); color: white; }
 
   /* ── Hero ── */
   .hero {
@@ -364,7 +424,6 @@
   }
   @media (max-width: 700px) {
     nav { padding: 0 20px; }
-    .nav-links a:not(:last-child) { display: none; }
     .hero { padding: 100px 20px 60px; }
     .apps-section { padding: 0 20px 60px; }
     .nobs-grid { grid-template-columns: 1fr; }
@@ -377,16 +436,84 @@
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">
-    <img src="morform.png" alt="MorForm" />
-    <span class="nav-logo-text">MorForm</span>
-  </a>
-  <div class="nav-links">
-    <a href="#apps">Apps</a>
-    <a href="#how">How it works</a>
-    <a href="morform-help.html">Supervisor Guide</a>
-    <a href="morform-manager-help.html">Manager Guide</a>
-    <a href="morform-office-help.html">Office Guide</a>
+  <div class="nav-logo-wrap" id="nav-logo-wrap">
+    <div class="nav-logo" onclick="toggleNavMenu()">
+      <img src="morform.png" alt="MorForm" />
+      <span class="nav-logo-text">MorForm</span>
+      <span class="nav-logo-caret">▾</span>
+    </div>
+    <div class="nav-dropdown" id="nav-dropdown">
+
+      <!-- Supervisor -->
+      <div class="nd-group" id="ndg-supervisor">
+        <div class="nd-header" onclick="toggleNdGroup('supervisor')">
+          <div class="nd-header-left">
+            <span class="nd-header-icon">🔵</span>
+            <div>
+              <div class="nd-header-title">MorForm</div>
+              <div class="nd-header-sub">Supervisor · iOS &amp; Android</div>
+            </div>
+          </div>
+          <span class="nd-header-caret">▾</span>
+        </div>
+        <div class="nd-body">
+          <div class="nd-body-inner">
+            <a href="https://apps.apple.com/ca/app/morform/id6744827471" target="_blank" rel="noopener"><span class="nd-icon">🍎</span>App Store</a>
+            <a href="morform-help.html"><span class="nd-icon">📖</span>User Guide</a>
+            <a href="morform-privacy.html"><span class="nd-icon">🔒</span>Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nd-divider"></div>
+
+      <!-- Manager -->
+      <div class="nd-group" id="ndg-manager">
+        <div class="nd-header" onclick="toggleNdGroup('manager')">
+          <div class="nd-header-left">
+            <span class="nd-header-icon">🟡</span>
+            <div>
+              <div class="nd-header-title">MorForm Manager</div>
+              <div class="nd-header-sub">Project Manager · iOS &amp; Android</div>
+            </div>
+          </div>
+          <span class="nd-header-caret">▾</span>
+        </div>
+        <div class="nd-body">
+          <div class="nd-body-inner">
+            <a href="https://apps.apple.com/ca/app/morform-manager/id6772639424" target="_blank" rel="noopener"><span class="nd-icon">🍎</span>App Store</a>
+            <a href="morform-manager-help.html"><span class="nd-icon">📖</span>User Guide</a>
+            <a href="morform-manager-privacy.html"><span class="nd-icon">🔒</span>Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nd-divider"></div>
+
+      <!-- Office -->
+      <div class="nd-group" id="ndg-office">
+        <div class="nd-header" onclick="toggleNdGroup('office')">
+          <div class="nd-header-left">
+            <span class="nd-header-icon">🟢</span>
+            <div>
+              <div class="nd-header-title">MorForm Office</div>
+              <div class="nd-header-sub">Desktop · Windows</div>
+            </div>
+          </div>
+          <span class="nd-header-caret">▾</span>
+        </div>
+        <div class="nd-body">
+          <div class="nd-body-inner">
+            <a href="morform-office-help.html"><span class="nd-icon">📖</span>User Guide</a>
+            <a href="morform-office-privacy.html"><span class="nd-icon">🔒</span>Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nd-divider"></div>
+      <a class="nd-contact" href="mailto:bryce.appdeveloper@gmail.com"><span class="nd-icon">✉️</span>Contact</a>
+
+    </div>
   </div>
 </nav>
 
@@ -822,6 +949,27 @@
 </footer>
 
 <script>
+  // ── Nav logo dropdown ──
+  function toggleNavMenu() {
+    document.getElementById('nav-logo-wrap').classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('#nav-logo-wrap')) {
+      document.getElementById('nav-logo-wrap').classList.remove('open');
+    }
+  });
+
+  // ── Nav accordion groups ──
+  function toggleNdGroup(which) {
+    const group = document.getElementById('ndg-' + which);
+    const isOpen = group.classList.contains('open');
+    // close all
+    ['supervisor','manager','office'].forEach(g => {
+      document.getElementById('ndg-' + g).classList.remove('open');
+    });
+    if (!isOpen) group.classList.add('open');
+  }
+
   const PICKERS = ['morform', 'manager', 'office'];
 
   function showBg(which) {
