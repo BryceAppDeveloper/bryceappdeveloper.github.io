@@ -702,12 +702,13 @@
         <div class="sec-title">How Both Apps Connect</div>
       </div>
       <div class="sec-body">
-        <p>MorForm Manager and MorForm (the supervisor app) are completely independent. No shared server, no accounts, no subscriptions. All data moves through regular email attachments using two custom file types.</p>
+        <p>MorForm Manager and MorForm (the supervisor app) are completely independent. No shared server, no accounts, no subscriptions. All data moves through regular email attachments using three custom file types.</p>
         <table class="tbl">
           <thead><tr><th>File</th><th>Direction</th><th>Contains</th></tr></thead>
           <tbody>
             <tr><td>.morjob</td><td>You → Supervisor</td><td>Job, dates, scope, PM contact, all contacts, trade contacts, permits, photos, documents</td></tr>
             <tr><td>.morrep</td><td>Supervisor → You</td><td>Time entries, expenses, safety doc summaries, job statuses, trade scope completions</td></tr>
+            <tr><td>.mordata</td><td>Manager ↔ Office</td><td>Full data snapshot — jobs, estimates, budgets, PMs, crew, notes. Used for Office handoff or desktop continuation.</td></tr>
           </tbody>
         </table>
         <h3>Other emails supervisors send</h3>
@@ -742,9 +743,20 @@
             <tr><td>👤 My Profile</td><td>Your name, email, phone — sent to supervisors as PM contact on every dispatched job.</td></tr>
             <tr><td>📬 Report Routing</td><td>Accounting email (forwarded expense summaries). Safety Manager email (forwarded safety summaries).</td></tr>
             <tr><td>📱 Mail App</td><td>Gmail, Outlook, Yahoo Mail, Spark, or device default.</td></tr>
-            <tr><td>💾 Data &amp; Backup</td><td>Export all data, restore from backup, download blank import templates (Job CSV and Budget XLSX), re-run wizard, factory reset.</td></tr>
+            <tr><td>💾 Data &amp; Backup</td><td>Export all data, restore from backup, download blank import templates (Job CSV and Budget XLSX). <strong>Send to Office / Handoff</strong> — export a <span class="file-badge">.mordata</span> file to MorForm Office or another project manager. Import <span class="file-badge">.mordata</span> from Office. Re-run wizard, factory reset.</td></tr>
           </tbody>
         </table>
+        <h3>Send to Office / Handoff</h3>
+        <p>MorForm Manager can export your full data snapshot and send it to MorForm Office on your desktop, or hand off a project to another project manager.</p>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div><div class="step-title">Open Settings → Data &amp; Backup</div></div></div>
+          <div class="step"><div class="step-num">2</div><div><div class="step-title">Tap 🖥 Send to Office / Handoff</div><div class="step-desc">Your own email is selected by default. Tap "Choose PMs" to also send to project managers from your PM list.</div></div></div>
+          <div class="step"><div class="step-num">3</div><div><div class="step-title">Mail app opens pre-addressed</div><div class="step-desc">Share the <span class="file-badge">.mordata</span> attachment from the share sheet.</div></div></div>
+          <div class="step"><div class="step-num">4</div><div><div class="step-title">Recipient imports the file</div><div class="step-desc">On MorForm Office: Settings → Data &amp; Backup → 📱 Import .mordata. On another Manager mobile: tap the attachment directly.</div></div></div>
+        </div>
+        <div class="callout callout-note"><span class="ico">💡</span><span>The <span class="file-badge">.mordata</span> file contains all jobs, estimates, budgets, PMs, crew, and notes. Choose <strong>Merge</strong> to add new items alongside existing data, or <strong>Replace All</strong> to fully swap — double confirmed before proceeding.</span></div>
+        <h3>Import from Office or Another Manager</h3>
+        <p>Tap <strong>📦 Import from Manager / Office</strong> in Settings → Data &amp; Backup, or tap a <span class="file-badge">.mordata</span> email attachment directly. You'll be offered Merge or Replace All.</p>
         <div class="callout callout-warn"><span class="ico">⚠️</span><span>Factory Reset permanently deletes all data — all jobs, estimates, crew history, and submissions. Back up your data first using the Back Up App Data button in Data &amp; Backup.</span></div>
       </div>
     </section>

@@ -357,7 +357,7 @@
           <strong>MorForm Office — Windows Desktop</strong>
           MorForm Office is the desktop companion to the MorForm Manager mobile app. Run it on your office PC to manage jobs, build detailed estimates, review supervisor reports, and track project actuals — all without accounts, cloud storage, or subscriptions.
         </div>
-        <p>Everything is stored locally on your computer. Communication with supervisors and managers happens through email using <span class="file-badge">.morjob</span> and <span class="file-badge">.morrep</span> file attachments — no internet connection required to use the app.</p>
+        <p>Everything is stored locally on your computer. Communication happens entirely through email attachments — three custom file types handle the whole workflow. <span class="file-badge">.morjob</span> dispatches jobs to supervisors. <span class="file-badge">.morrep</span> brings supervisor reports back to you. <span class="file-badge">.mordata</span> moves your full project data between Manager mobile and MorForm Office. No internet connection required to use the app.</p>
 
         <h3>What MorForm Office does</h3>
         <table class="tbl">
@@ -367,6 +367,7 @@
           <tr><td><strong>Crew</strong></td><td>Directory of your PMs, supervisors, safety officers, and employees</td></tr>
           <tr><td><strong>Contacts & Vendors</strong></td><td>Subcontractor and supplier directory — linked to estimate rows</td></tr>
           <tr><td><strong>Inbox</strong></td><td>Import and approve supervisor pay period reports (.morrep)</td></tr>
+          <tr><td><strong>Settings → Data &amp; Backup</strong></td><td>Import .mordata from Manager mobile — merge or replace jobs, estimates, PMs, crew, and notes</td></tr>
           <tr><td><strong>Overview</strong></td><td>Budget vs. actuals dashboard across all active jobs</td></tr>
         </table>
       </div>
@@ -701,6 +702,15 @@
       <div class="sec-body">
         <p>Supervisors submit pay period reports from the MorForm app on their phone. Those reports arrive in your email inbox as <span class="file-badge">.morrep</span> file attachments.</p>
 
+        <h3>Import from Manager Mobile</h3>
+        <p>MorForm Office can receive a full data snapshot from MorForm Manager mobile. This lets you continue work on a larger screen, or receive a job handoff from another project manager.</p>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div><div class="step-title">On Manager mobile — Settings → Data &amp; Backup → Send to Office / Handoff</div><div class="step-desc">Sends a <span class="file-badge">.mordata</span> file to your email (and optionally other PMs).</div></div></div>
+          <div class="step"><div class="step-num">2</div><div><div class="step-title">Save the .mordata attachment to your computer</div></div></div>
+          <div class="step"><div class="step-num">3</div><div><div class="step-title">In MorForm Office — Settings → Data &amp; Backup → 📱 Import .mordata</div></div></div>
+          <div class="step"><div class="step-num">4</div><div><div class="step-title">Choose Merge or Replace All</div><div class="step-desc"><strong>Merge</strong> adds new jobs, PMs, crew and notes without touching existing data. <strong>Replace All</strong> wipes current data and loads the snapshot — double confirmed before proceeding.</div></div></div>
+        </div>
+        <div class="callout callout-note"><span class="ico">💡</span><span>The <span class="file-badge">.mordata</span> file contains all jobs, estimates, budgets, PMs, supervisors, and notes. Supervisor submission details are included as summaries only.</span></div>
         <h3>Importing a report</h3>
         <div class="steps">
           <div class="step">
