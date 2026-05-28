@@ -188,8 +188,6 @@
   .feature-row .dot.teal { background: var(--teal-light); }
   .app-card-footer { padding: 14px 24px 22px; display: flex; flex-direction: column; gap: 8px; }
 
-  /* Platform tag for Office */
-  .platform-tag { display: inline-flex; align-items: center; gap: 6px; background: #f0f4f8; border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; font-size: 11px; color: #555; font-family: 'IBM Plex Mono', monospace; margin-bottom: 4px; }
 
   .store-btn { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 8px; border: 1.5px solid var(--border); text-decoration: none; background: white; transition: border-color 0.2s, box-shadow 0.2s; cursor: pointer; }
   .store-btn:hover { border-color: #999; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
@@ -200,7 +198,24 @@
   .store-btn .coming-tag { margin-left: auto; font-size: 10px; font-family: 'IBM Plex Mono', monospace; color: #aaa; letter-spacing: 0.06em; text-transform: uppercase; }
 
 
-  /* ── Screenshot strips ── */
+  /* ── Manager ↔ Office .mordata row ── */
+  .loop-mordata-row {
+    display: flex; align-items: center; gap: 12px;
+    margin-top: 16px; margin-bottom: 0;
+  }
+  .loop-mordata-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--teal-light), var(--gold), transparent); opacity: 0.35; }
+  .loop-mordata-arrow {
+    display: flex; align-items: center; gap: 8px;
+    background: #f0f4f8; border: 1px solid var(--border);
+    border-radius: 20px; padding: 5px 14px; white-space: nowrap;
+  }
+  .loop-mordata-tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--teal); font-weight: 600; letter-spacing: 0.05em; }
+  .loop-mordata-glyph { font-size: 14px; color: #999; }
+  .loop-mordata-label { font-size: 11px; color: #666; font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.03em; }
+
+  @media (max-width: 860px) { .loop-mordata-row { flex-direction: column; gap: 6px; } .loop-mordata-line { width: 60px; height: 1px; } }
+
+
   .ss-section { max-width: 1060px; margin: 0 auto; padding: 0 32px 48px; }
   .ss-label {
     font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600;
@@ -458,6 +473,17 @@
       <div class="loop-card teal">Budget vs. actuals dashboard across all active jobs</div>
     </div>
   </div>
+
+  <!-- Manager ↔ Office mordata handoff row -->
+  <div class="loop-mordata-row">
+    <div class="loop-mordata-line"></div>
+    <div class="loop-mordata-arrow">
+      <span class="loop-mordata-tag">.mordata</span>
+      <span class="loop-mordata-glyph">⇄</span>
+      <span class="loop-mordata-label">Manager Mobile &nbsp;↔&nbsp; MorForm Office</span>
+    </div>
+    <div class="loop-mordata-line"></div>
+  </div>
 </div>
 
 <!-- ── App Cards ── -->
@@ -620,12 +646,11 @@
         <div class="app-card-icon"><img src="morform-office.png" alt="MorForm Office" /></div>
         <div>
           <div class="app-card-name">MorForm Office</div>
-          <div class="app-card-tagline">Windows Desktop App</div>
+          <div class="app-card-tagline">Windows Desktop App &nbsp;·&nbsp; 🖥 Win 10/11</div>
           <div class="app-card-price">$9.99 USD &nbsp;·&nbsp; $13.99 CAD &nbsp;·&nbsp; One-time</div>
         </div>
       </div>
       <div class="app-card-features">
-        <div class="platform-tag">🖥 Windows 10 / 11</div>
         <div class="feature-row"><span class="dot teal"></span>Full CSI estimate builder — 84 division template, XLSX import &amp; export</div>
         <div class="feature-row"><span class="dot teal"></span>PDF quote generation with company logo and signature</div>
         <div class="feature-row"><span class="dot teal"></span>Dispatch jobs to supervisors — same .morjob format as mobile</div>
