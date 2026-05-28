@@ -155,7 +155,7 @@
   .section-intro { font-size: 1rem; color: #555; line-height: 1.7; max-width: 640px; margin-bottom: 48px; }
 
   /* Loop diagram — now 3 columns */
-  .loop { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: start; margin-bottom: 56px; }
+  .loop { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0; align-items: start; margin-bottom: 40px; }
   .loop-side { display: flex; flex-direction: column; gap: 12px; }
   .loop-arrow-col { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 16px; padding-top: 56px; gap: 28px; }
   .loop-arrow { display: flex; flex-direction: column; align-items: center; gap: 4px; }
@@ -389,22 +389,22 @@
   </p>
 
   <div class="loop">
-    <!-- Manager / Office side -->
+    <!-- Manager side -->
     <div class="loop-side">
       <div class="loop-header">
         <div class="loop-app-icon"><img loading="lazy" src="morform-manager.jpg" alt="Manager" /></div>
         <div>
-          <div class="loop-app-name">Manager + Office</div>
-          <div class="loop-app-role">Project Manager</div>
+          <div class="loop-app-name">MorForm Manager</div>
+          <div class="loop-app-role">Project Manager · Mobile</div>
         </div>
       </div>
       <div class="loop-card gold">Build estimate — labour, subtrades, markup, scope of work</div>
-      <div class="loop-card gold">Dispatch job to supervisor — plans, permits, contacts, scope in one email</div>
+      <div class="loop-card gold">Dispatch job to supervisor — plans, permits, contacts in one email</div>
       <div class="loop-card gold">Receive .morrep → approve → hours and expenses lock to actuals</div>
       <div class="loop-card gold">Track budget vs. actuals in real time</div>
     </div>
 
-    <!-- Arrows -->
+    <!-- Arrows Manager ↔ Supervisor -->
     <div class="loop-arrow-col">
       <div class="loop-arrow">
         <span class="file-tag">.morjob</span>
@@ -422,22 +422,40 @@
         <div class="loop-app-icon"><img src="morform.png" alt="MorForm" /></div>
         <div>
           <div class="loop-app-name">MorForm</div>
-          <div class="loop-app-role">Supervisor</div>
+          <div class="loop-app-role">Supervisor · Mobile</div>
         </div>
       </div>
-      <div class="loop-card">Tap .morjob attachment → imports job, plans, contacts instantly</div>
-      <div class="loop-card">Log time, expenses, and safety forms linked to the job</div>
+      <div class="loop-card">Tap .morjob attachment → imports job instantly</div>
+      <div class="loop-card">Log time, expenses, and safety forms by job</div>
       <div class="loop-card">Mark trade scopes complete as work finishes</div>
-      <div class="loop-card">Send .morrep — safety PDFs route to Safety Manager automatically</div>
+      <div class="loop-card">Send .morrep — safety PDFs route automatically</div>
     </div>
-  </div>
 
-  <!-- Office callout -->
-  <div style="background:white;border:1px solid var(--border);border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:18px;margin-top:-20px;">
-    <img src="morform-office.png" alt="MorForm Office" style="width:48px;height:48px;border-radius:11px;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,0.12);" />
-    <div>
-      <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:3px;">MorForm Office adds a full desktop workflow</div>
-      <div style="font-size:13px;color:#555;line-height:1.6;">Build detailed CSI estimates, import XLSX, generate PDF quotes with your signature, and review reports on a proper screen — all from your Windows PC. Same .morjob / .morrep file formats, fully compatible with the mobile apps.</div>
+    <!-- Arrows Supervisor ↔ Office -->
+    <div class="loop-arrow-col">
+      <div class="loop-arrow">
+        <span class="file-tag">.morjob</span>
+        <span class="arr">←</span>
+      </div>
+      <div class="loop-arrow">
+        <span class="arr">→</span>
+        <span class="file-tag">.morrep</span>
+      </div>
+    </div>
+
+    <!-- Office side -->
+    <div class="loop-side">
+      <div class="loop-header">
+        <div class="loop-app-icon"><img loading="lazy" src="morform-office.png" alt="MorForm Office" /></div>
+        <div>
+          <div class="loop-app-name">MorForm Office</div>
+          <div class="loop-app-role">Project Manager · Desktop</div>
+        </div>
+      </div>
+      <div class="loop-card teal">Full CSI estimate builder — 84 division template, XLSX import</div>
+      <div class="loop-card teal">Dispatch jobs to supervisors — same .morjob format</div>
+      <div class="loop-card teal">Review and approve .morrep reports on a full screen</div>
+      <div class="loop-card teal">Budget vs. actuals dashboard across all active jobs</div>
     </div>
   </div>
 </div>
