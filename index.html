@@ -200,20 +200,32 @@
 
   /* ── Manager ↔ Office .mordata row ── */
   .loop-mordata-row {
-    display: flex; align-items: center; gap: 12px;
-    margin-top: 16px; margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-items: center;
+    margin-top: 12px;
+    gap: 0;
   }
-  .loop-mordata-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--teal-light), var(--gold), transparent); opacity: 0.35; }
-  .loop-mordata-arrow {
+  .loop-mordata-end {
+    display: flex; align-items: center;
+  }
+  .loop-mordata-end:last-child { justify-content: flex-end; }
+  .loop-mordata-endlabel {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+    color: #999; letter-spacing: 0.06em;
+  }
+  .loop-mordata-mid {
     display: flex; align-items: center; gap: 8px;
+  }
+  .loop-mordata-line { flex: 1; height: 1px; background: var(--border); }
+  .loop-mordata-pill {
+    display: flex; align-items: center; gap: 6px;
     background: #f0f4f8; border: 1px solid var(--border);
-    border-radius: 20px; padding: 5px 14px; white-space: nowrap;
+    border-radius: 20px; padding: 4px 12px; white-space: nowrap; flex-shrink: 0;
   }
   .loop-mordata-tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--teal); font-weight: 600; letter-spacing: 0.05em; }
-  .loop-mordata-glyph { font-size: 14px; color: #999; }
-  .loop-mordata-label { font-size: 11px; color: #666; font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.03em; }
-
-  @media (max-width: 860px) { .loop-mordata-row { flex-direction: column; gap: 6px; } .loop-mordata-line { width: 60px; height: 1px; } }
+  .loop-mordata-arr { font-size: 11px; color: #aaa; }
+  @media (max-width: 860px) { .loop-mordata-row { display: none; } }
 
 
   .ss-section { max-width: 1060px; margin: 0 auto; padding: 0 32px 48px; }
@@ -474,15 +486,23 @@
     </div>
   </div>
 
-  <!-- Manager ↔ Office mordata handoff row -->
+  <!-- Manager ↔ Office mordata row — mirrors the 5-col loop grid -->
   <div class="loop-mordata-row">
-    <div class="loop-mordata-line"></div>
-    <div class="loop-mordata-arrow">
-      <span class="loop-mordata-tag">.mordata</span>
-      <span class="loop-mordata-glyph">⇄</span>
-      <span class="loop-mordata-label">Manager Mobile &nbsp;↔&nbsp; MorForm Office</span>
+    <div class="loop-mordata-end">
+      <div class="loop-mordata-endlabel">Manager Mobile</div>
     </div>
-    <div class="loop-mordata-line"></div>
+    <div class="loop-mordata-mid">
+      <div class="loop-mordata-line"></div>
+      <div class="loop-mordata-pill">
+        <span class="loop-mordata-arr">→</span>
+        <span class="loop-mordata-tag">.mordata</span>
+        <span class="loop-mordata-arr">←</span>
+      </div>
+      <div class="loop-mordata-line"></div>
+    </div>
+    <div class="loop-mordata-end">
+      <div class="loop-mordata-endlabel">MorForm Office</div>
+    </div>
   </div>
 </div>
 
@@ -651,12 +671,12 @@
         </div>
       </div>
       <div class="app-card-features">
-        <div class="feature-row"><span class="dot teal"></span>Full CSI estimate builder — 84 division template, XLSX import &amp; export</div>
+        <div class="feature-row"><span class="dot teal"></span>Full CSI estimate builder — 84 division template, XLSX import</div>
         <div class="feature-row"><span class="dot teal"></span>PDF quote generation with company logo and signature</div>
         <div class="feature-row"><span class="dot teal"></span>Dispatch jobs to supervisors — same .morjob format as mobile</div>
         <div class="feature-row"><span class="dot teal"></span>Review and approve supervisor .morrep reports on a full screen</div>
         <div class="feature-row"><span class="dot teal"></span>Budget vs. actuals dashboard across all active jobs</div>
-        <div class="feature-row"><span class="dot teal"></span>Contacts &amp; vendor directory linked to estimate rows</div>
+        <div class="feature-row"><span class="dot teal"></span>Contacts &amp; vendor directory linked to estimates</div>
       </div>
       <div class="app-card-footer">
         <a href="#" class="store-btn coming-soon">
