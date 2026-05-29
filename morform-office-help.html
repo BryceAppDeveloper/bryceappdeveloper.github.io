@@ -295,6 +295,21 @@
     letter-spacing: 0.05em;
   }
 
+  /* Search bar */
+  .toc-search { padding: 12px 14px 8px; }
+  .toc-search input {
+    width: 100%; padding: 7px 10px 7px 30px;
+    border: 1px solid var(--teal-border); border-radius: 7px;
+    font-family: 'IBM Plex Sans', sans-serif; font-size: 12px;
+    color: var(--ink); background: var(--bg); outline: none;
+    transition: border-color 0.15s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2.5'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: 9px center;
+  }
+  .toc-search input:focus { border-color: var(--teal); }
+  .toc-search input::placeholder { color: #aaa; }
+  .toc-no-results { padding: 10px 20px; font-size: 12px; color: #aaa; display: none; }
+
   @media (max-width: 768px) {
     .toc { display: none; }
     header { padding: 28px 20px 24px; }
@@ -317,6 +332,10 @@
 <div class="layout">
 
   <nav class="toc">
+    <div class="toc-search">
+      <input type="text" id="toc-search" placeholder="Search guide…" oninput="tocSearch(this.value)" autocomplete="off" />
+    </div>
+    <div id="toc-no-results" class="toc-no-results">No results</div>
     <div class="toc-group-label">Getting Started</div>
     <a href="#intro"><span class="icon">👋</span> Welcome</a>
     <a href="#setup"><span class="icon">✅</span> First-Time Setup</a>
@@ -926,26 +945,53 @@
 </div>
 
 <footer>
-  © 2025 Bryce Duhamel &nbsp;·&nbsp; MorForm Office &nbsp;·&nbsp; Edmonton, Alberta, Canada
+  © 2026 Bryce Duhamel &nbsp;·&nbsp; MorForm Office &nbsp;·&nbsp; Edmonton, Alberta, Canada
 </footer>
 
 <script>
+(function() {
   // Highlight active TOC item on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const tocLinks = document.querySelectorAll('.toc a');
+  const tocSections = document.querySelectorAll('section[id]');
+  const tocNavLinks = document.querySelectorAll('.toc a');
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        tocLinks.forEach(a => a.classList.remove('active'));
+        tocNavLinks.forEach(a => a.classList.remove('active'));
         const active = document.querySelector('.toc a[href="#' + entry.target.id + '"]');
         if (active) active.classList.add('active');
       }
     });
   }, { rootMargin: '-20% 0px -70% 0px' });
 
-  sections.forEach(s => observer.observe(s));
+  tocSections.forEach(s => observer.observe(s));
+})();
 </script>
 
+<script>
+(function() {
+  function tocSearch(val) {
+    const q = val.trim().toLowerCase();
+    const links = document.querySelectorAll('.toc a');
+    const groups = document.querySelectorAll('.toc-group-label');
+    let any = false;
+    links.forEach(a => {
+      const match = !q || a.textContent.toLowerCase().includes(q);
+      a.style.display = match ? '' : 'none';
+      if (match) any = true;
+    });
+    groups.forEach(g => g.style.display = q ? 'none' : '');
+    document.getElementById('toc-no-results').style.display = (!any && q) ? 'block' : 'none';
+  }
+
+  const tocSections = document.querySelectorAll('section[id]');
+  const tocNavLinks = document.querySelectorAll('.toc a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    tocSections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+    tocNavLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+  });
+})();
+</script>
 </body>
 </html>
