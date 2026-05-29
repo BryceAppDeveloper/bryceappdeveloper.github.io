@@ -333,7 +333,7 @@
 
   <nav class="toc">
     <div class="toc-search">
-      <input type="text" id="toc-search" placeholder="Search guide…" oninput="tocSearch(this.value)" autocomplete="off" />
+      <input type="text" id="toc-search" placeholder="Search guide…" autocomplete="off" />
     </div>
     <div id="toc-no-results" class="toc-no-results">No results</div>
     <div class="toc-group-label">Getting Started</div>
@@ -949,28 +949,9 @@
 </footer>
 
 <script>
-(function() {
-  // Highlight active TOC item on scroll
-  const tocSections = document.querySelectorAll('section[id]');
-  const tocNavLinks = document.querySelectorAll('.toc a');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        tocNavLinks.forEach(a => a.classList.remove('active'));
-        const active = document.querySelector('.toc a[href="#' + entry.target.id + '"]');
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px' });
-
-  tocSections.forEach(s => observer.observe(s));
-})();
-</script>
-
-<script>
-(function() {
-  function tocSearch(val) {
+  // Search
+  document.getElementById('toc-search').addEventListener('input', function() {
+    var val = this.value;
     const q = val.trim().toLowerCase();
     const links = document.querySelectorAll('.toc a');
     const groups = document.querySelectorAll('.toc-group-label');
@@ -982,16 +963,16 @@
     });
     groups.forEach(g => g.style.display = q ? 'none' : '');
     document.getElementById('toc-no-results').style.display = (!any && q) ? 'block' : 'none';
-  }
+  });
 
-  const tocSections = document.querySelectorAll('section[id]');
-  const tocNavLinks = document.querySelectorAll('.toc a');
+  // Active TOC highlight on scroll
+  const offSections = document.querySelectorAll('section[id]');
+  const offNavLinks = document.querySelectorAll('.toc a');
   window.addEventListener('scroll', () => {
     let cur = '';
-    tocSections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
-    tocNavLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+    offSections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+    offNavLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
   });
-})();
 </script>
 </body>
 </html>

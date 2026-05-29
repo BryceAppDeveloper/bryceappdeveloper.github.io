@@ -287,7 +287,7 @@
 
   <nav class="toc">
     <div class="toc-search">
-      <input type="text" id="toc-search" placeholder="Search guide…" oninput="tocSearch(this.value)" autocomplete="off" />
+      <input type="text" id="toc-search" placeholder="Search guide…" autocomplete="off" />
     </div>
     <div id="toc-no-results" class="toc-no-results">No results</div>
     <div class="toc-group-label">Getting Started</div>
@@ -747,8 +747,9 @@
 </footer>
 
 <script>
-(function() {
-  function tocSearch(val) {
+
+  document.getElementById('toc-search').addEventListener('input', function() {
+    var val = this.value;
     const q = val.trim().toLowerCase();
     const links = document.querySelectorAll('.toc a');
     const groups = document.querySelectorAll('.toc-group-label');
@@ -760,7 +761,7 @@
     });
     groups.forEach(g => g.style.display = q ? 'none' : '');
     document.getElementById('toc-no-results').style.display = (!any && q) ? 'block' : 'none';
-  }
+  });
 
   // Active TOC highlight on scroll
   const tocSections = document.querySelectorAll('section[id]');
@@ -770,7 +771,7 @@
     tocSections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
     tocNavLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
   });
-})();
+
 </script>
 </body>
 </html>
