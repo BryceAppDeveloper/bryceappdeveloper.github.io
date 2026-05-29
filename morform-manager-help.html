@@ -788,30 +788,33 @@
 </footer>
 
 <script>
-
   document.getElementById('toc-search').addEventListener('input', function() {
     var val = this.value;
-    const q = val.trim().toLowerCase();
-    const links = document.querySelectorAll('.toc a');
-    const groups = document.querySelectorAll('.toc-group-label');
-    let any = false;
-    links.forEach(a => {
-      const match = !q || a.textContent.toLowerCase().includes(q);
+    var q = val.trim().toLowerCase();
+    var links = document.querySelectorAll('.toc a');
+    var groups = document.querySelectorAll('.toc-group-label');
+    var any = false;
+    links.forEach(function(a) {
+      if (!q) { a.style.display = ''; return; }
+      var href = a.getAttribute('href');
+      var id = href ? href.replace('#', '') : '';
+      var section = id ? document.getElementById(id) : null;
+      var sectionText = section ? section.textContent.toLowerCase() : '';
+      var match = a.textContent.toLowerCase().includes(q) || sectionText.includes(q);
       a.style.display = match ? '' : 'none';
       if (match) any = true;
     });
-    groups.forEach(g => g.style.display = q ? 'none' : '');
+    groups.forEach(function(g) { g.style.display = q ? 'none' : ''; });
     document.getElementById('toc-no-results').style.display = (!any && q) ? 'block' : 'none';
   });
 
-  const tocSections = document.querySelectorAll('section[id]');
-  const tocNavLinks = document.querySelectorAll('.toc a');
-  window.addEventListener('scroll', () => {
-    let cur = '';
-    tocSections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
-    tocNavLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+  var scrollSections = document.querySelectorAll('section[id]');
+  var scrollLinks = document.querySelectorAll('.toc a');
+  window.addEventListener('scroll', function() {
+    var cur = '';
+    scrollSections.forEach(function(s) { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+    scrollLinks.forEach(function(a) { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
   });
-
 </script>
 </body>
 </html>
