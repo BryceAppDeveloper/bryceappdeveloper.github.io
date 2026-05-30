@@ -1,0 +1,16 @@
+I've uploaded morform_glass.py, ZillaSlab-Bold.ttf, and working.zip.
+
+morform_glass.py applies my approved "liquid glass" caption badges to MorForm app
+screenshots. It is already fully wired - every screenshot in working.zip is mapped to
+an output name and caption in the JOBS list.
+
+Please just run it:
+    python3 morform_glass.py
+
+It self-extracts working.zip, resolves the font, and writes badged images (JPG + WebP,
+flattened/no alpha, original dimensions) to /mnt/user-data/outputs. Then present the
+outputs to me.
+
+If I ask to change a caption or filename, edit only that entry's "caption" or "out"
+field in the JOBS list and re-run. Do NOT modify the constants under "LOCKED LOOK" -
+those define the approved appearance and must stay exactly as-is.
