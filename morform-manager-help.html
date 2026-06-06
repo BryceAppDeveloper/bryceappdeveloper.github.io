@@ -246,13 +246,16 @@
 
   footer {
     background: var(--gold-dark);
-    color: rgba(178,145,70,0.4);
-    text-align: center;
-    padding: 24px;
+    color: rgba(178,145,70,0.45);
+    padding: 28px 32px;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
+    font-size: 10px;
     letter-spacing: 0.05em;
   }
+  footer a { color: rgba(178,145,70,0.6); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: rgba(178,145,70,1); }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .footer-guides { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
 
   /* Search bar */
   .toc-search { padding: 12px 14px 8px; }
@@ -474,7 +477,7 @@
         <h3>Site Contacts</h3>
         <p>Add contacts via Edit Job → Contacts → + Add, or directly from the Job → People tab → + Add Contact. Tapping Add Contact expands an inline form in the People tab — fill in name, role, email, and phone, then tap Add Contact to save.</p>
         <h3>Trade Contacts from Estimates</h3>
-        <p>When you add a subtrade in Estimates → Externals, each row has a Trade Contact field. Their name, phone, and email appear in the People tab under Trades on Site. Each row also has a Scope of Work field — this flows through to the supervisor's job screen so they know exactly what each trade is on site to do.</p>
+        <p>Each subtrade row in Estimates → Externals has a Trade Contact field (name, phone, email — flows to the supervisor's Trades on Site list) and a Scope of Work field (flows to the supervisor so they know what each trade is responsible for). Tap any trade card in the People tab to expand it, fill in the fields, and tap Save Contact.</p>
         <div class="callout callout-note"><span class="ico">ℹ️</span><span>All trade contacts are included in the dispatch package. When a supervisor marks a trade's scope complete, that status comes back in their .morrep report.</span></div>
       </div>
     </section>
@@ -796,7 +799,15 @@
 </div>
 
 <footer>
-  © 2026 Bryce Duhamel &nbsp;·&nbsp; Edmonton, Alberta, Canada &nbsp;·&nbsp; bryce.appdeveloper@gmail.com
+  <div class="footer-inner">
+    <div>© 2026 Bryce Duhamel &nbsp;·&nbsp; Edmonton, Alberta &nbsp;·&nbsp; <a href="index.html">morform.app</a></div>
+    <div class="footer-guides">
+      <a href="morform-help.html">Supervisor Guide</a>
+      <a href="morform-office-help.html">Office Guide</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:support@morform.app">support@morform.app</a>
+    </div>
+  </div>
 </footer>
 
 <script>

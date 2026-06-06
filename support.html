@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MorForm — Support</title>
+<meta name="description" content="Get help with MorForm, MorForm Manager, or MorForm Office. Email support, user guides, and FAQs for construction time tracking and safety form apps." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://morform.app/support.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://morform.app/support.html" />
+<meta property="og:title" content="MorForm — Support" />
+<meta property="og:description" content="Get help with MorForm, MorForm Manager, or MorForm Office." />
+<meta property="og:image" content="https://morform.app/assets/og-image.jpg" />
+<meta property="og:site_name" content="MorForm" />
+<meta property="og:locale" content="en_CA" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;700&display=swap');
+
+  :root {
+    --blue: #325a81;
+    --blue-dark: #1A3D6E;
+    --blue-light: #EEF4FF;
+    --gold: #B29146;
+    --teal: #0e483c;
+    --teal-light: #1a6b58;
+    --ink: #1a1a1a;
+    --bg: #f7f9fc;
+    --border: #d0dce8;
+    --muted: #64748B;
+    --text: #334155;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 300;
+    background: var(--bg);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    background: var(--blue-dark);
+    color: white;
+    padding: 40px 32px 36px;
+  }
+
+  header .back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.2s;
+    display: block;
+  }
+  header .back:hover { color: rgba(255,255,255,0.9); }
+
+  header .page-tag {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 8px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  header p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.55);
+    font-weight: 300;
+  }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 32px 80px;
+    flex: 1;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+    margin-top: 48px;
+  }
+  h2:first-child { margin-top: 0; }
+
+  p {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  /* Email CTA card */
+  .contact-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    margin: 24px 0 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .contact-card-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+    line-height: 1;
+    margin-top: 2px;
+  }
+  .contact-card h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--ink);
+  }
+  .contact-card p { margin-bottom: 12px; font-size: 0.9rem; }
+  .contact-card a.email-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 9px 18px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .contact-card a.email-btn:hover { background: #264d70; }
+
+  .response-note {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.04em;
+    margin-top: 10px;
+  }
+
+  /* Guide cards */
+  .guide-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+  }
+  .guide-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 18px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .guide-card:hover { border-color: var(--blue); box-shadow: 0 2px 12px rgba(50,90,129,0.1); }
+  .guide-card-accent { width: 20px; height: 3px; border-radius: 2px; margin-bottom: 4px; }
+  .guide-card-accent.blue  { background: var(--blue); }
+  .guide-card-accent.gold  { background: var(--gold); }
+  .guide-card-accent.teal  { background: var(--teal-light); }
+  .guide-card-name { font-size: 13px; font-weight: 700; color: var(--ink); }
+  .guide-card-role { font-size: 11px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; letter-spacing: 0.04em; }
+  .guide-card-link { font-size: 11px; color: var(--blue); margin-top: auto; padding-top: 8px; font-weight: 500; }
+
+  /* Tips */
+  .tip-box {
+    background: var(--blue-light);
+    border-left: 3px solid var(--blue);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 16px;
+    margin: 16px 0;
+    font-size: 0.88rem;
+    color: #1e3a5f;
+    line-height: 1.6;
+  }
+
+  footer {
+    background: #070e15;
+    padding: 28px 32px;
+    text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.2);
+    letter-spacing: 0.05em;
+  }
+  footer a { color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: rgba(255,255,255,0.7); }
+  .footer-row { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 8px; }
+
+  @media (max-width: 700px) {
+    main { padding: 40px 20px 60px; }
+    header { padding: 32px 20px 28px; }
+    .guide-grid { grid-template-columns: 1fr; }
+    .contact-card { flex-direction: column; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="back">← morform.app</a>
+  <div class="page-tag">MorForm · Support</div>
+  <h1>Support</h1>
+  <p>Questions, issues, or feedback — we're here to help.</p>
+</header>
+
+<main>
+
+  <h2>Contact us</h2>
+  <p>MorForm is built by a solo developer. Email is the fastest way to get help — we typically reply within one business day.</p>
+
+  <div class="contact-card">
+    <div class="contact-card-icon">✉️</div>
+    <div>
+      <h3>Email support</h3>
+      <p>Include which app you're using (MorForm, Manager, or Office), your device/OS, and a description of the issue.</p>
+      <a href="mailto:support@morform.app" class="email-btn">support@morform.app</a>
+      <div class="response-note">Typical response: within 1 business day</div>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <strong>Tip:</strong> Most common issues are covered in the user guides below. A quick search in the app's built-in Help (Settings → Help &amp; User Guide) often finds the answer faster.
+  </div>
+
+  <h2>User guides</h2>
+  <p>Each app has a full user guide — both in-app (searchable) and on the web.</p>
+
+  <div class="guide-grid">
+    <a href="morform-help.html" class="guide-card">
+      <div class="guide-card-accent blue"></div>
+      <div class="guide-card-name">MorForm</div>
+      <div class="guide-card-role">Supervisor · iOS &amp; Android</div>
+      <div class="guide-card-link">Read guide →</div>
+    </a>
+    <a href="morform-manager-help.html" class="guide-card">
+      <div class="guide-card-accent gold"></div>
+      <div class="guide-card-name">MorForm Manager</div>
+      <div class="guide-card-role">Project Manager · iOS &amp; Android</div>
+      <div class="guide-card-link">Read guide →</div>
+    </a>
+    <a href="morform-office-help.html" class="guide-card">
+      <div class="guide-card-accent teal"></div>
+      <div class="guide-card-name">MorForm Office</div>
+      <div class="guide-card-role">Desktop · Windows</div>
+      <div class="guide-card-link">Read guide →</div>
+    </a>
+  </div>
+
+  <h2>Privacy</h2>
+  <p>MorForm apps collect no personal data and have no accounts or servers. For full details see the privacy policies below.</p>
+  <p>
+    <a href="morform-privacy.html" style="color:var(--blue);text-decoration:none;font-weight:500;">MorForm Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="morform-manager-privacy.html" style="color:var(--blue);text-decoration:none;font-weight:500;">Manager Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="morform-office-privacy.html" style="color:var(--blue);text-decoration:none;font-weight:500;">Office Privacy Policy</a>
+  </p>
+  <p>For privacy-related requests, email <a href="mailto:privacy@morform.app" style="color:var(--blue);">privacy@morform.app</a>.</p>
+
+</main>
+
+<footer>
+  <div>&copy; 2026 Bryce Duhamel &nbsp;&middot;&nbsp; Edmonton, Alberta</div>
+  <div class="footer-row">
+    <a href="index.html">morform.app</a>
+    <a href="morform-help.html">Supervisor Guide</a>
+    <a href="morform-manager-help.html">Manager Guide</a>
+    <a href="morform-office-help.html">Office Guide</a>
+    <a href="terms.html">Terms</a>
+  </div>
+</footer>
+
+</body>
+</html>

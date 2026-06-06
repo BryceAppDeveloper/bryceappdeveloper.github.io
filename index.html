@@ -64,7 +64,7 @@
       "logo": "https://morform.app/assets/morform.png",
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "bryce.appdeveloper@gmail.com",
+        "email": "support@morform.app",
         "contactType": "customer support"
       },
       "sameAs": []
@@ -576,17 +576,56 @@
   .nobs-item .nobs-title { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; }
   .nobs-item .nobs-desc { font-size: 12.5px; color: rgba(255,255,255,0.45); line-height: 1.6; }
 
+  /* ── Comparison section ── */
+  .compare-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 2px; border-radius: 14px; overflow: hidden;
+    margin-top: 36px; background: var(--ink);
+  }
+  .compare-col { padding: 28px 28px 32px; }
+  .compare-col.old { background: #131d28; }
+  .compare-col.new { background: #0e1e2c; border-left: 2px solid var(--blue); }
+  .compare-col-label {
+    font-family: 'IBM Plex Mono', monospace; font-size: 9px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    margin-bottom: 20px; display: block;
+  }
+  .compare-col.old .compare-col-label { color: rgba(255,255,255,0.25); }
+  .compare-col.new .compare-col-label { color: var(--blue); }
+  .compare-list { list-style: none; display: flex; flex-direction: column; gap: 13px; }
+  .compare-list li {
+    display: flex; align-items: baseline; gap: 10px;
+    font-size: 13px; line-height: 1.5;
+  }
+  .compare-list li::before {
+    content: ''; display: block; width: 4px; height: 4px;
+    border-radius: 50%; flex-shrink: 0; margin-top: 6px;
+  }
+  .compare-col.old .compare-list li { color: rgba(255,255,255,0.4); }
+  .compare-col.old .compare-list li::before { background: rgba(255,255,255,0.2); }
+  .compare-col.new .compare-list li { color: rgba(255,255,255,0.78); }
+  .compare-col.new .compare-list li::before { background: var(--blue); }
+
   /* ── Footer ── */
-  footer { background: #070e15; color: rgba(255,255,255,0.35); padding: 36px 32px; text-align: center; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.06em; line-height: 2; }
-  footer a { color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
-  footer a:hover { color: rgba(255,255,255,0.75); }
-  .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 10px; }
-  .footer-divider { color: rgba(255,255,255,0.12); }
+  footer { background: #070e15; padding: 56px 32px 36px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; }
+  footer a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: rgba(255,255,255,0.8); }
+  .footer-inner { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: start; }
+  .footer-brand { display: flex; flex-direction: column; gap: 5px; }
+  .footer-logo { font-size: 15px; font-weight: 600; color: white; letter-spacing: 0.02em; margin-bottom: 3px; }
+  .footer-tagline { font-size: 11px; color: rgba(255,255,255,0.28); letter-spacing: 0.04em; line-height: 1.6; }
+  .footer-copy { font-size: 10px; color: rgba(255,255,255,0.18); margin-top: 12px; letter-spacing: 0.05em; }
+  .footer-cols { display: flex; gap: 48px; }
+  .footer-col { display: flex; flex-direction: column; gap: 9px; }
+  .footer-col-head { font-size: 9px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.2); margin-bottom: 3px; }
 
   @media (max-width: 860px) {
     .apps-grid { grid-template-columns: 1fr; gap: 2px; }
     .loop { grid-template-columns: 1fr; }
     .loop-arrow-col { flex-direction: row; padding: 6px 0; justify-content: center; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    .footer-cols { flex-wrap: wrap; gap: 32px; }
   }
   @media (max-width: 700px) {
     nav { padding: 0 20px; }
@@ -595,7 +634,7 @@
     .nobs-grid { grid-template-columns: 1fr; }
     .section { padding: 56px 20px; }
     .nobs { padding: 56px 20px; }
-    footer { padding: 24px 20px; }
+    footer { padding: 40px 20px 28px; }
   }
 </style>
 </head>
@@ -679,7 +718,7 @@
       </div>
 
       <div class="nd-divider"></div>
-      <a class="nd-contact" href="mailto:bryce.appdeveloper@gmail.com"><span class="nd-icon">✉️</span>Contact</a>
+      <a class="nd-contact" href="mailto:support@morform.app"><span class="nd-icon">✉️</span>Contact</a>
 
     </div>
   </div>
@@ -1078,6 +1117,35 @@
   </div>
 </div>
 
+<!-- ── Comparison ── -->
+<div class="section" style="padding-top:0;" aria-label="MorForm vs old way">
+  <div class="section-label">Why not a spreadsheet?</div>
+  <h2>Old way vs. MorForm</h2>
+  <p class="section-intro">Construction sites have run on paper, email threads, and spreadsheets for decades. MorForm puts it all in one loop.</p>
+  <div class="compare-grid">
+    <div class="compare-col old">
+      <span class="compare-col-label">The old way</span>
+      <ul class="compare-list">
+        <li>Hours tracked on paper, re-entered in Excel at the end of the week</li>
+        <li>Safety forms printed, signed by hand, scanned and emailed as JPGs</li>
+        <li>Job estimates live in a spreadsheet only one person can update</li>
+        <li>Report emails with 10 loose attachments — no standard format</li>
+        <li>Another SaaS tool billed monthly, whether the job is running or not</li>
+      </ul>
+    </div>
+    <div class="compare-col new">
+      <span class="compare-col-label">MorForm</span>
+      <ul class="compare-list">
+        <li>Time logged on site in seconds, exported as a signed PDF in one tap</li>
+        <li>FLHA / JHA filled digitally — safety PDFs route to the right inbox automatically</li>
+        <li>Estimate builds the dispatch package — no re-entry, no version drift</li>
+        <li>One .morrep file: time, expenses, safety forms — all in one attachment</li>
+        <li>One-time purchase — no renewal, no account, no monthly bill ever</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
 <!-- ── FAQ ── -->
 <section class="nobs" id="faq" style="background:#0c1520;" aria-label="Frequently asked questions">
   <div class="nobs-inner" style="max-width:760px;">
@@ -1116,12 +1184,28 @@
         <p style="font-size:13.5px;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:12px;">MorForm includes FLHA (Field Level Hazard Assessment), JHA (Job Hazard Analysis), Emergency Response Plan, Site Inspection, and Incident Report forms. Both Alberta OH&amp;S and US OSHA jurisdiction references are built in.</p>
       </details>
 
-      <details style="border-top:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.07);padding:18px 0;">
+      <details style="border-top:1px solid rgba(255,255,255,0.07);padding:18px 0;">
         <summary style="font-size:15px;font-weight:700;color:white;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
           What platforms does MorForm support?
           <span style="font-size:18px;color:rgba(255,255,255,0.3);flex-shrink:0;margin-left:12px;">+</span>
         </summary>
         <p style="font-size:13.5px;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:12px;">MorForm (supervisor) and MorForm Manager run on iOS and Android. MorForm Office runs on Windows 10 and Windows 11. All three apps communicate with each other through email — no accounts or cloud required.</p>
+      </details>
+
+      <details style="border-top:1px solid rgba(255,255,255,0.07);padding:18px 0;">
+        <summary style="font-size:15px;font-weight:700;color:white;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Does MorForm work in the United States?
+          <span style="font-size:18px;color:rgba(255,255,255,0.3);flex-shrink:0;margin-left:12px;">+</span>
+        </summary>
+        <p style="font-size:13.5px;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:12px;">Yes. The Supervisor app includes both Alberta OH&amp;S and US OSHA jurisdiction modes — field-level terminology (FLHA vs. JHA, OH&amp;S vs. OSHA) adjusts to whichever you choose during setup. Time tracking, expenses, and job management work the same everywhere.</p>
+      </details>
+
+      <details style="border-top:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.07);padding:18px 0;">
+        <summary style="font-size:15px;font-weight:700;color:white;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          What happens if I lose my phone or switch devices?
+          <span style="font-size:18px;color:rgba(255,255,255,0.3);flex-shrink:0;margin-left:12px;">+</span>
+        </summary>
+        <p style="font-size:13.5px;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:12px;">Use the built-in backup: Settings → Data Backup → Create Backup saves a file you can email to yourself or save to cloud storage. Restoring on a new device takes a few taps. Since there's no server, the backup file <em>is</em> your data — keep a copy somewhere safe at the end of each pay period.</p>
       </details>
 
     </div>
@@ -1170,21 +1254,35 @@
 </main>
 
 <footer>
-  <div>&copy; 2026 Bryce Duhamel &nbsp;&middot;&nbsp; Edmonton, Alberta, Canada</div>
-  <div class="footer-links">
-    <a href="morform-help.html">MorForm Guide</a>
-    <span class="footer-divider">|</span>
-    <a href="morform-manager-help.html">Manager Guide</a>
-    <span class="footer-divider">|</span>
-    <a href="morform-office-help.html">Office Guide</a>
-    <span class="footer-divider">|</span>
-    <a href="morform-privacy.html">MorForm Privacy</a>
-    <span class="footer-divider">|</span>
-    <a href="morform-manager-privacy.html">Manager Privacy</a>
-    <span class="footer-divider">|</span>
-    <a href="morform-office-privacy.html">Office Privacy</a>
-    <span class="footer-divider">|</span>
-    <a href="mailto:bryce.appdeveloper@gmail.com">Contact</a>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">MorForm</div>
+      <div class="footer-tagline">Built for the job site, not the boardroom.</div>
+      <div class="footer-copy">&copy; 2026 Bryce Duhamel &nbsp;&middot;&nbsp; Edmonton, Alberta</div>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-head">Apps</div>
+        <a href="https://apps.apple.com/ca/app/morform/id6744827471" target="_blank" rel="noopener">MorForm (iOS)</a>
+        <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morform" target="_blank" rel="noopener">MorForm (Android)</a>
+        <a href="https://apps.apple.com/ca/app/morform-manager/id6772639424" target="_blank" rel="noopener">Manager (iOS)</a>
+        <a href="https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0" target="_blank" rel="noopener">Office (Windows)</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-head">Help</div>
+        <a href="morform-help.html">Supervisor Guide</a>
+        <a href="morform-manager-help.html">Manager Guide</a>
+        <a href="morform-office-help.html">Office Guide</a>
+        <a href="support.html">Support</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-head">Legal</div>
+        <a href="morform-privacy.html">MorForm Privacy</a>
+        <a href="morform-manager-privacy.html">Manager Privacy</a>
+        <a href="morform-office-privacy.html">Office Privacy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
   </div>
 </footer>
 

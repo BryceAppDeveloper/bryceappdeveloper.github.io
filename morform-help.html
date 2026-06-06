@@ -252,13 +252,16 @@
 
   footer {
     background: var(--ink);
-    color: rgba(255,255,255,0.4);
-    text-align: center;
-    padding: 24px;
+    color: rgba(255,255,255,0.3);
+    padding: 28px 32px;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
+    font-size: 10px;
     letter-spacing: 0.05em;
   }
+  footer a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: rgba(255,255,255,0.8); }
+  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .footer-guides { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
 
   /* Search bar */
   .toc-search {
@@ -407,8 +410,6 @@
         <div class="sec-title">Logging Time</div>
       </div>
       <div class="sec-body">
-        <h3>The Weekly Calendar</h3>
-        <p>The Time tab shows a horizontal strip of days. Tap a day to select it — entries for that day show below. Swipe the day strip left or right to move between weeks. Each day shows a colour bar showing total hours logged.</p>
         <h3>Adding a Time Entry</h3>
         <div class="steps">
           <div class="step"><div class="step-num">1</div><div><div class="step-title">Tap + Add Entry</div><div class="step-desc">The entry form slides up. Make sure the correct day is selected first.</div></div></div>
@@ -494,7 +495,7 @@
         <div class="sec-title">Safety Forms</div>
       </div>
       <div class="sec-body">
-        <p>The Safety tab is where you create and submit all OH&S documentation. Every form is saved locally on your device. PDF versions can be emailed to your Safety Manager at any time.</p>
+        <p>All forms save locally — tap any saved form to view the PDF or email it to your Safety Manager.</p>
         <table class="tbl">
           <thead><tr><th>Form</th><th>When</th><th>OH&S Reference</th></tr></thead>
           <tbody>
@@ -755,7 +756,15 @@
 </div>
 
 <footer>
-  © 2026 Bryce Duhamel &nbsp;·&nbsp; Edmonton, Alberta, Canada &nbsp;·&nbsp; bryce.appdeveloper@gmail.com
+  <div class="footer-inner">
+    <div>© 2026 Bryce Duhamel &nbsp;·&nbsp; Edmonton, Alberta &nbsp;·&nbsp; <a href="index.html">morform.app</a></div>
+    <div class="footer-guides">
+      <a href="morform-manager-help.html">Manager Guide</a>
+      <a href="morform-office-help.html">Office Guide</a>
+      <a href="support.html">Support</a>
+      <a href="mailto:support@morform.app">support@morform.app</a>
+    </div>
+  </div>
 </footer>
 
 <script>
