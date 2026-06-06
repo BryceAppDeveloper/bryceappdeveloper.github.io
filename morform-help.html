@@ -768,31 +768,54 @@
 </footer>
 
 <script>
-  // Natural-language search: tokenize the query, drop stopwords, and match any word
-  // against each section's link text + body. Multi-word/question phrasing now works.
   var TOC_STOP = {the:1,a:1,an:1,and:1,or:1,to:1,of:1,for:1,in:1,on:1,at:1,by:1,my:1,me:1,i:1,it:1,is:1,do:1,does:1,how:1,what:1,where:1,when:1,why:1,which:1,who:1,can:1,should:1,would:1,you:1,your:1,with:1,please:1,need:1,want:1,get:1,have:1,has:1,help:1,app:1,about:1,from:1,this:1,that:1,if:1,so:1,are:1,be:1};
-  document.getElementById('toc-search').addEventListener('input', function() {
-    var val = this.value;
-    var q = val.trim().toLowerCase();
+
+  function scrollToSection(id) {
+    var el = document.getElementById(id);
+    if (el) window.scrollTo({ top: el.offsetTop - 70, behavior: 'smooth' });
+  }
+
+  function runSearch(q) {
+    q = q.trim().toLowerCase();
     var links = document.querySelectorAll('.toc a');
     var groups = document.querySelectorAll('.toc-group-label');
+    var noRes = document.getElementById('toc-no-results');
     var tokens = [];
     if (q) { q.split(/[^a-z0-9]+/).forEach(function(t) { if (t.length >= 2 && !TOC_STOP[t]) tokens.push(t); }); }
-    var any = false;
+    var matches = [];
     links.forEach(function(a) {
       if (!q) { a.style.display = ''; return; }
-      var href = a.getAttribute('href');
-      var id = href ? href.replace('#', '') : '';
+      var href = a.getAttribute('href') || '';
+      var id = href.replace('#', '');
       var section = id ? document.getElementById(id) : null;
       var hay = (a.textContent + ' ' + (section ? section.textContent : '')).toLowerCase();
-      var score = 0;
-      if (tokens.length === 0) { score = hay.indexOf(q) !== -1 ? 1 : 0; }
-      else { tokens.forEach(function(t) { if (hay.indexOf(t) !== -1) score += t.length; }); }
+      var score = tokens.length === 0 ? (hay.indexOf(q) !== -1 ? 1 : 0) : 0;
+      if (tokens.length > 0) { tokens.forEach(function(t) { if (hay.indexOf(t) !== -1) score += t.length; }); }
       a.style.display = score > 0 ? '' : 'none';
-      if (score > 0) any = true;
+      if (score > 0) matches.push(id);
     });
     groups.forEach(function(g) { g.style.display = q ? 'none' : ''; });
-    document.getElementById('toc-no-results').style.display = (!any && q) ? 'block' : 'none';
+    noRes.style.display = (!matches.length && q) ? 'block' : 'none';
+    if (matches.length === 1) scrollToSection(matches[0]);
+  }
+
+  var searchEl = document.getElementById('toc-search');
+  searchEl.addEventListener('input', function() { runSearch(this.value); });
+  searchEl.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && this.value.trim()) {
+      var links = document.querySelectorAll('.toc a');
+      for (var i = 0; i < links.length; i++) {
+        if (links[i].style.display !== 'none') {
+          scrollToSection((links[i].getAttribute('href') || '').replace('#', ''));
+          this.blur();
+          break;
+        }
+      }
+    } else if (e.key === 'Escape') {
+      this.value = '';
+      runSearch('');
+      this.blur();
+    }
   });
 
   var scrollSections = document.querySelectorAll('section[id]');
