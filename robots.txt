@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://morform.app/sitemap.xml

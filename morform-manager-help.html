@@ -6,6 +6,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MorForm Manager — User Guide</title>
+<meta name="description" content="MorForm Manager user guide — dispatch jobs to field supervisors, build estimates and budgets, review time, expense and safety reports, and sync with MorForm Office, all through email." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://morform.app/morform-manager-help.html" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://morform.app/morform-manager-help.html" />
+<meta property="og:title" content="MorForm Manager — User Guide" />
+<meta property="og:description" content="Dispatch jobs, build estimates and budgets, and review supervisor reports with MorForm Manager. No accounts, no cloud." />
+<meta property="og:image" content="https://morform.app/assets/og-image.jpg" />
+<meta property="og:site_name" content="MorForm" />
+<meta property="og:locale" content="en_CA" />
 <style>
   @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;700&display=swap');
 
@@ -790,21 +800,28 @@
 </footer>
 
 <script>
+  // Natural-language search: tokenize the query, drop stopwords, and match any word
+  // against each section's link text + body. Multi-word/question phrasing now works.
+  var TOC_STOP = {the:1,a:1,an:1,and:1,or:1,to:1,of:1,for:1,in:1,on:1,at:1,by:1,my:1,me:1,i:1,it:1,is:1,do:1,does:1,how:1,what:1,where:1,when:1,why:1,which:1,who:1,can:1,should:1,would:1,you:1,your:1,with:1,please:1,need:1,want:1,get:1,have:1,has:1,help:1,app:1,about:1,from:1,this:1,that:1,if:1,so:1,are:1,be:1};
   document.getElementById('toc-search').addEventListener('input', function() {
     var val = this.value;
     var q = val.trim().toLowerCase();
     var links = document.querySelectorAll('.toc a');
     var groups = document.querySelectorAll('.toc-group-label');
+    var tokens = [];
+    if (q) { q.split(/[^a-z0-9]+/).forEach(function(t) { if (t.length >= 2 && !TOC_STOP[t]) tokens.push(t); }); }
     var any = false;
     links.forEach(function(a) {
       if (!q) { a.style.display = ''; return; }
       var href = a.getAttribute('href');
       var id = href ? href.replace('#', '') : '';
       var section = id ? document.getElementById(id) : null;
-      var sectionText = section ? section.textContent.toLowerCase() : '';
-      var match = a.textContent.toLowerCase().includes(q) || sectionText.includes(q);
-      a.style.display = match ? '' : 'none';
-      if (match) any = true;
+      var hay = (a.textContent + ' ' + (section ? section.textContent : '')).toLowerCase();
+      var score = 0;
+      if (tokens.length === 0) { score = hay.indexOf(q) !== -1 ? 1 : 0; }
+      else { tokens.forEach(function(t) { if (hay.indexOf(t) !== -1) score += t.length; }); }
+      a.style.display = score > 0 ? '' : 'none';
+      if (score > 0) any = true;
     });
     groups.forEach(function(g) { g.style.display = q ? 'none' : ''; });
     document.getElementById('toc-no-results').style.display = (!any && q) ? 'block' : 'none';
