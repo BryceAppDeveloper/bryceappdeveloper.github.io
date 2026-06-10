@@ -16,8 +16,14 @@
 <meta property="og:image" content="https://morform.app/assets/og-image.jpg" />
 <meta property="og:site_name" content="MorForm" />
 <meta property="og:locale" content="en_CA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="MorForm Manager — User Guide" />
+<meta name="twitter:description" content="Dispatch jobs, build estimates and budgets, and review supervisor reports with MorForm Manager. No accounts, no cloud." />
+<meta name="twitter:image" content="https://morform.app/assets/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=IBM+Plex+Sans:wght@300;400;500;700&amp;display=swap">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;700&display=swap');
 
   :root {
     --gold: #B29146;
@@ -170,6 +176,7 @@
   }
 
   .sec-title {
+    margin: 0;
     font-size: 1.2rem;
     font-weight: 800;
     color: #1C1400;
@@ -280,6 +287,26 @@
     .sec-header { padding: 16px 16px; }
   }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://morform.app/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "MorForm Manager User Guide",
+   "item": "https://morform.app/morform-manager-help.html"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -331,7 +358,7 @@
     <section id="intro">
       <div class="sec-header">
         <div class="sec-icon">👋</div>
-        <div class="sec-title">Welcome to MorForm Manager</div>
+        <h2 class="sec-title">Welcome to MorForm Manager</h2>
       </div>
       <div class="sec-body">
         <div class="welcome-box">
@@ -357,7 +384,7 @@
     <section id="setup">
       <div class="sec-header">
         <div class="sec-icon">✅</div>
-        <div class="sec-title">First-Time Setup</div>
+        <h2 class="sec-title">First-Time Setup</h2>
       </div>
       <div class="sec-body">
         <p>The Setup Wizard runs automatically on first launch. Takes about 3 minutes.</p>
@@ -377,7 +404,7 @@
     <section id="nav">
       <div class="sec-header">
         <div class="sec-icon">🧭</div>
-        <div class="sec-title">App Navigation</div>
+        <h2 class="sec-title">App Navigation</h2>
       </div>
       <div class="sec-body">
         <p>Five tabs along the bottom. Tap or swipe to switch. Settings ⚙️ and Reports 📊 are in the top-right header area.</p>
@@ -398,7 +425,7 @@
     <section id="jobs">
       <div class="sec-header">
         <div class="sec-icon">🏗️</div>
-        <div class="sec-title">Jobs Dashboard</div>
+        <h2 class="sec-title">Jobs Dashboard</h2>
       </div>
       <div class="sec-body">
         <h3>Creating a Job</h3>
@@ -447,7 +474,7 @@
     <section id="permits">
       <div class="sec-header">
         <div class="sec-icon">🏛️</div>
-        <div class="sec-title">Permits</div>
+        <h2 class="sec-title">Permits</h2>
       </div>
       <div class="sec-body">
         <p>Add and manage permits in the Edit Job form (tap ✏️ Edit → scroll to Permits → + Add). Each permit has:</p>
@@ -471,7 +498,7 @@
     <section id="people">
       <div class="sec-header">
         <div class="sec-icon">👥</div>
-        <div class="sec-title">People &amp; Trades</div>
+        <h2 class="sec-title">People &amp; Trades</h2>
       </div>
       <div class="sec-body">
         <h3>Site Contacts</h3>
@@ -486,7 +513,7 @@
     <section id="dispatch">
       <div class="sec-header">
         <div class="sec-icon">📤</div>
-        <div class="sec-title">Dispatching Jobs</div>
+        <h2 class="sec-title">Dispatching Jobs</h2>
       </div>
       <div class="sec-body">
         <p>Once a job is ready to go to site, tap 📤 Dispatch on the job detail. A dispatch picker lets you choose what to include and who to send it to.</p>
@@ -517,7 +544,7 @@
     <section id="estimates">
       <div class="sec-header">
         <div class="sec-icon">💰</div>
-        <div class="sec-title">Estimates &amp; Quotes</div>
+        <h2 class="sec-title">Estimates &amp; Quotes</h2>
       </div>
       <div class="sec-body">
         <p>Tap any job in the Estimates tab to open the quote editor. Six sections across the top:</p>
@@ -567,7 +594,7 @@
     <section id="externals">
       <div class="sec-header">
         <div class="sec-icon">🔧</div>
-        <div class="sec-title">Subtrades &amp; Externals</div>
+        <h2 class="sec-title">Subtrades &amp; Externals</h2>
       </div>
       <div class="sec-body">
         <p>The Externals section prices all subtrades, engineers, and consultants. Organized by CSI division:</p>
@@ -599,7 +626,7 @@
     <section id="changeorders">
       <div class="sec-header">
         <div class="sec-icon">📝</div>
-        <div class="sec-title">Change Orders</div>
+        <h2 class="sec-title">Change Orders</h2>
       </div>
       <div class="sec-body">
         <p>Add change orders in the Estimates → Changes section. Each CO has:</p>
@@ -621,7 +648,7 @@
     <section id="invoicing">
       <div class="sec-header">
         <div class="sec-icon">🧾</div>
-        <div class="sec-title">Client Invoicing</div>
+        <h2 class="sec-title">Client Invoicing</h2>
       </div>
       <div class="sec-body">
         <h3>Emailing the Invoice Directly</h3>
@@ -636,7 +663,7 @@
     <section id="crew">
       <div class="sec-header">
         <div class="sec-icon">👷</div>
-        <div class="sec-title">Crew Directory</div>
+        <h2 class="sec-title">Crew Directory</h2>
       </div>
       <div class="sec-body">
         <p>Tap + Add to add a supervisor manually. Supervisors are also added automatically the first time they send you a .morrep report — their name, email, and phone come from their MorForm profile.</p>
@@ -657,7 +684,7 @@
     <section id="inbox">
       <div class="sec-header">
         <div class="sec-icon">📥</div>
-        <div class="sec-title">Inbox — Reports</div>
+        <h2 class="sec-title">Inbox — Reports</h2>
       </div>
       <div class="sec-body">
         <p>When a supervisor sends a job report, tap the .morrep attachment in your email — MorForm Manager opens and imports it automatically. Or tap Import in the Inbox tab to pick the file manually.</p>
@@ -700,7 +727,7 @@
     <section id="reports">
       <div class="sec-header">
         <div class="sec-icon">📊</div>
-        <div class="sec-title">Reports &amp; Actuals</div>
+        <h2 class="sec-title">Reports &amp; Actuals</h2>
       </div>
       <div class="sec-body">
         <p>Tap 📊 Reports in the header. Set a date range — defaults to the current month. Three views:</p>
@@ -721,7 +748,7 @@
     <section id="notes">
       <div class="sec-header">
         <div class="sec-icon">📝</div>
-        <div class="sec-title">Notes</div>
+        <h2 class="sec-title">Notes</h2>
       </div>
       <div class="sec-body">
         <p>Internal reminders visible only to you. Tap + Add Note, write your note, optionally link it to a job and/or supervisor, and save. Tap a note to mark it done or delete it.</p>
@@ -733,7 +760,7 @@
     <section id="connection">
       <div class="sec-header">
         <div class="sec-icon">🔗</div>
-        <div class="sec-title">How Both Apps Connect</div>
+        <h2 class="sec-title">How Both Apps Connect</h2>
       </div>
       <div class="sec-body">
         <p>MorForm Manager and MorForm (the supervisor app) are completely independent. No shared server, no accounts, no subscriptions. All data moves through regular email attachments using three custom file types.</p>
@@ -765,7 +792,7 @@
     <section id="settings">
       <div class="sec-header">
         <div class="sec-icon">⚙️</div>
-        <div class="sec-title">Settings</div>
+        <h2 class="sec-title">Settings</h2>
       </div>
       <div class="sec-body">
         <p>Tap ⚙️ in the top-right header. Sections are collapsible — tap any header to expand.</p>

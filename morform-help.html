@@ -16,8 +16,14 @@
 <meta property="og:image" content="https://morform.app/assets/og-image.jpg" />
 <meta property="og:site_name" content="MorForm" />
 <meta property="og:locale" content="en_CA" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="MorForm (Supervisor) — User Guide" />
+<meta name="twitter:description" content="How to log field time, track expenses, complete FLHA/OHS safety forms, and email reports to your PM with MorForm." />
+<meta name="twitter:image" content="https://morform.app/assets/og-image.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=IBM+Plex+Sans:wght@300;400;500;700&amp;display=swap">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;700&display=swap');
 
   :root {
     --blue: #325a81;
@@ -172,6 +178,7 @@
   }
 
   .sec-title {
+    margin: 0;
     font-size: 1.2rem;
     font-weight: 800;
     color: #0F172A;
@@ -288,6 +295,59 @@
     .sec-header { padding: 16px 16px; }
   }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://morform.app/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "MorForm (Supervisor) User Guide",
+   "item": "https://morform.app/morform-help.html"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "The .morjob file didn't open MorForm — what do I do?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Tap the Import button on the Jobs screen, or go to Settings → Data & Backup → Import Job File. If it still doesn't auto-open, uninstall and reinstall once — Android registers file associations on install." }
+  },
+  {
+   "@type": "Question",
+   "name": "I logged hours on the wrong job — how do I fix it?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Tap the edit button on the entry in the Time tab, change the job site, and tap Update. Do this before sending your report." }
+  },
+  {
+   "@type": "Question",
+   "name": "Why does my report say 'nothing to send'?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Check your pay period date range at the top of the Report tab. Tap the dates to adjust them manually." }
+  },
+  {
+   "@type": "Question",
+   "name": "How do I stop the morning FLHA reminder?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Complete a FLHA for today in the Safety tab. To turn off the reminder permanently: Settings → Notifications → Morning FLHA Reminder." }
+  },
+  {
+   "@type": "Question",
+   "name": "My subtrade says they didn't receive the form — why?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Most email providers block .html file attachments. Resend using the share sheet and choose WhatsApp, AirDrop, or save to Files and share from there." }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -339,7 +399,7 @@
     <section id="intro">
       <div class="sec-header">
         <div class="sec-icon">👋</div>
-        <div class="sec-title">Welcome to MorForm</div>
+        <h2 class="sec-title">Welcome to MorForm</h2>
       </div>
       <div class="sec-body">
         <div class="welcome-box">
@@ -364,7 +424,7 @@
     <section id="setup">
       <div class="sec-header">
         <div class="sec-icon">✅</div>
-        <div class="sec-title">First-Time Setup</div>
+        <h2 class="sec-title">First-Time Setup</h2>
       </div>
       <div class="sec-body">
         <p>When you first open MorForm the Setup Wizard runs automatically. It takes about 3 minutes. Every setting here can be changed later in Settings.</p>
@@ -386,7 +446,7 @@
     <section id="nav">
       <div class="sec-header">
         <div class="sec-icon">🧭</div>
-        <div class="sec-title">App Navigation</div>
+        <h2 class="sec-title">App Navigation</h2>
       </div>
       <div class="sec-body">
         <p>Five tabs sit along the bottom of the screen. Tap any tab to switch, or swipe left and right. The Settings gear ⚙️ is in the top-right corner of the header on every screen.</p>
@@ -407,7 +467,7 @@
     <section id="time">
       <div class="sec-header">
         <div class="sec-icon">🕐</div>
-        <div class="sec-title">Logging Time</div>
+        <h2 class="sec-title">Logging Time</h2>
       </div>
       <div class="sec-body">
         <h3>Adding a Time Entry</h3>
@@ -433,7 +493,7 @@
     <section id="jobs">
       <div class="sec-header">
         <div class="sec-icon">🔨</div>
-        <div class="sec-title">Job Sites</div>
+        <h2 class="sec-title">Job Sites</h2>
       </div>
       <div class="sec-body">
         <h3>Receiving a Dispatched Job from Your PM</h3>
@@ -467,7 +527,7 @@
     <section id="expenses">
       <div class="sec-header">
         <div class="sec-icon">💲</div>
-        <div class="sec-title">Expenses</div>
+        <h2 class="sec-title">Expenses</h2>
       </div>
       <div class="sec-body">
         <h3>Adding an Expense</h3>
@@ -492,7 +552,7 @@
     <section id="safety">
       <div class="sec-header">
         <div class="sec-icon">🛡</div>
-        <div class="sec-title">Safety Forms</div>
+        <h2 class="sec-title">Safety Forms</h2>
       </div>
       <div class="sec-body">
         <p>All forms save locally — tap any saved form to view the PDF or email it to your Safety Manager.</p>
@@ -516,10 +576,11 @@
     <section id="flha">
       <div class="sec-header">
         <div class="sec-icon">📋</div>
-        <div class="sec-title">FLHA / JHA — Step by Step</div>
+        <h2 class="sec-title">FLHA / JHA — Step by Step</h2>
       </div>
       <div class="sec-body">
         <p>The Field Level Hazard Assessment (FLHA) / Job Hazard Analysis (JHA) is required every working day. It's a 5-page guided form.</p>
+        <p>Need a paper or browser version for someone without the app? Get the <a href="flha.html">free printable FLHA form</a> on our website — fill it online or download the PDF.</p>
         <div class="steps">
           <div class="step"><div class="step-num">1</div><div><div class="step-title">Page 1 — Job Info</div><div class="step-desc">Select the job site. Enter the date (or date range for consecutive days). List all trades and workers on site today. Describe today's full scope of work.</div></div></div>
           <div class="step"><div class="step-num">2</div><div><div class="step-title">Page 2 — Hazards</div><div class="step-desc">Tap each hazard present on site today: heavy loads, electrical, working at height, slippery surfaces, pinch points, and more. For each hazard, enter the control measure you're implementing.</div></div></div>
@@ -537,7 +598,7 @@
     <section id="erp">
       <div class="sec-header">
         <div class="sec-icon">🚒</div>
-        <div class="sec-title">Emergency Response Plan</div>
+        <h2 class="sec-title">Emergency Response Plan</h2>
       </div>
       <div class="sec-body">
         <p>The ERP is required once per job before work begins. It must be posted on site and communicated to all workers (OHS Code Part 7).</p>
@@ -558,7 +619,7 @@
     <section id="inspection">
       <div class="sec-header">
         <div class="sec-icon">🔍</div>
-        <div class="sec-title">Site Hazard Inspection</div>
+        <h2 class="sec-title">Site Hazard Inspection</h2>
       </div>
       <div class="sec-body">
         <p>A formal 10-category site inspection is required before work begins on a new job and at least weekly thereafter (OHS Code Part 2 &amp; 36).</p>
@@ -577,7 +638,7 @@
     <section id="incident">
       <div class="sec-header">
         <div class="sec-icon">🚨</div>
-        <div class="sec-title">Incident Report</div>
+        <h2 class="sec-title">Incident Report</h2>
       </div>
       <div class="sec-body">
         <p>Complete an Incident Report for any injury, near miss, property damage, or dangerous occurrence. File immediately — do not delay.</p>
@@ -599,7 +660,7 @@
     <section id="subtrades">
       <div class="sec-header">
         <div class="sec-icon">📨</div>
-        <div class="sec-title">Subtrade Forms</div>
+        <h2 class="sec-title">Subtrade Forms</h2>
       </div>
       <div class="sec-body">
         <p>If a subtrade on your site doesn't have their own safety forms, send them an interactive form they fill out in any browser — no app required on their end.</p>
@@ -618,7 +679,7 @@
     <section id="reports">
       <div class="sec-header">
         <div class="sec-icon">📊</div>
-        <div class="sec-title">Reports</div>
+        <h2 class="sec-title">Reports</h2>
       </div>
       <div class="sec-body">
         <p>The Report tab has three sections: Timesheet, Expenses, and Safety Docs. Each has its own send actions.</p>
@@ -646,7 +707,7 @@
     <section id="email">
       <div class="sec-header">
         <div class="sec-icon">📧</div>
-        <div class="sec-title">How Email Works</div>
+        <h2 class="sec-title">How Email Works</h2>
       </div>
       <div class="sec-body">
         <p>MorForm has no backend server and requires no account. All data moves through your regular email as file attachments. Nothing is stored in the cloud.</p>
@@ -677,7 +738,7 @@
     <section id="pm">
       <div class="sec-header">
         <div class="sec-icon">🔗</div>
-        <div class="sec-title">Working With Your PM</div>
+        <h2 class="sec-title">Working With Your PM</h2>
       </div>
       <div class="sec-body">
         <p>MorForm and MorForm Manager are two separate apps that communicate through email. Here's the complete loop:</p>
@@ -697,7 +758,7 @@
     <section id="settings">
       <div class="sec-header">
         <div class="sec-icon">⚙️</div>
-        <div class="sec-title">Settings</div>
+        <h2 class="sec-title">Settings</h2>
       </div>
       <div class="sec-body">
         <p>Tap ⚙️ in the top-right header. Settings are organized into collapsible sections.</p>
@@ -724,7 +785,7 @@
     <section id="tips">
       <div class="sec-header">
         <div class="sec-icon">💡</div>
-        <div class="sec-title">Tips &amp; Troubleshooting</div>
+        <h2 class="sec-title">Tips &amp; Troubleshooting</h2>
       </div>
       <div class="sec-body">
         <h3>The .morjob file didn't open MorForm</h3>

@@ -1,0 +1,29 @@
+# MorForm
+
+> MorForm is a suite of three construction apps for small crews and contractors: field time tracking, FLHA/JHA safety forms, expense tracking, job estimates, dispatch and field reports. There are no accounts, no cloud and no subscription — each app is a one-time purchase, all data stays on the user's device, and the apps exchange data peer-to-peer via email attachments.
+
+Key facts:
+- MorForm (Supervisor) — iOS & Android, $6.99 one-time. Field time tracking, expenses with receipt photos, FLHA/JHA, site hazard inspections, emergency response plans, incident reports; emails timesheets, expense reports and safety forms to the right manager.
+- MorForm Manager — iOS & Android, $6.99 one-time. Dispatches jobs to supervisors (.morjob), builds estimates and budgets, reviews supervisor reports (.morrep), change orders, client invoicing.
+- MorForm Office — Windows 10/11 desktop, $9.99 one-time. Full job management, CSI-style estimates with custom columns, PDF client quotes, crew and vendor directories, report review; syncs with Manager mobile (.mordata).
+- Privacy model: no accounts, no cloud, no tracking, no ads. Data leaves the device only as email attachments the user sends.
+- Works offline; built by a working site supervisor in Edmonton, Alberta, Canada.
+
+## Apps
+- [MorForm on the App Store](https://apps.apple.com/ca/app/morform/id6744827471)
+- [MorForm on Google Play](https://play.google.com/store/apps/details?id=com.bryceduhamel.morform)
+- [MorForm Manager on the App Store](https://apps.apple.com/ca/app/morform-manager/id6772639424)
+- [MorForm Office on the Microsoft Store](https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0)
+
+## Docs
+- [Supervisor user guide](https://morform.app/morform-help.html)
+- [Manager user guide](https://morform.app/morform-manager-help.html)
+- [Office user guide](https://morform.app/morform-office-help.html)
+- [Free printable & fillable FLHA form](https://morform.app/flha.html)
+- [Support](https://morform.app/support.html)
+
+## Legal
+- [Privacy policies](https://morform.app/morform-privacy.html)
+- [Terms of use](https://morform.app/terms.html)
+
+Contact: support@morform.app
