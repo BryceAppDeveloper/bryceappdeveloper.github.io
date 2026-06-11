@@ -70,6 +70,7 @@
         "https://apps.apple.com/ca/app/morform/id6744827471",
         "https://play.google.com/store/apps/details?id=com.bryceduhamel.morform",
         "https://apps.apple.com/ca/app/morform-manager/id6772639424",
+        "https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion",
         "https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0"
       ]
     },
@@ -101,15 +102,15 @@
       "name": "MorForm Manager",
       "operatingSystem": "iOS, Android",
       "applicationCategory": "BusinessApplication",
-      "description": "Project manager app for construction. Build CSI division estimates with labour, subtrades and markup. Track job budgets vs actuals, dispatch jobs to supervisors, approve field reports and manage crew safety compliance. No cloud required.",
+      "description": "Project manager app for construction field work. Build job specs (job type, subtypes, trades and scope), dispatch jobs to supervisors, track job budgets vs actuals, approve field reports and manage crew safety compliance. Sends job requests to MorForm Office for estimating and quoting. No cloud required.",
       "offers": {
         "@type": "Offer",
-        "price": "6.99",
+        "price": "10.99",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock"
       },
       "url": "https://morform.app/",
-      "downloadUrl": "https://apps.apple.com/ca/app/morform-manager/id6772639424",
+      "downloadUrl": ["https://apps.apple.com/ca/app/morform-manager/id6772639424", "https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion"],
       "screenshot": [
         "https://morform.app/assets/mm-screenshot/mm-01-estimate.webp",
         "https://morform.app/assets/mm-screenshot/mm-03-jobs.webp",
@@ -123,11 +124,11 @@
       "name": "MorForm Office",
       "operatingSystem": "Windows 10, Windows 11",
       "applicationCategory": "BusinessApplication",
-      "description": "Windows desktop app for construction project managers. Full CSI estimate builder with 84-division template, XLSX import, PDF quote generation with company logo, job dispatch to supervisors, supervisor report review and budget vs actuals dashboard.",
+      "description": "Windows desktop app for construction estimating and back office. Estimate pipeline from draft to won with named templates, custom columns, XLSX import, PDF proposal and quote generation, job dispatch to supervisors, supervisor report review, progress draws, QuickBooks export and a company dashboard.",
       "offers": {
         "@type": "Offer",
-        "price": "9.99",
-        "priceCurrency": "USD",
+        "price": "189.99",
+        "priceCurrency": "CAD",
         "availability": "https://schema.org/InStock"
       },
       "url": "https://morform.app/",
@@ -148,7 +149,7 @@
           "name": "Does MorForm require a subscription or monthly fee?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. MorForm is a one-time purchase. MorForm and MorForm Manager are $6.99 USD. MorForm Office is $9.99 USD. Pay once, own it forever — no subscription, no renewal, no hidden fees."
+            "text": "No. MorForm is a one-time purchase. MorForm (Supervisor) is $6.99 USD ($9.99 CAD). MorForm Manager is $10.99 USD ($14.99 CAD). MorForm Office is $189.99 CAD (USD pricing coming soon). Pay once, own it forever — no subscription, no renewal, no hidden fees."
           }
         },
         {
@@ -235,6 +236,15 @@
   .nav-logo-text { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 600; color: white; letter-spacing: 0.02em; }
   .nav-logo-caret { font-size: 10px; color: rgba(255,255,255,0.3); margin-left: 2px; transition: transform 0.2s; }
   .nav-logo-wrap.open .nav-logo-caret { transform: rotate(180deg); }
+  .nav-flha {
+    margin-left: auto;
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600;
+    color: rgba(255,255,255,0.75); text-decoration: none; letter-spacing: 0.04em;
+    padding: 6px 13px; border: 1px solid rgba(255,255,255,0.18); border-radius: 999px;
+    white-space: nowrap;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .nav-flha:hover { color: white; border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.06); }
 
   /* Nav dropdown */
   .nav-dropdown {
@@ -688,6 +698,7 @@
         <div class="nd-body">
           <div class="nd-body-inner">
             <a href="https://apps.apple.com/ca/app/morform-manager/id6772639424" target="_blank" rel="noopener"><span class="nd-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.46 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span>App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion" target="_blank" rel="noopener"><span class="nd-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76c.3.17.64.24.99.2L15.65 12 12 8.35 3.18 23.76zm16.87-11.19l-2.96-1.67L13.41 12l3.68 3.68 2.96-1.67a1.5 1.5 0 0 0 0-2.64zM2.01 1.05a1.5 1.5 0 0 0-.51 1.14v19.62c0 .45.19.86.51 1.14L14.24 12 2.01 1.05zm10.57 9.57L3.18.24A1.5 1.5 0 0 0 2.17.04L12 12l.58-.38z"/></svg></span>Google Play</a>
             <a href="morform-manager-help.html"><span class="nd-icon">📖</span>User Guide</a>
             <a href="morform-manager-privacy.html"><span class="nd-icon">🔒</span>Privacy Policy</a>
           </div>
@@ -722,6 +733,7 @@
 
     </div>
   </div>
+  <a class="nav-flha" href="flha.html">📝 Free FLHA Form</a>
 </nav>
 
 <main>
@@ -763,6 +775,8 @@
         <a href="morform-manager-privacy.html"><span class="dd-icon">🔒</span> Privacy Policy</a>
         <div class="dd-divider"></div>
         <a href="https://apps.apple.com/ca/app/morform-manager/id6772639424" target="_blank" rel="noopener"><span class="dd-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.46 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span> App Store</a>
+        <div class="dd-divider"></div>
+        <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion" target="_blank" rel="noopener"><span class="dd-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76c.3.17.64.24.99.2L15.65 12 12 8.35 3.18 23.76zm16.87-11.19l-2.96-1.67L13.41 12l3.68 3.68 2.96-1.67a1.5 1.5 0 0 0 0-2.64zM2.01 1.05a1.5 1.5 0 0 0-.51 1.14v19.62c0 .45.19.86.51 1.14L14.24 12 2.01 1.05zm10.57 9.57L3.18.24A1.5 1.5 0 0 0 2.17.04L12 12l.58-.38z"/></svg></span> Google Play</a>
       </div>
     </div>
 
@@ -785,8 +799,8 @@
   <h1>Time tracking, safety forms<br>&amp; job management — <span>no subscription</span></h1>
   <p class="hero-sub">
     Three apps built for construction crews. Supervisors log time, expenses and OH&amp;S safety forms on site.
-    Managers build estimates, track budgets and dispatch jobs. Everything moves through email —
-    no accounts, no cloud, no monthly fees.
+    Managers spec jobs, dispatch crews and track budgets. The Office desktop builds the estimates and quotes.
+    Everything moves through email — no accounts, no cloud, no monthly fees.
   </p>
   <div class="hero-badges">
     <span class="badge">No accounts</span>
@@ -821,7 +835,7 @@
           <div class="loop-app-role">Project Manager · Mobile</div>
         </div>
       </div>
-      <div class="loop-card gold">Build estimate — labour, subtrades, markup, scope of work</div>
+      <div class="loop-card gold">Spec the job — type, subtypes, trades &amp; scope of work</div>
       <div class="loop-card gold">Dispatch job to supervisor — plans, permits, contacts in one email</div>
       <div class="loop-card gold">Receive .morrep → approve → hours and expenses lock to actuals</div>
       <div class="loop-card gold">Track budget vs. actuals in real time</div>
@@ -1048,25 +1062,24 @@
         <div>
           <div class="app-card-name">MorForm Manager</div>
           <div class="app-card-tagline">Project Manager Mobile App</div>
-          <div class="app-card-price">$6.99 USD &nbsp;·&nbsp; $9.99 CAD &nbsp;·&nbsp; One-time</div>
+          <div class="app-card-price">$10.99 USD &nbsp;·&nbsp; $14.99 CAD &nbsp;·&nbsp; One-time</div>
         </div>
       </div>
       <div class="app-card-features">
         <div class="feature-row"><span class="dot gold"></span>Full job pipeline — Quoting through Complete with budget burn bars</div>
-        <div class="feature-row"><span class="dot gold"></span>CSI-division quote builder — labour, subtrades, markup, change orders</div>
-        <div class="feature-row"><span class="dot gold"></span>Generate internal summary PDF or clean client invoice</div>
+        <div class="feature-row"><span class="dot gold"></span>🧱 Job Specs — job type, subtypes, trades &amp; scope from a saved library</div>
+        <div class="feature-row"><span class="dot gold"></span>Send job requests to MorForm Office — estimates &amp; quotes built there</div>
         <div class="feature-row"><span class="dot gold"></span>Dispatch jobs to supervisors — plans, permits, scope in one email</div>
         <div class="feature-row"><span class="dot gold"></span>Approve supervisor reports — hours and expenses lock to actuals</div>
         <div class="feature-row"><span class="dot gold"></span>Crew directory with safety compliance tracking</div>
       </div>
       <div class="app-card-footer">
-        <a href="#" class="store-btn coming-soon">
+        <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion" class="store-btn" target="_blank" rel="noopener">
           <span class="store-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="display:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg></span>
           <span class="store-text-block">
             <span class="store-line1">Get it on</span>
             <span class="store-line2">Google Play</span>
           </span>
-          <span class="coming-tag">Soon</span>
         </a>
         <a href="https://apps.apple.com/ca/app/morform-manager/id6772639424" class="store-btn" target="_blank" rel="noopener">
           <span class="store-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="display:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.46 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span>
@@ -1085,15 +1098,15 @@
         <div>
           <div class="app-card-name">MorForm Office</div>
           <div class="app-card-tagline">Windows Desktop App &nbsp;·&nbsp; 🖥 Win 10/11</div>
-          <div class="app-card-price">$9.99 USD &nbsp;·&nbsp; $13.99 CAD &nbsp;·&nbsp; One-time</div>
+          <div class="app-card-price">$189.99 CAD &nbsp;·&nbsp; One-time &nbsp;·&nbsp; USD pricing coming soon</div>
         </div>
       </div>
       <div class="app-card-features">
-        <div class="feature-row"><span class="dot teal"></span>Full CSI estimate builder — 84 division template, XLSX import</div>
-        <div class="feature-row"><span class="dot teal"></span>PDF quote generation with company logo and signature</div>
+        <div class="feature-row"><span class="dot teal"></span>Estimate pipeline — Draft → Approved → Quoted → Won, with templates &amp; custom columns</div>
+        <div class="feature-row"><span class="dot teal"></span>PDF proposals &amp; quotes with company logo and signature</div>
         <div class="feature-row"><span class="dot teal"></span>Dispatch jobs to supervisors — same .morjob format as mobile</div>
         <div class="feature-row"><span class="dot teal"></span>Review and approve supervisor .morrep reports on a full screen</div>
-        <div class="feature-row"><span class="dot teal"></span>Budget vs. actuals dashboard across all active jobs</div>
+        <div class="feature-row"><span class="dot teal"></span>Progress draws, company dashboard &amp; QuickBooks export</div>
         <div class="feature-row"><span class="dot teal"></span>Contacts &amp; vendor directory linked to estimates</div>
       </div>
       <div class="app-card-footer">
@@ -1146,6 +1159,19 @@
   </div>
 </div>
 
+<!-- ── Free FLHA ── -->
+<div class="section" id="free-flha" style="padding-top:0;" aria-label="Free FLHA form download">
+  <div class="section-label">Free download</div>
+  <h2>Free FLHA form — fill it online or print it</h2>
+  <p class="section-intro" style="margin-bottom:24px;">
+    No app required. Fill out a Field Level Hazard Assessment right in your browser, sign and print it —
+    or download the blank PDF for the truck. Free for any crew. No sign-up, no watermark.
+  </p>
+  <div class="hero-cta" style="justify-content:flex-start;">
+    <a href="flha.html" class="btn-primary">📝 Open the free FLHA form</a>
+  </div>
+</div>
+
 <!-- ── FAQ ── -->
 <section class="nobs" id="faq" style="background:#0c1520;" aria-label="Frequently asked questions">
   <div class="nobs-inner" style="max-width:760px;">
@@ -1157,7 +1183,7 @@
           Does MorForm require a subscription?
           <span style="font-size:18px;color:rgba(255,255,255,0.3);flex-shrink:0;margin-left:12px;">+</span>
         </summary>
-        <p style="font-size:13.5px;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:12px;">No. MorForm is a one-time purchase. MorForm and MorForm Manager are $6.99 USD ($9.99 CAD). MorForm Office is $9.99 USD ($13.99 CAD). Pay once, own it forever — no subscription, no renewal, no hidden fees.</p>
+        <p style="font-size:13.5px;color:rgba(255,255,255,0.5);line-height:1.7;margin-top:12px;">No. MorForm is a one-time purchase. MorForm (Supervisor) is $6.99 USD ($9.99 CAD). MorForm Manager is $10.99 USD ($14.99 CAD). MorForm Office is $189.99 CAD (USD pricing coming soon). Pay once, own it forever — no subscription, no renewal, no hidden fees.</p>
       </details>
 
       <details style="border-top:1px solid rgba(255,255,255,0.07);padding:18px 0;">
@@ -1266,6 +1292,7 @@
         <a href="https://apps.apple.com/ca/app/morform/id6744827471" target="_blank" rel="noopener">MorForm (iOS)</a>
         <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morform" target="_blank" rel="noopener">MorForm (Android)</a>
         <a href="https://apps.apple.com/ca/app/morform-manager/id6772639424" target="_blank" rel="noopener">Manager (iOS)</a>
+        <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion" target="_blank" rel="noopener">Manager (Android)</a>
         <a href="https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0" target="_blank" rel="noopener">Office (Windows)</a>
       </div>
       <div class="footer-col">
