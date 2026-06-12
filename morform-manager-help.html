@@ -340,9 +340,10 @@
 
     <div class="toc-group-label">Team</div>
     <a href="#crew"><span class="icon">👷</span> Crew Directory</a>
-    <a href="#inbox"><span class="icon">📥</span> Inbox — Reports</a>
+    <a href="#inbox"><span class="icon">📥</span> Inbox — Receiving</a>
+    <a href="#outbox"><span class="icon">📤</span> Outbox — Sending</a>
     <a href="#reports"><span class="icon">📊</span> Reports &amp; Actuals</a>
-    <a href="#notes"><span class="icon">📝</span> Notes</a>
+    <a href="#notes"><span class="icon">📝</span> Notes &amp; Tasks</a>
 
     <div class="toc-group-label">Reference</div>
     <a href="#connection"><span class="icon">🔗</span> How Both Apps Connect</a>
@@ -403,15 +404,16 @@
         <h2 class="sec-title">App Navigation</h2>
       </div>
       <div class="sec-body">
-        <p>Five tabs along the bottom. Tap or swipe to switch. Settings ⚙️ and Reports 📊 are in the top-right header area.</p>
+        <p>Six tabs along the bottom. Tap or swipe to switch. Settings ⚙️ and Reports 📊 are in the top-right header area.</p>
         <table class="tbl">
           <thead><tr><th>Tab</th><th>Purpose</th></tr></thead>
           <tbody>
             <tr><td>🏗️ Jobs</td><td>All job sites. Pipeline status, budget vs. actuals, dispatch to supervisors, permits, contacts, documents.</td></tr>
             <tr><td>👥 Crew</td><td>Your supervisor directory. Hours history, expenses, safety compliance badge, all submitted reports.</td></tr>
-            <tr><td>📥 Inbox</td><td>Receive and approve supervisor pay period reports. Approval commits hours and expenses to job actuals.</td></tr>
-            <tr><td>🧱 Specs</td><td>Scope a job — type → subtype → trades &amp; scope — and send it to MorForm Office to estimate.</td></tr>
-            <tr><td>📝 Notes</td><td>Internal reminders linked to jobs or supervisors. Visible only to you.</td></tr>
+            <tr><td>📥 Inbox</td><td>Everything coming in — supervisor reports (.morrep) and office data (.mordata, including client approvals).</td></tr>
+            <tr><td>📤 Outbox</td><td>Everything going out — specs to the office, job dispatches to supervisors, full data handoffs.</td></tr>
+            <tr><td>🧱 Specs</td><td>Create a job and scope it — type → subtype → trades &amp; scope — then send it to MorForm Office to estimate.</td></tr>
+            <tr><td>📝 Notes</td><td>Tasks with push-notification reminders, plus internal job notes. Visible only to you.</td></tr>
           </tbody>
         </table>
       </div>
@@ -425,7 +427,9 @@
       </div>
       <div class="sec-body">
         <h3>Creating a Job</h3>
-        <p>Tap + Create in the top-right to open the job form: name, address, start and end dates, scope notes, supervisor assignment, contacts, permits, site photos, and documents. To create multiple jobs at once, tap 📊 Import beside the + Create button and pick a CSV or XLSX file using the MorForm Job Template (available in Settings → Data &amp; Backup).</p>
+        <p>Tap + Create in the top-right to open the job form: name, address, start and end dates, scope notes, supervisor assignment, contacts, permits, site photos, and documents. After saving a new job you're offered <strong>Build Spec</strong> — one tap drops you into the spec builder with that job attached. To create multiple jobs at once, tap 📊 Import beside the + Create button and pick a CSV or XLSX file using the MorForm Job Template (available in Settings → Data &amp; Backup).</p>
+        <h3>Approval &amp; Dispatch Badges</h3>
+        <p>Job cards show pills beside the status chip: <strong>⏳ AWAITING APPROVAL</strong> (spec sent to the office, no client approval back yet), <strong>✅ APPROVED</strong> (the office's .mordata confirmed the estimate was won), and <strong>📤 DISPATCHED</strong> (job package sent to a supervisor).</p>
         <h3>Job Status Pipeline</h3>
         <p>Tap the status chip on any job card to change it manually.</p>
         <div class="status-flow">
@@ -456,7 +460,7 @@
           <thead><tr><th>Card</th><th>What it shows</th></tr></thead>
           <tbody>
             <tr><td>Alert banners</td><td>Red if hours are over budget. Orange at 80–99%. Orange if any permits are Pending or Applied.</td></tr>
-            <tr><td>Stat cards</td><td>📋 Quote Total, ⏱️ Hours Logged, 💳 Expenses, 📥 Reports In — large number, easy to read at any amount.</td></tr>
+            <tr><td>Stat cards</td><td>📋 Quote Total, ⏱️ Hours Logged (with overtime), 💳 Expenses (with reimbursable), 📥 Reports In (with unreviewed count and last-report date), 🛡️ Safety Docs — the same per-job numbers MorForm Office shows on its job dashboard.</td></tr>
             <tr><td>Hours bar</td><td>Actual vs. estimated hours — green OK / orange Watch / red Over.</td></tr>
             <tr><td>Expenses bar</td><td>Actual expenses vs. the job's expense budget.</td></tr>
             <tr><td>Scope complete bar</td><td>X of Y trades complete — updates when supervisor reports are approved.</td></tr>
@@ -544,16 +548,17 @@
       </div>
       <div class="sec-body">
         <p>The Job Specs tab is your on-site scoping tool. You define <em>what</em> a job is — type, subtype, trades, and scope — and send it to MorForm Office, where it becomes an estimate (and the job, once it's won). Pricing and quoting happen in Office; Manager stays focused on the field.</p>
-        <h3>Building a Spec</h3>
+        <h3>Building a Spec (job first)</h3>
         <div class="steps">
-          <div class="step"><div class="step-num">1</div><div><div class="step-title">Pick the job type</div><div class="step-desc">Residential, Commercial, or Industrial.</div></div></div>
-          <div class="step"><div class="step-num">2</div><div><div class="step-title">Pick or create a subtype</div><div class="step-desc">e.g. "House build", "Dental clinic", "Whitebox". Subtypes you create are saved under that job type forever.</div></div></div>
-          <div class="step"><div class="step-num">3</div><div><div class="step-title">Toggle trades &amp; scope</div><div class="step-desc">The subtype's saved trades appear with their scope items — toggle off what this job doesn't need, add what it does. Everything new is saved back to the subtype.</div></div></div>
-          <div class="step"><div class="step-num">4</div><div><div class="step-title">Attach to a job</div><div class="step-desc">Pick an existing job or create a new one on the spot, add notes for the estimator, and save.</div></div></div>
+          <div class="step"><div class="step-num">1</div><div><div class="step-title">Start with the job</div><div class="step-desc">Enter the new job — only a name is required; address, client name, phone, email, and notes can wait. Or pick an existing job (e.g. a site visit for added scope) — its current spec pre-fills the next steps.</div></div></div>
+          <div class="step"><div class="step-num">2</div><div><div class="step-title">Pick the job type</div><div class="step-desc">Residential, Commercial, or Industrial.</div></div></div>
+          <div class="step"><div class="step-num">3</div><div><div class="step-title">Pick or create a subtype</div><div class="step-desc">e.g. "House build", "Dental clinic", "Whitebox". Subtypes you create are saved under that job type forever.</div></div></div>
+          <div class="step"><div class="step-num">4</div><div><div class="step-title">Toggle trades &amp; scope, then save</div><div class="step-desc">The subtype's saved trades appear with their scope items — toggle off what this job doesn't need, add what it does. Everything new is saved back to the subtype.</div></div></div>
         </div>
         <div class="callout callout-tip"><span class="ico">💡</span><span>The app starts as a blank slate and gets faster the more you use it. The first dental clinic you spec is all typing; the fifth is all tapping — your trades and scope items are already in the library.</span></div>
         <h3>Sending to the Office</h3>
-        <p>Tap 📤 Send to Office on any spec card. A small .mordata file goes by email; the office opens it in MorForm Office (File → Import Data from Manager) and the spec lands in their Inbox as a job request. One tap there converts it into a full estimate — every trade becomes a section with its scope checklist attached.</p>
+        <p>Tap 📤 Send to Office on any spec card (or from the Outbox tab). A small .mordata file goes by email; the office opens it in MorForm Office (File → Import Data from Manager) and the spec lands as a job request. One tap there converts it into a full estimate — every trade becomes a section with its scope checklist attached.</p>
+        <div class="callout callout-note"><span class="ico">ℹ️</span><span>When the client approves and the estimate is marked Won in Office, the office sends a .mordata back — import it (Inbox → Import from Office) and the job turns ✅ APPROVED. Until then it shows ⏳ AWAITING APPROVAL.</span></div>
         <div class="callout callout-note"><span class="ico">ℹ️</span><span>The spec's trades and scope items are also what dispatch sends to the supervisor — when they tick off scope on site, their .morrep report updates the spec's progress here.</span></div>
         <div class="callout callout-note"><span class="ico">ℹ️</span><span>Estimates, PDF quotes, client invoicing, and change orders now live in MorForm Office — see the <a href="morform-office-help.html">Office guide</a>.</span></div>
       </div>
@@ -584,10 +589,13 @@
     <section id="inbox">
       <div class="sec-header">
         <div class="sec-icon">📥</div>
-        <h2 class="sec-title">Inbox — Reports</h2>
+        <h2 class="sec-title">Inbox — Receiving</h2>
       </div>
       <div class="sec-body">
-        <p>When a supervisor sends a job report, tap the .morrep attachment in your email — MorForm Manager opens and imports it automatically. Or tap Import in the Inbox tab to pick the file manually.</p>
+        <p>The Inbox receives from both directions: supervisor reports (.morrep) and office data (.mordata). When a supervisor sends a job report, tap the .morrep attachment in your email — MorForm Manager opens and imports it automatically. Or tap Import in the Inbox tab to pick the file manually.</p>
+        <h3>Import from Office</h3>
+        <p>Tap <strong>🏢 Import from Office (.mordata)</strong> to bring in the office's data — most importantly client approvals. When an estimate is marked Won in MorForm Office, its .mordata marks the matching job here ✅ APPROVED.</p>
+        <div class="callout callout-warn"><span class="ico">⚠️</span><span>A job whose spec was sent to the office but isn't approved yet warns before accepting a .morrep ("Import Anyway" is available). Jobs that never went through the office aren't affected.</span></div>
         <div class="callout callout-note"><span class="ico">ℹ️</span><span>Reports are sent per job — not per pay period. When a supervisor taps 📤 Send on a job card, it sends all time, expenses, and safety docs for that specific job. You may receive multiple reports per supervisor if they work across several jobs.</span></div>
         <div class="callout callout-tip"><span class="ico">💡</span><span>If a supervisor re-sends a report you already imported, you're prompted to Replace it with the newer version. If the earlier version was already approved, its committed hours and expenses are backed out automatically — approve the replacement to commit the updated totals. No double counting.</span></div>
         <h3>What's in a Report</h3>
@@ -624,6 +632,26 @@
       </div>
     </section>
 
+    <!-- OUTBOX -->
+    <section id="outbox">
+      <div class="sec-header">
+        <div class="sec-icon">📤</div>
+        <h2 class="sec-title">Outbox — Sending</h2>
+      </div>
+      <div class="sec-body">
+        <p>Everything that leaves the app, in one place. The tab badge counts specs that haven't been sent to the office yet.</p>
+        <table class="tbl">
+          <thead><tr><th>Section</th><th>What it sends</th></tr></thead>
+          <tbody>
+            <tr><td>📐 Job specs → Office</td><td>Each spec'd job with a Send (or Re-send) button. Sending creates an estimate template in MorForm Office with your trades as the section headers — the office fills in vendors and pricing. Sent specs show ⏳ awaiting approval until the office's .mordata comes back, then ✅ Approved.</td></tr>
+            <tr><td>🚚 Dispatch → Supervisor</td><td>Tap any job to open the dispatch picker (same as 📤 Dispatch on the job). Shows which jobs have been dispatched and when.</td></tr>
+            <tr><td>📦 Full data handoff</td><td>Send everything — jobs, specs, crew, approved reports — as one .mordata file to the office or another project manager.</td></tr>
+          </tbody>
+        </table>
+        <div class="callout callout-tip"><span class="ico">💡</span><span>Dispatching a job that's still awaiting client approval asks for confirmation first — the normal flow is spec → office estimate → client approves → dispatch.</span></div>
+      </div>
+    </section>
+
     <!-- REPORTS -->
     <section id="reports">
       <div class="sec-header">
@@ -649,10 +677,11 @@
     <section id="notes">
       <div class="sec-header">
         <div class="sec-icon">📝</div>
-        <h2 class="sec-title">Notes</h2>
+        <h2 class="sec-title">Notes &amp; Tasks</h2>
       </div>
       <div class="sec-body">
-        <p>Internal reminders visible only to you. Tap + Add Note, write your note, optionally link it to a job and/or supervisor, and save. Tap a note to mark it done or delete it.</p>
+        <p>Two sub-tabs, visible only to you. <strong>Tasks</strong> are checkable follow-ups with a priority and due date — saving a task schedules a push notification for 8:00 AM on its due date, and checking it off (or deleting it) cancels the reminder. <strong>Job Notes</strong> are freeform notes tied to a job; add an optional 🔔 Remind me date and the note pings you that morning too.</p>
+        <div class="callout callout-note"><span class="ico">ℹ️</span><span>Reminders need notification permission — the app asks the first time you save a task with a future due date. If you said no, enable notifications for MorForm Manager in your phone's settings.</span></div>
         <div class="callout callout-tip"><span class="ico">💡</span><span>Good uses: permit application follow-ups, client call reminders, delegation notes, inspection schedules — anything that doesn't fit elsewhere.</span></div>
       </div>
     </section>
@@ -669,8 +698,8 @@
           <thead><tr><th>File</th><th>Direction</th><th>Contains</th></tr></thead>
           <tbody>
             <tr><td>.morjob</td><td>You → Supervisor</td><td>Job, dates, scope, PM contact, all contacts, trade contacts, permits, photos, documents</td></tr>
-            <tr><td>.morrep</td><td>Supervisor → You</td><td>Time entries, expenses, safety doc summaries, job statuses, trade scope completions</td></tr>
-            <tr><td>.mordata</td><td>Manager ↔ Office</td><td>Data snapshot — jobs, job specs / job requests, budgets, PMs, crew, notes. Used to send specs to Office for estimating, Office handoff, or desktop continuation.</td></tr>
+            <tr><td>.morrep</td><td>Supervisor → You + Office</td><td>Time entries, expenses, safety doc summaries, job statuses, trade scope completions — the same file imports into both apps against the same job</td></tr>
+            <tr><td>.mordata</td><td>Manager ↔ Office</td><td>Data snapshot — jobs, job specs / job requests, budgets, PMs, crew, notes. Specs go to Office for estimating; Office sends back client approvals (estimate Won → job ✅ APPROVED in Manager).</td></tr>
           </tbody>
         </table>
         <h3>Other emails supervisors send</h3>

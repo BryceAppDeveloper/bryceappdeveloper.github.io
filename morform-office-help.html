@@ -396,7 +396,7 @@
     <a href="#contacts"><span class="icon">🏢</span> Contacts & Vendors</a>
 
     <div class="toc-group-label">Reports</div>
-    <a href="#inbox"><span class="icon">📥</span> Inbox</a>
+    <a href="#inbox"><span class="icon">🔄</span> Send &amp; Receive</a>
     <a href="#overview"><span class="icon">📈</span> Overview</a>
 
     <div class="toc-group-label">Reference</div>
@@ -428,7 +428,7 @@
           <tr><td><strong>Draws &amp; QuickBooks</strong></td><td>Bill progress draws against contract value, then export invoices, expenses, and time to QuickBooks (Online CSV or Desktop IIF)</td></tr>
           <tr><td><strong>Crew</strong></td><td>Directory of your PMs, supervisors, safety officers, and employees</td></tr>
           <tr><td><strong>Contacts & Vendors</strong></td><td>Subcontractor and supplier directory — linked to estimate rows</td></tr>
-          <tr><td><strong>Inbox</strong></td><td>Import and approve supervisor reports (.morrep), and receive job requests from Manager mobile</td></tr>
+          <tr><td><strong>Send &amp; Receive</strong></td><td>Everything in and out — import and approve supervisor reports (.morrep), receive job requests from Manager mobile, dispatch jobs, and export to QuickBooks</td></tr>
           <tr><td><strong>Settings → Data &amp; Backup</strong></td><td>Import .mordata from Manager mobile — merge or replace jobs, specs, PMs, crew, and notes</td></tr>
           <tr><td><strong>Overview</strong></td><td>Company dashboard — revenue, income, and won/lost by day, week, month, or year — plus budget vs. actuals per job</td></tr>
         </table>
@@ -488,13 +488,13 @@
           <tr><td><strong>📊 Estimates</strong></td><td>Estimate pipeline — build, import, quote, and win estimates; winning creates the job</td></tr>
           <tr><td><strong>👷 Crew</strong></td><td>Your internal team — PMs, supervisors, safety officers, employees</td></tr>
           <tr><td><strong>🏢 Contacts</strong></td><td>External companies and vendors — subcontractors, suppliers, inspectors, clients</td></tr>
-          <tr><td><strong>📥 Inbox</strong></td><td>Import and approve supervisor pay period reports</td></tr>
+          <tr><td><strong>🔄 Send &amp; Receive</strong></td><td>Everything in and out — supervisor reports, Manager job requests, dispatch, QuickBooks exports, backups</td></tr>
           <tr><td><strong>📈 Overview</strong></td><td>Company dashboard — revenue, income, win/loss — plus budget vs. actuals per job</td></tr>
           <tr><td><strong>⚙️ Settings</strong></td><td>Appearance, company info, PDF settings, routing, templates, backup</td></tr>
         </table>
         <div class="callout callout-note">
           <span class="ico">📬</span>
-          <span>The <strong>Inbox</strong> badge shows a count of unreviewed reports. The <strong>Contacts</strong> badge shows how many vendor entries are missing contact details.</span>
+          <span>The <strong>Send &amp; Receive</strong> badge shows a count of unreviewed reports and new job requests. The <strong>Contacts</strong> badge shows how many vendor entries are missing contact details.</span>
         </div>
         <div class="callout callout-tip">
           <span class="ico">📂</span>
@@ -545,7 +545,7 @@
         <p>Deleting a job moves it to the <strong>Deleted</strong> tab at the top of the Jobs page rather than removing it outright. It stays there for <strong>30 days</strong> with the days remaining shown — <strong>Restore</strong> it to Active, or <strong>Delete permanently</strong>. After 30 days it's removed automatically.</p>
 
         <h3>Bulk Add Jobs</h3>
-        <p>Use <strong>📥 Bulk Add Jobs from Spreadsheet</strong> to create multiple jobs at once from a CSV or XLSX — one row per job, handy when first moving an existing job list into MorForm. Download the template from <strong>Settings → Data & Backup</strong> first. Jobs started in MorForm Manager mobile arrive via the Inbox instead.</p>
+        <p>Use <strong>📥 Bulk Add Jobs from Spreadsheet</strong> to create multiple jobs at once from a CSV or XLSX — one row per job, handy when first moving an existing job list into MorForm. Download the template from <strong>Settings → Data & Backup</strong> first. Jobs started in MorForm Manager mobile arrive via Send &amp; Receive instead.</p>
 
         <h3>Site Contacts & Permits</h3>
         <p>Add site contacts (owner, inspector, safety officer) directly to the job. Add permits with permit type and expiry date. Both are included in the dispatch package sent to the supervisor.</p>
@@ -624,7 +624,7 @@
         <h2 class="sec-title">Estimates</h2>
       </div>
       <div class="sec-body">
-        <p>Estimates are standalone — build one for any bid, whether or not a job exists yet. Create one with <strong>+ New Estimate</strong> on the Estimates screen, or convert a job request sent from Manager mobile (see Inbox). New estimates start from your default template — a lean, plain-language section layout you can replace with your own.</p>
+        <p>Estimates are standalone — build one for any bid, whether or not a job exists yet. Create one with <strong>+ New Estimate</strong> on the Estimates screen, or convert a job request sent from Manager mobile (see Send &amp; Receive). New estimates start from your default template — a lean, plain-language section layout you can replace with your own.</p>
 
         <h3>Estimate pipeline</h3>
         <div class="flow">
@@ -788,14 +788,15 @@
       </div>
     </section>
 
-    <!-- INBOX -->
+    <!-- SEND & RECEIVE -->
     <section id="inbox">
       <div class="sec-header">
-        <div class="sec-icon">📥</div>
-        <h2 class="sec-title">Inbox</h2>
+        <div class="sec-icon">🔄</div>
+        <h2 class="sec-title">Send &amp; Receive</h2>
       </div>
       <div class="sec-body">
-        <p>Supervisors submit pay period reports from the MorForm app on their phone. Those reports arrive in your email inbox as <span class="file-badge">.morrep</span> file attachments.</p>
+        <p>Everything that moves in or out of MorForm Office lives on this tab (formerly called Inbox) — supervisor reports in, job dispatches out, Manager job requests in, QuickBooks exports out. Supervisors submit pay period reports from the MorForm app on their phone; those arrive in your email as <span class="file-badge">.morrep</span> file attachments.</p>
+        <div class="callout callout-tip"><span class="ico">🧾</span><span>The <strong>QuickBooks Export</strong> row at the bottom of the Import &amp; Export panel offers the same Invoices / Expenses / Time CSVs and Desktop IIF as Settings → Accounting — they're also in the File menu.</span></div>
 
         <h3>Import from Manager Mobile</h3>
         <p>MorForm Office can receive a full data snapshot from MorForm Manager mobile. This lets you continue work on a larger screen, or receive a job handoff from another project manager.</p>
@@ -808,7 +809,7 @@
         <div class="callout callout-note"><span class="ico">💡</span><span>The <span class="file-badge">.mordata</span> file contains all jobs, specs / job requests, budgets, PMs, supervisors, and notes. Supervisor submission details are included as summaries only.</span></div>
 
         <h3>📐 Job requests from Manager mobile</h3>
-        <p>When a PM specs a job in MorForm Manager (job type → subtype → trades &amp; scope) and taps <strong>Send to Office</strong>, the spec arrives in the .mordata import and lands in your Inbox as a <strong>job request</strong>. One click converts it into a full estimate — every trade becomes a section with its scope checklist attached. The job itself is created when the estimate is <strong>Won</strong>.</p>
+        <p>When a PM specs a job in MorForm Manager (job → type → subtype → trades &amp; scope) and taps <strong>Send to Office</strong>, the spec arrives in the .mordata import and lands here as a <strong>job request</strong>. One click converts it into a full estimate — every trade becomes a section with its scope checklist attached. The job itself is created when the estimate is <strong>Won</strong> — under the <em>same job id the PM's phone uses</em>, so sending a .mordata back (File → Send Data to Manager) marks the job ✅ Approved in their app and the supervisor's .morrep reports match the job in both places.</p>
 
         <h3>Importing a report</h3>
         <div class="steps">
@@ -948,7 +949,7 @@
           <div style="display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid var(--teal-border); width:100%;">
             <div class="flow-step" style="min-width:160px; text-align:center;">📱 MM mobile<br><span style="font-weight:400;font-size:11px;">job spec</span></div>
             <div class="flow-arrow">→</div>
-            <div style="font-size:13px;color:var(--text);"><span class="file-badge">.mordata</span> email attachment &nbsp;→&nbsp; Office Inbox job request → estimate → job when Won</div>
+            <div style="font-size:13px;color:var(--text);"><span class="file-badge">.mordata</span> email attachment &nbsp;→&nbsp; Office Send &amp; Receive job request → estimate → job when Won → .mordata back marks the job ✅ Approved on the phone</div>
           </div>
           <div style="display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid var(--teal-border); width:100%;">
             <div class="flow-step" style="min-width:160px; text-align:center;">🖥 MorForm Office<br><span style="font-weight:400;font-size:11px;">or MM mobile</span></div>
