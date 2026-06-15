@@ -498,7 +498,7 @@
         </div>
         <div class="callout callout-tip">
           <span class="ico">📂</span>
-          <span>The <strong>File</strong> menu at the top of the window gathers every import and export in one place — estimates and templates, bulk job add, .morrep reports, .mordata both ways, and backups. Press <kbd>F1</kbd> or open <strong>Help</strong> for the built-in user guide.</span>
+          <span>The top menu bar groups everything: the <strong>File</strong> menu holds estimates &amp; templates, bulk job add, and QuickBooks exports; the <strong>Data</strong> menu holds all MorForm data exchange (<span class="file-badge">.morrep</span> / <span class="file-badge">.mordata</span>), backups, and the Company Cloud Folder. Press <kbd>F1</kbd> or open <strong>Help</strong> for the built-in user guide.</span>
         </div>
       </div>
     </section>
@@ -808,8 +808,41 @@
         </div>
         <div class="callout callout-note"><span class="ico">💡</span><span>The <span class="file-badge">.mordata</span> file contains all jobs, specs / job requests, budgets, PMs, supervisors, and notes. Supervisor submission details are included as summaries only.</span></div>
 
+        <h3>☁️ Company Cloud Folder (optional)</h3>
+        <p>Don't want to email files back and forth? Connect a shared folder in your company <strong>Drive / Dropbox / OneDrive</strong> and the apps pass the same <span class="file-badge">.morrep</span> / <span class="file-badge">.mordata</span> files through it instead. There are <strong>no accounts to create and nothing to host</strong> — it rides on your cloud provider's own sync app plus the file system.</p>
+        <p style="margin-bottom:8px;"><strong>First, choose how accounts work</strong> — tap a card to see its steps:</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
+          <button class="btn" onclick="document.getElementById('cloud-a').style.display='block';document.getElementById('cloud-b').style.display='none';">A · One company account (simplest)</button>
+          <button class="btn" onclick="document.getElementById('cloud-b').style.display='block';document.getElementById('cloud-a').style.display='none';">B · Everyone's own account (private)</button>
+        </div>
+        <div id="cloud-a" style="display:none;border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:12px;">
+          <p style="margin-bottom:6px;"><strong>A · One company account</strong> — one login on every device, no sharing step. <em>Everyone can see all the files</em> (best for small, trusted crews).</p>
+          <ol style="margin:0;padding-left:20px;line-height:1.7;">
+            <li>Make one cloud account for the company (e.g. a Google account just for MorForm).</li>
+            <li>Install that provider's app on the office PC and every phone, signed in with that account.</li>
+            <li>Create a folder called <strong>MorForm</strong> in it.</li>
+            <li>In Office: <strong>Data → Connect Company Cloud Folder</strong> → pick it. On each phone: MorForm → Connect Company Cloud Folder → pick the same folder.</li>
+          </ol>
+        </div>
+        <div id="cloud-b" style="display:none;border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:12px;">
+          <p style="margin-bottom:6px;"><strong>B · Everyone uses their own account</strong> — you share each person only their own folder. <em>Nobody sees anyone else's files.</em> A little more setup; easy to remove someone later.</p>
+          <ol style="margin:0;padding-left:20px;line-height:1.7;">
+            <li>On the office PC, create a folder called <strong>MorForm</strong> in your cloud.</li>
+            <li>Right-click it → <strong>Share</strong> → add each crew member's email with edit access. For strict privacy, share each person their own subfolder instead of the whole folder.</li>
+            <li>Each person opens the invite and chooses <strong>Add to my Drive / Add to my files</strong> so it syncs to their device.</li>
+            <li>In Office: <strong>Data → Connect Company Cloud Folder</strong> → pick it. On each phone: MorForm → Connect Company Cloud Folder → pick the shared folder.</li>
+          </ol>
+        </div>
+        <p style="margin-bottom:8px;"><strong>Then, day to day:</strong></p>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div><div class="step-title">Set it up once in Office</div><div class="step-desc">Have a Drive/Dropbox/OneDrive folder synced on the office PC, then Settings → Data &amp; Backup → <strong>Connect Company Cloud Folder</strong>. Office auto-creates an inbox for each crew member from your contacts.</div></div></div>
+          <div class="step"><div class="step-num">2</div><div><div class="step-title">The crew connect once</div><div class="step-desc">On each phone, the same folder is synced (company cloud account or a shared folder), then in MorForm they tap Connect Company Cloud Folder and pick it. That's the only step they do.</div></div></div>
+          <div class="step"><div class="step-num">3</div><div><div class="step-title">Files flow on their own</div><div class="step-desc">Reports/data dropped into the shared folder import automatically (same Merge / Replace prompts), routed to the right person's inbox and stamped with who sent them. Desktop is automatic; Android scans when opened; iPhone imports via the Files app.</div></div></div>
+        </div>
+        <div class="callout callout-note"><span class="ico">💡</span><span>Email keeps working exactly as before — the cloud folder is an extra channel, not a replacement. A shared folder means everyone with access can see the files; for strict per-person privacy you can lock individual subfolders in your cloud's sharing settings.</span></div>
+
         <h3>📐 Job requests from Manager mobile</h3>
-        <p>When a PM specs a job in MorForm Manager (job → type → subtype → trades &amp; scope) and taps <strong>Send to Office</strong>, the spec arrives in the .mordata import and lands here as a <strong>job request</strong>. One click converts it into a full estimate — every trade becomes a section with its scope checklist attached. The job itself is created when the estimate is <strong>Won</strong> — under the <em>same job id the PM's phone uses</em>, so sending a .mordata back (File → Send Data to Manager) marks the job ✅ Approved in their app and the supervisor's .morrep reports match the job in both places.</p>
+        <p>When a PM specs a job in MorForm Manager (job → type → subtype → trades &amp; scope) and taps <strong>Send to Office</strong>, the spec arrives in the .mordata import and lands here as a <strong>job request</strong>. One click converts it into a full estimate — every trade becomes a section with its scope checklist attached. The job itself is created when the estimate is <strong>Won</strong> — under the <em>same job id the PM's phone uses</em>, so sending a .mordata back (Data → Send Data to Manager) marks the job ✅ Approved in their app and the supervisor's .morrep reports match the job in both places.</p>
 
         <h3>Importing a report</h3>
         <div class="steps">
@@ -991,7 +1024,7 @@
           <tr><td><strong>Report Routing</strong></td><td>Accounting email (receives expense summaries on approval) and Safety email (receives safety document summaries).</td></tr>
           <tr><td><strong>Accounting (QuickBooks)</strong></td><td>Export your books for QuickBooks without a cloud connection — QBO CSVs and a Desktop IIF file, with configurable account names. See below.</td></tr>
           <tr><td><strong>Import Templates</strong></td><td>Upload a custom XLSX estimate template to replace the default template for new estimates — or save any estimate as a named template instead.</td></tr>
-          <tr><td><strong>Data & Backup</strong></td><td>Export a full JSON backup of all data. Import a backup to restore. Data is stored at <kbd>%APPDATA%\morform-office\morform-office-data.json</kbd></td></tr>
+          <tr><td><strong>Data & Backup</strong></td><td>Back up all data to a <span class="file-badge">.morbak</span> file and restore from one (older .json backups still import). Moving to a new computer? Back up, copy the .morbak over, then Restore Backup — or use Import from Backup on the first-run setup screen. Data is stored at <kbd>%APPDATA%\morform-office\morform-office-data.json</kbd>. If a saved file ever can't be read on launch, Office shows a recovery screen (Try Again / Restore from Backup) instead of starting empty, so a one-time read glitch can't wipe your data.</td></tr>
         </table>
 
         <h3>🧾 QuickBooks export</h3>
@@ -1022,6 +1055,11 @@
             <td><span class="file-badge">.mordata</span></td>
             <td>Manager ↔ Office</td>
             <td>Data snapshot between Manager mobile and Office — jobs, specs / job requests, budgets, crew, notes. JSON format.</td>
+          </tr>
+          <tr>
+            <td><span class="file-badge">.morbak</span></td>
+            <td>Backup (this app)</td>
+            <td>Full-app backup of everything in MorForm Office, for safekeeping or moving to a new computer. Restore via Settings → Data &amp; Backup or the first-run setup screen. App-specific — a mobile backup can't restore into Office. JSON format.</td>
           </tr>
           <tr>
             <td><span class="file-badge">.xlsx</span></td>

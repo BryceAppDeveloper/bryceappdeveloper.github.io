@@ -504,7 +504,7 @@
         <h3>Site Contacts</h3>
         <p>Add contacts via Edit Job → Contacts → + Add, or directly from the Job → People tab → + Add Contact. Tapping Add Contact expands an inline form in the People tab — fill in name, role, email, and phone, then tap Add Contact to save.</p>
         <h3>Trade Contacts from Job Specs</h3>
-        <p>Each trade in a job spec carries a contact (name, phone, email — flows to the supervisor's Trades on Site list) and its scope items (flow to the supervisor so they know what each trade is on site to do). Tap any trade card in the People tab to expand it, fill in the fields, then tap Save Contact. Tap 📞/✉️ to call or email directly from the card.</p>
+        <p>Each trade in a job spec carries a vendor/company plus a contact (name, phone, email — flows to the supervisor's Trades on Site list) and its scope items (flow to the supervisor so they know what each trade is on site to do). Tap any trade card in the People tab to expand it, fill in the Vendor / Company and contact fields — this is where a trade gets its company attached once quotes start coming in — then tap Save Contact. Tap 📞/✉️ to call or email directly from the card. Notes added in the spec builder (📝 on a trade or scope item) show on the card read-only.</p>
         <div class="callout callout-note"><span class="ico">ℹ️</span><span>All trade contacts — even ones with no contact info yet — are included in the dispatch package. Supervisors see the full trade list on site including scope of work. When a supervisor marks a trade's scope complete, that status comes back in their .morrep report.</span></div>
       </div>
     </section>
@@ -553,9 +553,14 @@
           <div class="step"><div class="step-num">1</div><div><div class="step-title">Start with the job</div><div class="step-desc">Enter the new job — only a name is required; address, client name, phone, email, and notes can wait. Or pick an existing job (e.g. a site visit for added scope) — its current spec pre-fills the next steps.</div></div></div>
           <div class="step"><div class="step-num">2</div><div><div class="step-title">Pick the job type</div><div class="step-desc">Residential, Commercial, or Industrial.</div></div></div>
           <div class="step"><div class="step-num">3</div><div><div class="step-title">Pick or create a subtype</div><div class="step-desc">e.g. "House build", "Dental clinic", "Whitebox". Subtypes you create are saved under that job type forever.</div></div></div>
-          <div class="step"><div class="step-num">4</div><div><div class="step-title">Toggle trades &amp; scope, then save</div><div class="step-desc">The subtype's saved trades appear with their scope items — toggle off what this job doesn't need, add what it does. Everything new is saved back to the subtype.</div></div></div>
+          <div class="step"><div class="step-num">4</div><div><div class="step-title">Toggle trades &amp; scope, then save</div><div class="step-desc">The subtype's saved trades appear with their scope items — toggle off what this job doesn't need, add what it does. Every trade you've ever used (across ALL job types and subtypes) is one tap away as a ＋ chip; new scope items are saved back to the subtype.</div></div></div>
         </div>
         <div class="callout callout-tip"><span class="ico">💡</span><span>The app starts as a blank slate and gets faster the more you use it. The first dental clinic you spec is all typing; the fifth is all tapping — your trades and scope items are already in the library.</span></div>
+        <h3>Editing a Spec</h3>
+        <p>Tap any spec card to reopen it right at Trades &amp; scope — add a trade you forgot, extend scope, keep working on a half-finished spec. Everything survives the round trip: trade contacts, the supervisor's scope progress, and your notes. Going back to re-pick a subtype warns before replacing what you've built.</p>
+        <div class="callout callout-warn"><span class="ico">⚠️</span><span>Editing a spec that was already sent marks it unsent — the Outbox badge prompts you to re-send the updated version to the office.</span></div>
+        <h3>Notes &amp; Vendors</h3>
+        <p>Tap 📝 on any trade or scope item to attach a job-specific note ("use existing panel", "client supplies fixtures"). The icon lights up when a note is there, and the note travels with the spec to the office and with the dispatch to the supervisor — but it's never saved into your library, so it won't haunt the next job. Vendor and contact details are tucked behind <strong>+ vendor / contact</strong> on each trade — skip them while scoping; attach the company later from the job's People tab when quotes come in.</p>
         <h3>Sending to the Office</h3>
         <p>Tap 📤 Send to Office on any spec card (or from the Outbox tab). A small .mordata file goes by email; the office opens it in MorForm Office (File → Import Data from Manager) and the spec lands as a job request. One tap there converts it into a full estimate — every trade becomes a section with its scope checklist attached.</p>
         <div class="callout callout-note"><span class="ico">ℹ️</span><span>When the client approves and the estimate is marked Won in Office, the office sends a .mordata back — import it (Inbox → Import from Office) and the job turns ✅ APPROVED. Until then it shows ⏳ AWAITING APPROVAL.</span></div>
@@ -680,8 +685,11 @@
         <h2 class="sec-title">Notes &amp; Tasks</h2>
       </div>
       <div class="sec-body">
-        <p>Two sub-tabs, visible only to you. <strong>Tasks</strong> are checkable follow-ups with a priority and due date — saving a task schedules a push notification for 8:00 AM on its due date, and checking it off (or deleting it) cancels the reminder. <strong>Job Notes</strong> are freeform notes tied to a job; add an optional 🔔 Remind me date and the note pings you that morning too.</p>
-        <div class="callout callout-note"><span class="ico">ℹ️</span><span>Reminders need notification permission — the app asks the first time you save a task with a future due date. If you said no, enable notifications for MorForm Manager in your phone's settings.</span></div>
+        <p>Two sub-tabs, visible only to you. <strong>Tasks</strong> are checkable follow-ups with a priority and due date. <strong>Job Notes</strong> are freeform notes tied to a job. Tap any task or note to open it for editing — the checkbox and 🗑️ stay separate, so ticking off or deleting still works with one tap.</p>
+        <h3>Reminders</h3>
+        <p>Every task form has a 🔔 <strong>Remind me</strong> toggle with its own date and time — set it to whenever you want to be reminded, independent of the due date (e.g. task due Friday, remind me Wednesday 3:00&nbsp;PM). If a reminder is set, a push notification always fires at that moment. High-priority tasks also fire a loud ⏰ alarm-style notification, and due tasks show a badge count on the Notes tab and the app icon — which extras fire per priority is yours to change in Settings → Reminders. Job Notes take an optional remind date and time too (push only).</p>
+        <div class="callout callout-note"><span class="ico">ℹ️</span><span>The alarm is a notification with an alarm tone — on Android it plays on your alarm volume; on iPhone it breaks through Focus but cannot override the mute switch (only the phone's own Clock app can do that).</span></div>
+        <div class="callout callout-note"><span class="ico">ℹ️</span><span>Reminders need notification permission — the app asks the first time you save a task with a reminder. If you said no, enable notifications for MorForm Manager in your phone's settings.</span></div>
         <div class="callout callout-tip"><span class="ico">💡</span><span>Good uses: permit application follow-ups, client call reminders, delegation notes, inspection schedules — anything that doesn't fit elsewhere.</span></div>
       </div>
     </section>
@@ -734,7 +742,8 @@
             <tr><td>👤 My Profile</td><td>Your name, email, phone — sent to supervisors as PM contact on every dispatched job.</td></tr>
             <tr><td>📬 Report Routing</td><td>Accounting email (forwarded expense summaries). Safety Manager email (forwarded safety summaries).</td></tr>
             <tr><td>📱 Mail App</td><td>Gmail, Outlook, Yahoo Mail, Spark, or device default.</td></tr>
-            <tr><td>💾 Data &amp; Backup</td><td>Export all data, restore from backup, download blank import templates (Job CSV and Budget XLSX). <strong>Send to Office / Handoff</strong> — export a <span class="file-badge">.mordata</span> file to MorForm Office or another project manager. Import <span class="file-badge">.mordata</span> from Office. Re-run wizard, factory reset.</td></tr>
+            <tr><td>⏰ Reminders</td><td>Which reminder types fire for tasks, per priority (High/Medium/Low × Push/Alarm/Badge). A reminder you set on a task always pushes; these toggles control the loud alarm, badges, and the defaults. Applies to tasks created or edited from then on.</td></tr>
+            <tr><td>💾 Data &amp; Backup</td><td>Back Up App Data (creates a <span class="file-badge">.morbak</span> full-app backup you can email to yourself), restore from backup, download blank import templates (Job CSV and Budget XLSX). <strong>Send to Office / Handoff</strong> — export a <span class="file-badge">.mordata</span> file to MorForm Office or another project manager. Import <span class="file-badge">.mordata</span> from Office. Re-run wizard, factory reset.</td></tr>
           </tbody>
         </table>
         <h3>Send to Office / Handoff</h3>
@@ -749,6 +758,11 @@
         <h3>Import from Office or Another Manager</h3>
         <p>Tap <strong>📦 Import from Manager / Office</strong> in Settings → Data &amp; Backup, or tap a <span class="file-badge">.mordata</span> email attachment directly. You'll be offered Merge or Replace All.</p>
         <div class="callout callout-warn"><span class="ico">⚠️</span><span>Factory Reset permanently deletes all data — all jobs, specs, crew history, and submissions. Back up your data first using the Back Up App Data button in Data &amp; Backup.</span></div>
+        <h3>☁️ Company Cloud Folder (optional)</h3>
+        <p>If your company shares a Drive / Dropbox / OneDrive folder, you can send and receive through it instead of email. Install your cloud app so the folder syncs on this phone, then <strong>Settings → Data &amp; Backup → Import from Cloud</strong> pulls in reports and data (or just tap a file in your cloud app). Tap <strong>"How do I set this up?"</strong> there for a walkthrough. Email keeps working alongside it.</p>
+        <h3>Moving to a New Phone</h3>
+        <p>On your old phone tap <strong>Back Up App Data</strong> to create a <span class="file-badge">.morbak</span> file and email it to yourself. On the new phone, install MorForm Manager and on the first setup screen tap <strong>Import from Backup</strong> (or tap the <span class="file-badge">.morbak</span> attachment in your email) to restore everything. A <span class="file-badge">.morbak</span> backup is your whole app and is different from a <span class="file-badge">.mordata</span> data-handoff file.</p>
+        <div class="callout callout-note"><span class="ico">ℹ️</span><span>If the app ever can't read your saved data on launch, it now shows a recovery screen with Try Again and Restore from Backup instead of starting empty — a one-time read glitch can't wipe your data.</span></div>
       </div>
     </section>
 
