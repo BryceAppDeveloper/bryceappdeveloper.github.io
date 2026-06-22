@@ -592,7 +592,7 @@
             <div class="step-num">4</div>
             <div>
               <div class="step-title">Send Job Package</div>
-              <div class="step-desc">Your default mail client opens with the .morjob file attached and the supervisor's email pre-filled. Review and send.</div>
+              <div class="step-desc">MorForm saves the .morjob file and highlights it in your file explorer, then opens your default mail client with the supervisor's email pre-filled. Desktop email can't attach files on its own, so attach the highlighted .morjob file to the email and send. (Tip: connect a Company Cloud Folder and dispatched jobs deliver automatically — no attaching needed.)</div>
             </div>
           </div>
         </div>
@@ -809,7 +809,7 @@
         <div class="callout callout-note"><span class="ico">💡</span><span>The <span class="file-badge">.mordata</span> file contains all jobs, specs / job requests, budgets, PMs, supervisors, and notes. Supervisor submission details are included as summaries only.</span></div>
 
         <h3>☁️ Company Cloud Folder (optional)</h3>
-        <p>Don't want to email files back and forth? Connect a shared folder in your company <strong>Drive / Dropbox / OneDrive</strong> and the apps pass the same <span class="file-badge">.morrep</span> / <span class="file-badge">.mordata</span> files through it instead. There are <strong>no accounts to create and nothing to host</strong> — it rides on your cloud provider's own sync app plus the file system.</p>
+        <p>Don't want to email files back and forth? Connect a shared folder in your company <strong>Drive / Dropbox / OneDrive</strong> and the apps pass the same <span class="file-badge">.morrep</span> / <span class="file-badge">.mordata</span> files through it instead. There's <strong>no MorForm account and no server to host</strong> — it rides on your own cloud provider's sync app plus the file system, so your data stays in your accounts.</p>
         <p style="margin-bottom:8px;"><strong>First, choose how accounts work</strong> — tap a card to see its steps:</p>
         <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
           <button class="btn" onclick="document.getElementById('cloud-a').style.display='block';document.getElementById('cloud-b').style.display='none';">A · One company account (simplest)</button>
@@ -840,6 +840,7 @@
           <div class="step"><div class="step-num">3</div><div><div class="step-title">Files flow on their own</div><div class="step-desc">Reports/data dropped into the shared folder import automatically (same Merge / Replace prompts), routed to the right person's inbox and stamped with who sent them. Desktop is automatic; Android scans when opened; iPhone imports via the Files app.</div></div></div>
         </div>
         <div class="callout callout-note"><span class="ico">💡</span><span>Email keeps working exactly as before — the cloud folder is an extra channel, not a replacement. A shared folder means everyone with access can see the files; for strict per-person privacy you can lock individual subfolders in your cloud's sharing settings.</span></div>
+        <div class="callout callout-tip"><span class="ico">💾</span><span>Once a cloud folder is connected, <strong>Settings → Data &amp; Backup → Back Up to Cloud Folder</strong> drops a timestamped <span class="file-badge">.morbak</span> backup into a <strong>backups</strong> subfolder in one tap — no save dialog. It syncs through your cloud app like everything else, and stays out of the crew inboxes so no app tries to import it.</span></div>
 
         <h3>📐 Job requests from Manager mobile</h3>
         <p>When a PM specs a job in MorForm Manager (job → type → subtype → trades &amp; scope) and taps <strong>Send to Office</strong>, the spec arrives in the .mordata import and lands here as a <strong>job request</strong>. One click converts it into a full estimate — every trade becomes a section with its scope checklist attached. The job itself is created when the estimate is <strong>Won</strong> — under the <em>same job id the PM's phone uses</em>, so sending a .mordata back (Data → Send Data to Manager) marks the job ✅ Approved in their app and the supervisor's .morrep reports match the job in both places.</p>

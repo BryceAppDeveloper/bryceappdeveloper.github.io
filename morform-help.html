@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MorForm — User Guide</title>
-<meta name="description" content="MorForm (Supervisor) user guide — log field time, track expenses, complete FLHA/OHS safety forms, import dispatched jobs, and email reports to your project manager. No accounts, no cloud." />
+<meta name="description" content="MorForm (Supervisor) user guide — log field time, track expenses, complete FLHA/OHS safety forms, import dispatched jobs, and send reports to your project manager by email or a shared cloud folder. No MorForm account, no servers." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://morform.app/morform-help.html" />
 <meta property="og:type" content="website" />
@@ -404,7 +404,7 @@
       <div class="sec-body">
         <div class="welcome-box">
           <strong>What MorForm does</strong>
-          MorForm is your construction field companion. It tracks your time, expenses, and safety forms on site — and communicates with your Project Manager's app through regular email. No accounts, no cloud storage, no subscriptions.
+          MorForm is your construction field companion. It tracks your time, expenses, and safety forms on site — and communicates with your Project Manager's app through regular email or a shared cloud folder you connect. No MorForm account, no servers, no subscriptions.
         </div>
         <table class="tbl">
           <thead><tr><th>Tab</th><th>What it does</th></tr></thead>
@@ -416,7 +416,7 @@
             <tr><td>📊 Report</td><td>Review and send your pay period report to your PM</td></tr>
           </tbody>
         </table>
-        <div class="callout callout-note"><span class="ico">ℹ️</span><span>MorForm works with MorForm Manager — your Project Manager's app. Your PM dispatches jobs to you and you send reports back. All communication happens through email — no server involved.</span></div>
+        <div class="callout callout-note"><span class="ico">ℹ️</span><span>MorForm works with MorForm Manager — your Project Manager's app. Your PM dispatches jobs to you and you send reports back, by email or through a shared Company Cloud Folder in your own Drive/Dropbox/OneDrive. MorForm runs no server of its own.</span></div>
       </div>
     </section>
 
@@ -723,10 +723,11 @@
     <section id="email">
       <div class="sec-header">
         <div class="sec-icon">📧</div>
-        <h2 class="sec-title">How Email Works</h2>
+        <h2 class="sec-title">How Sending Works</h2>
       </div>
       <div class="sec-body">
-        <p>MorForm has no backend server and requires no account. All data moves through your regular email as file attachments. Nothing is stored in the cloud.</p>
+        <p>MorForm has no backend server and requires no MorForm account. Data moves as file attachments — by email, or through an optional shared <strong>Company Cloud Folder</strong> you connect in your own Google Drive, Dropbox or OneDrive. Nothing syncs to any cloud unless you set that up; email always works on its own.</p>
+        <p>To use a cloud folder: have the folder synced on your phone (your cloud app does this), then in MorForm tap <strong>Connect Company Cloud Folder</strong> and pick it — dispatched jobs land automatically and your reports drop straight into the right inbox. On iPhone, use <strong>Settings → Import from Cloud</strong> instead. Your office sets the folder up once (see the Office guide).</p>
         <table class="tbl">
           <thead><tr><th>What you send</th><th>File type</th><th>Goes to</th></tr></thead>
           <tbody>
@@ -790,7 +791,7 @@
             <tr><td>🔔 Notifications</td><td>End-of-day hours reminder, morning FLHA reminder, pay period notification.</td></tr>
             <tr><td>📬 Contacts</td><td>Manager email, PM email, Accounting, Safety Manager, Work Email.</td></tr>
             <tr><td>📱 Mail App</td><td>Gmail, Outlook, Yahoo Mail, Spark, or device default.</td></tr>
-            <tr><td>💾 Data &amp; Backup</td><td>Back up all data (creates a .morbak file you can email to yourself), restore from backup, import a .morjob manually, re-run wizard, factory reset.</td></tr>
+            <tr><td>💾 Data &amp; Backup</td><td><strong>Email Backup</strong> (emails you a .morbak full-app backup with the file attached) or <strong>Save Backup to Device</strong> (save the .morbak to Files / Drive or share it anywhere), restore from backup, import a .morjob manually, re-run wizard, factory reset.</td></tr>
           </tbody>
         </table>
         <div class="callout callout-warn"><span class="ico">⚠️</span><span>Factory Reset permanently deletes all data including time entries, expenses, safety forms, and job history. Always back up first.</span></div>
@@ -809,7 +810,7 @@
         <h3>☁️ Company Cloud Folder (optional)</h3>
         <p>If your company shares a Drive / Dropbox / OneDrive folder, you can send and receive through it instead of email. Install your cloud app so the folder syncs on this phone, then <strong>Settings → Data &amp; Backup → Import from Cloud</strong> pulls in jobs (or just tap a file in your cloud app). Tap <strong>"How do I set this up?"</strong> there for a step-by-step walkthrough. Email keeps working alongside it.</p>
         <h3>Moving to a new phone</h3>
-        <p>On your old phone: Settings → Data &amp; Backup → Back Up App Data — this creates a .morbak file. Email it to yourself or save it to the cloud. On your new phone: install MorForm, then on the first setup screen tap "Import from Backup" (or tap the .morbak attachment in your email) to restore everything — jobs, time, expenses, safety docs and settings. A .morbak backup is your whole app; a .morjob file is just a single job from your PM. If MorForm ever can't read your saved data on launch, it now shows a recovery screen with Try Again and Restore from Backup instead of starting empty, so a one-time read glitch can't wipe your data.</p>
+        <p>On your old phone: Settings → Data &amp; Backup → <strong>Email Backup</strong> emails you the .morbak file as an attachment, or <strong>Save Backup to Device</strong> saves it to Files / Drive. On your new phone: install MorForm, then on the first setup screen tap "Import from Backup" (or tap the .morbak attachment in your email) to restore everything — jobs, time, expenses, safety docs and settings. A .morbak backup is your whole app; a .morjob file is just a single job from your PM. If MorForm ever can't read your saved data on launch, it now shows a recovery screen with Try Again and Restore from Backup instead of starting empty, so a one-time read glitch can't wipe your data.</p>
         <h3>I logged hours on the wrong job</h3>
         <p>Tap ✏️ on the entry in the Time tab, change the job site, and tap Update. Do this before sending your report.</p>
         <h3>I deleted a job but need it back</h3>

@@ -6,19 +6,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — MorForm</title>
-<meta name="description" content="MorForm privacy policy. No accounts, no cloud, no tracking and no ads — your data stays on your device and is shared only through email attachments you control." />
+<meta name="description" content="MorForm privacy policy. No MorForm account, no MorForm servers, no tracking and no ads — your data stays on your device and is shared only when you send it, by email or a cloud folder you connect." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://morform.app/morform-privacy.html" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://morform.app/morform-privacy.html" />
 <meta property="og:title" content="Privacy Policy — MorForm" />
-<meta property="og:description" content="No accounts, no cloud, no tracking. Your MorForm data stays on your device." />
+<meta property="og:description" content="No MorForm account, no MorForm servers, no tracking. Your MorForm data stays on your device." />
 <meta property="og:image" content="https://morform.app/assets/og-image.jpg" />
 <meta property="og:site_name" content="MorForm" />
 <meta property="og:locale" content="en_CA" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Privacy Policy — MorForm" />
-<meta name="twitter:description" content="No accounts, no cloud, no tracking. Your MorForm data stays on your device." />
+<meta name="twitter:description" content="No MorForm account, no MorForm servers, no tracking. Your MorForm data stays on your device." />
 <meta name="twitter:image" content="https://morform.app/assets/og-image.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -194,7 +194,7 @@
 <main>
 
   <div class="intro">
-    MorForm is a field tool for construction supervisors. It does not send, transmit, or sell your personal data to any server, third party, or analytics platform. The information you enter — time, expenses, photos, and safety forms — is stored only on your device, and is shared only when you choose to send it by email. No analytics, advertising, or third-party tracking SDKs are used; the app is built with Expo / React Native, which transmits no personal data.
+    MorForm is a field tool for construction supervisors. It does not send, transmit, or sell your personal data to any server, third party, or analytics platform. The information you enter — time, expenses, photos, and safety forms — is stored only on your device, and is shared only when you choose to send it — by email, or through a shared cloud folder you connect (see Section 3). No analytics, advertising, or third-party tracking SDKs are used; the app is built with Expo / React Native, which transmits no personal data.
   </div>
 
   <h2>1. Who We Are</h2>
@@ -210,10 +210,10 @@
     <li>Job information received from your project manager via .morjob files</li>
     <li>Photos taken or selected for safety documents and expense receipts</li>
   </ul>
-  <p>None of this data is transmitted to any server operated by the developer or any third party.</p>
+  <p>The developer operates no server, so none of this data is transmitted to the developer. It leaves your device only when you choose to share it — by email, or to a cloud folder you connect (see Section 3).</p>
 
   <h2>3. How Data Leaves Your Device</h2>
-  <p>Data only leaves your device when you explicitly choose to send a report. MorForm communicates exclusively through email:</p>
+  <p>Data only leaves your device when you explicitly choose to send a report. MorForm communicates by email or, optionally, a shared cloud folder you connect:</p>
   <div class="highlight-box">
     <strong>Outgoing (.morrep files)</strong>
     When you tap the Send button on a job, MorForm packages your time entries, expenses, and safety records into a .morrep file and opens your device's email client. You control the recipient and whether to send.
@@ -222,7 +222,11 @@
     <strong>Incoming (.morjob files)</strong>
     Job assignments arrive as .morjob email attachments from your project manager. MorForm reads these files locally — no data is sent back automatically.
   </div>
-  <p>MorForm does not operate any server, API, or cloud storage. No background data transmission occurs.</p>
+  <div class="highlight-box">
+    <strong>Optional Company Cloud Folder sync</strong>
+    Instead of (or in addition to) email, you can connect a shared folder in your own cloud storage — Google Drive, Dropbox, OneDrive or similar — so the same .morjob / .morrep / .mordata files exchange automatically. When you enable this, those files are stored in and synced through that folder by your cloud provider's own app, and are subject to that provider's terms and privacy policy. MorForm operates no server, never receives your cloud account or password, and only reads and writes files in the folder you point it at. Nothing syncs to any cloud unless you set this up.
+  </div>
+  <p>Aside from a cloud folder you choose to connect, MorForm operates no server, API, or cloud storage of its own, and performs no background transmission to the developer.</p>
 
   <h2>4. Device Permissions</h2>
   <p>MorForm requests the following device permissions:</p>
