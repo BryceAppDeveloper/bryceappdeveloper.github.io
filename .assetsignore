@@ -1,10 +1,11 @@
 .git
 .gitattributes
+.gitignore
 .assetsignore
 .wrangler
 node_modules
 wrangler.jsonc
 worker.js
+publish.cmd
 CNAME
-_redirects
 morform_glass_carryover.md
