@@ -4,8 +4,8 @@
 
 Key facts:
 - MorForm (Supervisor) — iOS & Android, $6.99 USD one-time. Field time tracking, expenses with receipt photos, FLHA/JHA, site hazard inspections, emergency response plans, incident reports; emails timesheets, expense reports and safety forms to the right manager.
-- MorForm Manager — iOS & Android, $10.99 USD one-time. Field-side project management: builds job specs (job type → subtypes → trades & scope from a saved library), dispatches jobs to supervisors (.morjob), tracks budgets vs actuals, reviews supervisor reports (.morrep), sends job requests to MorForm Office for estimating.
-- MorForm Office — Windows 10/11 desktop, $189.99 CAD one-time (USD pricing TBA). Estimating and back office: estimate pipeline (Draft → Approved → Quoted → Won/Lost) with named templates and custom columns, PDF proposals and quotes, progress draws, QuickBooks export, company dashboard, crew and vendor directories, report review; syncs with Manager mobile (.mordata).
+- MorForm Manager — iOS & Android, $34.99 USD one-time. Field-side project management: builds job specs (job type → subtypes → trades & scope from a saved library), dispatches jobs to supervisors (.morjob), tracks budgets vs actuals, reviews supervisor reports (.morrep), sends job requests to MorForm Office for estimating.
+- MorForm Office — Windows 10/11 desktop, $299.99 CAD one-time, with a 15-day free trial. Estimating and back office: estimate pipeline (Draft → Approved → Quoted → Won/Lost) with named templates and custom columns, PDF proposals and quotes, progress draws, QuickBooks export, company dashboard, crew and vendor directories, report review; syncs with Manager mobile (.mordata).
 - Privacy model: no MorForm account, no MorForm servers, no tracking, no ads. Data leaves the device only when the user sends it — as an email attachment, or into a shared cloud folder they connect (their own Google Drive, Dropbox or OneDrive, under that provider's terms). MorForm never sees the user's cloud login.
 - Works offline; built by a working site supervisor in Edmonton, Alberta, Canada.
 
