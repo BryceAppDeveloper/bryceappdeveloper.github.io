@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MorForm FAQ — Subscriptions, Offline, Your Data | MorForm</title>
+<meta name="description" content="Answers on MorForm pricing, offline use, how the three apps sync by email or your own cloud, where your data lives, and which safety forms are supported. One-time purchase, no subscription." />
+<meta name="author" content="Bryce Duhamel" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0f1923" />
+<link rel="canonical" href="https://morform.app/faq" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://morform.app/faq" />
+<meta property="og:title" content="MorForm FAQ — Subscriptions, Offline, Your Data" />
+<meta property="og:description" content="Answers on pricing, offline use, how the apps sync, your data, and supported safety forms." />
+<meta property="og:image" content="https://morform.app/assets/og-image.jpg" />
+<meta property="og:site_name" content="MorForm" />
+<meta property="og:locale" content="en_CA" />
+
+<!-- FAQ structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Does MorForm require a subscription or monthly fee?","acceptedAnswer":{"@type":"Answer","text":"No. MorForm is a one-time purchase. MorForm (Supervisor) is $6.99 USD ($9.99 CAD). MorForm Manager is $10.99 USD ($14.99 CAD). MorForm Office is $189.99 CAD (USD pricing coming soon). Pay once, own it forever — no subscription, no renewal, no hidden fees."}},
+    {"@type":"Question","name":"Does MorForm work offline on job sites?","acceptedAnswer":{"@type":"Answer","text":"Yes. All three apps work fully offline. Log time, fill FLHA and safety forms, view job details, and build estimates with no internet connection. Data syncs by email or your connected cloud folder when you're back in range."}},
+    {"@type":"Question","name":"How do the apps communicate with each other?","acceptedAnswer":{"@type":"Answer","text":"Two ways — your choice. By email, managers dispatch jobs as .morjob files, supervisors report back as .morrep files, and Manager and MorForm Office sync full snapshots via .mordata files. Or connect a shared Company Cloud Folder in your own Google Drive, Dropbox or OneDrive and the apps read and write the same files there automatically. MorForm runs no servers of its own and never sees your cloud login."}},
+    {"@type":"Question","name":"Does MorForm store my data in the cloud?","acceptedAnswer":{"@type":"Answer","text":"Only if you choose to. By default your data stays on your device and moves as email attachments. Optionally, connect a shared folder in your own Google Drive, Dropbox or OneDrive so the crew's devices sync automatically. That folder is yours — MorForm has no servers and never sees your cloud account; your data is governed by your cloud provider's terms."}},
+    {"@type":"Question","name":"What safety forms are included?","acceptedAnswer":{"@type":"Answer","text":"MorForm includes FLHA (Field Level Hazard Assessment), JHA (Job Hazard Analysis), Emergency Response Plan, Site Inspection, and Incident Report forms. Both Alberta OH&S and US OSHA jurisdiction references are built in."}},
+    {"@type":"Question","name":"What platforms does MorForm support?","acceptedAnswer":{"@type":"Answer","text":"MorForm (supervisor) and MorForm Manager run on iOS and Android. MorForm Office runs on Windows 10 and Windows 11. All three apps communicate through email or a shared cloud folder you connect — no MorForm account required."}},
+    {"@type":"Question","name":"Does MorForm work in the United States?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Supervisor app includes both Alberta OH&S and US OSHA jurisdiction modes — field-level terminology (FLHA vs. JHA, OH&S vs. OSHA) adjusts to whichever you choose during setup. Time tracking, expenses, and job management work the same everywhere."}},
+    {"@type":"Question","name":"What happens if I lose my phone or switch devices?","acceptedAnswer":{"@type":"Answer","text":"Use the built-in backup: Settings, Data Backup, Create Backup saves a file you can email to yourself or save to cloud storage. Restoring on a new device takes a few taps. Since there's no server, the backup file is your data — keep a copy somewhere safe at the end of each pay period."}}
+  ]
+}
+</script>
+
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=IBM+Plex+Sans:wght@300;400;500;700;800&amp;display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo-wrap" id="nav-logo-wrap">
+    <div class="nav-logo" onclick="toggleNavMenu()">
+      <img src="assets/morform.png" alt="MorForm app icon" width="28" height="28" />
+      <span class="nav-logo-text">MorForm</span>
+      <span class="nav-logo-caret">▾</span>
+    </div>
+    <div class="nav-dropdown" id="nav-dropdown">
+      <div class="nd-group" id="ndg-supervisor">
+        <div class="nd-header" onclick="toggleNdGroup('supervisor')">
+          <div class="nd-header-left"><span class="nd-header-icon">🔵</span><div><div class="nd-header-title">MorForm</div><div class="nd-header-sub">Supervisor · iOS &amp; Android</div></div></div>
+          <span class="nd-header-caret">▾</span>
+        </div>
+        <div class="nd-body"><div class="nd-body-inner">
+          <a href="https://apps.apple.com/ca/app/morform/id6744827471" target="_blank" rel="noopener"><span class="nd-icon">🍎</span>App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morform" target="_blank" rel="noopener"><span class="nd-icon">🤖</span>Google Play</a>
+          <a href="morform-help.html"><span class="nd-icon">📖</span>User Guide</a>
+          <a href="flha.html"><span class="nd-icon">📝</span>Free FLHA Form</a>
+          <a href="morform-privacy.html"><span class="nd-icon">🔒</span>Privacy Policy</a>
+        </div></div>
+      </div>
+      <div class="nd-divider"></div>
+      <div class="nd-group" id="ndg-manager">
+        <div class="nd-header" onclick="toggleNdGroup('manager')">
+          <div class="nd-header-left"><span class="nd-header-icon">🟡</span><div><div class="nd-header-title">MorForm Manager</div><div class="nd-header-sub">Project Manager · iOS &amp; Android</div></div></div>
+          <span class="nd-header-caret">▾</span>
+        </div>
+        <div class="nd-body"><div class="nd-body-inner">
+          <a href="https://apps.apple.com/ca/app/morform-manager/id6772639424" target="_blank" rel="noopener"><span class="nd-icon">🍎</span>App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion" target="_blank" rel="noopener"><span class="nd-icon">🤖</span>Google Play</a>
+          <a href="morform-manager-help.html"><span class="nd-icon">📖</span>User Guide</a>
+          <a href="morform-manager-privacy.html"><span class="nd-icon">🔒</span>Privacy Policy</a>
+        </div></div>
+      </div>
+      <div class="nd-divider"></div>
+      <div class="nd-group" id="ndg-office">
+        <div class="nd-header" onclick="toggleNdGroup('office')">
+          <div class="nd-header-left"><span class="nd-header-icon">🟢</span><div><div class="nd-header-title">MorForm Office</div><div class="nd-header-sub">Desktop · Windows</div></div></div>
+          <span class="nd-header-caret">▾</span>
+        </div>
+        <div class="nd-body"><div class="nd-body-inner">
+          <a href="https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0" target="_blank" rel="noopener"><span class="nd-icon">🪟</span>Microsoft Store</a>
+          <a href="morform-office-help.html"><span class="nd-icon">📖</span>User Guide</a>
+          <a href="morform-office-privacy.html"><span class="nd-icon">🔒</span>Privacy Policy</a>
+        </div></div>
+      </div>
+      <div class="nd-divider"></div>
+      <a class="nd-contact" href="mailto:support@morform.app"><span class="nd-icon">✉️</span>Contact</a>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="/how-it-works">How it works</a>
+    <a href="/apps">Apps &amp; Pricing</a>
+    <a href="flha.html">Free FLHA</a>
+    <a href="/faq" class="active">FAQ</a>
+  </div>
+  <a class="nav-cta" href="/apps">Get the apps ▸</a>
+</nav>
+
+<main>
+
+<header class="page-hero">
+  <div class="hero-eyebrow">FAQ</div>
+  <h1>Questions, <span>answered</span></h1>
+  <p>Pricing, offline use, how the three apps sync, where your data lives, and which safety forms are built in. Still stuck? Email <a href="mailto:support@morform.app" style="color:#fff;text-decoration:underline;">support@morform.app</a>.</p>
+</header>
+
+<section class="nobs" style="background:#0c1520;padding-top:64px;" aria-label="Frequently asked questions">
+  <div class="nobs-inner">
+    <div class="faq-list">
+
+      <details>
+        <summary>Does MorForm require a subscription or monthly fee?<span class="faq-plus">+</span></summary>
+        <p>No. MorForm is a one-time purchase. MorForm (Supervisor) is $6.99 USD ($9.99 CAD). MorForm Manager is $10.99 USD ($14.99 CAD). MorForm Office is $189.99 CAD (USD pricing coming soon). Pay once, own it forever — no subscription, no renewal, no hidden fees.</p>
+      </details>
+
+      <details>
+        <summary>Does it work offline on job sites?<span class="faq-plus">+</span></summary>
+        <p>Yes. All three apps work fully offline. Log time, fill FLHA and safety forms, view job details, and build estimates with no internet connection. Data syncs by email or your connected cloud folder when you're back in range.</p>
+      </details>
+
+      <details>
+        <summary>How do the apps communicate with each other?<span class="faq-plus">+</span></summary>
+        <p>Two ways — your choice. By email, managers dispatch jobs as <strong>.morjob</strong> files, supervisors report back as <strong>.morrep</strong> files, and Manager and MorForm Office sync full snapshots via <strong>.mordata</strong> files. Or connect a shared <strong>Company Cloud Folder</strong> in your own Google Drive, Dropbox or OneDrive and the apps read and write the same files there automatically. MorForm runs no servers of its own and never sees your cloud login.</p>
+      </details>
+
+      <details>
+        <summary>Does MorForm store my data in the cloud?<span class="faq-plus">+</span></summary>
+        <p>Only if you choose to. By default your data stays on your device and moves as email attachments. Optionally, connect a shared folder in your own Google Drive, Dropbox or OneDrive so the crew's devices sync automatically. That folder is yours — MorForm has no servers and never sees your cloud account; your data is governed by your cloud provider's terms.</p>
+      </details>
+
+      <details>
+        <summary>What safety forms are included?<span class="faq-plus">+</span></summary>
+        <p>MorForm includes FLHA (Field Level Hazard Assessment), JHA (Job Hazard Analysis), Emergency Response Plan, Site Inspection, and Incident Report forms. Both Alberta OH&amp;S and US OSHA jurisdiction references are built in. Prefer paper for now? Grab the free <a href="jha-template.html" style="color:#8fc0ec;">JHA template</a>, <a href="toolbox-talk-template.html" style="color:#8fc0ec;">toolbox talk template</a>, or <a href="cor-audit-checklist.html" style="color:#8fc0ec;">COR audit checklist</a> — all free to print.</p>
+      </details>
+
+      <details>
+        <summary>What platforms does MorForm support?<span class="faq-plus">+</span></summary>
+        <p>MorForm (supervisor) and MorForm Manager run on iOS and Android. MorForm Office runs on Windows 10 and Windows 11. All three apps communicate through email or a shared cloud folder you connect — no MorForm account required.</p>
+      </details>
+
+      <details>
+        <summary>Does MorForm work in the United States?<span class="faq-plus">+</span></summary>
+        <p>Yes. The Supervisor app includes both Alberta OH&amp;S and US OSHA jurisdiction modes — field-level terminology (FLHA vs. JHA, OH&amp;S vs. OSHA) adjusts to whichever you choose during setup. Time tracking, expenses, and job management work the same everywhere.</p>
+      </details>
+
+      <details>
+        <summary>What happens if I lose my phone or switch devices?<span class="faq-plus">+</span></summary>
+        <p>Use the built-in backup: Settings → Data Backup → Create Backup saves a file you can email to yourself or save to cloud storage. Restoring on a new device takes a few taps. Since there's no server, the backup file <em>is</em> your data — keep a copy somewhere safe at the end of each pay period.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="cta-band" aria-label="Get MorForm">
+  <div class="cta-band-inner">
+    <h2>Ready to try it?</h2>
+    <p>One-time purchase — no subscription, no servers. Works offline on iOS, Android &amp; Windows.</p>
+    <div class="hero-cta">
+      <a href="/apps" class="btn-primary">See the apps &amp; pricing ↗</a>
+      <a href="flha.html" class="btn-outline">📝 Free FLHA form</a>
+    </div>
+    <p class="founder-line">Built by a working site supervisor in Edmonton, Alberta.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">MorForm</div>
+      <div class="footer-tagline">Built for the job site, not the boardroom.</div>
+      <div class="footer-copy">&copy; 2026 Bryce Duhamel &nbsp;&middot;&nbsp; Edmonton, Alberta</div>
+      <div class="footer-social" aria-label="MorForm on social media">
+        <a href="https://www.instagram.com/morform.app/" target="_blank" rel="noopener" aria-label="MorForm on Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61590819100585" target="_blank" rel="noopener" aria-label="MorForm on Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://www.linkedin.com/company/morform-app" target="_blank" rel="noopener" aria-label="MorForm on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://www.youtube.com/@MorForm-app" target="_blank" rel="noopener" aria-label="MorForm on YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <div class="footer-col-head">Pages</div>
+        <a href="/">Home</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/apps">Apps &amp; Pricing</a>
+        <a href="/faq">FAQ</a>
+        <a href="flha.html">Free FLHA Form</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-head">Free Guides</div>
+        <a href="flha.html">Free FLHA form</a>
+        <a href="jha-template.html">JHA / JSA template</a>
+        <a href="toolbox-talk-template.html">Toolbox talk template</a>
+        <a href="cor-audit-checklist.html">COR audit checklist</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-head">Help</div>
+        <a href="morform-help.html">Supervisor Guide</a>
+        <a href="morform-manager-help.html">Manager Guide</a>
+        <a href="morform-office-help.html">Office Guide</a>
+        <a href="support.html">Support</a>
+        <a href="mailto:support@morform.app">support@morform.app</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-head">Legal</div>
+        <a href="morform-privacy.html">MorForm Privacy</a>
+        <a href="morform-manager-privacy.html">Manager Privacy</a>
+        <a href="morform-office-privacy.html">Office Privacy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleNavMenu(){ document.getElementById('nav-logo-wrap').classList.toggle('open'); }
+  document.addEventListener('click', function(e){ if(!e.target.closest('#nav-logo-wrap')){ document.getElementById('nav-logo-wrap').classList.remove('open'); } });
+  function toggleNdGroup(which){ const g=document.getElementById('ndg-'+which); const open=g.classList.contains('open'); ['supervisor','manager','office'].forEach(x=>document.getElementById('ndg-'+x).classList.remove('open')); if(!open) g.classList.add('open'); }
+</script>
+</body>
+</html>
