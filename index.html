@@ -109,10 +109,11 @@
       "url": "https://morform.app/",
       "downloadUrl": ["https://apps.apple.com/ca/app/morform/id6744827471", "https://play.google.com/store/apps/details?id=com.bryceduhamel.morform"],
       "screenshot": [
-        "https://morform.app/assets/mf-screenshot/mf-android-time.webp",
-        "https://morform.app/assets/mf-screenshot/mf-android-jobs.webp",
-        "https://morform.app/assets/mf-screenshot/mf-android-safety.webp",
-        "https://morform.app/assets/mf-screenshot/mf-android-reports.webp"
+        "https://morform.app/assets/mf-screenshot/mf-log-hours.webp",
+        "https://morform.app/assets/mf-screenshot/mf-daytimer.webp",
+        "https://morform.app/assets/mf-screenshot/mf-jobs.webp",
+        "https://morform.app/assets/mf-screenshot/mf-safety.webp",
+        "https://morform.app/assets/mf-screenshot/mf-reports.webp"
       ],
       "keywords": "construction time tracking, FLHA app, JHA app, field report app, OHS safety forms, supervisor app, trades app, offline job site app, Alberta OHS, construction timesheet"
     },
@@ -131,10 +132,10 @@
       "url": "https://morform.app/",
       "downloadUrl": ["https://apps.apple.com/ca/app/morform-manager/id6772639424", "https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion"],
       "screenshot": [
-        "https://morform.app/assets/mm-screenshot/mm-01-estimate.webp",
-        "https://morform.app/assets/mm-screenshot/mm-03-jobs.webp",
-        "https://morform.app/assets/mm-screenshot/mm-05-job-detail.webp",
-        "https://morform.app/assets/mm-screenshot/mm-06-budget.webp"
+        "https://morform.app/assets/mm-screenshot/mm-estimate.webp",
+        "https://morform.app/assets/mm-screenshot/mm-jobs.webp",
+        "https://morform.app/assets/mm-screenshot/mm-crew.webp",
+        "https://morform.app/assets/mm-screenshot/mm-reports.webp"
       ],
       "keywords": "construction project manager app, job estimate app, construction budget app, CSI estimate, crew management, job dispatch, contractor management app, subtrade management"
     },
@@ -153,10 +154,10 @@
       "url": "https://morform.app/",
       "downloadUrl": "https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0",
       "screenshot": [
-        "https://morform.app/assets/mo-screenshot/mo-01-estimate.webp",
-        "https://morform.app/assets/mo-screenshot/mo-02-job-overview.webp",
-        "https://morform.app/assets/mo-screenshot/mo-03-contacts.webp",
-        "https://morform.app/assets/mo-screenshot/mo-04-help.webp"
+        "https://morform.app/assets/mo-screenshot/mo-overview.webp",
+        "https://morform.app/assets/mo-screenshot/mo-estimates.webp",
+        "https://morform.app/assets/mo-screenshot/mo-contacts.webp",
+        "https://morform.app/assets/mo-screenshot/mo-jobs.webp"
       ],
       "keywords": "construction desktop app, CSI estimate builder, construction budget software, Windows construction app, job management software, construction invoice"
     },
@@ -554,8 +555,15 @@
     margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
   }
   .ss-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-  .ss-strip { display: flex; gap: 12px; overflow-x: auto; padding: 12px 4px 16px; scrollbar-width: none; }
+  .ss-strip { display: flex; gap: 16px; overflow-x: auto; padding: 12px 4px 16px; scrollbar-width: none; }
   .ss-strip::-webkit-scrollbar { display: none; }
+
+  /* Pre-framed store screenshots (device frame + headline baked in) */
+  .shot { flex-shrink: 0; cursor: pointer; display: block; border-radius: 18px;
+    box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+  .shot-m { height: 460px; width: auto; }
+  .shot-d { width: 560px; height: auto; align-self: center; }
+  @media (max-width: 860px) { .shot-m { height: 380px; } .shot-d { width: 460px; } }
 
   /* Phone screenshot card */
   .pf {
@@ -976,22 +984,13 @@
   <div class="ss-section" style="padding-bottom:32px;">
     <div class="ss-label">MorForm — Supervisor App</div>
     <div class="ss-strip">
-      <div class="pf-wrap">
-        <div class="pf" onclick="openLb('assets/mf-screenshot/mf-android-time.webp')"><img loading="lazy" src="assets/mf-screenshot/mf-android-time.webp" alt="MorForm time tracking — log construction hours by job site on mobile" /></div>
-        <div class="pf-cap">Time Tracking</div>
-      </div>
-      <div class="pf-wrap">
-        <div class="pf" onclick="openLb('assets/mf-screenshot/mf-android-jobs.webp')"><img loading="lazy" src="assets/mf-screenshot/mf-android-jobs.webp" alt="MorForm job sites — manage active construction job sites on Android" /></div>
-        <div class="pf-cap">Job Sites</div>
-      </div>
-      <div class="pf-wrap">
-        <div class="pf" onclick="openLb('assets/mf-screenshot/mf-android-safety.webp')"><img loading="lazy" src="assets/mf-screenshot/mf-android-safety.webp" alt="MorForm safety forms — FLHA, site inspection, incident report, ERP for OH&S compliance" /></div>
-        <div class="pf-cap">Safety Forms</div>
-      </div>
-      <div class="pf-wrap">
-        <div class="pf" onclick="openLb('assets/mf-screenshot/mf-android-reports.webp')"><img loading="lazy" src="assets/mf-screenshot/mf-android-reports.webp" alt="MorForm reports — timesheets and pay period reports for construction supervisors" /></div>
-        <div class="pf-cap">Reports</div>
-      </div>
+      <img class="shot shot-m" loading="lazy" src="assets/mf-screenshot/mf-log-hours.webp" onclick="openLb('assets/mf-screenshot/mf-log-hours.webp')" alt="MorForm time tracking — log construction hours by job site on mobile" />
+      <img class="shot shot-m" loading="lazy" src="assets/mf-screenshot/mf-daytimer.webp" onclick="openLb('assets/mf-screenshot/mf-daytimer.webp')" alt="MorForm Daytimer — weekly schedule board with hours, events and reminders" />
+      <img class="shot shot-m" loading="lazy" src="assets/mf-screenshot/mf-jobs.webp" onclick="openLb('assets/mf-screenshot/mf-jobs.webp')" alt="MorForm job sites — manage active construction job sites" />
+      <img class="shot shot-m" loading="lazy" src="assets/mf-screenshot/mf-expenses.webp" onclick="openLb('assets/mf-screenshot/mf-expenses.webp')" alt="MorForm expenses — track job expenses and receipts by payment method" />
+      <img class="shot shot-m" loading="lazy" src="assets/mf-screenshot/mf-flha.webp" onclick="openLb('assets/mf-screenshot/mf-flha.webp')" alt="MorForm FLHA — daily field level hazard assessments for OH&S compliance" />
+      <img class="shot shot-m" loading="lazy" src="assets/mf-screenshot/mf-safety.webp" onclick="openLb('assets/mf-screenshot/mf-safety.webp')" alt="MorForm safety hub — FLHA, site inspection, incident report and ERP" />
+      <img class="shot shot-m" loading="lazy" src="assets/mf-screenshot/mf-reports.webp" onclick="openLb('assets/mf-screenshot/mf-reports.webp')" alt="MorForm reports — timesheets and pay period reports for construction supervisors" />
     </div>
   </div>
 
@@ -999,22 +998,12 @@
   <div class="ss-section" style="padding-bottom:32px;">
     <div class="ss-label">MorForm Manager — Project Manager App</div>
     <div class="ss-strip">
-      <div class="pf-wrap">
-        <div class="pf" onclick="openLb('assets/mm-screenshot/mm-01-estimate.webp')"><img loading="lazy" src="assets/mm-screenshot/mm-01-estimate.webp" alt="MorForm Manager estimate builder — CSI division quote builder for construction" /></div>
-        <div class="pf-cap">Estimate Builder</div>
-      </div>
-      <div class="pf-wrap">
-        <div class="pf" onclick="openLb('assets/mm-screenshot/mm-03-jobs.webp')"><img loading="lazy" src="assets/mm-screenshot/mm-03-jobs.webp" alt="MorForm Manager jobs pipeline — track construction jobs from quote to complete" /></div>
-        <div class="pf-cap">Jobs Pipeline</div>
-      </div>
-      <div class="pf-wrap">
-        <div class="pf" onclick="openLb('assets/mm-screenshot/mm-05-job-detail.webp')"><img loading="lazy" src="assets/mm-screenshot/mm-05-job-detail.webp" alt="MorForm Manager job detail — full job overview with tasks and scope" /></div>
-        <div class="pf-cap">Job Detail</div>
-      </div>
-      <div class="pf-wrap">
-        <div class="pf" onclick="openLb('assets/mm-screenshot/mm-06-budget.webp')"><img loading="lazy" src="assets/mm-screenshot/mm-06-budget.webp" alt="MorForm Manager budget vs actuals — track construction job costs in real time" /></div>
-        <div class="pf-cap">Budget vs Actuals</div>
-      </div>
+      <img class="shot shot-m" loading="lazy" src="assets/mm-screenshot/mm-jobs.webp" onclick="openLb('assets/mm-screenshot/mm-jobs.webp')" alt="MorForm Manager jobs dashboard — track construction jobs from quote to complete" />
+      <img class="shot shot-m" loading="lazy" src="assets/mm-screenshot/mm-estimate.webp" onclick="openLb('assets/mm-screenshot/mm-estimate.webp')" alt="MorForm Manager estimate builder — division quote builder for construction" />
+      <img class="shot shot-m" loading="lazy" src="assets/mm-screenshot/mm-crew.webp" onclick="openLb('assets/mm-screenshot/mm-crew.webp')" alt="MorForm Manager crew roster — dispatch crew and trades to job sites" />
+      <img class="shot shot-m" loading="lazy" src="assets/mm-screenshot/mm-transfer.webp" onclick="openLb('assets/mm-screenshot/mm-transfer.webp')" alt="MorForm Manager transfer — receive supervisor reports and dispatch jobs" />
+      <img class="shot shot-m" loading="lazy" src="assets/mm-screenshot/mm-reports.webp" onclick="openLb('assets/mm-screenshot/mm-reports.webp')" alt="MorForm Manager overview — budget vs actuals and crew hours dashboard" />
+      <img class="shot shot-m" loading="lazy" src="assets/mm-screenshot/mm-daytimer.webp" onclick="openLb('assets/mm-screenshot/mm-daytimer.webp')" alt="MorForm Manager Daytimer — weekly crew dispatch board" />
     </div>
   </div>
 
@@ -1022,34 +1011,11 @@
   <div class="ss-section" style="padding-bottom:40px;">
     <div class="ss-label">MorForm Office — Windows Desktop App</div>
     <div class="ss-strip">
-      <div class="df-wrap">
-        <div class="df" onclick="openLb('assets/mo-screenshot/mo-01-estimate.webp')">
-          <div class="df-bar"><span></span><span></span><span></span></div>
-          <img loading="lazy" src="assets/mo-screenshot/mo-01-estimate.webp" alt="MorForm Office CSI estimate builder — 84-division construction estimate on Windows" />
-        </div>
-        <div class="df-cap">CSI Estimate Builder</div>
-      </div>
-      <div class="df-wrap">
-        <div class="df" onclick="openLb('assets/mo-screenshot/mo-02-job-overview.webp')">
-          <div class="df-bar"><span></span><span></span><span></span></div>
-          <img loading="lazy" src="assets/mo-screenshot/mo-02-job-overview.webp" alt="MorForm Office job overview — budget vs actuals dashboard for construction jobs" />
-        </div>
-        <div class="df-cap">Job Budget &amp; Progress</div>
-      </div>
-      <div class="df-wrap">
-        <div class="df" onclick="openLb('assets/mo-screenshot/mo-03-contacts.webp')">
-          <div class="df-bar"><span></span><span></span><span></span></div>
-          <img loading="lazy" src="assets/mo-screenshot/mo-03-contacts.webp" alt="MorForm Office contacts — vendor and subtrade directory linked to estimates" />
-        </div>
-        <div class="df-cap">Contacts &amp; Vendors</div>
-      </div>
-      <div class="df-wrap">
-        <div class="df" onclick="openLb('assets/mo-screenshot/mo-04-help.webp')">
-          <div class="df-bar"><span></span><span></span><span></span></div>
-          <img loading="lazy" src="assets/mo-screenshot/mo-04-help.webp" alt="MorForm Office help screen — built-in user guide for Windows construction app" />
-        </div>
-        <div class="df-cap">Built-in User Guide</div>
-      </div>
+      <img class="shot shot-d" loading="lazy" src="assets/mo-screenshot/mo-overview.webp" onclick="openLb('assets/mo-screenshot/mo-overview.webp')" alt="MorForm Office project overview — budget vs actuals dashboard for construction jobs on Windows" />
+      <img class="shot shot-d" loading="lazy" src="assets/mo-screenshot/mo-estimates.webp" onclick="openLb('assets/mo-screenshot/mo-estimates.webp')" alt="MorForm Office estimate builder — division construction estimate on Windows" />
+      <img class="shot shot-d" loading="lazy" src="assets/mo-screenshot/mo-jobs.webp" onclick="openLb('assets/mo-screenshot/mo-jobs.webp')" alt="MorForm Office jobs database — manage all construction jobs on Windows" />
+      <img class="shot shot-d" loading="lazy" src="assets/mo-screenshot/mo-crew.webp" onclick="openLb('assets/mo-screenshot/mo-crew.webp')" alt="MorForm Office crew directory — roles, rates and contact details" />
+      <img class="shot shot-d" loading="lazy" src="assets/mo-screenshot/mo-contacts.webp" onclick="openLb('assets/mo-screenshot/mo-contacts.webp')" alt="MorForm Office contacts — vendor and subtrade directory linked to estimates" />
     </div>
   </div>
 

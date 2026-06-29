@@ -498,7 +498,7 @@
         </div>
         <div class="callout callout-tip">
           <span class="ico">📂</span>
-          <span>The top menu bar groups everything: the <strong>File</strong> menu holds estimates &amp; templates, bulk job add, and QuickBooks exports; the <strong>Data</strong> menu holds all MorForm data exchange (<span class="file-badge">.morrep</span> / <span class="file-badge">.mordata</span>), backups, and the Company Cloud Folder. Press <kbd>F1</kbd> or open <strong>Help</strong> for the built-in user guide.</span>
+          <span>The top menu bar groups everything: the <strong>File</strong> menu holds estimates &amp; templates, bulk job add, and QuickBooks exports; the <strong>Data</strong> menu holds all MorForm data exchange (<span class="file-badge">.morjob</span> / <span class="file-badge">.morrep</span> / <span class="file-badge">.mordata</span>), backups, and the Company Cloud Folder. Press <kbd>F1</kbd> or open <strong>Help</strong> for the built-in user guide.</span>
         </div>
       </div>
     </section>
@@ -624,7 +624,7 @@
         <h2 class="sec-title">Estimates</h2>
       </div>
       <div class="sec-body">
-        <p>Estimates are standalone — build one for any bid, whether or not a job exists yet. Create one with <strong>+ New Estimate</strong> on the Estimates screen, or convert a job request sent from Manager mobile (see Send &amp; Receive). New estimates start from your default template — a lean, plain-language section layout you can replace with your own.</p>
+        <p>Estimates are standalone — build one for any bid, whether or not a job exists yet. Create one with <strong>+ New Estimate</strong> on the Estimates screen, or convert a job request sent from Manager mobile (see Send &amp; Receive). When you create one, pick a starting point from the <strong>Start from template</strong> dropdown — no Excel import needed.</p>
 
         <h3>Estimate pipeline</h3>
         <div class="flow">
@@ -639,12 +639,15 @@
         <p>Mark an estimate <strong>Approved</strong> when the numbers are ready. Exporting a Proposal &amp; Quote (or clicking <strong>📤 Mark Quoted</strong>) moves it to <strong>Quoted</strong>. When the client says yes, click <strong>🏆 Won — Create Job</strong> — the job is created from the estimate automatically, with every trade's scope checklist ready to dispatch. Mark it <strong>✖ Lost</strong> and it's kept for your win/loss stats on the Overview dashboard.</p>
 
         <h3>Templates</h3>
-        <p>Save any estimate as a <strong>named template</strong> and tag it by job type (e.g. <em>Dental clinic</em>, <em>Whitebox</em>). Pick a template whenever you start a new estimate, and set your default in Settings. <strong>💾 Save layout as my template</strong> keeps your sections, line items, and custom columns for every new estimate.</p>
+        <p>The <strong>Start from template</strong> dropdown is ordered <strong>Blank (MorForm starter)</strong> → a built-in <strong>gallery</strong> (General Contractor — Residential &amp; Commercial, plus Plumbing, Electrical, Structural, Interior Systems, and HVAC) → your own saved templates. The <strong>Blank</strong> sheet shows greyed guideline text so you can see what goes where — type over it or leave fields blank. Set the default for new estimates and 📤 export any template to a fill-in Excel sheet in <strong>Settings → Estimate Templates</strong>.</p>
+        <p>Save any estimate as a <strong>named template</strong> and tag it by job type (e.g. <em>Dental clinic</em>, <em>Whitebox</em>). <strong>💾 Save layout as my template</strong> keeps your divisions, line items, and custom columns for every new estimate.</p>
+        <h3>Smart suggestions</h3>
+        <p>As you fill out estimates and contacts, MorForm learns the <strong>division names, line items, and trades</strong> you use. Division headers, the Description column, and a contact's Role/Trade field all offer a <strong>type-or-pick</strong> dropdown — start typing to reuse an existing name or just type a new one. Line-item suggestions are tuned to the division you're in (e.g. plumbing items under a <em>Plumbing</em> division).</p>
 
         <h3>Column reference</h3>
         <table class="tbl">
           <tr><th>Column</th><th>Description</th></tr>
-          <tr><td><strong>Section</strong></td><td>Optional grouping label (e.g. Electrical) — section header rows organise the sheet</td></tr>
+          <tr><td><strong>Division</strong></td><td>Optional grouping label (e.g. Electrical) — division header rows organise the sheet</td></tr>
           <tr><td><strong>Description</strong></td><td>Line item name</td></tr>
           <tr><td><strong>Contractor / Vendor</strong></td><td>Who is doing the work. Click 📋 to choose from your Contacts & Vendors directory.</td></tr>
           <tr><td><strong>Wkrs</strong></td><td>Number of workers on this line</td></tr>
@@ -667,18 +670,32 @@
           <span>The 📝 icon turns <strong style="color:#B29146;">gold</strong> when a scope is written, and <strong style="color:#27ae60;">green</strong> when the supervisor marks it complete. Rows with complete scope have a subtle green background.</span>
         </div>
 
-        <h3>Section headers (collapsible)</h3>
-        <p>Click <strong>+ Section</strong> to add a collapsible section divider (e.g. <em>Electrical</em>, <em>Finishes</em>). Each section header has a <strong>▼ / ▶</strong> caret to collapse or expand its line items — handy on long estimates — and a <strong>➕</strong> to add a line item inside that section. Sections organise the sheet but don't affect totals.</p>
+        <h3>Division headers (collapsible)</h3>
+        <p>Click <strong>+ Division</strong> to add a collapsible division divider (e.g. <em>Electrical</em>, <em>Finishes</em>). Each division header has a <strong>▼ / ▶</strong> caret to collapse or expand its line items — handy on long estimates — and a <strong>➕</strong> to add a line item inside that division. Divisions organise the sheet but don't affect totals.</p>
 
         <h3>Default markup</h3>
         <p>Set a project-wide default markup percentage at the top of the estimate. Individual rows can override it — leave the Markup % field blank on a row to use the default.</p>
 
         <h3>XLSX import & export</h3>
-        <p>Export any estimate to Excel for sharing or printing. Import an XLSX to load rows from an external spreadsheet — every import shows a <strong>preview first</strong> (sections and rows) so you can check it before anything is saved.</p>
+        <p>Export any estimate to Excel for sharing or printing. Import an XLSX to load rows from an external spreadsheet — every import shows a <strong>preview first</strong> (divisions and rows) so you can check it before anything is saved.</p>
         <div class="callout callout-note">
           <span class="ico">📥</span>
           <span>Best workflow: <strong>File → Export Blank Estimate Template</strong>, fill it in, and import that file. MorForm-exported files carry a hidden signature so they re-import exactly — no guessing. Other spreadsheets are matched by column names (Division, Description, Contractor, Workers, Hours, Days, Rate, Mat'l, Sub, Markup); if the file doesn't match, the preview warns you before you commit.</span>
         </div>
+
+        <h3>How to fill in the blank template</h3>
+        <p>In the exported template, fill the columns marked <strong>type here</strong> and leave the rest blank — MorForm calculates Labor and every total for you.</p>
+        <table class="tbl">
+          <tr><th>Column</th><th>What to do</th></tr>
+          <tr><td><strong>Division</strong></td><td><em>Type here</em> — a <strong>division name</strong> on its own row (e.g. In-House). Leave the rest of that row blank.</td></tr>
+          <tr><td><strong>Description</strong></td><td><em>Type here</em> — the line-item name (e.g. Supervision). Leave Division blank on item rows.</td></tr>
+          <tr><td>Contractor/Vendor</td><td>Type here (optional) — who does the work.</td></tr>
+          <tr><td>Workers / Hours / Days / Rate</td><td>Type here — labour inputs; MorForm multiplies them into Labor.</td></tr>
+          <tr><td><strong>Labor</strong></td><td><strong>Leave blank</strong> — calculated automatically.</td></tr>
+          <tr><td>Mat'l / Sub</td><td>Type here (optional) — material and subcontractor dollar amounts.</td></tr>
+          <tr><td>Scope</td><td>Type here (optional) — notes about the work.</td></tr>
+        </table>
+        <p>Don't have a number yet? Leave it blank — empty cells just add $0.</p>
 
         <div class="callout callout-tip">
           <span class="ico">💡</span>
@@ -708,7 +725,7 @@
             <div class="step-num">2</div>
             <div>
               <div class="step-title">Approve the estimate, then click 📄 Proposal &amp; Quote</div>
-              <div class="step-desc">Pick PDF or XLSX, set the client name and cover notes, and choose how much price detail the client sees — section subtotals, every line item, or grand total only. Internal costs and markup never appear.</div>
+              <div class="step-desc">Pick PDF or XLSX, set the client name and cover notes, and choose how much price detail the client sees — division subtotals, every line item, or grand total only. Internal costs and markup never appear.</div>
             </div>
           </div>
           <div class="step">
@@ -745,9 +762,13 @@
           <tr><td><strong>Project Managers</strong></td><td>Assignable to jobs. Their name, email, and phone appear as the PM contact in every dispatched <span class="file-badge">.morjob</span>.</td></tr>
           <tr><td><strong>Supervisors</strong></td><td>Auto-added when you import their first <span class="file-badge">.morrep</span> report. You can also add them manually before dispatching.</td></tr>
           <tr><td><strong>Safety Officers</strong></td><td>Internal safety staff — for reference and routing.</td></tr>
+          <tr><td><strong>Managers</strong></td><td>The people you forward field reports to — timesheets, expenses, and safety forms. Add them here, then pick who receives each kind in <strong>Settings → Report Routing</strong>.</td></tr>
           <tr><td><strong>Employees / Labourers</strong></td><td>Your direct-hire workers.</td></tr>
           <tr><td><strong>Other Contacts</strong></td><td>Internal contacts who don't fit another category — accountants, architects on retainer, etc.</td></tr>
         </table>
+
+        <h3>Managers &amp; report routing</h3>
+        <p>Add a <strong>Manager</strong> for each person who should receive field reports — typically a primary manager for timesheets, an account manager for expenses, and a safety manager for safety forms. Then open <strong>Settings → 📧 Report Routing</strong> and choose which manager receives each kind. When a supervisor's report comes in, the report viewer shows a one-click <strong>📧 Forward</strong> button for timesheets, expenses, and safety forms that opens your email pre-filled to the right manager with a summary.</p>
 
         <div class="callout callout-tip">
           <span class="ico">💡</span>
@@ -772,11 +793,16 @@
           <span class="pill">🔍 Inspectors</span>
           <span class="pill">🏠 Owners & Clients</span>
           <span class="pill">👤 Other</span>
+          <span class="pill">📍 Site Contacts</span>
+          <span class="pill">🤝 Trusted Trades</span>
         </div>
         <p>Filter by category using the tab row at the top. Search by company name, contact name, role, or email.</p>
 
         <h3>Adding contacts</h3>
-        <p>Click <strong>+ Add Contact</strong> in the top right, or click any existing card to expand it and edit inline. Fields: company name, contact person, category, role/trade, email, phone, address, notes.</p>
+        <p>Click <strong>+ Add Contact</strong> in the top right, or click any existing card to expand it and edit inline. Fields: company name, contact person, category, role/trade, email, phone, address, notes. The <strong>Role / Trade</strong> field is a type-or-pick dropdown — start typing to reuse a trade you've used before, or type a new one.</p>
+
+        <h3>🤝 Trusted Trades</h3>
+        <p>A vetted network of MorForm partner trades you can pull from when you don't have your own contact for a task — browse and sort by trade and rating, right inside the estimate Contractor/Vendor picker or the Trusted Trades tab. <strong>Coming soon.</strong></p>
 
         <h3>⚠ Add info badge</h3>
         <p>When you type a new vendor name into an estimate row that doesn't match any existing contact, a stub entry is created automatically. It appears in Contacts with a yellow <strong>⚠ Add info</strong> badge. Click the badge to open the card and fill in their details. The orange number on the Contacts nav item shows how many stubs are waiting.</p>
@@ -807,6 +833,15 @@
           <div class="step"><div class="step-num">4</div><div><div class="step-title">Choose Merge or Replace All</div><div class="step-desc"><strong>Merge</strong> adds new jobs, PMs, crew and notes without touching existing data. <strong>Replace All</strong> wipes current data and loads the snapshot — double confirmed before proceeding.</div></div></div>
         </div>
         <div class="callout callout-note"><span class="ico">💡</span><span>The <span class="file-badge">.mordata</span> file contains all jobs, specs / job requests, budgets, PMs, supervisors, and notes. Supervisor submission details are included as summaries only.</span></div>
+
+        <h3>Import a dispatched job (.morjob)</h3>
+        <p>A <span class="file-badge">.morjob</span> is a single job dispatched from MorForm Manager mobile or another copy of Office — it carries the job's details, contacts, trade scopes, permits, photos, and documents. Office usually <em>sends</em> these to supervisors, but you can also pull one in (for example, a job a colleague dispatched to you, or one recovered from an old email).</p>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div><div class="step-title">Save the .morjob attachment to your computer</div></div></div>
+          <div class="step"><div class="step-num">2</div><div><div class="step-title">In MorForm Office — Data → 📦 Import Job (.morjob)</div><div class="step-desc">Or use the 📂 Import &amp; Export panel on the Send &amp; Receive tab. Pick the file.</div></div></div>
+          <div class="step"><div class="step-num">3</div><div><div class="step-title">The job lands on your Jobs tab</div><div class="step-desc">With its contacts, trade scopes, permits, photos, and documents attached, and the project manager linked. If a job with the same ID already exists you're asked to <strong>Replace</strong> it; a job sitting in Deleted is offered back as <strong>Restore &amp; Update</strong>.</div></div></div>
+        </div>
+        <div class="callout callout-note"><span class="ico">💡</span><span>A <span class="file-badge">.morjob</span> carries the dispatched job only — not cost or hours data, which live in the estimate. Imported trade scopes ride along on the job's contacts so they survive a re-dispatch.</span></div>
 
         <h3>☁️ Company Cloud Folder (optional)</h3>
         <p>Don't want to email files back and forth? Connect a shared folder in your company <strong>Drive / Dropbox / OneDrive</strong> and the apps pass the same <span class="file-badge">.morrep</span> / <span class="file-badge">.mordata</span> files through it instead. There's <strong>no MorForm account and no server to host</strong> — it rides on your own cloud provider's sync app plus the file system, so your data stays in your accounts.</p>
@@ -843,7 +878,7 @@
         <div class="callout callout-tip"><span class="ico">💾</span><span>Once a cloud folder is connected, <strong>Settings → Data &amp; Backup → Back Up to Cloud Folder</strong> drops a timestamped <span class="file-badge">.morbak</span> backup into a <strong>backups</strong> subfolder in one tap — no save dialog. It syncs through your cloud app like everything else, and stays out of the crew inboxes so no app tries to import it.</span></div>
 
         <h3>📐 Job requests from Manager mobile</h3>
-        <p>When a PM specs a job in MorForm Manager (job → type → subtype → trades &amp; scope) and taps <strong>Send to Office</strong>, the spec arrives in the .mordata import and lands here as a <strong>job request</strong>. One click converts it into a full estimate — every trade becomes a section with its scope checklist attached. The job itself is created when the estimate is <strong>Won</strong> — under the <em>same job id the PM's phone uses</em>, so sending a .mordata back (Data → Send Data to Manager) marks the job ✅ Approved in their app and the supervisor's .morrep reports match the job in both places.</p>
+        <p>When a PM specs a job in MorForm Manager (job → type → subtype → trades &amp; scope) and taps <strong>Send to Office</strong>, the spec arrives in the .mordata import and lands here as a <strong>job request</strong>. One click converts it into a full estimate — every trade becomes a division with its scope checklist attached. The job itself is created when the estimate is <strong>Won</strong> — under the <em>same job id the PM's phone uses</em>, so sending a .mordata back (Data → Send Data to Manager) marks the job ✅ Approved in their app and the supervisor's .morrep reports match the job in both places.</p>
 
         <h3>Importing a report</h3>
         <div class="steps">
@@ -886,8 +921,8 @@
           <span class="pill">Supervisor added to Crew if new</span>
         </div>
 
-        <h3>Report routing</h3>
-        <p>Set up forwarding addresses in <strong>Settings → Report Routing</strong>. When you approve a report, expense summaries can be forwarded to Accounting and safety document summaries to your Safety Manager — your default mail client opens automatically with the pre-composed message.</p>
+        <h3>Forwarding to managers</h3>
+        <p>An open report has a <strong>📧 Forward to managers</strong> section with one-click buttons for <strong>timesheets</strong>, <strong>expenses</strong>, and <strong>safety forms</strong>. Each opens your default mail client pre-filled — with a summary of that part — to the manager you assigned in <strong>Settings → Report Routing</strong>. Add those managers first on the <strong>Crew</strong> screen.</p>
 
         <h3>Incident Report Sign-off</h3>
         <div class="callout callout-imp">
@@ -1022,7 +1057,7 @@
           <tr><td><strong>Company</strong></td><td>Company name, address, city, province, phone, website, and logo. Logo appears on PDF quotes.</td></tr>
           <tr><td><strong>My Profile</strong></td><td>Your name, job title, email, and phone. Appears as the PM contact in dispatched jobs.</td></tr>
           <tr><td><strong>PDF & Quotes</strong></td><td>Quote number format (auto Q-YYYY-NNN or manual), validity days, terms text, and signature. Signature editor removes the paper background automatically.</td></tr>
-          <tr><td><strong>Report Routing</strong></td><td>Accounting email (receives expense summaries on approval) and Safety email (receives safety document summaries).</td></tr>
+          <tr><td><strong>Report Routing</strong></td><td>Pick which <strong>Manager</strong> (added on the Crew screen) receives each kind of field report — timesheets, expenses, and safety forms. Drives the one-click 📧 Forward buttons in the report viewer.</td></tr>
           <tr><td><strong>Accounting (QuickBooks)</strong></td><td>Export your books for QuickBooks without a cloud connection — QBO CSVs and a Desktop IIF file, with configurable account names. See below.</td></tr>
           <tr><td><strong>Import Templates</strong></td><td>Upload a custom XLSX estimate template to replace the default template for new estimates — or save any estimate as a named template instead.</td></tr>
           <tr><td><strong>Data & Backup</strong></td><td>Back up all data to a <span class="file-badge">.morbak</span> file and restore from one (older .json backups still import). Moving to a new computer? Back up, copy the .morbak over, then Restore Backup — or use Import from Backup on the first-run setup screen. Data is stored at <kbd>%APPDATA%\morform-office\morform-office-data.json</kbd>. If a saved file ever can't be read on launch, Office shows a recovery screen (Try Again / Restore from Backup) instead of starting empty, so a one-time read glitch can't wipe your data.</td></tr>
@@ -1045,7 +1080,7 @@
           <tr>
             <td><span class="file-badge">.morjob</span></td>
             <td>Office / Manager → Supervisor</td>
-            <td>Job dispatch package. Contains job details, contacts, permits, trade scopes, photos, and documents. JSON format.</td>
+            <td>Job dispatch package. Contains job details, contacts, permits, trade scopes, photos, and documents. Office mainly <em>sends</em> these to supervisors, but can also <em>import</em> one in via <strong>Data → Import Job (.morjob)</strong>. JSON format.</td>
           </tr>
           <tr>
             <td><span class="file-badge">.morrep</span></td>
@@ -1096,6 +1131,7 @@
       <a href="morform-manager-help.html">Manager Guide</a>
       <a href="flha.html">Free FLHA Form</a>
       <a href="support.html">Support</a>
+      <a href="terms.html">Terms of Use</a>
       <a href="mailto:support@morform.app">support@morform.app</a>
     </div>
   </div>
