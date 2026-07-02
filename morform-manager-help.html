@@ -603,13 +603,15 @@
         <div class="callout callout-warn"><span class="ico">⚠️</span><span>A job whose spec was sent to the office but isn't approved yet warns before accepting a .morrep ("Import Anyway" is available). Jobs that never went through the office aren't affected.</span></div>
         <div class="callout callout-note"><span class="ico">ℹ️</span><span>Reports are sent per job — not per pay period. When a supervisor taps 📤 Send on a job card, it sends all time, expenses, and safety docs for that specific job. You may receive multiple reports per supervisor if they work across several jobs.</span></div>
         <div class="callout callout-tip"><span class="ico">💡</span><span>If a supervisor re-sends a report you already imported, you're prompted to Replace it with the newer version. If the earlier version was already approved, its committed hours and expenses are backed out automatically — approve the replacement to commit the updated totals. No double counting.</span></div>
+        <h3>Safety batches</h3>
+        <p>Supervisors can also send a <strong>🦺 safety batch</strong> — the complete content of their safety forms (FLHAs, inspections, incidents, ERPs, and scanned documents) across all their jobs at once. A batch appears in the Inbox like a report but carries no hours or expenses, so approving it commits nothing to job actuals — it exists so you can review the forms and sign off incidents. Forms that already arrived inside a period report are skipped automatically, so nothing shows up twice.</p>
         <h3>What's in a Report</h3>
         <table class="tbl">
           <thead><tr><th>Data</th><th>Details</th></tr></thead>
           <tbody>
             <tr><td>Time entries</td><td>Every hour by date and job site, with OT and stat holiday flags</td></tr>
             <tr><td>Expenses</td><td>All amounts by category with reimbursable total</td></tr>
-            <tr><td>Safety summary</td><td>Count of each form type — not the actual PDFs</td></tr>
+            <tr><td>Safety docs</td><td>Each form with its full content — viewable in the report, incidents trigger sign-off</td></tr>
             <tr><td>Incident reports</td><td>Full incident details included when present — triggers the sign-off workflow</td></tr>
             <tr><td>Job statuses</td><td>Current status of dispatched jobs — your pipeline updates on approval</td></tr>
             <tr><td>Trade scope completions</td><td>Which trades have had their scope marked complete by the supervisor</td></tr>

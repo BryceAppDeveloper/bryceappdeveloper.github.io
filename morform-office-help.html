@@ -428,7 +428,8 @@
           <tr><td><strong>Draws &amp; QuickBooks</strong></td><td>Bill progress draws against contract value, then export invoices, expenses, and time to QuickBooks (Online CSV or Desktop IIF)</td></tr>
           <tr><td><strong>Crew</strong></td><td>Directory of your PMs, supervisors, safety officers, and employees</td></tr>
           <tr><td><strong>Contacts & Vendors</strong></td><td>Subcontractor and supplier directory — linked to estimate rows</td></tr>
-          <tr><td><strong>Send &amp; Receive</strong></td><td>Everything in and out — import and approve supervisor reports (.morrep), receive job requests from Manager mobile, dispatch jobs, and export to QuickBooks</td></tr>
+          <tr><td><strong>Send &amp; Receive</strong></td><td>Everything in and out — import and approve supervisor reports (.morrep) and expense batches with receipts, receive job requests from Manager mobile, dispatch jobs, and export to QuickBooks</td></tr>
+          <tr><td><strong>Safety</strong></td><td>Every safety document received from the field — FLHAs, inspections, incidents, ERPs, and scanned forms — filterable, printable, with incident sign-off</td></tr>
           <tr><td><strong>Settings → Data &amp; Backup</strong></td><td>Import .mordata from Manager mobile — merge or replace jobs, specs, PMs, crew, and notes</td></tr>
           <tr><td><strong>Overview</strong></td><td>Company dashboard — revenue, income, and won/lost by day, week, month, or year — plus budget vs. actuals per job</td></tr>
         </table>
@@ -488,7 +489,8 @@
           <tr><td><strong>📊 Estimates</strong></td><td>Estimate pipeline — build, import, quote, and win estimates; winning creates the job</td></tr>
           <tr><td><strong>👷 Crew</strong></td><td>Your internal team — PMs, supervisors, safety officers, employees</td></tr>
           <tr><td><strong>🏢 Contacts</strong></td><td>External companies and vendors — subcontractors, suppliers, inspectors, clients</td></tr>
-          <tr><td><strong>🔄 Send &amp; Receive</strong></td><td>Everything in and out — supervisor reports, Manager job requests, dispatch, QuickBooks exports, backups</td></tr>
+          <tr><td><strong>🔄 Send &amp; Receive</strong></td><td>Everything in and out — supervisor reports, expense batches, Manager job requests, dispatch, QuickBooks exports, backups</td></tr>
+          <tr><td><strong>🦺 Safety</strong></td><td>All safety documents received from the field — the badge counts incidents awaiting sign-off</td></tr>
           <tr><td><strong>📈 Overview</strong></td><td>Company dashboard — revenue, income, win/loss — plus budget vs. actuals per job</td></tr>
           <tr><td><strong>⚙️ Settings</strong></td><td>Appearance, company info, PDF settings, routing, templates, backup</td></tr>
         </table>
@@ -923,6 +925,15 @@
 
         <h3>Forwarding to managers</h3>
         <p>An open report has a <strong>📧 Forward to managers</strong> section with one-click buttons for <strong>timesheets</strong>, <strong>expenses</strong>, and <strong>safety forms</strong>. Each opens your default mail client pre-filled — with a summary of that part — to the manager you assigned in <strong>Settings → Report Routing</strong>. Add those managers first on the <strong>Crew</strong> screen.</p>
+
+        <h3>Jobs created in the field</h3>
+        <p>If a supervisor created a job themselves in their app (instead of receiving a dispatch) and sends a report for it, Office <strong>creates that job automatically</strong> — the import alert names it, and it appears on the Jobs tab with a <strong>📱 from field</strong> tag, ready for you to fill in the address, client, and estimate. Future reports for that job match it exactly, and approval commits hours and expenses to it like any other job.</p>
+
+        <h3>💳 Expense batches</h3>
+        <p>Supervisors can send their expenses <strong>with receipt photos</strong> from Reports → Expenses → 📤 Send to Office in their app. The batch spans all their jobs and appears in Send &amp; Receive as a <strong>💳 Expense batch</strong> row. Review it to see every expense with its receipt (click a thumbnail to zoom), then <strong>Approve &amp; Commit</strong> — each expense commits to its own job's actuals, and anything already counted from an approved pay-period report is skipped automatically, so nothing double-counts.</p>
+
+        <h3>🦺 The Safety tab</h3>
+        <p>Every safety document your supervisors send — FLHAs, site hazard inspections, incident reports, emergency response plans, and scanned paper forms — collects on the dedicated <strong>Safety</strong> tab. Documents arrive automatically inside pay-period reports or as <strong>safety batches</strong> (Reports → Safety → 📤 Send to Office in the supervisor app, which includes the complete forms and scanned pages across all jobs). Filter by type, job, and date; click any row to view the full form; export a formatted <strong>PDF</strong> for your records. Each job's dashboard also shows a Safety card with that job's documents, and the red badge on the Safety nav item counts incidents still awaiting sign-off.</p>
 
         <h3>Incident Report Sign-off</h3>
         <div class="callout callout-imp">
