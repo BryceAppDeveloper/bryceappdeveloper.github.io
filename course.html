@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to use MorForm — Free 10-Part Course | MorForm</title>
+<meta name="description" content="A free, hands-on course for the MorForm construction suite. Ten short parts walk one job from estimate to dispatch to field report — real screens from Office, Manager and the supervisor field app.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Bryce Duhamel">
+<meta name="theme-color" content="#0f1923">
+<link rel="canonical" href="https://morform.app/course">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://morform.app/course">
+<meta property="og:site_name" content="MorForm">
+<meta property="og:locale" content="en_CA">
+<meta property="og:title" content="How to use MorForm — Free 10-Part Course">
+<meta property="og:description" content="Ten short, hands-on parts take one construction job from estimate to dispatch to field report — real screens from Office, Manager and the Field app. Free, no sign-up.">
+<meta property="og:image" content="https://morform.app/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MorForm — construction apps for supervisors and project managers">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to use MorForm — Free 10-Part Course">
+<meta name="twitter:description" content="Ten short, hands-on parts take one construction job from estimate to dispatch to field report — real screens from Office, Manager and the Field app. Free, no sign-up.">
+<meta name="twitter:image" content="https://morform.app/assets/og-image.jpg">
+<link rel="icon" href="/assets/m-logo.png">
+<link rel="preload" href="/fonts/IBMPlexSans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-600.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Course","@id":"https://morform.app/course#course","name":"How to use MorForm","url":"https://morform.app/course","isAccessibleForFree":true,"description":"A free ten-part, hands-on course that walks one construction job through the whole MorForm suite — estimate in Office, dispatch in Manager, log time, expenses and safety forms in the field.","provider":{"@type":"Organization","name":"MorForm","url":"https://morform.app/"},"offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"},"hasCourseInstance":{"@type":"CourseInstance","courseMode":"Online","courseWorkload":"PT50M"},"inLanguage":"en-CA","image":"https://morform.app/assets/og-image.jpg"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://morform.app/"},{"@type":"ListItem","position":2,"name":"Free course","item":"https://morform.app/course"}]}]}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>@font-face{
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("/fonts/IBMPlexSans-var.woff2") format('woff2');
+}
+@font-face{
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/IBMPlexMono-400.woff2") format('woff2');
+}
+@font-face{
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/IBMPlexMono-600.woff2") format('woff2');
+}
+
+/* MorForm brand tokens.
+   Sources: the marketing site's site.css (:root palette, typography) and the
+   app theme in theme.js (Light/Dark palettes, ACCENT_PRESETS). Keep in sync
+   with those files — they are the truth; this file is the web-token mirror. */
+:root {
+  /* marketing palette (site.css) */
+  --mf-blue: #325a81;
+  --mf-blue-dark: #1A3D6E;
+  --mf-blue-mid: #264d70;
+  --mf-gold: #B29146;
+  --mf-gold-dark: #8B6914;
+  --mf-teal: #0e483c;
+  --mf-teal-mid: #0a3830;
+  --mf-teal-light: #1a6b58;
+  --mf-ink: #0f1923;
+  --mf-bg: #f7f9fc;
+  --mf-border: #d0dce8;
+  --mf-white: #ffffff;
+
+  /* app light theme (theme.js Light) */
+  --mf-app-bg: #F2F4F7;
+  --mf-app-surface: #FFFFFF;
+  --mf-app-surface2: #EAECF0;
+  --mf-app-border: #D0D5DD;
+  --mf-app-border2: #98A2B3;
+  --mf-app-text: #101828;
+  --mf-app-text2: #344054;
+  --mf-app-muted: #667085;
+  --mf-app-green: #027A48;
+  --mf-app-green-light: #ECFDF3;
+  --mf-app-purple: #6941C6;
+  --mf-app-purple-light: #F4F3FF;
+  --mf-app-red: #B42318;
+  --mf-app-red-light: #FEF3F2;
+
+  /* app dark theme (theme.js Dark) */
+  --mf-app-dark-bg: #111827;
+  --mf-app-dark-surface: #1F2937;
+  --mf-app-dark-surface2: #283548;
+  --mf-app-dark-border: #374151;
+  --mf-app-dark-border2: #4B5563;
+  --mf-app-dark-text: #F9FAFB;
+  --mf-app-dark-text2: #D1D5DB;
+  --mf-app-dark-muted: #9CA3AF;
+
+  /* accent presets (theme.js ACCENT_PRESETS; blue is the default) */
+  --mf-accent: #325a81;
+  --mf-accent-light: #E8EEF8;
+  --mf-accent-orange: #C94A0C;
+  --mf-accent-red: #C0392B;
+  --mf-accent-purple: #7B2D8B;
+  --mf-accent-sky: #0288D1;
+  --mf-accent-green: #388E3C;
+  --mf-accent-slate: #455A64;
+
+  /* typography (site.css) */
+  --mf-font-sans: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mf-font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+body { font-family: var(--mf-font-sans); }
+
+</style>
+
+<style>
+html{scroll-behavior:auto}
+body{margin:0;background:var(--mf-bg);color:#101828;font-family:var(--mf-font-sans);font-weight:300;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:#1A3D6E}a:hover{color:#8B6914}
+::selection{background:rgba(178,145,70,.35)}
+:focus-visible{outline:2px solid var(--mf-gold);outline-offset:2px}
+.mono{font-family:var(--mf-font-mono)}
+h1,h2,h3{line-height:1.14;margin:0;text-wrap:balance}
+img{max-width:100%}
+.num{font-variant-numeric:tabular-nums}
+.t-intro{--acc:#0f1923;--accD:#0f1923;--accL:#e9edf2}
+.t-office{--acc:#0e483c;--accD:#0e483c;--accL:#e7efec}
+.t-manager{--acc:#B29146;--accD:#8B6914;--accL:#f5efe0}
+.t-field{--acc:#325a81;--accD:#325a81;--accL:#e8eef8}
+.topbar{position:sticky;top:0;z-index:60;background:rgba(15,25,35,.94);backdrop-filter:blur(10px);color:#fff;border-bottom:1px solid rgba(255,255,255,.09)}
+.readbar{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--mf-gold);z-index:2}
+.tb-in{max-width:1200px;margin:0 auto;padding:9px 20px;display:flex;align-items:center;gap:14px}
+.tb-brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:#fff;flex:none}
+.tb-brand:hover{color:#fff}
+.tb-logo{width:32px;height:32px;border-radius:7px;display:block}
+.tb-name{display:flex;flex-direction:column;gap:2px}
+.tb-kick{font-family:var(--mf-font-mono);font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mf-gold);line-height:1}
+.tb-title{font-family:var(--mf-font-mono);font-weight:600;font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;line-height:1.1}
+.tb-sp{flex:1}
+.tb-links{display:flex;align-items:center;gap:4px;margin-left:auto}
+.tb-lnk{font-family:var(--mf-font-mono);font-weight:600;font-size:12px;letter-spacing:.03em;color:#c8d4df;text-decoration:none;padding:8px 11px;border-radius:8px;white-space:nowrap}
+.tb-lnk:hover{color:#fff;background:rgba(255,255,255,.07)}
+.tb-lnk.on{color:#fff;background:rgba(255,255,255,.09)}
+.tb-cta{font-family:var(--mf-font-mono);font-weight:600;font-size:12px;letter-spacing:.02em;background:var(--mf-gold);color:#0f1923;text-decoration:none;padding:9px 16px;border-radius:8px;margin-left:8px;white-space:nowrap}
+.tb-cta:hover{background:#c4a45a;color:#0f1923}
+.tb-sub{border-top:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.03)}
+.tb-in2{padding:7px 20px}
+.crs-lab{font-family:var(--mf-font-mono);font-weight:600;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mf-gold);white-space:nowrap}
+.pmenu{position:relative;flex:none;width:330px}
+.pm-btn{width:100%;display:flex;align-items:center;gap:9px;background:#1b2836;border:1px solid rgba(255,255,255,.16);border-radius:9px;padding:8px 12px;color:#fff;font-family:var(--mf-font-mono);font-size:12px;font-weight:600;letter-spacing:.02em;cursor:pointer;text-align:left;transition:border-color .15s}
+.pm-btn:hover{border-color:rgba(255,255,255,.4)}
+.pm-n{color:var(--mf-gold);flex:none}
+.pm-lab{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pm-car{flex:none;color:#9fb0c0;transition:transform .15s}
+.pm-open .pm-car{transform:rotate(180deg)}
+.pm-pop{position:absolute;top:calc(100% + 8px);right:0;width:392px;max-width:calc(100vw - 28px);background:#14212e;border:1px solid rgba(255,255,255,.15);border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,.55);padding:6px;max-height:min(72vh,600px);overflow:auto;z-index:70}
+.mi-grp{font-family:var(--mf-font-mono);font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#7d8fa0;margin:0;padding:11px 10px 4px}
+.mi{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;text-decoration:none;color:#dbe4ec;font-size:13.5px;font-weight:400;line-height:1.3}
+.mi:hover{background:rgba(255,255,255,.07);color:#fff}
+.mi.cur{background:rgba(178,145,70,.16);color:#fff}
+.mi-n{font-family:var(--mf-font-mono);font-weight:600;font-size:11px;color:var(--mf-gold);width:18px;flex:none}
+.mi-t{flex:1}
+.mi-tick{flex:none;font-family:var(--mf-font-mono);font-size:11px;color:color-mix(in srgb,#027A48 50%,#fff)}
+.mi-m{flex:none;font-family:var(--mf-font-mono);font-size:10px;color:#8b9bab}
+.tb-nav{display:flex;gap:6px;flex:none}
+.nvb{width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:#1b2836;border:1px solid rgba(255,255,255,.16);border-radius:8px;color:#e6edf3;cursor:pointer;padding:0;transition:border-color .15s}
+.nvb:hover{border-color:rgba(255,255,255,.45)}
+.nvb.off{opacity:.32;pointer-events:none}
+.prog{display:flex;flex-direction:column;gap:5px;width:126px;flex:none}
+.prog-lab{font-family:var(--mf-font-mono);font-size:10px;letter-spacing:.08em;color:#9fb0c0;display:flex;justify-content:space-between}
+.ticks{display:flex;gap:3px}
+.tk{flex:1;height:4px;border-radius:2px;background:rgba(255,255,255,.16);transition:background .3s}
+.tk.on{background:var(--mf-gold)}
+.hero{position:relative;background:#0f1923;color:#fff;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px) 0 0/100% 44px,linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px) 0 0/44px 100%}
+.hero-fade{position:absolute;inset:0;background:radial-gradient(1000px 560px at 70% 42%,rgba(178,145,70,.12),transparent 62%)}
+.hero-in{position:relative;max-width:1200px;margin:0 auto;padding:78px 20px 96px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.02fr);gap:56px;align-items:center}
+.kick{font-family:var(--mf-font-mono);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mf-gold);margin:0 0 18px}
+.hero-h{font-size:clamp(38px,4.5vw,56px);font-weight:700;letter-spacing:-.015em}
+.gld{font-style:normal;color:var(--mf-gold)}
+.promise{font-size:18.5px;font-weight:300;color:#c8d4df;max-width:54ch;margin:18px 0 22px;text-wrap:pretty}
+.hmeta{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 28px}
+.hm{font-family:var(--mf-font-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#c8d4df;border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:5px 12px}
+.cta{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;font-family:var(--mf-font-mono);font-weight:600;font-size:13px;letter-spacing:.02em;padding:13px 24px;border-radius:10px;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background .15s,border-color .15s,color .15s}
+.btn-gold{background:var(--mf-gold);color:#0f1923}
+.btn-gold:hover{background:#c4a45a;color:#0f1923}
+.btn-ghost{border-color:rgba(255,255,255,.3);color:#fff}
+.btn-ghost:hover{border-color:var(--mf-gold);color:var(--mf-gold)}
+.trust{font-family:var(--mf-font-mono);font-size:12px;letter-spacing:.06em;color:#9fb0c0;margin:22px 0 0}
+.collage{position:relative;min-height:470px}
+.col-desk{position:absolute;left:0;top:0;width:87%;border-radius:10px;border:1px solid rgba(255,255,255,.15);box-shadow:0 32px 80px rgba(0,0,0,.55);display:block}
+.col-phone{position:absolute;right:0;bottom:0;width:30%;border-radius:20px;border:1px solid rgba(255,255,255,.22);box-shadow:0 26px 70px rgba(0,0,0,.6);display:block}
+.col-tag{position:absolute;font-family:var(--mf-font-mono);font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#9fb0c0;display:flex;align-items:center;gap:9px;white-space:nowrap}
+.ct-line{display:inline-block;width:26px;height:1px;background:#5b6c7c}
+.ct-a{left:0;top:-26px}
+.ct-b{right:0;bottom:-32px}
+.ov{background:var(--mf-ink);padding:10px 20px 96px}
+.ov-in{max-width:1120px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+.resume{display:flex;align-items:center;gap:18px;background:#16283a;border:1px solid rgba(178,145,70,.55);border-radius:12px;padding:14px 20px;text-decoration:none;color:#fff;transition:border-color .15s,background .15s}
+.resume:hover{background:#1b3040;border-color:var(--mf-gold);color:#fff}
+.rs-k{font-family:var(--mf-font-mono);font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--mf-gold);flex:none}
+.rs-t{font-weight:600;font-size:15.5px;flex:1}
+.rs-go{font-family:var(--mf-font-mono);font-size:12px;font-weight:600;color:var(--mf-gold);flex:none}
+.trk-head{display:flex;align-items:center;gap:13px;margin:0 2px 16px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.1)}
+.trk-dot{width:11px;height:11px;border-radius:3px;background:var(--acc);box-shadow:0 0 0 4px color-mix(in srgb,var(--acc) 30%,transparent);flex:none}
+.trk-app{font-family:var(--mf-font-mono);font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin:0}
+.trk-sub{font-size:12.5px;color:#9fb0c0;margin:3px 0 0;font-weight:300}
+.trk-count{margin-left:auto;font-family:var(--mf-font-mono);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#7d8fa0;flex:none}
+.trk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px}
+.tile{position:relative;display:flex;flex-direction:column;background:#fff;border-radius:14px;padding:19px 20px 17px;text-decoration:none;color:inherit;border-top:3px solid var(--acc);box-shadow:0 1px 2px rgba(0,0,0,.25),0 10px 28px rgba(0,0,0,.28);transition:transform .16s ease,box-shadow .16s ease}
+.tile:hover{transform:translateY(-3px);box-shadow:0 2px 3px rgba(0,0,0,.28),0 18px 40px rgba(0,0,0,.44);color:inherit}
+.tile-top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px}
+.tile-n{font-family:var(--mf-font-mono);font-weight:700;font-size:32px;line-height:1;color:var(--acc);letter-spacing:-.02em}
+.tile-min{font-family:var(--mf-font-mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:#98A2B3}
+.tile-t{font-size:16.5px;font-weight:600;color:#0f1923;margin:0 0 6px;line-height:1.25}
+.tile-d{font-size:13px;color:#667085;margin:0;flex:1;line-height:1.55;font-weight:400}
+.tile-go{font-family:var(--mf-font-mono);font-weight:600;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--accD);margin-top:14px}
+.vtick{font-family:var(--mf-font-mono);font-size:10px;font-weight:600;letter-spacing:.08em;color:#027A48;text-transform:uppercase}
+.feat .vtick{color:color-mix(in srgb,#027A48 45%,#fff)}
+.feat{display:grid;grid-template-columns:1.05fr 1fr;background:#16283a;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:0 12px 34px rgba(0,0,0,.32);transition:border-color .15s ease}
+.feat:hover{border-color:var(--mf-gold);color:inherit}
+.feat.rev{grid-template-columns:1fr 1.05fr}
+.rev .feat-im{order:-1}
+.feat-tx{padding:36px 38px;display:flex;flex-direction:column;justify-content:center}
+.feat-k{font-family:var(--mf-font-mono);font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mf-gold);margin:0 0 13px}
+.feat-h{font-size:26px;font-weight:700;color:#fff;margin:0 0 11px;letter-spacing:-.01em;line-height:1.15}
+.feat-p{font-size:15px;color:#c8d4df;margin:0;font-weight:300;line-height:1.6;max-width:46ch}
+.feat-go{font-family:var(--mf-font-mono);font-weight:600;font-size:12.5px;letter-spacing:.03em;color:var(--mf-gold);margin-top:22px}
+.feat-n{font-family:var(--mf-font-mono);font-weight:700;font-size:38px;line-height:1;color:var(--mf-gold);letter-spacing:-.02em;margin:0 0 12px}
+.feat-im{background:var(--accL);min-height:224px;overflow:hidden;position:relative}
+.feat-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left top;display:block}
+.phero{position:relative;background:var(--acc);color:#fff;padding:58px 20px 50px;overflow:hidden}
+.t-manager .phero{background:linear-gradient(120deg,#8B6914,#B29146)}
+.ph-grid{position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px) 0 0/100% 40px}
+.phero-in{position:relative;max-width:860px;margin:0 auto}
+.ph-wm{position:absolute;right:-30px;top:50%;transform:translateY(-52%);font-family:var(--mf-font-mono);font-weight:700;font-size:220px;line-height:1;color:rgba(255,255,255,.08);letter-spacing:-.05em;pointer-events:none;user-select:none}
+.pmeta{position:relative;display:flex;gap:14px;align-items:center;font-family:var(--mf-font-mono);font-weight:600;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.88);margin:0 0 15px;flex-wrap:wrap}
+.chip-app{background:rgba(255,255,255,.18);border-radius:99px;padding:4px 12px}
+.phero h1{position:relative;font-size:clamp(29px,3.5vw,38px);font-weight:700;letter-spacing:-.012em}
+.plede{position:relative;font-size:17.5px;color:rgba(255,255,255,.9);max-width:60ch;margin:12px 0 0;text-wrap:pretty;font-weight:300}
+.content{max-width:860px;margin:0 auto;padding:44px 20px 10px}
+.blk{margin:0 0 56px}
+.blk h2{font-size:25px;font-weight:650;margin:0 0 12px;letter-spacing:-.008em}
+.kickr{font-family:var(--mf-font-mono);font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accD);margin:0 0 7px}
+.blk p{margin:0 0 14px;max-width:70ch;text-wrap:pretty}
+.blk strong{font-weight:600}
+.fig{margin:20px 0;background:#fff;border:1px solid var(--mf-border);border-radius:14px;padding:10px;box-shadow:0 1px 3px rgba(15,25,35,.05)}
+.fig img{width:100%;display:block;border-radius:8px;border:1px solid #e6ecf3}
+.fig figcaption{font-family:var(--mf-font-mono);font-size:11.5px;color:#667085;margin:10px 4px 3px;line-height:1.5}
+.phones{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin:20px 0}
+.ph{flex:1 1 210px;max-width:262px;margin:0}
+.ph img{width:100%;display:block;border:1px solid var(--mf-border);border-radius:20px;box-shadow:0 2px 10px rgba(15,25,35,.09)}
+.ph figcaption{font-family:var(--mf-font-mono);font-size:11.5px;color:#667085;margin:8px 2px 0;line-height:1.5}
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:20px 0}
+.apptile{background:#fff;border:1px solid var(--mf-border);border-top:4px solid var(--tc);border-radius:14px;padding:16px 17px}
+.at-t{font-size:16px;font-weight:600;color:var(--tc)}
+.at-p{font-size:14px;color:#344054;margin:7px 0 0;font-weight:400}
+.sub{font-family:var(--mf-font-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#667085;display:block;margin-top:3px}
+.cue{display:inline;font-family:var(--mf-font-mono);font-weight:600;font-size:.78em;color:var(--accD);background:var(--accL);border:1px solid color-mix(in srgb,var(--acc) 35%,transparent);border-radius:999px;padding:.14em .6em .16em;cursor:pointer;white-space:nowrap;vertical-align:baseline}
+.cue::before{content:"▷ ";font-size:.85em}
+.cue:hover{background:color-mix(in srgb,var(--acc) 16%,#fff)}
+.cue:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.stage{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s ease;margin:0 0 6px}
+.stage>div{overflow:hidden;min-height:0}
+.stage.open{grid-template-rows:1fr;margin-bottom:16px}
+.st-in{background:#fff;border:1px solid var(--mf-border);border-left:3px solid var(--acc);border-radius:12px;padding:16px;margin-top:4px}
+.st-cap{font-family:var(--mf-font-mono);font-size:11px;letter-spacing:.06em;color:#667085;margin:10px 0 0}
+.st-cap b{color:var(--accD)}
+.xf{position:relative;border-radius:8px;overflow:hidden;border:1px solid #e6ecf3}
+.xf img{width:100%;display:block}
+.xb{position:absolute;inset:0;opacity:0}
+.play .xb{animation:xfIn .8s .5s ease both}
+@keyframes xfIn{to{opacity:1}}
+.xf.tall{max-width:270px;margin:0 auto}
+.ring{position:absolute;left:var(--x);top:var(--y);width:72px;height:72px;margin:-36px 0 0 -36px;border:3px solid var(--gg,#d92d20);border-radius:50%;opacity:0;pointer-events:none;box-shadow:0 0 0 3px rgba(255,255,255,.6)}
+.play .ring{animation:ringp 1.3s 1.15s ease-out 2 both}
+@keyframes ringp{0%{opacity:0;transform:scale(.55)}30%{opacity:1}100%{opacity:0;transform:scale(1.3)}}
+.mini{border:1px solid var(--mf-border);border-radius:10px;padding:16px;background:var(--mf-bg)}
+.mini-lab{font-family:var(--mf-font-mono);font-weight:600;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#667085;margin:0 0 10px}
+.crow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chip{display:inline-block;white-space:nowrap;padding:6px 14px;border:1.5px solid var(--mf-border);border-radius:999px;font-size:13.5px;font-weight:400;background:#fff;color:#344054}
+.chip.on{border-color:var(--acc);color:var(--accD);font-weight:600;background:var(--accL)}
+.play .fc{opacity:0;transform:translateY(9px);animation:chipIn .4s var(--d,0s) both}
+@keyframes chipIn{to{opacity:1;transform:none}}
+.okcard{margin-top:12px;background:#ECFDF3;border-left:3px solid #027A48;border-radius:0 8px 8px 0;padding:10px 14px;font-size:14px;color:#027A48;font-weight:400}
+.play .okcard{opacity:0;animation:chipIn .45s 1.5s both}
+.ppl{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:6px 0}
+.pp{font-family:var(--mf-font-mono);font-weight:600;font-size:12px;letter-spacing:.04em;padding:7px 16px;border-radius:999px;border:1.5px solid var(--mf-border);color:#667085;background:#fff;opacity:.55}
+.pp-ar{color:#98A2B3;font-size:14px}
+.play .pp{animation:ppOn .35s var(--d) both}
+@keyframes ppOn{to{opacity:1;background:var(--acc);color:#fff;border-color:var(--acc)}}
+.filetag{font-family:var(--mf-font-mono);font-weight:600;font-size:12.5px;background:#fff;border:1.5px solid var(--mf-border);border-radius:8px;padding:6px 12px;color:#0f1923;display:inline-block}
+.filetag b{color:var(--accD)}
+.note{background:var(--accL);border-left:3px solid var(--acc);padding:13px 17px;border-radius:0 10px 10px 0;font-size:15px;margin:18px 0;max-width:72ch}
+.cnt{font-family:var(--mf-font-mono);font-weight:600}
+.bigcnt{font-size:30px;color:var(--accD);display:block;margin:2px 0;font-variant-numeric:tabular-nums}
+.pnav{display:flex;justify-content:space-between;gap:14px;max-width:860px;margin:0 auto;padding:6px 20px 78px}
+.pn{flex:1;max-width:396px;background:#fff;border:1px solid var(--mf-border);border-radius:12px;padding:14px 17px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s}
+.pn:hover{border-color:var(--acc);box-shadow:0 8px 22px rgba(15,25,35,.09);color:inherit}
+.pn .dir{font-family:var(--mf-font-mono);font-weight:600;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#667085;display:block;margin-bottom:3px}
+.pn .pt{font-weight:600;font-size:15px}
+.pn.nx{text-align:right}
+.dlrow{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.dl{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--mf-border);border-radius:10px;padding:11px 15px;text-decoration:none;color:#101828;font-size:14px;font-weight:400;transition:border-color .15s}
+.dl:hover{border-color:var(--acc);color:#101828}
+.dl .tag{font-family:var(--mf-font-mono);font-weight:600;font-size:10.5px;background:var(--accL);color:var(--accD);border-radius:6px;padding:3px 7px}
+.sitefoot{background:#0f1923;color:#9fb0c0;padding:54px 20px 26px}
+.sf-in{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1)}
+.sf-brandrow{display:flex;align-items:center;gap:11px;margin:0 0 14px}
+.sf-logo{width:30px;height:30px;border-radius:7px;display:block}
+.sf-t{font-family:var(--mf-font-mono);font-weight:600;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+.sf-d{font-size:13.5px;line-height:1.6;max-width:34ch;margin:0 0 14px;font-weight:300}
+.sf-trust{font-family:var(--mf-font-mono);font-size:11px;letter-spacing:.06em;color:#7d8fa0;margin:0}
+.sf-h{font-family:var(--mf-font-mono);font-size:10.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#7d8fa0;margin:4px 0 12px}
+.sf-l{display:block;color:#c8d4df;text-decoration:none;font-size:13.5px;padding:4px 0;font-weight:300}
+.sf-l:hover{color:var(--mf-gold)}
+.sf-base{max-width:1120px;margin:0 auto;padding-top:22px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;font-family:var(--mf-font-mono);font-size:11px;letter-spacing:.05em;color:#7d8fa0}
+.sf-bl{color:#9fb0c0;text-decoration:none}
+.sf-bl:hover{color:var(--mf-gold)}
+.kbd{display:inline-block;border:1px solid rgba(255,255,255,.25);border-bottom-width:2px;border-radius:5px;padding:0 6px;color:#c8d4df;font-size:10px;line-height:1.6;margin:0 1px;font-family:var(--mf-font-mono)}
+.all-open .stage{grid-template-rows:1fr}
+@media (prefers-reduced-motion: reduce){.stage{transition:none}.tk{transition:none}.play .xb,.play .ring,.play .fc,.play .okcard,.play .pp{animation-duration:.001s!important;animation-delay:0s!important}}
+.force-reduced .stage{transition:none}
+.force-reduced .play .xb,.force-reduced .play .ring,.force-reduced .play .fc,.force-reduced .play .okcard,.force-reduced .play .pp{animation-duration:.001s!important;animation-delay:0s!important}
+@media (max-width:1020px){.hero-in{grid-template-columns:1fr;padding:64px 20px 64px}.collage{display:none}.sf-in{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.tb-kick{display:none}.tb-links{display:none}.tb-cta{display:none}.crs-lab{display:none}.prog{display:none}.tb-sp{display:none}.pmenu{width:auto;flex:1;min-width:0}.tb-title{font-size:11px}.hero-h{font-size:34px}.promise{font-size:16.5px}.phero h1{font-size:26px}.ph-wm{display:none}.blk h2{font-size:21px}.pnav{flex-direction:column}.pn{max-width:none}.pn.nx{text-align:left}.feat,.feat.rev{grid-template-columns:1fr}.feat-im{display:none}.feat-tx{padding:26px 24px}.feat-h{font-size:22px}.sf-in{grid-template-columns:1fr}.resume{flex-wrap:wrap;gap:8px}}
+</style>
+<style>
+/* static-page routing (progressive enhancement: no JS = whole course readable) */
+html.js #home,html.js .part{display:none}
+html.js #home.cur,html.js .part.cur{display:block}
+.pmenu:not(.pm-open) .pm-pop{display:none}
+html:not(.js) .stage{grid-template-rows:1fr}
+html:not(.js) .nvb,html:not(.js) .pm-btn{display:none}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="mfc">
+<nav class="topbar"><span class="readbar" id="readbar"></span><div class="tb-in">
+<a class="tb-brand" href="/"><img class="tb-logo" src="/assets/m-logo.png" alt="MorForm app icon"><span class="tb-name"><span class="tb-kick">Built for the job site</span><span class="tb-title">MorForm</span></span></a>
+<nav class="tb-links" aria-label="Site"><a class="tb-lnk" href="/how-it-works">How it works</a><a class="tb-lnk" href="/apps">Apps &amp; Pricing</a><a class="tb-lnk on" href="#home" aria-current="page">Free course</a><a class="tb-lnk" href="/flha.html">Free FLHA</a><a class="tb-lnk" href="/faq">FAQ</a></nav><a class="tb-cta" href="/apps">Get the apps</a>
+</div><div class="tb-sub"><div class="tb-in tb-in2">
+<span class="crs-lab">Free course · How to use MorForm</span><span class="tb-sp"></span>
+<div class="pmenu" id="pmenu">
+<button type="button" class="pm-btn" aria-haspopup="true" aria-expanded="false"><span class="pm-n" id="pm-num">00</span><span class="pm-lab" id="pm-lab">Course overview</span><svg class="pm-car" width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+<div class="pm-pop" role="menu"><a class="mi" data-mi="0" href="#home"><span class="mi-n">00</span><span class="mi-t">Course overview</span><span class="mi-tick" data-mi-tick="0" hidden>✓</span><span class="mi-m"></span></a><p class="mi-grp">Start here</p><a class="mi" data-mi="1" href="#part-1"><span class="mi-n">01</span><span class="mi-t">Welcome &amp; how MorForm thinks</span><span class="mi-tick" data-mi-tick="1" hidden>✓</span><span class="mi-m">~4 min</span></a><p class="mi-grp">MorForm Office · Windows desktop</p><a class="mi" data-mi="2" href="#part-2"><span class="mi-n">02</span><span class="mi-t">First run &amp; your roster</span><span class="mi-tick" data-mi-tick="2" hidden>✓</span><span class="mi-m">~5 min</span></a><a class="mi" data-mi="3" href="#part-3"><span class="mi-n">03</span><span class="mi-t">Estimating</span><span class="mi-tick" data-mi-tick="3" hidden>✓</span><span class="mi-m">~6 min</span></a><a class="mi" data-mi="4" href="#part-4"><span class="mi-n">04</span><span class="mi-t">Estimate to won job</span><span class="mi-tick" data-mi-tick="4" hidden>✓</span><span class="mi-m">~4 min</span></a><a class="mi" data-mi="5" href="#part-5"><span class="mi-n">05</span><span class="mi-t">Running the job</span><span class="mi-tick" data-mi-tick="5" hidden>✓</span><span class="mi-m">~5 min</span></a><p class="mi-grp">MorForm Manager · iOS &amp; Android</p><a class="mi" data-mi="6" href="#part-6"><span class="mi-n">06</span><span class="mi-t">Setup, crew &amp; the spec wizard</span><span class="mi-tick" data-mi-tick="6" hidden>✓</span><span class="mi-m">~6 min</span></a><a class="mi" data-mi="7" href="#part-7"><span class="mi-n">07</span><span class="mi-t">Jobs, dispatch &amp; your day</span><span class="mi-tick" data-mi-tick="7" hidden>✓</span><span class="mi-m">~6 min</span></a><p class="mi-grp">MorForm Field · iOS &amp; Android</p><a class="mi" data-mi="8" href="#part-8"><span class="mi-n">08</span><span class="mi-t">Job &amp; costs</span><span class="mi-tick" data-mi-tick="8" hidden>✓</span><span class="mi-m">~5 min</span></a><a class="mi" data-mi="9" href="#part-9"><span class="mi-n">09</span><span class="mi-t">Safety done right</span><span class="mi-tick" data-mi-tick="9" hidden>✓</span><span class="mi-m">~6 min</span></a><p class="mi-grp">Finish</p><a class="mi" data-mi="10" href="#part-10"><span class="mi-n">10</span><span class="mi-t">The full loop</span><span class="mi-tick" data-mi-tick="10" hidden>✓</span><span class="mi-m">~3 min</span></a><p class="mi-grp">MorForm.app</p><a class="mi" href="/"><span class="mi-n">↖</span><span class="mi-t">Back to the website</span><span class="mi-m"></span></a></div>
+</div>
+<div class="tb-nav"><button type="button" class="nvb off" id="nv-prev" aria-label="Previous part"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button><button type="button" class="nvb" id="nv-next" aria-label="Next part"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path></svg></button></div>
+<div class="prog" aria-label="Course progress"><span class="prog-lab"><span>Viewed</span><span class="num"><span id="vcount">0</span>/10</span></span><span class="ticks"><span class="tk" data-tk="1"></span><span class="tk" data-tk="2"></span><span class="tk" data-tk="3"></span><span class="tk" data-tk="4"></span><span class="tk" data-tk="5"></span><span class="tk" data-tk="6"></span><span class="tk" data-tk="7"></span><span class="tk" data-tk="8"></span><span class="tk" data-tk="9"></span><span class="tk" data-tk="10"></span></span></div>
+</div></div></nav>
+<section id="home">
+<header class="hero"><span class="hero-grid"></span><span class="hero-fade"></span><div class="hero-in">
+<div><p class="kick">Free course · The MorForm suite</p><h1 class="hero-h">How to use <em class="gld">MorForm</em></h1><p class="promise">Ten short, hands-on parts that take a construction crew from a blank install to a complete estimate → dispatch → field-report loop. Real screens, no jargon.</p><div class="hmeta"><span class="hm">10 parts · ~50 min</span><span class="hm">Office · Manager · Field</span><span class="hm">One job, start to finish</span></div><div class="cta"><a class="btn btn-gold" href="#part-1">Start the course →</a><a class="btn btn-ghost" data-resume data-resume-cta href="#part-1" hidden></a></div><p class="trust">no accounts · works offline · your data stays yours</p></div>
+<div class="collage" aria-hidden="true"><span class="col-tag ct-a"><span class="ct-line"></span>MorForm Office — the estimating desk</span><img class="col-desk" src="/assets/screens/office-estimate.png" alt=""><img class="col-phone" src="/assets/screens/sup-safety.png" alt=""><span class="col-tag ct-b">MorForm Field — the crew's logbook<span class="ct-line"></span></span></div>
+</div></header>
+<div class="ov"><div class="ov-in">
+<a class="resume" data-resume href="#part-1" hidden><span class="rs-k">Pick up where you left off</span><span class="rs-t"><span data-resume-title></span></span><span class="rs-go">Continue →</span></a>
+<a class="feat t-intro" href="#part-1"><div class="feat-tx"><span class="feat-n">01</span><p class="feat-k">Start here · ~4 min<span class="vtick" data-vis="1" hidden> · viewed ✓</span></p><h3 class="feat-h">Welcome &amp; how MorForm thinks</h3><p class="feat-p">The empty-to-full idea, the three apps, and why your work moves as files — not accounts. A couple of minutes of grounding before we install anything.</p><span class="feat-go">Begin the course →</span></div><div class="feat-im"><img class="feat-img" src="/assets/course/01-morform-manager-onboarding-with-company-name.png" alt="MorForm Manager onboarding with company name and M logo filled in" loading="lazy"></div></a>
+<div class="track t-office"><div class="trk-head"><span class="trk-dot"></span><div><p class="trk-app">MorForm Office</p><p class="trk-sub">Parts 2–5 · The estimating desk — Windows desktop</p></div><span class="trk-count">Track 1 of 3</span></div><div class="trk-grid">
+<a class="tile" href="#part-2"><div class="tile-top"><span class="tile-n">02</span><span class="tile-min num">~5 min<span class="vtick" data-vis="2" hidden> · ✓</span></span></div><p class="tile-t">First run &amp; your roster</p><p class="tile-d">Terms, setup, the empty screens — then add crew and contacts and watch the counts tick up.</p><span class="tile-go">Start this part →</span></a>
+<a class="tile" href="#part-3"><div class="tile-top"><span class="tile-n">03</span><span class="tile-min num">~6 min<span class="vtick" data-vis="3" hidden> · ✓</span></span></div><p class="tile-t">Estimating</p><p class="tile-d">Start blank or from the template library, name your divisions, and let the pick-lists learn from you.</p><span class="tile-go">Start this part →</span></a>
+<a class="tile" href="#part-4"><div class="tile-top"><span class="tile-n">04</span><span class="tile-min num">~4 min<span class="vtick" data-vis="4" hidden> · ✓</span></span></div><p class="tile-t">Estimate to won job</p><p class="tile-d">Approve, send a clean client quote, mark it won — and the job creates itself.</p><span class="tile-go">Start this part →</span></a>
+<a class="tile" href="#part-5"><div class="tile-top"><span class="tile-n">05</span><span class="tile-min num">~5 min<span class="vtick" data-vis="5" hidden> · ✓</span></span></div><p class="tile-t">Running the job</p><p class="tile-d">The job dashboard, dispatching to the field, company overview, and where your own logo lives.</p><span class="tile-go">Start this part →</span></a>
+</div></div>
+<div class="track t-manager"><div class="trk-head"><span class="trk-dot"></span><div><p class="trk-app">MorForm Manager</p><p class="trk-sub">Parts 6–7 · The PM's site tool — iOS &amp; Android</p></div><span class="trk-count">Track 2 of 3</span></div><div class="trk-grid">
+<a class="tile" href="#part-6"><div class="tile-top"><span class="tile-n">06</span><span class="tile-min num">~6 min<span class="vtick" data-vis="6" hidden> · ✓</span></span></div><p class="tile-t">Setup, crew &amp; the spec wizard</p><p class="tile-d">Onboard the PM phone, build your crew list, and scope a job with subtypes that save themselves.</p><span class="tile-go">Start this part →</span></a>
+<a class="tile" href="#part-7"><div class="tile-top"><span class="tile-n">07</span><span class="tile-min num">~6 min<span class="vtick" data-vis="7" hidden> · ✓</span></span></div><p class="tile-t">Jobs, dispatch &amp; your day</p><p class="tile-d">Job detail tabs, permits, one-tap status, dispatching to a supervisor, and the PM's own time log.</p><span class="tile-go">Start this part →</span></a>
+</div></div>
+<div class="track t-field"><div class="trk-head"><span class="trk-dot"></span><div><p class="trk-app">MorForm Field</p><p class="trk-sub">Parts 8–9 · The crew's logbook — iOS &amp; Android</p></div><span class="trk-count">Track 3 of 3</span></div><div class="trk-grid">
+<a class="tile" href="#part-8"><div class="tile-top"><span class="tile-n">08</span><span class="tile-min num">~5 min<span class="vtick" data-vis="8" hidden> · ✓</span></span></div><p class="tile-t">Job &amp; costs</p><p class="tile-d">Import the dispatched job, then log hours and expenses with receipt photos — right from site.</p><span class="tile-go">Start this part →</span></a>
+<a class="tile" href="#part-9"><div class="tile-top"><span class="tile-n">09</span><span class="tile-min num">~6 min<span class="vtick" data-vis="9" hidden> · ✓</span></span></div><p class="tile-t">Safety done right</p><p class="tile-d">FLHA, site inspection with auto-scoring, and the emergency response plan — OHS-compliant PDFs included.</p><span class="tile-go">Start this part →</span></a>
+</div></div>
+<a class="feat rev t-intro" href="#part-10"><div class="feat-tx"><span class="feat-n">10</span><p class="feat-k">Finish · ~3 min<span class="vtick" data-vis="10" hidden> · viewed ✓</span></p><h3 class="feat-h">The full loop</h3><p class="feat-p">Office dispatches, Field documents, the report comes home — one screen that ties the whole suite back together.</p><span class="feat-go">See the whole loop →</span></div><div class="feat-im"><img class="feat-img" src="/assets/screens/office-overview.png" alt="Office overview dashboard with pipeline metrics" loading="lazy"></div></a>
+</div></div>
+</section>
+<section id="part-1" class="part t-intro">
+<header class="phero"><span class="ph-grid"></span><div class="phero-in"><span class="ph-wm">01</span><div class="pmeta"><span class="chip-app">Start here</span><span>Part 1 of 10</span><span>~4 min</span></div><h1>Welcome &amp; how MorForm thinks</h1><p class="plede">Three small apps, one paper trail — and a suite that starts completely empty, on purpose.</p></div></header>
+<div class="content">
+<section class="blk"><p class="kickr">The suite</p><h2>Three apps, one paper trail</h2><p>MorForm is three apps that pass work between them. <strong>Office</strong> sits on the estimating desk, <strong>Manager</strong> rides in the PM's pocket, and <strong>Field</strong> goes wherever the crew goes. This course walks the same job through all three.</p>
+<div class="apps"><div class="apptile" style="--tc:#0e483c"><h3 class="at-t">MorForm Office</h3><span class="sub">Windows desktop</span><p class="at-p">The estimating desk. Estimates, client quotes, jobs, dispatch, and the company dashboard.</p></div><div class="apptile" style="--tc:#8B6914"><h3 class="at-t">MorForm Manager</h3><span class="sub">iOS &amp; Android</span><p class="at-p">The PM's site tool. Crew, job specs, dispatching work, incoming field reports, and a day-timer.</p></div><div class="apptile" style="--tc:#325a81"><h3 class="at-t">MorForm Field</h3><span class="sub">iOS &amp; Android</span><p class="at-p">The supervisor's logbook. Hours, expenses with receipts, safety forms, and reports back to the PM.</p></div></div></section>
+<section class="blk"><p class="kickr">The one big idea</p><h2>It ships empty — and fills up from your work</h2><p>A fresh install has no demo data: no jobs, no contacts, not even options in the dropdowns. Every list you'll see in this course was generated by someone using the app. It starts at the very first setup screen: <button type="button" class="cue" data-stage="s1-prov" aria-controls="s1-prov" aria-expanded="false">pick a country, the province list appears</button> on its own — and brings the right safety rules with it.</p>
+<div class="stage" id="s1-prov"><div><div class="st-in"><div class="mini"><p class="mini-lab">Setup → OHS Jurisdiction</p><div class="crow" style="margin-bottom:12px"><span class="chip on">🍁 Canada</span><span class="chip">🇺🇸 United States</span><span class="chip">🌐 Other</span></div><div class="crow"><span class="chip fc" style="--d:.15s">Alberta</span><span class="chip fc" style="--d:.25s">British Columbia</span><span class="chip fc" style="--d:.35s">Manitoba</span><span class="chip fc" style="--d:.45s">New Brunswick</span><span class="chip fc" style="--d:.55s">Newfoundland &amp; Labrador</span><span class="chip fc" style="--d:.65s">Nova Scotia</span><span class="chip fc" style="--d:.75s">Ontario</span><span class="chip fc" style="--d:.85s">Quebec</span><span class="chip fc" style="--d:.95s">Saskatchewan</span><span class="chip fc" style="--d:1.05s">Yukon</span><span class="chip fc" style="--d:1.15s">…</span></div><div class="okcard">✓ Alberta — Alberta OHS · Alberta OHS Act</div></div><p class="st-cap">Choosing <b>Canada</b> generates the province list; choosing a province sets the OHS legislation used across the whole suite. Click the cue again to replay.</p></div></div></div>
+<figure class="fig"><img src="/assets/course/02-office-setup-screen-canada-selected-the-prov.png" alt="Office setup screen: Canada selected, the province chip list revealed, Alberta chosen with Alberta OHS confirmation" loading="lazy"><figcaption>Office setup, first run — the first of many lists that exist only because you made a choice.</figcaption></figure></section>
+<section class="blk"><p class="kickr">No accounts, no servers</p><h2>Your work moves as files</h2><p>There is no MorForm account and no MorForm server. Work travels as plain files you can see, keep, and back up:</p>
+<div class="crow" style="margin:14px 0 16px"><span class="filetag"><b>.morjob</b> — a dispatched job</span><span class="filetag"><b>.morrep</b> — a field report</span><span class="filetag"><b>.mordata</b> — a full handoff</span></div>
+<p>Send them by email, or connect a shared Drive / Dropbox / OneDrive folder that <strong>you</strong> own and the apps pass files automatically. Email keeps working either way.</p>
+<figure class="fig"><img src="/assets/course/03-office-data-menu-listing-import-and-export-o.png" alt="Office Data menu listing import and export of .morjob, .morrep and .mordata files, cloud folder options, and backups" loading="lazy"><figcaption>Office's Data menu — every file the suite exchanges, plus your own backups. No sign-in anywhere.</figcaption></figure></section>
+<section class="blk"><p class="kickr">Before you start</p><h2>The demo company isn't yours</h2><div class="note">Every screen in this course shows a placeholder brand — <strong>MorForm.app Industries</strong> and the stencil <strong>M</strong> logo. When you set up, put your own company name and logo in <strong>Settings → Company</strong>. They flow onto every quote, dispatch and PDF the suite produces.</div>
+<p>We'll point out that Settings screen in each app as we reach it. That's it for theory — let's install Office.</p></section>
+</div>
+<nav class="pnav"><a class="pn" href="#home"><span class="dir">← Overview</span><span class="pt">All parts</span></a><a class="pn nx" href="#part-2"><span class="dir">Next → Part 02</span><span class="pt">Office — First run &amp; your roster</span></a></nav>
+</section>
+<section id="part-2" class="part t-office">
+<header class="phero"><span class="ph-grid"></span><div class="phero-in"><span class="ph-wm">02</span><div class="pmeta"><span class="chip-app">MorForm Office</span><span>Part 2 of 10</span><span>~5 min</span></div><h1>First run &amp; your roster</h1><p class="plede">Five minutes of setup, seven empty screens — then your first people and contacts start the counters moving.</p></div></header>
+<div class="content">
+<section class="blk"><p class="kickr">Install → setup</p><h2>First run is one form</h2><p>Office installs from the Microsoft Store — a one-time purchase, no subscription. First run shows plain-language terms, then a single setup form: your name, company name, logo, and OHS jurisdiction. The logo note says exactly where it goes: <strong>"Appears on your PDF quotes."</strong></p>
+<figure class="fig"><img src="/assets/course/04-office-setup-form-completed-with-alex-morris.png" alt="Office setup form completed with Alex Morrison, MorForm.app Industries, the M logo and Canada/Alberta selected" loading="lazy"><figcaption>Setup, filled with the demo identity. Example only — you'll type your own name and load your own logo here.</figcaption></figure>
+<p>Step 2 offers the optional <strong>Company Cloud Folder</strong> — a shared Drive / Dropbox / OneDrive folder that moves dispatched jobs and returned reports automatically. You can skip it; email works either way, and it's one click in Settings later.</p>
+<figure class="fig"><img src="/assets/course/05-optional-company-cloud-folder-step-with-conn.png" alt="Optional Company Cloud Folder step with Connect and Skip for now buttons" loading="lazy"><figcaption>Optional, uses your own cloud, "No MorForm account" — and a Skip for now button.</figcaption></figure></section>
+<section class="blk"><p class="kickr">The blank slate</p><h2>Everything starts at zero</h2><p>Setup drops you on a completely blank app: Jobs (0), "No estimates yet," every crew bucket empty, every contact category at (0), and a dashboard of zeros. Nothing is seeded. Keep those zeros in mind — the rest of this course is watching them fill.</p>
+<figure class="fig"><img src="/assets/course/06-office-overview-dashboard-empty-state-nothin.png" alt="Office Overview dashboard empty state — nothing to show yet" loading="lazy"><figcaption>Overview on day one: "Create estimates and jobs, record draws, and import supervisor reports to see the company picture here."</figcaption></figure></section>
+<section class="blk"><p class="kickr">Crew</p><h2>Add your people</h2><p>Crew holds your own roster — project managers, supervisors, safety officers, subcontractors, employees. Add a PM with just a name, email and phone, and <button type="button" class="cue" data-stage="s2-crew" aria-controls="s2-crew" aria-expanded="false">watch the count tick 0 → 1</button> — that person is now a one-tap option everywhere the app asks for a PM.</p>
+<div class="stage" id="s2-crew"><div><div class="st-in"><div class="xf"><img src="/assets/course/07-crew-screen-with-every-role-at-zero.png" alt="Crew screen with every role at zero"><img class="xb" src="/assets/course/08-crew-screen-with-project-managers-1-morgan-a.png" alt="Crew screen with Project Managers (1) — Morgan Avery"><span class="ring" style="--x:19%;--y:17%"></span></div><p class="st-cap"><b>Project Managers (0) → (1).</b> Supervisors can also appear automatically when their first report arrives. Click the cue to replay.</p></div></div></div>
+<figure class="fig"><img src="/assets/course/09-crew-with-a-project-manager-and-a-framing-su.png" alt="Crew with a project manager and a framing subcontractor listed" loading="lazy"><figcaption>A PM and a framing sub on the roster — each row has Edit, Add to job, Delete.</figcaption></figure></section>
+<section class="blk"><p class="kickr">Contacts &amp; vendors</p><h2>Watch the list learn</h2><p>Contacts &amp; Vendors is where clients, subs, suppliers and inspectors live. The <strong>Category</strong> you pick decides which pick-list that contact lands in later. Add the project owner under Owners &amp; Clients and <button type="button" class="cue" data-stage="s2-learn" aria-controls="s2-learn" aria-expanded="false">watch the tab tick (0) → (1)</button>.</p>
+<div class="stage" id="s2-learn"><div><div class="st-in"><div class="xf"><img src="/assets/course/10-contacts-screen-all-categories-at-zero.png" alt="Contacts screen, all categories at zero"><img class="xb" src="/assets/course/11-contacts-screen-with-hollis-property-group-a.png" alt="Contacts screen with Hollis Property Group added and Owners &amp; Clients (1)"><span class="ring" style="--x:58%;--y:16%"></span></div><p class="st-cap"><b>Owners &amp; Clients (0) → (1).</b> The saved contact becomes a card — and a pick-list option.</p></div></div></div>
+<figure class="fig"><img src="/assets/course/12-add-contact-form-for-hollis-property-group-w.png" alt="Add Contact form for Hollis Property Group with category Owners &amp; Clients" loading="lazy"><figcaption>One form: company, person, category, role. Type it once — it's a one-tap choice from here on.</figcaption></figure>
+<div class="note">That's the core MorForm loop, and you'll see it in every screen from now on: <strong>the app has no options until you create them — then it never asks you to type them again.</strong></div></section>
+</div>
+<nav class="pnav"><a class="pn" href="#part-1"><span class="dir">← Part 01</span><span class="pt">Welcome &amp; how MorForm thinks</span></a><a class="pn nx" href="#part-3"><span class="dir">Next → Part 03</span><span class="pt">Office — Estimating</span></a></nav>
+</section>
+<section id="part-3" class="part t-office">
+<header class="phero"><span class="ph-grid"></span><div class="phero-in"><span class="ph-wm">03</span><div class="pmeta"><span class="chip-app">MorForm Office</span><span>Part 3 of 10</span><span>~6 min</span></div><h1>Estimating</h1><p class="plede">Start from blank or a ready-made template, name divisions in plain language, and let the sheet do the math.</p></div></header>
+<div class="content">
+<section class="blk"><p class="kickr">Two ways to start</p><h2>Blank sheet or template library</h2><p>New Estimate asks one important question: start from <strong>Blank</strong> or from a template. <button type="button" class="cue" data-stage="s3-lib" aria-controls="s3-lib" aria-expanded="false">open the template library</button> and you'll find shipped scaffolds — General Contractor (Commercial / Residential) and trade templates for Plumbing, Electrical, Structural, Interior Systems and HVAC.</p>
+<div class="stage" id="s3-lib"><div><div class="st-in"><div class="xf"><img src="/assets/course/13-new-estimate-dialog-with-the-start-from-temp.png" alt="New Estimate dialog with the Start From Template dropdown open, listing the built-in templates"><span class="ring" style="--x:50%;--y:63%"></span></div><p class="st-cap"><b>Templates give you the division &amp; line-item structure instantly</b> — amounts are never copied. Your own saved layouts join this list too.</p></div></div></div>
+<p>Prefer Excel? Export a blank estimate template from the File menu, fill it in, and import it back — MorForm reads its own template exactly, so divisions and line items land in the right place.</p></section>
+<section class="blk"><p class="kickr">The authoring canvas</p><h2>Divisions and line items, typed in place</h2><p>A blank estimate is a live sheet: a status pipeline across the top (Draft → Approved → Quoted → Won), header fields for client and markup, summary cards at $0, and one starter division with ghost prompts. You rename everything in plain language — <strong>"Framing", "Sitework &amp; Foundation"</strong> — never "Division 22."</p>
+<figure class="fig"><img src="/assets/course/14-a-fresh-blank-estimate-sheet-with-ghost-text.png" alt="A fresh blank estimate sheet with ghost text prompts and $0 summary cards" loading="lazy"><figcaption>The blank sheet: pipeline, header fields, $0 cards, and a starter division waiting for a real name.</figcaption></figure></section>
+<section class="blk"><p class="kickr">The math</p><h2>Labour lines calculate, totals roll up</h2><p>Labour rows multiply <strong>Workers × Hrs × Days × Rate</strong>; material and sub rows take dollar amounts; a per-sheet markup % rolls everything up. Fill the Riverbend estimate and <button type="button" class="cue" data-stage="s3-total" aria-controls="s3-total" aria-expanded="false">watch the total roll up</button>.</p>
+<div class="stage" id="s3-total"><div><div class="st-in"><div class="mini"><p class="mini-lab">Summary cards</p><div class="crow" style="margin-bottom:10px"><span class="chip fc" style="--d:.1s">Labor $4,680.00</span><span class="chip fc" style="--d:.35s">Mat'l $32,750.00</span><span class="chip fc" style="--d:.6s">Sub $54,700.00</span><span class="chip fc" style="--d:.85s">Markup $11,055.60</span></div><span class="mini-lab" style="margin:8px 0 0">Total</span><span class="cnt bigcnt" data-count="103185.60" data-dec="2" data-pre="$" data-dur="1500" data-delay="350">$0.00</span></div><p class="st-cap">Four divisions, nine line items — <b>the TOTAL card recalculates on every keystroke.</b></p></div></div></div>
+<figure class="fig"><img src="/assets/screens/office-estimate.png" alt="The completed estimate: General Requirements, Sitework &amp; Foundation, Framing and Interior Finishes divisions, total $103,185.60" loading="lazy"><figcaption>The finished sheet — every division a clear trade name, total $103,185.60.</figcaption></figure></section>
+<section class="blk"><p class="kickr">Pick-lists again</p><h2>Vendors come from your Contacts</h2><p>Each line has a Contractor/Vendor field with a "Choose from contacts" picker. On a fresh install it's empty — because the estimate pulls vendors from <strong>your</strong> Contacts list. Add Summit Framing once, and <button type="button" class="cue" data-stage="s3-vendor" aria-controls="s3-vendor" aria-expanded="false">the pick-list fills from your contacts</button>.</p>
+<div class="stage" id="s3-vendor"><div><div class="st-in"><div class="xf"><img src="/assets/course/15-vendor-picker-open-on-a-line-item-no-contact.png" alt="Vendor picker open on a line item: no contacts yet"><img class="xb" src="/assets/course/16-the-same-vendor-picker-now-listing-summit-fr.png" alt="The same vendor picker now listing Summit Framing Ltd."><span class="ring" style="--x:47%;--y:90%"></span></div><p class="st-cap"><b>Empty → add once → it appears.</b> The same loop as contacts, applied to vendors on estimate lines.</p></div></div></div></section>
+<section class="blk"><p class="kickr">Make it yours</p><h2>Reshape the sheet, save your own template</h2><p><strong>Edit Layout</strong> renames, reorders or hides columns — each one explains its behaviour — and <strong>Add Column</strong> creates your own (Equipment $, Contingency %, a Room note). When a sheet's structure fits how you work, <strong>Save as Template</strong> puts it in the Start-From-Template list for next time. Amounts are never copied.</p>
+<figure class="fig"><img src="/assets/course/17-edit-layout-panel-listing-every-column-with.png" alt="Edit Layout panel listing every column with rename, reorder and hide controls" loading="lazy"><figcaption>Edit Layout — the sheet is reconfigurable per trade, and a layout can become your default template.</figcaption></figure>
+<figure class="fig"><img src="/assets/course/18-an-estimate-pre-scaffolded-from-the-general.png" alt="An estimate pre-scaffolded from the General Contractor — Residential template" loading="lazy"><figcaption>Started from General Contractor — Residential: structure arrives instantly, prices stay yours to fill.</figcaption></figure></section>
+</div>
+<nav class="pnav"><a class="pn" href="#part-2"><span class="dir">← Part 02</span><span class="pt">Office — First run &amp; your roster</span></a><a class="pn nx" href="#part-4"><span class="dir">Next → Part 04</span><span class="pt">Office — Estimate to won job</span></a></nav>
+</section>
+<section id="part-4" class="part t-office">
+<header class="phero"><span class="ph-grid"></span><div class="phero-in"><span class="ph-wm">04</span><div class="pmeta"><span class="chip-app">MorForm Office</span><span>Part 4 of 10</span><span>~4 min</span></div><h1>Estimate to won job</h1><p class="plede">Approve it, quote it, win it — and the job creates itself. Your costs never leave the building.</p></div></header>
+<div class="content">
+<section class="blk"><p class="kickr">Step 1</p><h2>Approve — internally</h2><p><strong>Approve (internal)</strong> is your own sign-off that the numbers are ready. The pipeline ticks ✓ Draft → <strong>Approved</strong> and reveals the client-facing actions: Proposal &amp; Quote, Mark Quoted, or Back to Draft if you change your mind.</p>
+<figure class="fig"><img src="/assets/course/19-estimate-pipeline-showing-draft-checked-and.png" alt="Estimate pipeline showing Draft checked and Approved active, with Proposal &amp; Quote button revealed" loading="lazy"><figcaption>Approved — nothing has gone to the client yet.</figcaption></figure></section>
+<section class="blk"><p class="kickr">Step 2</p><h2>Send a clean quote — costs stay private</h2><p>Proposal &amp; Quote builds the client PDF. You choose how much price detail the client sees — <strong>section subtotals</strong> is recommended — and MorForm assigns a quote number automatically. The promise is printed right in the dialog: <strong>internal costs — labour math, markup, vendors — are never included.</strong></p>
+<figure class="fig"><img src="/assets/course/20-proposal-and-quote-dialog-with-price-detail.png" alt="Proposal &amp; Quote dialog with price detail options, PDF format and auto quote number Q-2026-001" loading="lazy"><figcaption>The client sees a clean quote; your cost build stays in the estimate.</figcaption></figure>
+<p>This is the exact document it makes — from the data built in this course:</p>
+<div class="dlrow"><a class="dl" href="/uploads/course-outline/pdfs/Quote_Riverbend_Duplex_Unit_B_Q-2026-001.pdf" download=""><span class="tag">PDF</span>Client Quote Q-2026-001 — Riverbend Duplex</a></div></section>
+<section class="blk"><p class="kickr">Step 3</p><h2>Won → the job creates itself</h2><p>Generating the quote advances the pipeline to Quoted. When the client says yes, hit <strong>Won — Create Job</strong>: the job dialog arrives pre-filled from the estimate — name, address, scope notes. No re-typing. <button type="button" class="cue" data-stage="s4-pipe" aria-controls="s4-pipe" aria-expanded="false">see the whole pipeline light up</button>.</p>
+<div class="stage" id="s4-pipe"><div><div class="st-in"><div class="mini"><p class="mini-lab">Estimate lifecycle</p><div class="ppl"><span class="pp" style="--d:.1s">Draft</span><span class="pp-ar">→</span><span class="pp" style="--d:.5s">Approved</span><span class="pp-ar">→</span><span class="pp" style="--d:.9s">Quoted</span><span class="pp-ar">→</span><span class="pp" style="--d:1.3s">Won</span></div><div class="okcard" style="animation-delay:1.8s">✓ Job created — Riverbend Duplex - Unit B · budget $103,185.60 carried over</div></div><p class="st-cap"><b>One click per stage.</b> Lost happens too — the estimate keeps its history either way.</p></div></div></div>
+<figure class="fig"><img src="/assets/course/21-estimate-won-create-job-dialog-pre-filled-wi.png" alt="Estimate Won — Create Job dialog pre-filled with job name, address and notes from the estimate" loading="lazy"><figcaption>Won → Create Job: everything pre-filled from the estimate, just add start and end dates.</figcaption></figure></section>
+</div>
+<nav class="pnav"><a class="pn" href="#part-3"><span class="dir">← Part 03</span><span class="pt">Office — Estimating</span></a><a class="pn nx" href="#part-5"><span class="dir">Next → Part 05</span><span class="pt">Office — Running the job</span></a></nav>
+</section>
+<section id="part-5" class="part t-office">
+<header class="phero"><span class="ph-grid"></span><div class="phero-in"><span class="ph-wm">05</span><div class="pmeta"><span class="chip-app">MorForm Office</span><span>Part 5 of 10</span><span>~5 min</span></div><h1>Running the job</h1><p class="plede">The estimate becomes a live budget, the job goes to the field as a file, and the dashboard keeps score.</p></div></header>
+<div class="content">
+<section class="blk"><p class="kickr">The job dashboard</p><h2>Your estimate became a budget</h2><p>The new job opens with the estimate's numbers already working: <strong>Budget $103,185.60</strong>, and <strong>72h estimated</strong> — straight from the supervision labour line (1 worker × 8 hrs × 9 days). Hours and expenses sit at zero, waiting for field reports.</p>
+<figure class="fig"><img src="/assets/course/22-job-dashboard-with-budget-hours-expenses-sco.png" alt="Job dashboard with budget, hours, expenses, scope and reports cards plus progress bars" loading="lazy"><figcaption>Job dashboard, day one: budget from the estimate, 0h logged, $0 spent — and a Safety panel waiting for field forms.</figcaption></figure>
+<figure class="fig"><img src="/assets/course/23-budget-breakdown-by-category-labour-5-materi.png" alt="Budget breakdown by category: labour 5%, materials 32%, subs 53%, markup 11%" loading="lazy"><figcaption>The estimate's cost structure carries straight into live job costing — actuals fill in as reports arrive.</figcaption></figure></section>
+<section class="blk"><p class="kickr">Dispatch</p><h2>Hand the job to the field — as a file</h2><p>Send &amp; Receive is the crossroads for every file the suite exchanges. <strong>Send Job to Supervisor</strong> saves a <strong>.morjob</strong> and opens your email to attach it — or, with a Company Cloud Folder connected, delivers it automatically. <button type="button" class="cue" data-stage="s5-sent" aria-controls="s5-sent" aria-expanded="false">watch a dispatch go out</button> — and note it only counts once it really sends.</p>
+<div class="stage" id="s5-sent"><div><div class="st-in"><div class="mini"><p class="mini-lab">Dispatching Riverbend Duplex - Unit B</p><div class="ppl"><span class="pp" style="--d:.1s">Save .morjob</span><span class="pp-ar">→</span><span class="pp" style="--d:.7s">Email opens</span><span class="pp-ar">→</span><span class="pp" style="--d:1.3s">You hit send</span></div><div class="okcard" style="animation-delay:1.9s">✓ Jobs list now reads DISPATCHED — not before</div></div><p class="st-cap"><b>Honest status:</b> in the shot below the email was never sent, so the Dispatched column still shows "—". The app doesn't pretend.</p></div></div></div>
+<figure class="fig"><img src="/assets/course/24-dispatch-job-dialog-showing-the-morjob-file.png" alt="Dispatch Job dialog showing the .morjob file flow, supervisor email and optional photos and documents" loading="lazy"><figcaption>Dispatch = the whole job package — info, contacts, permits, photos — in one .morjob file.</figcaption></figure></section>
+<section class="blk"><p class="kickr">The scoreboard</p><h2>Overview fills from the pipeline</h2><p>The Overview dashboard tracks the company, not just one job. Right now it shows <strong>Won/Lost 1 / 0</strong> and <button type="button" class="cue" data-stage="s5-hours" aria-controls="s5-hours" aria-expanded="false">72 billable hours won</button> — while revenue and costs stay $0 until real field time and expenses are imported. The dashboard never invents numbers.</p>
+<div class="stage" id="s5-hours"><div><div class="st-in"><div class="mini"><p class="mini-lab">Overview → Billable hours won</p><span class="cnt bigcnt" data-count="72" data-suf="h" data-dur="1100">0h</span><div class="crow" style="margin-top:6px"><span class="chip on">Won / Lost · 1 / 0 (100%)</span><span class="chip">Revenue $0 — until reports arrive</span></div></div><p class="st-cap"><b>Pipeline metrics fill from estimates and jobs;</b> money metrics wait for the field.</p></div></div></div>
+<figure class="fig"><img src="/assets/screens/office-overview.png" alt="Overview dashboard: revenue, income and costs at zero, billable hours won 72h, won/lost 1/0" loading="lazy"><figcaption>Overview after one won job — honest zeros everywhere the field hasn't reported yet.</figcaption></figure></section>
+<section class="blk"><p class="kickr">Your brand</p><h2>Settings → Company is where you become you</h2><div class="note">Everything in this course says <strong>MorForm.app Industries</strong> because that's what was typed during setup. <strong>Settings → Company</strong> is where you change the name, upload your logo, and set jurisdiction — it re-brands every quote, dispatch and PDF from that moment on.</div>
+<figure class="fig"><img src="/assets/course/25-settings-company-panel-with-logo-upload-comp.png" alt="Settings Company panel with logo upload, company name, address fields and OHS jurisdiction" loading="lazy"><figcaption>Upload / Remove logo, company details, jurisdiction — one screen, suite-wide effect.</figcaption></figure></section>
+</div>
+<nav class="pnav"><a class="pn" href="#part-4"><span class="dir">← Part 04</span><span class="pt">Office — Estimate to won job</span></a><a class="pn nx" href="#part-6"><span class="dir">Next → Part 06</span><span class="pt">Manager — Setup, crew &amp; the spec wizard</span></a></nav>
+</section>
+<section id="part-6" class="part t-manager">
+<header class="phero"><span class="ph-grid"></span><div class="phero-in"><span class="ph-wm">06</span><div class="pmeta"><span class="chip-app">MorForm Manager</span><span>Part 6 of 10</span><span>~6 min</span></div><h1>Setup, crew &amp; the spec wizard</h1><p class="plede">The PM's phone: onboard it in minutes, add your supervisors, and scope a job with lists that build themselves.</p></div></header>
+<div class="content">
+<section class="blk"><p class="kickr">Onboarding</p><h2>Same idea, smaller screen</h2><p>Manager onboards like Office did: plain terms, then <strong>your company</strong> (name, logo, country → province, jurisdiction), <strong>your profile</strong> — the identity that travels with every job you dispatch — an accent colour, and optional report-routing addresses for payroll, safety and HR.</p>
+<div class="phones"><figure class="ph"><img src="/assets/course/01-morform-manager-onboarding-with-company-name.png" alt="Manager onboarding company step with MorForm.app Industries, the M logo and Alberta selected" loading="lazy"><figcaption>Company step — your name &amp; logo land on every dispatch. Country → province, same as Office.</figcaption></figure><figure class="ph"><img src="/assets/course/26-accent-colour-picker-with-manager-gold-selec.png" alt="Accent colour picker with Manager Gold selected and a preview of the five-tab bar" loading="lazy"><figcaption>Pick a colour — and meet the five tabs: Jobs · Crew · Transfer · Specs · Time.</figcaption></figure><figure class="ph"><img src="/assets/course/27-onboarding-complete-summary-card.png" alt="Onboarding complete summary card" loading="lazy"><figcaption>Configured — but still completely empty. Everything from here is built by use.</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">Crew</p><h2>Supervisors in three fields</h2><p>Crew is where dispatching starts: every supervisor you add becomes a recipient later. It's just name, email, phone — <button type="button" class="cue" data-stage="s6-crew" aria-controls="s6-crew" aria-expanded="false">add Dana and watch the list start</button>. Supervisors can also appear automatically when their first .morrep report arrives.</p>
+<div class="stage" id="s6-crew"><div><div class="st-in"><div class="xf tall"><img src="/assets/course/28-crew-tab-empty-0-supervisors.png" alt="Crew tab empty — 0 supervisors"><img class="xb" src="/assets/course/29-crew-tab-with-dana-whitfield-listed-1-superv.png" alt="Crew tab with Dana Whitfield listed — 1 supervisor"><span class="ring" style="--x:28%;--y:19%"></span></div><p class="st-cap"><b>0 → 1 supervisor.</b> This list feeds every supervisor picker in the app — job assignment, dispatch, reminders.</p></div></div></div></section>
+<section class="blk"><p class="kickr">The generated-lists moment</p><h2>"0 saved subtypes" — the wizard proves the idea</h2><p>The 4-step spec wizard scopes a job: job info → type → subtype → trades &amp; scope. On a fresh install, step 2 shows Residential, Commercial and Industrial each reading <strong>"0 saved subtypes."</strong> The app ships with none — <button type="button" class="cue" data-stage="s6-sub" aria-controls="s6-sub" aria-expanded="false">create your first subtype</button> and it's saved for every job after this one.</p>
+<div class="stage" id="s6-sub"><div><div class="st-in"><div class="mini"><p class="mini-lab">Step 2 → Step 3 · Residential</p><div class="crow" style="margin-bottom:10px"><span class="chip on">Residential · 0 saved subtypes</span></div><div class="crow"><span class="chip fc" style="--d:.3s">"Basement Development"</span><span class="chip on fc" style="--d:.9s">✓ Saved</span></div><div class="okcard">Next spec, "Basement Development" is a one-tap choice — and it remembers its trades.</div></div><p class="st-cap"><b>Every subtype you'll ever see in this app was created by you.</b> Click to replay.</p></div></div></div>
+<div class="phones"><figure class="ph"><img src="/assets/course/30-spec-wizard-step-2-with-residential-commerci.png" alt="Spec wizard step 2 with Residential, Commercial and Industrial each showing 0 saved subtypes" loading="lazy"><figcaption>Fresh install: three job types, zero subtypes anywhere.</figcaption></figure><figure class="ph"><img src="/assets/course/31-spec-wizard-step-3-with-basement-development.png" alt="Spec wizard step 3 with Basement Development typed as the first residential subtype" loading="lazy"><figcaption>"It's saved for next time" — the app says so right on the screen.</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">Trades &amp; scope</p><h2>Trades, vendors and scope — remembered together</h2><p>Step 4 builds the trade list for this subtype: add Framing, Electrical, Drywall, then attach a vendor and scope items per trade. All of it is saved to "Basement Development" — next time, the whole structure is one tap.</p>
+<div class="phones"><figure class="ph"><img src="/assets/course/32-spec-wizard-step-4-with-framing-electrical-a.png" alt="Spec wizard step 4 with Framing, Electrical and Drywall trade cards" loading="lazy"><figcaption>Three trades added — each with "+ vendor / contact" and "+ Add scope item."</figcaption></figure><figure class="ph"><img src="/assets/screens/mgr-specs.png" alt="Framing trade card expanded with Summit Framing Ltd., contact Theo Brandt and two scope items" loading="lazy"><figcaption>Framing fully specced: vendor, contact, and two scope items that follow the job.</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">One flow, two artifacts</p><h2>Saving the spec created the job</h2><p>Save, and the confirmation tells you what happened: <strong>the spec is on the job</strong> — it appeared in the Jobs tab automatically. From the spec card, <strong>Send to Office</strong> shares a .mordata file; Office turns it into an estimate with your trades as the division headers.</p>
+<div class="phones"><figure class="ph"><img src="/assets/course/33-spec-card-for-riverbend-duplex-unit-b-with-s.png" alt="Spec card for Riverbend Duplex Unit B with Send to Office button" loading="lazy"><figcaption>The saved spec: 3 trades, scope progress, Send to Office.</figcaption></figure><figure class="ph"><img src="/assets/course/34-android-share-sheet-sharing-jobspec-riverben.png" alt="Android share sheet sharing JobSpec_Riverbend_Duplex___Unit_B.mordata" loading="lazy"><figcaption>No server — the spec leaves as a file, via email, Drive, or any share target.</figcaption></figure></div></section>
+</div>
+<nav class="pnav"><a class="pn" href="#part-5"><span class="dir">← Part 05</span><span class="pt">Office — Running the job</span></a><a class="pn nx" href="#part-7"><span class="dir">Next → Part 07</span><span class="pt">Manager — Jobs, dispatch &amp; your day</span></a></nav>
+</section>
+<section id="part-7" class="part t-manager">
+<header class="phero"><span class="ph-grid"></span><div class="phero-in"><span class="ph-wm">07</span><div class="pmeta"><span class="chip-app">MorForm Manager</span><span>Part 7 of 10</span><span>~6 min</span></div><h1>Jobs, dispatch &amp; your day</h1><p class="plede">Run the pipeline from a job card, hand work to a supervisor as a file, and keep your own hours honest.</p></div></header>
+<div class="content">
+<section class="blk"><p class="kickr">The pipeline</p><h2>Status is one tap on the card</h2><p>The Jobs tab is the pipeline: filter chips with live counts, and job cards carrying their status. Tap the status chip and it cycles — <button type="button" class="cue" data-stage="s7-status" aria-controls="s7-status" aria-expanded="false">Quoting → Approved</button> — the filter counts update the moment it flips.</p>
+<div class="stage" id="s7-status"><div><div class="st-in"><div class="mini"><p class="mini-lab">Tap the status chip</p><div class="ppl"><span class="pp" style="--d:.1s">QUOTING</span><span class="pp-ar">→</span><span class="pp" style="--d:.7s">APPROVED</span></div><div class="okcard" style="animation-delay:1.2s">✓ Filter counts: Quoting 0 · Approved 1 — updated live</div></div><p class="st-cap"><b>No edit form needed for the everyday move</b> — status lives on the card.</p></div></div></div>
+<div class="phones"><figure class="ph"><img src="/assets/screens/mgr-jobs.png" alt="Jobs tab with the Riverbend card showing QUOTING and AWAITING APPROVAL badges" loading="lazy"><figcaption>The job the spec wizard created — badges, address, contact count, office note.</figcaption></figure><figure class="ph"><img src="/assets/course/35-the-same-job-card-cycled-to-approved-with-a.png" alt="The same job card cycled to APPROVED with a green border" loading="lazy"><figcaption>One tap later: APPROVED, green border, counts moved.</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">Job detail</p><h2>Five tabs, everything attached</h2><p>Open the job: Overview · People · Permits · Files · Notes. The vendors you entered in the spec wizard surfaced under <strong>Trades on Site</strong> automatically, and permits — type, number, authority, dates — are tracked on the job and travel with it to the field.</p>
+<div class="phones"><figure class="ph"><img src="/assets/course/36-job-detail-overview-with-estimate-cost-break.png" alt="Job detail Overview with estimate, cost breakdown, actuals and scope cards" loading="lazy"><figcaption>Overview: estimate and actuals stay empty until Office and Field send data back.</figcaption></figure><figure class="ph"><img src="/assets/course/37-job-detail-people-tab-with-client-card-and-t.png" alt="Job detail People tab with client card and trades on site" loading="lazy"><figcaption>People: the client from step 1, and spec vendors surfaced automatically.</figcaption></figure><figure class="ph"><img src="/assets/course/38-permit-form-filled-building-permit-bld-2026.png" alt="Permit form filled: Building Permit BLD-2026-0113, City of Edmonton, status Applied" loading="lazy"><figcaption>Permit tracking lives on the job — and follows the dispatch.</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">Dispatch</p><h2>Recipients come from your crew</h2><p>Dispatch opens a recipient list that is exactly your Crew tab — pick Dana, keep the client contact checked, and <strong>Send Job Package</strong> shares a .morjob file. Email it, or let the cloud folder drop it straight into her inbox folder. Afterwards the outbox shows "✓ Dispatched — tap to re-send"; every send is repeatable.</p>
+<div class="phones"><figure class="ph"><img src="/assets/screens/mgr-dispatch.png" alt="Dispatch Job screen with supervisor radio list and contacts checklist" loading="lazy"><figcaption>Send to: your supervisors, from Crew. Contacts travel with the package.</figcaption></figure><figure class="ph"><img src="/assets/course/39-share-sheet-sharing-a-morjob-file.png" alt="Share sheet sharing a .morjob file" loading="lazy"><figcaption>The dispatch is a file — Job_Riverbend_Duplex___Unit_B….morjob.</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">Your own time</p><h2>Log hours in quarter-hour taps</h2><p>The Time tab is the PM's own journal — separate from supervisor timesheets. Add an entry, pick the job (the dropdown holds <strong>exactly the jobs that exist</strong>, nothing more) and <button type="button" class="cue" data-stage="s7-hours" aria-controls="s7-hours" aria-expanded="false">step the hours 0.25h → 8h</button>.</p>
+<div class="stage" id="s7-hours"><div><div class="st-in"><div class="mini"><p class="mini-lab">Add Time Entry → Hours</p><span class="cnt bigcnt" data-count="8" data-q="0.25" data-dec="2" data-suf="h" data-dur="1300">0.25h</span><div class="crow"><span class="chip on">Riverbend Duplex - Unit B</span><span class="chip">Overtime ☐</span><span class="chip">Stat Holiday ☐</span></div></div><p class="st-cap"><b>Steps follow your timesheet increment</b> — 0.25h here, set during onboarding.</p></div></div></div>
+<div class="phones"><figure class="ph"><img src="/assets/course/40-time-entry-job-dropdown-listing-exactly-the.png" alt="Time entry job dropdown listing exactly the two existing jobs" loading="lazy"><figcaption>The job dropdown: two jobs exist, two options appear.</figcaption></figure><figure class="ph"><img src="/assets/course/41-daytimer-day-sheet-with-logged-hours-and-a-r.png" alt="Daytimer day sheet with logged hours and a reminder attached to the Riverbend job" loading="lazy"><figcaption>The daytimer cross-references logged hours; reminders can attach to a job and a crew member.</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">Waiting on the field</p><h2>The reports dashboard is ready</h2><p>Reports aggregates every supervisor submission by date range, job, or supervisor — right now it reads "0 submissions in range." It fills the moment .morrep files land in the Transfer inbox. That's Part 8's job.</p>
+<figure class="ph" style="max-width:300px;margin:18px auto"><img src="/assets/course/42-reports-dashboard-empty-0-submissions-in-ran.png" alt="Reports dashboard empty — 0 submissions in range" loading="lazy"><figcaption>Honest zeros again — the dashboard only counts what actually arrived.</figcaption></figure></section>
+</div>
+<nav class="pnav"><a class="pn" href="#part-6"><span class="dir">← Part 06</span><span class="pt">Manager — Setup, crew &amp; specs</span></a><a class="pn nx" href="#part-8"><span class="dir">Next → Part 08</span><span class="pt">Field — Job &amp; costs</span></a></nav>
+</section>
+<section id="part-8" class="part t-field">
+<header class="phero"><span class="ph-grid"></span><div class="phero-in"><span class="ph-wm">08</span><div class="pmeta"><span class="chip-app">MorForm Field</span><span>Part 8 of 10</span><span>~5 min</span></div><h1>Job &amp; costs</h1><p class="plede">The supervisor's phone: import the dispatched job, then log the hours and receipts that become the report.</p></div></header>
+<div class="content">
+<section class="blk"><p class="kickr">Onboarding</p><h2>Set up once, work all season</h2><p>Field onboarding covers the worker's world: company and personal identity (they sign every form), a <strong>pay schedule</strong> that groups the timesheet, <strong>work hours and a timesheet increment</strong> — which becomes the steps in the Hours dropdown — and <strong>jurisdiction</strong>, which sets the overtime rules and the OHS legislation quoted on every safety form.</p>
+<div class="phones"><figure class="ph"><img src="/assets/course/43-pay-schedule-step-with-bi-weekly-selected.png" alt="Pay schedule step with Bi-Weekly selected" loading="lazy"><figcaption>Bi-Weekly selected — the Reports tab groups pay periods to match.</figcaption></figure><figure class="ph"><img src="/assets/course/44-jurisdiction-step-with-alberta-selected-show.png" alt="Jurisdiction step with Alberta selected showing Alberta OHS and overtime rules" loading="lazy"><figcaption>Alberta → "OT: Daily &gt;8h · Weekly &gt;44h." The province you tap drives the rules app-wide.</figcaption></figure><figure class="ph"><img src="/assets/course/45-field-onboarding-complete-summary.png" alt="Field onboarding complete summary" loading="lazy"><figcaption>"Start by adding your job sites, then log your first time entry."</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">The dispatch lands</p><h2>Import the job — nothing re-typed</h2><p>The .morjob the PM sent opens straight into the app. <button type="button" class="cue" data-stage="s8-import" aria-controls="s8-import" aria-expanded="false">import it and watch the job appear</button> — PM contact, site note, the building permit, the client contact: the whole package lands intact.</p>
+<div class="stage" id="s8-import"><div><div class="st-in"><div class="xf tall"><img src="/assets/course/46-field-jobs-tab-with-no-active-jobs.png" alt="Field Jobs tab with no active jobs"><img class="xb" src="/assets/course/47-field-jobs-tab-with-the-imported-riverbend-c.png" alt="Field Jobs tab with the imported Riverbend card showing ERP Needed and Inspection Due badges"><span class="ring" style="--x:50%;--y:36%"></span></div><p class="st-cap"><b>No active jobs → Riverbend, fully loaded.</b> The ERP Needed and Inspection Due badges are compliance prompts the app raises on its own.</p></div></div></div>
+<div class="phones"><figure class="ph"><img src="/assets/course/48-job-imported-confirmation-listing-pm-address.png" alt="Job Imported confirmation listing PM, address, 1 permit and 1 contact included" loading="lazy"><figcaption>The receipt: "Included: 1 permit, 1 contact." Exactly what the PM packed.</figcaption></figure><figure class="ph"><img src="/assets/course/49-job-status-tab-showing-hours-and-expense-rol.png" alt="Job status tab showing hours and expense roll-ups and the mirrored building permit" loading="lazy"><figcaption>The permit the PM tracked, mirrored on site — hours and expenses fill as you log.</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">Time</p><h2>Hours in the same quarter-hour steps</h2><p>Add Entry → pick the job — the dropdown holds only the jobs on this phone — set the hours in the increment chosen at onboarding, flag overtime or a stat holiday, save. A green dot marks the day; the week adds itself up.</p>
+<div class="phones"><figure class="ph"><img src="/assets/course/50-time-entry-job-dropdown-listing-the-imported.png" alt="Time entry job dropdown listing the imported Riverbend job" loading="lazy"><figcaption>One job on the phone, one option in the list.</figcaption></figure><figure class="ph"><img src="/assets/screens/field-log-hours.png" alt="Time tab with 8h logged on the Riverbend job" loading="lazy"><figcaption>Jul 6 Mon · 8h logged — this row is headed for the timesheet.</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">Expenses</p><h2>Receipts photographed at the counter</h2><p>Expenses take a job, a payment method — company card, vendor account, or personal-reimburse — a vendor, and a receipt photo from camera or library. <button type="button" class="cue" data-stage="s8-exp" aria-controls="s8-exp" aria-expanded="false">log the framing materials</button> and the job's cost ticker moves. Half-finished forms are protected by a discard guard, so a phone call doesn't cost you the entry.</p>
+<div class="stage" id="s8-exp"><div><div class="st-in"><div class="mini"><p class="mini-lab">Expense tab total</p><span class="cnt bigcnt" data-count="147.75" data-dec="2" data-pre="$" data-dur="1100">$0.00</span><div class="crow"><span class="chip on fc" style="--d:.9s">Site Supply Co. · Company Card</span><span class="chip fc" style="--d:1.1s">1 receipt attached</span></div></div><p class="st-cap"><b>Every expense carries its receipt</b> — payroll and the PM see the photo, not a mystery number.</p></div></div></div>
+<div class="phones"><figure class="ph"><img src="/assets/screens/sup-expenses.png" alt="Expense form filled: Riverbend, company card, $147.75, Site Supply Co., receipt thumbnail attached" loading="lazy"><figcaption>$147.75 at Site Supply Co., receipt attached, Replace Photo if it's blurry.</figcaption></figure><figure class="ph"><img src="/assets/course/51-discard-changes-confirmation-dialog-protecti.png" alt="Discard changes confirmation dialog protecting an unsaved expense" loading="lazy"><figcaption>The discard guard — the app never silently throws away a half-entered form.</figcaption></figure></div></section>
+</div>
+<nav class="pnav"><a class="pn" href="#part-7"><span class="dir">← Part 07</span><span class="pt">Manager — Jobs, dispatch &amp; your day</span></a><a class="pn nx" href="#part-9"><span class="dir">Next → Part 09</span><span class="pt">Field — Safety done right</span></a></nav>
+</section>
+<section id="part-9" class="part t-field">
+<header class="phero"><span class="ph-grid"></span><div class="phero-in"><span class="ph-wm">09</span><div class="pmeta"><span class="chip-app">MorForm Field</span><span>Part 9 of 10</span><span>~6 min</span></div><h1>Safety done right</h1><p class="plede">FLHA, site inspection, emergency response plan — guided, OHS-compliant, and signed on the spot.</p></div></header>
+<div class="content">
+<section class="blk"><p class="kickr">The toolkit</p><h2>One tab, the whole safety routine</h2><p>The Safety tab holds it all: FLHA, Site Hazard Inspection, Incident Report, Emergency Response Plan, plus blank printable forms and paper-form upload — each tagged with the OHS rule it satisfies. The banner at the top does the nagging for you: <strong>"FLHA Not Yet Done Today."</strong></p>
+<figure class="ph" style="max-width:300px;margin:18px auto"><img src="/assets/screens/sup-safety.png" alt="Safety tab with the daily FLHA banner and the five document types" loading="lazy"><figcaption>The daily-FLHA banner enforces the routine; every form lists its OHS basis.</figcaption></figure></section>
+<section class="blk"><p class="kickr">FLHA</p><h2>Hazard assessment, step by step</h2><p>The FLHA is a guided five-stage form — <button type="button" class="cue" data-stage="s9-steps" aria-controls="s9-steps" aria-expanded="false">watch the steps advance</button>. Job info pulls from your job list, hazards are tap-to-select chips, task steps build a reusable library, PPE is a checklist, and the crew signs on the glass.</p>
+<div class="stage" id="s9-steps"><div><div class="st-in"><div class="mini"><p class="mini-lab">FLHA — five stages</p><div class="ppl"><span class="pp" style="--d:.1s">1 Job Info</span><span class="pp-ar">→</span><span class="pp" style="--d:.5s">2 Site Hazards</span><span class="pp-ar">→</span><span class="pp" style="--d:.9s">3 Task Steps</span><span class="pp-ar">→</span><span class="pp" style="--d:1.3s">4 PPE</span><span class="pp-ar">→</span><span class="pp" style="--d:1.7s">Review &amp; Sign</span></div><div class="okcard" style="animation-delay:2.2s">✓ Signed: Dana Whitfield — Employee · Submit FLHA</div></div><p class="st-cap"><b>The attestation quotes your jurisdiction</b> — "…per Alberta OHS Act… all workers understand their right to refuse unsafe work."</p></div></div></div>
+<div class="phones"><figure class="ph"><img src="/assets/course/52-flha-step-1-filled-with-the-riverbend-job-an.png" alt="FLHA step 1 filled with the Riverbend job and scope of work" loading="lazy"><figcaption>Step 1 — the job comes from your list, the scope in your words.</figcaption></figure><figure class="ph"><img src="/assets/course/53-flha-step-4-ppe-checklist-chips.png" alt="FLHA step 4 PPE checklist chips" loading="lazy"><figcaption>Step 4 — PPE as tap-chips: hard hat, glasses, boots, fall protection…</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">The core lesson</p><h2>Every hazard forces a real control</h2><p>Select a hazard and a Control Methods card appears for it, ranked by the <strong>OHS Hierarchy of Controls</strong> — 1 Eliminate down to 5 PPE. <button type="button" class="cue" data-stage="s9-ctrl" aria-controls="s9-ctrl" aria-expanded="false">pick a hazard, choose its control</button>.</p>
+<div class="stage" id="s9-ctrl"><div><div class="st-in"><div class="xf tall"><img src="/assets/course/54-flha-step-2-hazard-chips-grid.png" alt="FLHA step 2 hazard chips grid"><img class="xb" src="/assets/course/55-control-method-card-with-engineering-selecte.png" alt="Control method card with Engineering selected for slippery surfaces"><span class="ring" style="--x:50%;--y:52%"></span></div><p class="st-cap"><b>Slippery Surfaces → 3. Engineering,</b> with a written control note. Ticking a box isn't enough.</p></div></div></div>
+<div class="note">The form says it in so many words: <strong>"PPE alone is not sufficient."</strong> That's the habit this screen builds — controls first, equipment last.</div></section>
+<section class="blk"><p class="kickr">Inspection</p><h2>The site inspection scores itself</h2><p>The 12-page Site Hazard Inspection rates every item Pass / Fail / N/A / Action Required — any non-Pass opens a mandatory "describe the issue" field, and a live tally rides in the header. <button type="button" class="cue" data-stage="s9-score" aria-controls="s9-score" aria-expanded="false">jump to the final score</button>.</p>
+<div class="stage" id="s9-score"><div><div class="st-in"><div class="mini"><p class="mini-lab">Page 12 — Review &amp; Score</p><span class="cnt bigcnt" data-count="98" data-suf="% compliant" data-dur="1300">0% compliant</span><div class="crow"><span class="chip fc" style="--d:.9s">57 scored</span><span class="chip fc" style="--d:1.05s">56 pass</span><span class="chip fc" style="--d:1.2s">0 fail</span><span class="chip on fc" style="--d:1.35s">1 action required</span></div></div><p class="st-cap"><b>Every Action-Required item rolls into a punch list</b> with your written note attached.</p></div></div></div>
+<div class="phones"><figure class="ph"><img src="/assets/course/56-inspection-checklist-with-items-rated-and-an.png" alt="Inspection checklist with items rated and an Action Required note field revealed" loading="lazy"><figcaption>One item flagged Action Req. — the describe-issue field is not optional.</figcaption></figure><figure class="ph"><img src="/assets/course/57-inspection-review-page-with-98-compliance-sc.png" alt="Inspection review page with 98% compliance score and items requiring action" loading="lazy"><figcaption>Auto-scored: 98% compliant, one item on the punch list, signed by the inspector.</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">ERP</p><h2>The plan you post before work begins</h2><p>The Emergency Response Plan — OHS Code Part 7 — pre-fills 911, Alberta OHS and Poison Control, then asks for what only you know: nearest hospital and route, muster point, first-aid locations, emergency contacts. Review it with the crew, sign, and post it.</p>
+<div class="phones"><figure class="ph"><img src="/assets/course/58-erp-filled-with-royal-alexandra-hospital-and.png" alt="ERP filled with Royal Alexandra Hospital and the muster point" loading="lazy"><figcaption>Hospital, route, muster point — the answers that matter at the worst moment.</figcaption></figure><figure class="ph"><img src="/assets/course/59-erp-review-and-authorization-with-crew-revie.png" alt="ERP review and authorization with crew-review checkbox and signature" loading="lazy"><figcaption>"Reviewed with all crew members" — then the supervisor signs.</figcaption></figure></div></section>
+<section class="blk"><p class="kickr">Proof</p><h2>The PDFs are the point</h2><p>Every completed form becomes a branded, compliant PDF — ready for the PM, the safety officer, or the auditor. These two came out of the forms above:</p>
+<div class="dlrow"><a class="dl" href="/uploads/course-outline/pdfs/FLHA_Riverbend_Duplex_Unit_B.pdf" download=""><span class="tag">PDF</span>FLHA — Riverbend Duplex, signed</a><a class="dl" href="/uploads/course-outline/pdfs/ERP_Riverbend_Duplex_Unit_B.pdf" download=""><span class="tag">PDF</span>Emergency Response Plan — post on site</a></div></section>
+</div>
+<nav class="pnav"><a class="pn" href="#part-8"><span class="dir">← Part 08</span><span class="pt">Field — Job &amp; costs</span></a><a class="pn nx" href="#part-10"><span class="dir">Next → Part 10</span><span class="pt">The full loop</span></a></nav>
+</section>
+<section id="part-10" class="part t-intro">
+<header class="phero"><span class="ph-grid"></span><div class="phero-in"><span class="ph-wm">10</span><div class="pmeta"><span class="chip-app">The whole suite</span><span>Part 10 of 10</span><span>~3 min</span></div><h1>The full loop</h1><p class="plede">Office dispatches, the field works and documents, the report comes home — and the numbers write themselves.</p></div></header>
+<div class="content">
+<section class="blk"><p class="kickr">One cycle</p><h2>Follow the job all the way around</h2><p>Everything this course built is one loop. <button type="button" class="cue" data-stage="s10-loop" aria-controls="s10-loop" aria-expanded="false">run the loop</button> and read it stage by stage:</p>
+<div class="stage" id="s10-loop"><div><div class="st-in"><div class="mini"><p class="mini-lab">The MorForm cycle</p><div class="ppl"><span class="pp" style="--d:.1s">Office estimates &amp; wins</span><span class="pp-ar">→</span><span class="pp" style="--d:.6s">.morjob dispatched</span><span class="pp-ar">→</span><span class="pp" style="--d:1.1s">Field logs, signs, spends</span><span class="pp-ar">→</span><span class="pp" style="--d:1.6s">.morrep returns</span><span class="pp-ar">→</span><span class="pp" style="--d:2.1s">Costing &amp; safety update</span></div><div class="okcard" style="animation-delay:2.6s">✓ Hours, expenses and safety docs land on the job — nothing typed twice, nothing on anyone's server.</div></div><p class="st-cap"><b>Manager rides the same loop on mobile</b> — specs out, dispatches out, reports in, one aggregated dashboard.</p></div></div></div></section>
+<section class="blk"><p class="kickr">The report comes home</p><h2>From pay period to paper trail</h2><p>On the field phone, the Report tab rolls the logged time into a pay-period timesheet — 8 regular hours on Riverbend for Dana — and sends it as a branded PDF + CSV, or as a <strong>.morrep</strong> file. Back at the desk, Send &amp; Receive imports it: the supervisor auto-appears in Crew, hours and expenses hit the job's actuals, and the dashboards finally get their numbers.</p>
+<div class="phones"><figure class="ph"><img src="/assets/course/60-field-report-tab-showing-the-bi-weekly-times.png" alt="Field report tab showing the bi-weekly timesheet with 8 hours on Riverbend" loading="lazy"><figcaption>The timesheet aggregates itself — Generate PDF, Export CSV, or Email to Manager.</figcaption></figure><figure class="ph"><img src="/assets/course/61-share-sheet-sending-the-generated-timesheet.png" alt="Share sheet sending the generated timesheet PDF" loading="lazy"><figcaption>Reports leave as files, like everything else in the suite.</figcaption></figure></div>
+<figure class="fig"><img src="/assets/course/62-office-send-and-receive-hub-with-import-and.png" alt="Office Send &amp; Receive hub with import and export actions and QuickBooks export row" loading="lazy"><figcaption>Office's Send &amp; Receive: reports in, dispatches out — and QuickBooks CSV/IIF export when accounting asks.</figcaption></figure></section>
+<section class="blk"><p class="kickr">Take the samples</p><h2>What the suite actually produces</h2><p>All four documents below were generated from the data built in this course — same job, same people, start to finish:</p>
+<div class="dlrow"><a class="dl" href="/uploads/course-outline/pdfs/Quote_Riverbend_Duplex_Unit_B_Q-2026-001.pdf" download=""><span class="tag">PDF</span>Client Quote Q-2026-001</a><a class="dl" href="/uploads/course-outline/pdfs/Timesheet_Dana_Whitfield_Riverbend_Duplex_Unit_B.pdf" download=""><span class="tag">PDF</span>Timesheet — Dana Whitfield</a><a class="dl" href="/uploads/course-outline/pdfs/FLHA_Riverbend_Duplex_Unit_B.pdf" download=""><span class="tag">PDF</span>FLHA — signed</a><a class="dl" href="/uploads/course-outline/pdfs/ERP_Riverbend_Duplex_Unit_B.pdf" download=""><span class="tag">PDF</span>Emergency Response Plan</a></div></section>
+<section class="blk"><p class="kickr">Your turn</p><h2>Now make it yours</h2><div class="note">First job on your own install: <strong>Settings → Company</strong> in each app — your company name, your logo, your jurisdiction. From that moment every quote, dispatch and safety PDF carries your brand, and every list you touch starts learning your business.</div>
+<p style="margin-top:18px"><a class="btn btn-gold" href="#home">Back to the course overview →</a></p></section>
+</div>
+<nav class="pnav"><a class="pn" href="#part-9"><span class="dir">← Part 09</span><span class="pt">Field — Safety done right</span></a><a class="pn nx" href="#home"><span class="dir">Finish</span><span class="pt">Course overview</span></a></nav>
+</section>
+<footer class="sitefoot"><div class="sf-in">
+<div><div class="sf-brandrow"><img class="sf-logo" src="/assets/m-logo.png" alt="MorForm M logo"><span class="sf-t">How to use MorForm</span></div><p class="sf-d">A hands-on course for the MorForm construction suite — estimate in Office, dispatch in Manager, report from Field. Ten parts, one job, every screen real.</p><p class="sf-trust">no accounts · works offline · your data stays yours</p><a class="sf-l" href="/" style="margin-top:10px">↖ morform.app — the website</a></div>
+<div><p class="sf-h">Office · Parts 2–5</p><a class="sf-l" href="#part-2">First run &amp; your roster</a><a class="sf-l" href="#part-3">Estimating</a><a class="sf-l" href="#part-4">Estimate to won job</a><a class="sf-l" href="#part-5">Running the job</a></div>
+<div><p class="sf-h">Manager &amp; Field · 6–9</p><a class="sf-l" href="#part-6">Setup, crew &amp; specs</a><a class="sf-l" href="#part-7">Jobs, dispatch &amp; your day</a><a class="sf-l" href="#part-8">Job &amp; costs</a><a class="sf-l" href="#part-9">Safety done right</a></div>
+<div><p class="sf-h">Sample documents</p><a class="sf-l" href="/uploads/course-outline/pdfs/Quote_Riverbend_Duplex_Unit_B_Q-2026-001.pdf" download="">Client quote (PDF)</a><a class="sf-l" href="/uploads/course-outline/pdfs/Timesheet_Dana_Whitfield_Riverbend_Duplex_Unit_B.pdf" download="">Timesheet (PDF)</a><a class="sf-l" href="/uploads/course-outline/pdfs/FLHA_Riverbend_Duplex_Unit_B.pdf" download="">Signed FLHA (PDF)</a><a class="sf-l" href="/uploads/course-outline/pdfs/ERP_Riverbend_Duplex_Unit_B.pdf" download="">Emergency response plan (PDF)</a></div>
+</div><div class="sf-base"><a class="sf-bl" href="#home">Course overview — all 10 parts</a><span>Navigate with <span class="kbd">←</span><span class="kbd">→</span> keys</span></div></footer>
+</div>
+<script>
+/* Course navigation — vanilla, no libraries. Progress lives in this browser's
+   localStorage only (mfcourse-visited / mfcourse-last); nothing is sent anywhere. */
+(function(){
+var T=["Welcome & how MorForm thinks","First run & your roster","Estimating","Estimate to won job","Running the job","Setup, crew & the spec wizard","Jobs, dispatch & your day","Job & costs","Safety done right","The full loop"];
+function pad(i){return (i<10?'0':'')+i}
+function parseHash(){var h=(location.hash||'').replace('#','');return /^part-(10|[1-9])$/.test(h)?h:'home'}
+function loadVisited(){try{var v=JSON.parse(localStorage.getItem('mfcourse-visited')||'[]');return Array.isArray(v)?v:[]}catch(e){return []}}
+function loadLast(){try{var v=localStorage.getItem('mfcourse-last')||'';return /^part-(10|[1-9])$/.test(v)?v:''}catch(e){return ''}}
+var visited=loadVisited(),last=loadLast(),route=parseHash();
+var ROUTES=['home','part-1','part-2','part-3','part-4','part-5','part-6','part-7','part-8','part-9','part-10'];
+function has(i){return visited.indexOf('part-'+i)>=0}
+function $(s){return document.querySelector(s)}
+function all(s){return [].slice.call(document.querySelectorAll(s))}
+var pmenu=$('#pmenu'),pmBtn=pmenu?pmenu.querySelector('.pm-btn'):null;
+function render(){
+  var n=route==='home'?0:parseInt(route.split('-')[1],10);
+  all('#home,.part').forEach(function(sec){sec.classList.toggle('cur',sec.id===(n===0?'home':'part-'+n))});
+  var num=$('#pm-num'),lab=$('#pm-lab');
+  if(num)num.textContent=n===0?'00':pad(n);
+  if(lab)lab.textContent=n===0?'Course overview':T[n-1];
+  all('.mi[data-mi]').forEach(function(a){a.classList.toggle('cur',parseInt(a.getAttribute('data-mi'),10)===n)});
+  all('[data-mi-tick]').forEach(function(s){var i=parseInt(s.getAttribute('data-mi-tick'),10);s.hidden=!(i>0&&has(i))});
+  all('.tk[data-tk]').forEach(function(s){s.classList.toggle('on',has(parseInt(s.getAttribute('data-tk'),10)))});
+  var vc=$('#vcount');if(vc)vc.textContent=String(visited.length);
+  all('[data-vis]').forEach(function(s){s.hidden=!has(parseInt(s.getAttribute('data-vis'),10))});
+  var pv=$('#nv-prev'),nx=$('#nv-next');
+  if(pv)pv.classList.toggle('off',n===0);
+  if(nx)nx.classList.toggle('off',n===10);
+  var lastN=last?parseInt(last.split('-')[1],10):0,nu=0;
+  for(var k=1;k<=10;k++){if(!has(k)){nu=k;break}}
+  var target=0;if(lastN>0&&lastN<10){target=lastN+1}else if(nu>0){target=nu}
+  var show=visited.length>0&&visited.length<10&&target>0;
+  all('[data-resume]').forEach(function(a){
+    a.hidden=!show;
+    if(!show)return;
+    a.setAttribute('href','#part-'+target);
+    if(a.hasAttribute('data-resume-cta'))a.textContent='Resume — Part '+pad(target)+' \u2192';
+    var t=a.querySelector('[data-resume-title]');
+    if(t)t.textContent='Part '+pad(target)+' \u2014 '+T[target-1];
+  });
+  if(pmenu)pmenu.classList.remove('pm-open');
+  if(pmBtn)pmBtn.setAttribute('aria-expanded','false');
+}
+function bar(){var el=document.getElementById('readbar');if(!el)return;var d=document.documentElement;var m=d.scrollHeight-d.clientHeight;var y=window.pageYOffset||d.scrollTop||0;el.style.width=(m>0?Math.min(100,Math.max(0,y/m*100)):0)+'%'}
+function mark(r){
+  if(r==='home')return;
+  if(last!==r){last=r;try{localStorage.setItem('mfcourse-last',r)}catch(e){}}
+  if(visited.indexOf(r)<0){visited=visited.concat([r]);try{localStorage.setItem('mfcourse-visited',JSON.stringify(visited))}catch(e){}}
+}
+function step(d){var i=ROUTES.indexOf(route);var j=Math.max(0,Math.min(ROUTES.length-1,i+d));if(j!==i)location.hash='#'+ROUTES[j]}
+window.addEventListener('hashchange',function(){route=parseHash();mark(route);render();window.scrollTo(0,0);bar()});
+window.addEventListener('keydown',function(e){
+  if(e.key==='Escape'){if(pmenu)pmenu.classList.remove('pm-open');if(pmBtn)pmBtn.setAttribute('aria-expanded','false');return}
+  if(e.altKey||e.ctrlKey||e.metaKey||e.shiftKey)return;
+  var t=e.target,tag=(t&&t.tagName?t.tagName:'').toLowerCase();
+  if(tag==='input'||tag==='textarea'||tag==='select'||(t&&t.isContentEditable))return;
+  if(e.key==='ArrowRight'){step(1)}else if(e.key==='ArrowLeft'){step(-1)}
+});
+document.addEventListener('mousedown',function(e){if(pmenu&&pmenu.classList.contains('pm-open')&&!pmenu.contains(e.target)){pmenu.classList.remove('pm-open');if(pmBtn)pmBtn.setAttribute('aria-expanded','false')}});
+var rq=null;
+window.addEventListener('scroll',function(){if(rq)return;rq=requestAnimationFrame(function(){rq=null;bar()})},{passive:true});
+if(pmBtn)pmBtn.addEventListener('click',function(){var open=pmenu.classList.toggle('pm-open');pmBtn.setAttribute('aria-expanded',String(open))});
+all('.pm-pop a').forEach(function(a){a.addEventListener('click',function(){pmenu.classList.remove('pm-open');if(pmBtn)pmBtn.setAttribute('aria-expanded','false')})});
+if($('#nv-prev'))$('#nv-prev').addEventListener('click',function(){step(-1)});
+if($('#nv-next'))$('#nv-next').addEventListener('click',function(){step(1)});
+function counters(st){
+  var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var els=st.querySelectorAll('[data-count]');
+  for(var i=0;i<els.length;i++){(function(el){
+    var to=parseFloat(el.getAttribute('data-count')),dec=parseInt(el.getAttribute('data-dec')||'0',10),pre=el.getAttribute('data-pre')||'',suf=el.getAttribute('data-suf')||'',q=parseFloat(el.getAttribute('data-q')||'0'),dur=parseFloat(el.getAttribute('data-dur')||'1100'),dly=parseFloat(el.getAttribute('data-delay')||'0');
+    function fmt(v){if(q>0){v=Math.round(v/q)*q}var s=v.toLocaleString('en-CA',{minimumFractionDigits:dec,maximumFractionDigits:dec});if(q>0){s=s.replace(/\.([0-9]*?)0+$/,'.$1').replace(/\.$/,'')}return pre+s+suf}
+    if(el._raf)cancelAnimationFrame(el._raf);if(el._tmo)clearTimeout(el._tmo);
+    if(rm){el.textContent=fmt(to);return}
+    el.textContent=fmt(0);
+    el._tmo=setTimeout(function(){var t0=performance.now();function stp(t){var k=Math.min(1,(t-t0)/dur),ease=1-Math.pow(1-k,3);el.textContent=fmt(to*ease);if(k<1){el._raf=requestAnimationFrame(stp)}}el._raf=requestAnimationFrame(stp)},dly);
+  })(els[i])}
+}
+all('.cue[data-stage]').forEach(function(b){b.addEventListener('click',function(){
+  var st=document.getElementById(b.getAttribute('data-stage'));if(!st)return;
+  st.classList.add('open');b.setAttribute('aria-expanded','true');
+  st.classList.remove('play');void st.offsetWidth;st.classList.add('play');
+  counters(st);
+})});
+mark(route);render();bar();
+})();
+</script>
+</body></html>
