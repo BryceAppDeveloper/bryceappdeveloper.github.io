@@ -17,6 +17,7 @@ Key facts:
 - [MorForm Office on the Microsoft Store](https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0)
 
 ## Docs
+- [How to use MorForm — free 10-part course](https://morform.app/course)
 - [Supervisor user guide](https://morform.app/morform-help.html)
 - [Manager user guide](https://morform.app/morform-manager-help.html)
 - [Office user guide](https://morform.app/morform-office-help.html)

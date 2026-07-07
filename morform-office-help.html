@@ -1,1214 +1,492 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MorForm Office — User Guide</title>
-<meta name="description" content="MorForm Office (Windows) user guide — desktop estimating and client quotes, jobs, progress draws, QuickBooks export, supervisor report review, and data sync with MorForm Manager mobile." />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://morform.app/morform-office-help.html" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://morform.app/morform-office-help.html" />
-<meta property="og:title" content="MorForm Office — User Guide" />
-<meta property="og:description" content="Desktop estimating, client quotes, draws, QuickBooks export, and supervisor report review on Windows with MorForm Office." />
-<meta property="og:image" content="https://morform.app/assets/og-image.jpg" />
-<meta property="og:site_name" content="MorForm" />
-<meta property="og:locale" content="en_CA" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="MorForm Office — User Guide" />
-<meta name="twitter:description" content="Desktop estimating, client quotes, draws, QuickBooks export, and supervisor report review on Windows with MorForm Office." />
-<meta name="twitter:image" content="https://morform.app/assets/og-image.jpg" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=IBM+Plex+Sans:wght@300;400;500;700&amp;display=swap">
-<style>
-
-  :root {
-    --teal: #0e483c;
-    --teal-dark: #061f19;
-    --teal-light: #e8f5f1;
-    --teal-border: #a8d4c8;
-    --ink: #0a1f1a;
-    --bg: #f4faf8;
-    --muted: #3d6b5e;
-    --text: #1a3d34;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 300;
-    background: var(--bg);
-    color: var(--ink);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  header {
-    background: var(--teal-dark);
-    color: white;
-    padding: 40px 32px 32px;
-  }
-
-  header .back {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(14,72,60,0.6);
-    text-decoration: none;
-    margin-bottom: 20px;
-    transition: color 0.2s;
-  }
-  header .back:hover { color: rgba(14,72,60,1); }
-
-  header .app-tag {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: rgba(14,72,60,0.5);
-    margin-bottom: 8px;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 6px;
-    color: #e8f5f1;
-  }
-
-  header p {
-    font-size: 0.9rem;
-    color: rgba(245,230,192,0.55);
-    font-weight: 300;
-  }
-
-  /* Windows badge */
-  header .platform-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 14px;
-    background: rgba(14,72,60,0.15);
-    border: 1px solid rgba(14,72,60,0.3);
-    border-radius: 20px;
-    padding: 5px 12px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: rgba(178,145,70,0.8);
-    letter-spacing: 0.06em;
-  }
-
-  .layout {
-    display: flex;
-    max-width: 1100px;
-    margin: 0 auto;
-    width: 100%;
-    flex: 1;
-    gap: 0;
-  }
-
-  .toc {
-    width: 240px;
-    flex-shrink: 0;
-    padding: 32px 0;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow-y: auto;
-    border-right: 1px solid var(--teal-border);
-    background: white;
-  }
-
-  .toc-group-label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(14,72,60,0.45);
-    padding: 16px 20px 6px;
-  }
-
-  .toc a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 9px 20px;
-    text-decoration: none;
-    font-size: 13px;
-    color: var(--muted);
-    border-left: 3px solid transparent;
-    transition: all 0.15s;
-    font-weight: 400;
-  }
-
-  .toc a:hover, .toc a.active {
-    color: var(--teal);
-    background: var(--teal-light);
-    border-left-color: var(--teal);
-  }
-
-  .toc a .icon { font-size: 15px; width: 20px; text-align: center; }
-
-  main {
-    flex: 1;
-    padding: 40px 40px 80px;
-    min-width: 0;
-  }
-
-  section {
-    margin-bottom: 8px;
-    background: white;
-  }
-
-  .sec-header {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 20px 24px;
-    border-bottom: 2px solid rgba(14,72,60,0.18);
-  }
-
-  .sec-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: rgba(14,72,60,0.12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    flex-shrink: 0;
-  }
-
-  .sec-title {
-    margin: 0;
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: #0a1f1a;
-    letter-spacing: -0.02em;
-  }
-
-  .sec-body { padding: 20px 24px 24px; }
-
-  h3 {
-    font-size: 14px;
-    font-weight: 800;
-    color: #0a1f1a;
-    margin: 20px 0 8px;
-  }
-
-  p {
-    font-size: 13.5px;
-    color: var(--text);
-    line-height: 1.7;
-    margin-bottom: 10px;
-  }
-
-  .callout {
-    display: flex;
-    gap: 10px;
-    border-radius: 8px;
-    padding: 12px 14px;
-    margin: 10px 0;
-    border-width: 1px;
-    border-style: solid;
-    font-size: 13px;
-    line-height: 1.6;
-  }
-  .callout .ico { flex-shrink: 0; margin-top: 1px; }
-  .callout-tip  { background:#EDFAF4; border-color:#6EE7B7; color:#064E3B; }
-  .callout-note { background:#e8f5f1; border-color:#5fb8a0; color:#0e483c; }
-  .callout-warn { background:#FFFBEB; border-color:#FDE68A; color:#7C2D12; }
-  .callout-imp  { background:#FEF2F2; border-color:#FECACA; color:#7F1D1D; }
-
-  .tbl { width:100%; border-collapse:collapse; border-radius:8px; overflow:hidden; border:1px solid var(--teal-border); margin:10px 0; font-size:13px; }
-  .tbl th { background:var(--teal); color:#e8f5f1; padding:9px 12px; text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:0.04em; font-weight:700; }
-  .tbl td { padding:9px 12px; color:#1a3d34; border-top:1px solid var(--teal-border); line-height:1.5; vertical-align:top; }
-  .tbl tr:nth-child(even) td { background:#e8f5f1; }
-
-  .steps { margin: 10px 0; }
-  .step { display:flex; gap:14px; padding:10px 0; border-bottom:1px solid var(--teal-border); }
-  .step:last-child { border-bottom:none; }
-  .step-num {
-    width:28px; height:28px; border-radius:50%;
-    background:var(--teal); color:white;
-    display:flex; align-items:center; justify-content:center;
-    font-size:12px; font-weight:800; flex-shrink:0; margin-top:2px;
-  }
-  .step-title { font-size:13.5px; font-weight:700; color:#1C1400; margin-bottom:3px; }
-  .step-desc { font-size:12.5px; color:#6B5D3A; line-height:1.6; }
-
-  .pills { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0; }
-  .pill { background:var(--teal-light); border:1px solid var(--teal-border); border-radius:14px; padding:4px 11px; font-size:12px; color:#0e483c; font-weight:600; }
-
-  /* Keyboard shortcut style */
-  kbd {
-    display: inline-block;
-    background: #f4f1e8;
-    border: 1px solid var(--teal-border);
-    border-bottom-width: 2px;
-    border-radius: 4px;
-    padding: 1px 7px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
-  }
-
-  /* File format badge */
-  .file-badge {
-    display: inline-block;
-    background: var(--teal-dark);
-    color: rgba(178,145,70,0.9);
-    border-radius: 4px;
-    padding: 1px 7px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-  }
-
-  .welcome-box {
-    background: rgba(14,72,60,0.08);
-    border-radius: 10px;
-    padding: 16px;
-    margin-bottom: 14px;
-  }
-  .welcome-box strong { color: var(--teal); font-size: 14px; display:block; margin-bottom:6px; }
-
-  .flow {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin: 10px 0;
-  }
-  .flow-step {
-    background: var(--teal-light);
-    border: 1px solid var(--teal-border);
-    border-radius: 8px;
-    padding: 6px 14px;
-    font-size: 12px;
-    font-weight: 600;
-    color: #0e483c;
-  }
-  .flow-arrow { color: var(--teal); font-size: 16px; font-weight: 700; }
-
-  footer {
-    background: var(--teal-dark);
-    color: rgba(180,230,215,0.4);
-    padding: 28px 32px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.05em;
-  }
-  footer a { color: rgba(180,230,215,0.55); text-decoration: none; transition: color 0.2s; }
-  footer a:hover { color: rgba(180,230,215,0.95); }
-  .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
-  .footer-guides { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
-
-  /* Search bar */
-  .toc-search { padding: 12px 14px 8px; }
-  .toc-search input {
-    width: 100%; padding: 7px 10px 7px 30px;
-    border: 1px solid var(--teal-border); border-radius: 7px;
-    font-family: 'IBM Plex Sans', sans-serif; font-size: 12px;
-    color: var(--ink); background: var(--bg); outline: none;
-    transition: border-color 0.15s;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2.5'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E");
-    background-repeat: no-repeat; background-position: 9px center;
-  }
-  .toc-search input:focus { border-color: var(--teal); }
-  .toc-search input::placeholder { color: #aaa; }
-  .toc-no-results { padding: 10px 20px; font-size: 12px; color: #aaa; display: none; }
-
-  @media (max-width: 768px) {
-    .toc { display: none; }
-    header { padding: 28px 20px 24px; }
-    main { padding: 24px 20px 60px; }
-    .sec-body { padding: 16px 16px 20px; }
-    .sec-header { padding: 16px 16px; }
-  }
-</style>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "BreadcrumbList",
- "itemListElement": [
-  {
-   "@type": "ListItem",
-   "position": 1,
-   "name": "Home",
-   "item": "https://morform.app/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 2,
-   "name": "MorForm Office User Guide",
-   "item": "https://morform.app/morform-office-help.html"
-  }
- ]
-}
-</script>
+<meta name="description" content="MorForm Office (Windows) user guide — desktop estimating and client quotes, jobs, progress draws, QuickBooks export, supervisor report review, and data sync with MorForm Manager mobile.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0f1923">
+<link rel="canonical" href="https://morform.app/morform-office-help.html">
+<link rel="icon" href="/assets/m-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://morform.app/morform-office-help.html">
+<meta property="og:site_name" content="MorForm">
+<meta property="og:locale" content="en_CA">
+<meta property="og:title" content="MorForm Office — User Guide">
+<meta property="og:description" content="Desktop estimating, client quotes, draws, QuickBooks export, and supervisor report review on Windows with MorForm Office.">
+<meta property="og:image" content="https://morform.app/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MorForm Office — User Guide">
+<meta name="twitter:description" content="Desktop estimating, client quotes, draws, QuickBooks export, and supervisor report review on Windows with MorForm Office.">
+<meta name="twitter:image" content="https://morform.app/assets/og-image.jpg">
+<link rel="preload" href="/fonts/IBMPlexSans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header>
-  <a href="index.html" class="back">← All Apps</a>
-  <div class="app-tag">MorForm Office — Windows Desktop App</div>
-  <h1>User Guide</h1>
-  <p>Estimating &amp; quotes, jobs, draws, QuickBooks export, and supervisor report review</p>
-  <div class="platform-badge">🖥 Windows Desktop &nbsp;·&nbsp; Companion to MorForm Manager</div>
+<header class="topbar">
+  <div class="tb-in">
+    <a class="tb-brand" href="/" aria-label="MorForm home">
+      <img class="tb-logo" src="/assets/m-logo.png" alt="MorForm app icon" width="32" height="32">
+      <span class="tb-name"><span class="tb-kick">Built for the job site</span><span class="tb-title">MorForm</span></span>
+    </a>
+    <nav class="tb-nav" aria-label="Primary">
+      <a class="tb-link" href="/how-it-works">How it works</a>
+      <a class="tb-link" href="/apps">Apps &amp; Pricing</a>
+      <a class="tb-link" href="/course">Free course</a>
+      <a class="tb-link" href="/flha.html">Free FLHA</a>
+      <a class="tb-link" href="/faq">FAQ</a>
+      <a class="btn btn-gold btn-sm" href="/apps" style="margin-left:8px">Get the apps</a>
+    </nav>
+    <details class="mnav">
+      <summary aria-label="Open menu">Menu ▾</summary>
+      <nav class="mnav-pop" aria-label="Mobile">
+        <a href="/">Home</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/apps">Apps &amp; Pricing</a>
+        <a href="/course">Free course</a>
+        <a href="/flha.html">Free FLHA form</a>
+        <a href="/faq">FAQ</a>
+        <a href="mailto:support@morform.app">Contact</a>
+      </nav>
+    </details>
+  </div>
 </header>
 
-<div class="layout">
+<main id="main">
 
-  <nav class="toc">
-    <div class="toc-search">
-      <input type="text" id="toc-search" placeholder="Search guide…" autocomplete="off" />
+<section class="dark grid-bg pagehero" aria-labelledby="ug-h">
+  <span class="grid-bg-layer" aria-hidden="true"></span>
+  <span class="gold-fade" aria-hidden="true"></span>
+  <div class="sec-in" style="position:relative">
+    <p class="kick">MorForm Office — Windows Desktop App</p>
+    <h1 class="ph-h1" id="ug-h">User Guide</h1>
+    <p class="lede">Estimating &amp; quotes, jobs, draws, QuickBooks export, and supervisor report review</p>
+    <div class="hmeta" style="margin-top:20px;margin-bottom:0">
+      <span class="hm">🖥 Windows Desktop · Win 10/11</span>
+      <span class="hm">Companion to MorForm Manager</span>
+      <span class="hm">No account · works offline</span>
     </div>
-    <div id="toc-no-results" class="toc-no-results">No results</div>
-    <div class="toc-group-label">Getting Started</div>
-    <a href="#intro"><span class="icon">👋</span> Welcome</a>
-    <a href="#setup"><span class="icon">✅</span> First-Time Setup</a>
-    <a href="#nav"><span class="icon">🧭</span> Navigation</a>
-
-    <div class="toc-group-label">Jobs & Projects</div>
-    <a href="#jobs"><span class="icon">🏗️</span> Jobs</a>
-    <a href="#dispatch"><span class="icon">📤</span> Dispatching Jobs</a>
-
-    <div class="toc-group-label">Estimating</div>
-    <a href="#estimates"><span class="icon">📊</span> Estimates</a>
-    <a href="#pdf"><span class="icon">📄</span> Proposal &amp; Quote</a>
-
-    <div class="toc-group-label">Team & Contacts</div>
-    <a href="#crew"><span class="icon">👷</span> Crew</a>
-    <a href="#contacts"><span class="icon">🏢</span> Contacts & Vendors</a>
-
-    <div class="toc-group-label">Reports</div>
-    <a href="#inbox"><span class="icon">🔄</span> Send &amp; Receive</a>
-    <a href="#overview"><span class="icon">📈</span> Overview</a>
-
-    <div class="toc-group-label">Reference</div>
-    <a href="#connection"><span class="icon">🔗</span> How the Suite Connects</a>
-    <a href="#settings"><span class="icon">⚙️</span> Settings</a>
-    <a href="#files"><span class="icon">📁</span> File Formats</a>
-  </nav>
-
-  <main>
-
-    <!-- WELCOME -->
-    <section id="intro">
-      <div class="sec-header">
-        <div class="sec-icon">👋</div>
-        <h2 class="sec-title">Welcome to MorForm Office</h2>
+    <nav class="htoc" aria-label="On this page">
+      <div>
+        <p class="htoc-h">Getting Started</p>
+        <a class="htoc-l" href="#intro">👋 Welcome</a>
+        <a class="htoc-l" href="#setup">✅ First-Time Setup</a>
+        <a class="htoc-l" href="#nav">🧭 Navigation</a>
       </div>
-      <div class="sec-body">
-        <div class="welcome-box">
-          <strong>MorForm Office — Windows Desktop</strong>
-          MorForm Office is the estimating and back-office hub of the MorForm suite. Run it on your office PC to build estimates and win work, generate client quotes, manage jobs, bill progress draws, review supervisor reports, export to QuickBooks, and track company performance — all without accounts, cloud storage, or subscriptions.
-        </div>
-        <p>Everything is stored locally on your computer. Communication happens through email attachments — or an optional shared Company Cloud Folder in your own Drive/Dropbox/OneDrive — with three custom file types handling the whole workflow. <span class="file-badge">.morjob</span> dispatches jobs to supervisors. <span class="file-badge">.morrep</span> brings supervisor reports back to you. <span class="file-badge">.mordata</span> moves your full project data between Manager mobile and MorForm Office. No internet connection required to use the app.</p>
-
-        <h3>What MorForm Office does</h3>
-        <table class="tbl">
-          <tr><th>Feature</th><th>Description</th></tr>
-          <tr><td><strong>Jobs</strong></td><td>Create and manage job sites, assign PMs, add contacts and permits, dispatch to supervisors</td></tr>
-          <tr><td><strong>Estimates</strong></td><td>Standalone estimate pipeline — Draft → Approved → Quoted → Won / Lost — with labour, materials, sub costs, markup, scope of work, named templates, and custom columns. Winning an estimate creates the job.</td></tr>
-          <tr><td><strong>Draws &amp; QuickBooks</strong></td><td>Bill progress draws against contract value, then export invoices, expenses, and time to QuickBooks (Online CSV or Desktop IIF)</td></tr>
-          <tr><td><strong>Crew</strong></td><td>Directory of your PMs, supervisors, safety officers, and employees</td></tr>
-          <tr><td><strong>Contacts & Vendors</strong></td><td>Subcontractor and supplier directory — linked to estimate rows</td></tr>
-          <tr><td><strong>Send &amp; Receive</strong></td><td>Everything in and out — import and approve supervisor reports (.morrep) and expense batches with receipts, receive job requests from Manager mobile, dispatch jobs, and export to QuickBooks</td></tr>
-          <tr><td><strong>Safety</strong></td><td>Every safety document received from the field — FLHAs, inspections, incidents, ERPs, and scanned forms — filterable, printable, with incident sign-off</td></tr>
-          <tr><td><strong>Settings → Data &amp; Backup</strong></td><td>Import .mordata from Manager mobile — merge or replace jobs, specs, PMs, crew, and notes</td></tr>
-          <tr><td><strong>Overview</strong></td><td>Company dashboard — revenue, income, and won/lost by day, week, month, or year — plus budget vs. actuals per job</td></tr>
-        </table>
+      <div>
+        <p class="htoc-h">Jobs &amp; Projects</p>
+        <a class="htoc-l" href="#jobs">🏗️ Jobs</a>
+        <a class="htoc-l" href="#dispatch">📤 Dispatching Jobs</a>
       </div>
-    </section>
-
-    <!-- SETUP -->
-    <section id="setup">
-      <div class="sec-header">
-        <div class="sec-icon">✅</div>
-        <h2 class="sec-title">First-Time Setup</h2>
+      <div>
+        <p class="htoc-h">Estimating</p>
+        <a class="htoc-l" href="#estimates">📊 Estimates</a>
+        <a class="htoc-l" href="#pdf">📄 Proposal &amp; Quote</a>
       </div>
-      <div class="sec-body">
-        <p>On first launch, a setup wizard walks you through the essentials. It takes about two minutes.</p>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div>
-              <div class="step-title">Company</div>
-              <div class="step-desc">Enter your company name, address, city, province, phone, and website. Upload your logo — it appears on every PDF quote you generate.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div>
-              <div class="step-title">Your Profile</div>
-              <div class="step-desc">Your name, title, email, and phone. Supervisors see this as the PM contact on every job you dispatch to them.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div>
-              <div class="step-title">PDF & Quotes</div>
-              <div class="step-desc">Set your quote number format (auto or manual), validity period in days, standard terms, and upload a photo of your handwritten signature for quote sign-off.</div>
-            </div>
-          </div>
-        </div>
-        <div class="callout callout-tip">
-          <span class="ico">💡</span>
-          <span>Add supervisors in Crew before creating your first job so you can assign and dispatch to them immediately.</span>
-        </div>
-        <p>You can update all these settings later in <strong>Settings</strong> at any time.</p>
+      <div>
+        <p class="htoc-h">Team &amp; Contacts</p>
+        <a class="htoc-l" href="#crew">👷 Crew</a>
+        <a class="htoc-l" href="#contacts">🏢 Contacts &amp; Vendors</a>
       </div>
-    </section>
-
-    <!-- NAVIGATION -->
-    <section id="nav">
-      <div class="sec-header">
-        <div class="sec-icon">🧭</div>
-        <h2 class="sec-title">Navigation</h2>
+      <div>
+        <p class="htoc-h">Reports</p>
+        <a class="htoc-l" href="#inbox">🔄 Send &amp; Receive</a>
+        <a class="htoc-l" href="#overview">📈 Overview</a>
       </div>
-      <div class="sec-body">
-        <p>The sidebar on the left gives you access to every screen. Click any item to switch screens instantly.</p>
-        <table class="tbl">
-          <tr><th>Screen</th><th>Purpose</th></tr>
-          <tr><td><strong>🏗️ Jobs</strong></td><td>All job sites — create, edit, dispatch, and track status</td></tr>
-          <tr><td><strong>📊 Estimates</strong></td><td>Estimate pipeline — build, import, quote, and win estimates; winning creates the job</td></tr>
-          <tr><td><strong>👷 Crew</strong></td><td>Your internal team — PMs, supervisors, safety officers, employees</td></tr>
-          <tr><td><strong>🏢 Contacts</strong></td><td>External companies and vendors — subcontractors, suppliers, inspectors, clients</td></tr>
-          <tr><td><strong>🔄 Send &amp; Receive</strong></td><td>Everything in and out — supervisor reports, expense batches, Manager job requests, dispatch, QuickBooks exports, backups</td></tr>
-          <tr><td><strong>🦺 Safety</strong></td><td>All safety documents received from the field — the badge counts incidents awaiting sign-off</td></tr>
-          <tr><td><strong>📈 Overview</strong></td><td>Company dashboard — revenue, income, win/loss — plus budget vs. actuals per job</td></tr>
-          <tr><td><strong>⚙️ Settings</strong></td><td>Appearance, company info, PDF settings, routing, templates, backup</td></tr>
-        </table>
-        <div class="callout callout-note">
-          <span class="ico">📬</span>
-          <span>The <strong>Send &amp; Receive</strong> badge shows a count of unreviewed reports and new job requests. The <strong>Contacts</strong> badge shows how many vendor entries are missing contact details.</span>
-        </div>
-        <div class="callout callout-tip">
-          <span class="ico">📂</span>
-          <span>The top menu bar groups everything: the <strong>File</strong> menu holds estimates &amp; templates, bulk job add, and QuickBooks exports; the <strong>Data</strong> menu holds all MorForm data exchange (<span class="file-badge">.morjob</span> / <span class="file-badge">.morrep</span> / <span class="file-badge">.mordata</span>), backups, and the Company Cloud Folder. Press <kbd>F1</kbd> or open <strong>Help</strong> for the built-in user guide.</span>
-        </div>
+      <div>
+        <p class="htoc-h">Reference</p>
+        <a class="htoc-l" href="#connection">🔗 How the Suite Connects</a>
+        <a class="htoc-l" href="#settings">⚙️ Settings</a>
+        <a class="htoc-l" href="#files">📁 File Formats</a>
       </div>
-    </section>
+    </nav>
+  </div>
+</section>
 
-    <!-- JOBS -->
-    <section id="jobs">
-      <div class="sec-header">
-        <div class="sec-icon">🏗️</div>
-        <h2 class="sec-title">Jobs</h2>
+<section class="sec">
+  <div class="sec-in help-in">
+
+  <div class="hsec hsec-first" id="intro">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">👋</span><h2 class="hsec-h">Welcome to MorForm Office</h2></div>
+    <p><strong>MorForm Office — Windows Desktop</strong> — MorForm Office is the estimating and back-office hub of the MorForm suite. Run it on your office PC to build estimates and win work, generate client quotes, manage jobs, bill progress draws, review supervisor reports, export to QuickBooks, and track company performance — all without accounts, cloud storage, or subscriptions.</p>
+    <p>Everything is stored locally on your computer. Communication happens through email attachments — or an optional shared Company Cloud Folder in your own Drive/Dropbox/OneDrive — with three custom file types handling the whole workflow. .morjob dispatches jobs to supervisors. .morrep brings supervisor reports back to you. .mordata moves your full project data between Manager mobile and MorForm Office. No internet connection required to use the app.</p>
+    <h3>What MorForm Office does</h3>
+    <table class="htab">
+      <tr><th>Feature</th><th>Description</th></tr>
+      <tr><td>Jobs</td><td>Create and manage job sites, assign PMs, add contacts and permits, dispatch to supervisors</td></tr>
+      <tr><td>Estimates</td><td>Standalone estimate pipeline — Draft → Approved → Quoted → Won / Lost — with labour, materials, sub costs, markup, scope of work, named templates, and custom columns. Winning an estimate creates the job.</td></tr>
+      <tr><td>Draws &amp; QuickBooks</td><td>Bill progress draws against contract value, then export invoices, expenses, and time to QuickBooks (Online CSV or Desktop IIF)</td></tr>
+      <tr><td>Crew</td><td>Directory of your PMs, supervisors, safety officers, and employees</td></tr>
+      <tr><td>Contacts &amp; Vendors</td><td>Subcontractor and supplier directory — linked to estimate rows</td></tr>
+      <tr><td>Send &amp; Receive</td><td>Everything in and out — import and approve supervisor reports (.morrep), receive job requests from Manager mobile, dispatch jobs, and export to QuickBooks</td></tr>
+      <tr><td>Settings → Data &amp; Backup</td><td>Import .mordata from Manager mobile — merge or replace jobs, specs, PMs, crew, and notes</td></tr>
+      <tr><td>Overview</td><td>Company dashboard — revenue, income, and won/lost by day, week, month, or year — plus budget vs. actuals per job</td></tr>
+    </table>
+  </div>
+
+  <div class="hsec" id="setup">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">✅</span><h2 class="hsec-h">First-Time Setup</h2></div>
+    <p>On first launch, a setup wizard walks you through the essentials. It takes about two minutes.</p>
+    <ol class="steps">
+      <li><h3>Company</h3><p>Enter your company name, address, city, province, phone, and website. Upload your logo — it appears on every PDF quote you generate.</p></li>
+      <li><h3>Your Profile</h3><p>Your name, title, email, and phone. Supervisors see this as the PM contact on every job you dispatch to them.</p></li>
+      <li><h3>PDF &amp; Quotes</h3><p>Set your quote number format (auto or manual), validity period in days, standard terms, and upload a photo of your handwritten signature for quote sign-off.</p></li>
+    </ol>
+    <div class="note note-tip"><span class="note-ic">💡</span><span>Add supervisors in Crew before creating your first job so you can assign and dispatch to them immediately.</span></div>
+    <p>You can update all these settings later in <strong>Settings</strong> at any time.</p>
+  </div>
+
+  <div class="hsec" id="nav">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">🧭</span><h2 class="hsec-h">Navigation</h2></div>
+    <p>The sidebar on the left gives you access to every screen. Click any item to switch screens instantly.</p>
+    <table class="htab">
+      <tr><th>Screen</th><th>Purpose</th></tr>
+      <tr><td>🏗️ Jobs</td><td>All job sites — create, edit, dispatch, and track status</td></tr>
+      <tr><td>📊 Estimates</td><td>Estimate pipeline — build, import, quote, and win estimates; winning creates the job</td></tr>
+      <tr><td>👷 Crew</td><td>Your internal team — PMs, supervisors, safety officers, employees</td></tr>
+      <tr><td>🏢 Contacts</td><td>External companies and vendors — subcontractors, suppliers, inspectors, clients</td></tr>
+      <tr><td>🔄 Send &amp; Receive</td><td>Everything in and out — supervisor reports, Manager job requests, dispatch, QuickBooks exports, backups</td></tr>
+      <tr><td>📈 Overview</td><td>Company dashboard — revenue, income, win/loss — plus budget vs. actuals per job</td></tr>
+      <tr><td>⚙️ Settings</td><td>Appearance, company info, PDF settings, routing, templates, backup</td></tr>
+    </table>
+    <div class="note"><span class="note-ic">📬</span><span>The <strong>Send &amp; Receive</strong> badge shows a count of unreviewed reports and new job requests. The <strong>Contacts</strong> badge shows how many vendor entries are missing contact details.</span></div>
+    <div class="note"><span class="note-ic">📂</span><span>The top menu bar groups everything: the <strong>File</strong> menu holds estimates &amp; templates, bulk job add, and QuickBooks exports; the <strong>Data</strong> menu holds all MorForm data exchange (.morjob / .morrep / .mordata), backups, and the Company Cloud Folder. Press <strong>F1</strong> or open <strong>Help</strong> for the built-in user guide.</span></div>
+  </div>
+
+  <div class="hsec" id="jobs">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">🏗️</span><h2 class="hsec-h">Jobs</h2></div>
+    <h3>Creating a Job</h3>
+    <p>Click <strong>+ New Job</strong> in the top right. Fill in:</p>
+    <div class="chips"><span class="chip">Job name</span><span class="chip">Address</span><span class="chip">Start &amp; end dates</span><span class="chip">Status</span><span class="chip">Scope notes</span><span class="chip">Project Manager</span><span class="chip">Supervisor</span><span class="chip">Site contacts</span><span class="chip">Permits</span><span class="chip">Photos</span><span class="chip">Documents (PDF)</span></div>
+    <div class="note note-tip"><span class="note-ic">💡</span><span>Click anywhere on a job row to open it for editing — no need to hunt for the Edit button. Closing an editor with unsaved changes asks whether to save first.</span></div>
+    <h3>Job Status</h3>
+    <p class="pipe">🟢 Active → 🔵 Complete or 🟡 On Hold</p>
+    <p>Change status any time by editing the job. Status affects how it appears in Overview — completing a job also books its remaining contract value as revenue.</p>
+    <h3>Deleting &amp; Restoring Jobs</h3>
+    <p>Deleting a job moves it to the <strong>Deleted</strong> tab at the top of the Jobs page rather than removing it outright. It stays there for <strong>30 days</strong> with the days remaining shown — <strong>Restore</strong> it to Active, or <strong>Delete permanently</strong>. After 30 days it's removed automatically.</p>
+    <h3>Bulk Add Jobs</h3>
+    <p>Use <strong>📥 Bulk Add Jobs from Spreadsheet</strong> to create multiple jobs at once from a CSV or XLSX — one row per job, handy when first moving an existing job list into MorForm. Download the template from <strong>Settings → Data &amp; Backup</strong> first. Jobs started in MorForm Manager mobile arrive via Send &amp; Receive instead.</p>
+    <h3>Site Contacts &amp; Permits</h3>
+    <p>Add site contacts (owner, inspector, safety officer) directly to the job. Add permits with permit type and expiry date. Both are included in the dispatch package sent to the supervisor.</p>
+    <div class="note note-tip"><span class="note-ic">💡</span><span>Photos and PDF documents attached to a job (site plans, drawings) are bundled into the .morjob dispatch. The supervisor sees them on their phone.</span></div>
+  </div>
+
+  <div class="hsec" id="dispatch">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">📤</span><h2 class="hsec-h">Dispatching Jobs</h2></div>
+    <p>When a job is ready to go to site, dispatch it to a supervisor. They receive a .morjob file by email and import it into the MorForm app on their phone in one tap.</p>
+    <ol class="steps">
+      <li><h3>Open the job and click 📤 Dispatch</h3><p>Found in the job detail view.</p></li>
+      <li><h3>Select a supervisor</h3><p>Choose from your Crew directory. Their email pre-fills in the compose window.</p></li>
+      <li><h3>Choose what to include</h3><p>Contacts, photos, and documents are selectable. Uncheck anything you don't want to send.</p></li>
+      <li><h3>Send Job Package</h3><p>With a Company Cloud Folder connected, the .morjob is dropped straight into the supervisor's inbox folder — it imports on their phone automatically, and the email that opens is just a heads-up (no attaching). Without one, MorForm saves the .morjob file and highlights it in your file explorer, then opens your default mail client with the supervisor's email pre-filled — attach the highlighted file and send.</p></li>
+    </ol>
+    <h3>What's in the dispatch package</h3>
+    <div class="chips"><span class="chip">Job name &amp; address</span><span class="chip">Start &amp; end dates</span><span class="chip">Scope notes</span><span class="chip">PM contact info</span><span class="chip">Site contacts</span><span class="chip">Trade scopes from estimate</span><span class="chip">Permits</span><span class="chip">Site photos</span><span class="chip">Plans &amp; documents</span></div>
+    <div class="note note-warn"><span class="note-ic">⚠️</span><span>If the package exceeds ~15 MB you'll be warned. Large PDF drawings are the usual cause — consider compressing them first.</span></div>
+  </div>
+
+  <div class="hsec" id="estimates">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">📊</span><h2 class="hsec-h">Estimates</h2></div>
+    <p>Estimates are standalone — build one for any bid, whether or not a job exists yet. Create one with <strong>+ New Estimate</strong> on the Estimates screen, or convert a job request sent from Manager mobile (see Send &amp; Receive). When you create one, pick a starting point from the <strong>Start from template</strong> dropdown — no Excel import needed.</p>
+    <h3>Estimate pipeline</h3>
+    <p class="pipe">Draft → Approved → Quoted → 🏆 Won / ✖ Lost</p>
+    <p>Mark an estimate <strong>Approved</strong> when the numbers are ready. Exporting a Proposal &amp; Quote (or clicking <strong>📤 Mark Quoted</strong>) moves it to <strong>Quoted</strong>. When the client says yes, click <strong>🏆 Won — Create Job</strong> — the job is created from the estimate automatically, with every trade's scope checklist ready to dispatch. Mark it <strong>✖ Lost</strong> and it's kept for your win/loss stats on the Overview dashboard.</p>
+    <h3>Templates</h3>
+    <p>The <strong>Start from template</strong> dropdown is ordered <strong>Blank (MorForm starter)</strong> → a built-in <strong>gallery</strong> (General Contractor — Residential &amp; Commercial, plus Plumbing, Electrical, Structural, Interior Systems, and HVAC) → your own saved templates. The <strong>Blank</strong> sheet shows greyed guideline text so you can see what goes where — type over it or leave fields blank. Set the default for new estimates and 📤 export any template to a fill-in Excel sheet in <strong>Settings → Estimate Templates</strong>.</p>
+    <p>Save any estimate as a <strong>named template</strong> and tag it by job type (e.g. <em>Dental clinic</em>, <em>Whitebox</em>). <strong>💾 Save layout as my template</strong> keeps your divisions, line items, and custom columns for every new estimate.</p>
+    <h3>Smart suggestions</h3>
+    <p>As you fill out estimates and contacts, MorForm learns the <strong>division names, line items, and trades</strong> you use. Division headers, the Description column, and a contact's Role/Trade field all offer a <strong>type-or-pick</strong> dropdown — start typing to reuse an existing name or just type a new one. Line-item suggestions are tuned to the division you're in (e.g. plumbing items under a <em>Plumbing</em> division).</p>
+    <h3>Column reference</h3>
+    <table class="htab">
+      <tr><th>Column</th><th>Description</th></tr>
+      <tr><td>Division</td><td>Optional grouping label (e.g. Electrical) — division header rows organise the sheet</td></tr>
+      <tr><td>Description</td><td>Line item name</td></tr>
+      <tr><td>Contractor / Vendor</td><td>Who is doing the work. Click 📋 to choose from your Contacts &amp; Vendors directory.</td></tr>
+      <tr><td>Wkrs</td><td>Number of workers on this line</td></tr>
+      <tr><td>Hrs</td><td>Hours per day per worker</td></tr>
+      <tr><td>Days</td><td>Number of working days</td></tr>
+      <tr><td>Rate $</td><td>Hourly rate — Labour = Wkrs × Hrs × Days × Rate</td></tr>
+      <tr><td>Mat'l $</td><td>Material cost for this line</td></tr>
+      <tr><td>Sub $</td><td>Subcontractor cost (external quote)</td></tr>
+      <tr><td>Markup %</td><td>Row-level markup override. Leave blank to use the estimate's default markup.</td></tr>
+      <tr><td>Total $</td><td>Sub Total (Labour + Mat'l + Sub) + Markup</td></tr>
+    </table>
+    <h3>✏ Edit Layout — custom columns</h3>
+    <p>Click <strong>✏ Edit Layout</strong> in the top bar to change the sheet itself: rename any column, hide ones you don't use, reorder them, or <strong>+ Add column</strong>. New columns can be a <em>dollar amount</em> (adds to the row's Sub Total), a <em>% of the row</em> (like Markup), a <em>% of the whole estimate</em> (added at the bottom — e.g. a fee), or plain <em>words</em>. Custom columns survive XLSX export and re-import.</p>
+    <h3>Scope of work (📝)</h3>
+    <p>Click the 📝 icon on any row to add a scope description for that trade. Scope text is included in the .morjob dispatch — the supervisor sees exactly what each trade is on site to do. When a supervisor marks a scope complete it comes back in their .morrep report and updates the estimate automatically.</p>
+    <div class="note"><span class="note-ic">📝</span><span>The 📝 icon turns <strong>gold</strong> when a scope is written, and <strong>green</strong> when the supervisor marks it complete. Rows with complete scope have a subtle green background.</span></div>
+    <h3>Division headers (collapsible)</h3>
+    <p>Click <strong>+ Division</strong> to add a collapsible division divider (e.g. <em>Electrical</em>, <em>Finishes</em>). Each division header has a <strong>▼ / ▶</strong> caret to collapse or expand its line items — handy on long estimates — and a <strong>➕</strong> to add a line item inside that division. Divisions organise the sheet but don't affect totals.</p>
+    <h3>Default markup</h3>
+    <p>Set a project-wide default markup percentage at the top of the estimate. Individual rows can override it — leave the Markup % field blank on a row to use the default.</p>
+    <h3>XLSX import &amp; export</h3>
+    <p>Export any estimate to Excel for sharing or printing. Import an XLSX to load rows from an external spreadsheet — every import shows a <strong>preview first</strong> (divisions and rows) so you can check it before anything is saved.</p>
+    <div class="note"><span class="note-ic">📥</span><span>Best workflow: <strong>File → Export Blank Estimate Template</strong>, fill it in, and import that file. MorForm-exported files carry a hidden signature so they re-import exactly — no guessing. Other spreadsheets are matched by column names (Division, Description, Contractor, Workers, Hours, Days, Rate, Mat'l, Sub, Markup); if the file doesn't match, the preview warns you before you commit.</span></div>
+    <h3>How to fill in the blank template</h3>
+    <p>In the exported template, fill the columns marked <strong>type here</strong> and leave the rest blank — MorForm calculates Labor and every total for you.</p>
+    <table class="htab">
+      <tr><th>Column</th><th>What to do</th></tr>
+      <tr><td>Division</td><td><em>Type here</em> — a <strong>division name</strong> on its own row (e.g. In-House). Leave the rest of that row blank.</td></tr>
+      <tr><td>Description</td><td><em>Type here</em> — the line-item name (e.g. Supervision). Leave Division blank on item rows.</td></tr>
+      <tr><td>Contractor/Vendor</td><td>Type here (optional) — who does the work.</td></tr>
+      <tr><td>Workers / Hours / Days / Rate</td><td>Type here — labour inputs; MorForm multiplies them into Labor.</td></tr>
+      <tr><td>Labor</td><td><strong>Leave blank</strong> — calculated automatically.</td></tr>
+      <tr><td>Mat'l / Sub</td><td>Type here (optional) — material and subcontractor dollar amounts.</td></tr>
+      <tr><td>Scope</td><td>Type here (optional) — notes about the work.</td></tr>
+    </table>
+    <p>Don't have a number yet? Leave it blank — empty cells just add $0.</p>
+    <div class="note note-tip"><span class="note-ic">💡</span><span>If you type a vendor name in the estimate that doesn't exist in Contacts yet, it's automatically added as a stub with a <strong>⚠ Add info</strong> badge. Fill in their details in the Contacts screen.</span></div>
+  </div>
+
+  <div class="hsec" id="pdf">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">📄</span><h2 class="hsec-h">Proposal &amp; Quote (PDF / XLSX)</h2></div>
+    <p>MorForm Office exports client-ready <strong>Proposal &amp; Quote</strong> documents as real PDF or XLSX files, with your logo, terms, and signature.</p>
+    <ol class="steps">
+      <li><h3>Set up PDF settings</h3><p>In Settings → PDF &amp; Quotes — configure your quote number format, validity period, standard terms, and upload a signature photo.</p></li>
+      <li><h3>Approve the estimate, then click 📄 Proposal &amp; Quote</h3><p>Pick PDF or XLSX, set the client name and cover notes, and choose how much price detail the client sees — division subtotals, every line item, or grand total only. Internal costs and markup never appear.</p></li>
+      <li><h3>Save the file</h3><p>The PDF is generated directly — just pick where to save it. Exporting marks the estimate <strong>Quoted</strong> and increments the quote counter.</p></li>
+    </ol>
+    <h3>Quote numbering</h3>
+    <p>🔢 <strong>Auto mode</strong> formats quote numbers as <strong>Q-YYYY-NNN</strong> and increments the counter each time you export. <strong>Manual mode</strong> lets you type a number each time. Use the <em>Override</em> field to set a specific next number — it clears automatically after one use.</p>
+    <h3>Signature upload</h3>
+    <p>Take a photo of your handwritten signature on white paper. Settings → PDF &amp; Quotes → Upload Signature opens an editor where you can rotate and crop the photo, then the background is automatically removed to give you a clean transparent signature for quotes.</p>
+  </div>
+
+  <div class="hsec" id="crew">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">👷</span><h2 class="hsec-h">Crew</h2></div>
+    <p>Crew stores your internal team — the people you directly manage. It is separate from Contacts &amp; Vendors, which stores external companies and subcontractors.</p>
+    <table class="htab">
+      <tr><th>Type</th><th>Notes</th></tr>
+      <tr><td>Project Managers</td><td>Assignable to jobs. Their name, email, and phone appear as the PM contact in every dispatched .morjob.</td></tr>
+      <tr><td>Supervisors</td><td>Auto-added when you import their first .morrep report. You can also add them manually before dispatching.</td></tr>
+      <tr><td>Safety Officers</td><td>Internal safety staff — for reference and routing.</td></tr>
+      <tr><td>Managers</td><td>The people you forward field reports to — timesheets, expenses, and safety forms. Add them here, then pick who receives each kind in <strong>Settings → Report Routing</strong>.</td></tr>
+      <tr><td>Employees / Labourers</td><td>Your direct-hire workers.</td></tr>
+      <tr><td>Other Contacts</td><td>Internal contacts who don't fit another category — accountants, architects on retainer, etc.</td></tr>
+    </table>
+    <h3>Managers &amp; report routing</h3>
+    <p>Add a <strong>Manager</strong> for each person who should receive field reports — typically a primary manager for timesheets, an account manager for expenses, and a safety manager for safety forms. Then open <strong>Settings → 📧 Report Routing</strong> and choose which manager receives each kind. When a supervisor's report comes in, the report viewer shows a one-click <strong>📧 Forward</strong> button for timesheets, expenses, and safety forms that opens your email pre-filled to the right manager with a summary.</p>
+    <div class="note note-tip"><span class="note-ic">💡</span><span>Supervisors are created automatically the first time you import one of their reports. You don't need to add them manually before they send their first .morrep.</span></div>
+  </div>
+
+  <div class="hsec" id="contacts">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">🏢</span><h2 class="hsec-h">Contacts &amp; Vendors</h2></div>
+    <p>Your directory of external companies and individuals. Use it to store subcontractors, material suppliers, inspectors, and clients. Contacts are selectable in Estimates via the 📋 picker in the Contractor/Vendor column.</p>
+    <h3>Categories</h3>
+    <div class="chips"><span class="chip">🔧 Subcontractors</span><span class="chip">📦 Vendors &amp; Suppliers</span><span class="chip">🔍 Inspectors</span><span class="chip">🏠 Owners &amp; Clients</span><span class="chip">👤 Other</span><span class="chip">📍 Site Contacts</span><span class="chip">🤝 Recommended Trades</span></div>
+    <p>Filter by category using the tab row at the top. Search by company name, contact name, role, or email.</p>
+    <h3>Adding contacts</h3>
+    <p>Click <strong>+ Add Contact</strong> in the top right, or click any existing card to expand it and edit inline. Fields: company name, contact person, category, role/trade, email, phone, address, notes. The <strong>Role / Trade</strong> field is a type-or-pick dropdown — start typing to reuse a trade you've used before, or type a new one.</p>
+    <h3>🤝 Recommended Trades</h3>
+    <p>A vetted network of MorForm partner trades you can pull from when you don't have your own contact for a task — browse and sort by trade and rating, right inside the estimate Contractor/Vendor picker or the Recommended Trades tab. <strong>Coming soon.</strong></p>
+    <h3>⚠ Add info badge</h3>
+    <p>When you type a new vendor name into an estimate row that doesn't match any existing contact, a stub entry is created automatically. It appears in Contacts with a yellow <strong>⚠ Add info</strong> badge. Click the badge to open the card and fill in their details. The orange number on the Contacts nav item shows how many stubs are waiting.</p>
+    <div class="note note-tip"><span class="note-ic">💡</span><span>Existing subcontractors from your Crew directory are automatically migrated into Contacts when you first open the Contacts screen.</span></div>
+  </div>
+
+  <div class="hsec" id="inbox">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">🔄</span><h2 class="hsec-h">Send &amp; Receive</h2></div>
+    <p>Everything that moves in or out of MorForm Office lives on this tab (formerly called Inbox) — supervisor reports in, job dispatches out, Manager job requests in, QuickBooks exports out. Supervisors submit pay period reports from the MorForm app on their phone; those arrive in your email as .morrep file attachments.</p>
+    <div class="note"><span class="note-ic">🧾</span><span>The <strong>QuickBooks Export</strong> row at the bottom of the Import &amp; Export panel offers the same Invoices / Expenses / Time CSVs and Desktop IIF as Settings → Accounting — they're also in the File menu.</span></div>
+    <h3>Import from Manager Mobile</h3>
+    <p>MorForm Office can receive a full data snapshot from MorForm Manager mobile. This lets you continue work on a larger screen, or receive a job handoff from another project manager.</p>
+    <ol class="steps">
+      <li><h3>On Manager mobile — Settings → Data &amp; Backup → Send to Office / Handoff</h3><p>Sends a .mordata file to your email (and optionally other PMs).</p></li>
+      <li><h3>Save the .mordata attachment to your computer</h3></li>
+      <li><h3>In MorForm Office — Settings → Data &amp; Backup → 📱 Import .mordata</h3></li>
+      <li><h3>Choose Merge or Replace All</h3><p><strong>Merge</strong> adds new jobs, PMs, crew and notes without touching existing data. <strong>Replace All</strong> wipes current data and loads the snapshot — double confirmed before proceeding.</p></li>
+    </ol>
+    <div class="note note-tip"><span class="note-ic">💡</span><span>The .mordata file contains all jobs, specs / job requests, budgets, PMs, supervisors, and notes. Supervisor submission details are included as summaries only.</span></div>
+    <h3>Import a dispatched job (.morjob)</h3>
+    <p>A .morjob is a single job dispatched from MorForm Manager mobile or another copy of Office — it carries the job's details, contacts, trade scopes, permits, photos, and documents. Office usually <em>sends</em> these to supervisors, but you can also pull one in (for example, a job a colleague dispatched to you, or one recovered from an old email).</p>
+    <ol class="steps">
+      <li><h3>Save the .morjob attachment to your computer</h3></li>
+      <li><h3>In MorForm Office — Data → 📦 Import Job (.morjob)</h3><p>Or use the 📂 Import &amp; Export panel on the Send &amp; Receive tab. Pick the file.</p></li>
+      <li><h3>The job lands on your Jobs tab</h3><p>With its contacts, trade scopes, permits, photos, and documents attached, and the project manager linked. If a job with the same ID already exists you're asked to <strong>Replace</strong> it; a job sitting in Deleted is offered back as <strong>Restore &amp; Update</strong>.</p></li>
+    </ol>
+    <div class="note note-tip"><span class="note-ic">💡</span><span>A .morjob carries the dispatched job only — not cost or hours data, which live in the estimate. Imported trade scopes ride along on the job's contacts so they survive a re-dispatch.</span></div>
+    <h3>☁️ Company Cloud Folder (optional)</h3>
+    <p>Don't want to email files back and forth? Connect a shared folder in your company <strong>Drive / Dropbox / OneDrive</strong> and the apps pass the same .morrep / .mordata files through it instead. There's <strong>no MorForm account and no server to host</strong> — it rides on your own cloud provider's sync app plus the file system, so your data stays in your accounts.</p>
+    <p><strong>First, choose how accounts work:</strong></p>
+    <p><strong>A · One company account (simplest)</strong> — one login on every device, no sharing step. <em>Everyone can see all the files</em> (best for small, trusted crews).</p>
+    <ol class="steps">
+      <li><h3>Make one cloud account for the company</h3><p>e.g. a Google account just for MorForm.</p></li>
+      <li><h3>Install that provider's app on the office PC and every phone</h3><p>Signed in with that account.</p></li>
+      <li><h3>Create a folder called MorForm in it</h3></li>
+      <li><h3>Connect it everywhere</h3><p>In Office: <strong>Data → Connect Company Cloud Folder</strong> → pick it. On each phone: MorForm → Connect Company Cloud Folder → pick the same folder.</p></li>
+    </ol>
+    <p><strong>B · Everyone uses their own account</strong> — you share each person only their own folder. <em>Nobody sees anyone else's files.</em> A little more setup; easy to remove someone later.</p>
+    <ol class="steps">
+      <li><h3>On the office PC, create a folder called MorForm in your cloud</h3></li>
+      <li><h3>Share it</h3><p>Right-click it → <strong>Share</strong> → add each crew member's email with edit access. For strict privacy, share each person their own subfolder instead of the whole folder.</p></li>
+      <li><h3>Each person adds it</h3><p>They open the invite and choose <strong>Add to my Drive / Add to my files</strong> so it syncs to their device.</p></li>
+      <li><h3>Connect it everywhere</h3><p>In Office: <strong>Data → Connect Company Cloud Folder</strong> → pick it. On each phone: MorForm → Connect Company Cloud Folder → pick the shared folder.</p></li>
+    </ol>
+    <p><strong>Then, day to day:</strong></p>
+    <ol class="steps">
+      <li><h3>Set it up once in Office</h3><p>Have a Drive/Dropbox/OneDrive folder synced on the office PC, then Settings → Data &amp; Backup → <strong>Connect Company Cloud Folder</strong>. Office auto-creates an inbox for each crew member from your contacts.</p></li>
+      <li><h3>The crew connect once</h3><p>On each phone, the same folder is synced (company cloud account or a shared folder), then in MorForm they tap Connect Company Cloud Folder and pick it. That's the only step they do.</p></li>
+      <li><h3>Files flow on their own</h3><p>Reports/data dropped into the shared folder import automatically (same Merge / Replace prompts), routed to the right person's inbox and stamped with who sent them — and dispatched jobs go straight to each supervisor's inbox folder. Desktop is automatic; phones (Android and iPhone) scan each time the app opens.</p></li>
+    </ol>
+    <div class="note note-tip"><span class="note-ic">💡</span><span>Email keeps working exactly as before — the cloud folder is an extra channel, not a replacement. A shared folder means everyone with access can see the files; for strict per-person privacy you can lock individual subfolders in your cloud's sharing settings.</span></div>
+    <div class="note"><span class="note-ic">💾</span><span>Once a cloud folder is connected, <strong>Settings → Data &amp; Backup → Back Up to Cloud Folder</strong> drops a timestamped .morbak backup into a <strong>backups</strong> subfolder in one tap — no save dialog. It syncs through your cloud app like everything else, and stays out of the crew inboxes so no app tries to import it.</span></div>
+    <h3>📐 Job requests from Manager mobile</h3>
+    <p>When a PM specs a job in MorForm Manager (job → type → subtype → trades &amp; scope) and taps <strong>Send to Office</strong>, the spec arrives in the .mordata import and lands here as a <strong>job request</strong>. One click converts it into a full estimate — every trade becomes a division with its scope checklist attached. The job itself is created when the estimate is <strong>Won</strong> — under the <em>same job id the PM's phone uses</em>, so sending a .mordata back (Data → Send Data to Manager) marks the job ✅ Approved in their app and the supervisor's .morrep reports match the job in both places.</p>
+    <h3>Importing a report</h3>
+    <ol class="steps">
+      <li><h3>Save the attachment</h3><p>In your email client, save the .morrep file to your computer (e.g. Downloads folder).</p></li>
+      <li><h3>Click 📥 Import .morrep</h3><p>Browse to the saved file and open it. The report appears in the Inbox list.</p></li>
+      <li><h3>Review</h3><p>Click the report to open it. Review hours (regular and overtime), expenses, safety documents, trade scope progress, and the site photo grid.</p></li>
+      <li><h3>Approve</h3><p>Click <strong>Approve</strong> to commit hours and expenses to the job's actuals. Scope completions reported by the supervisor are applied to the estimate. The report is marked reviewed.</p></li>
+    </ol>
+    <h3>What gets committed on approval</h3>
+    <div class="chips"><span class="chip">Regular hours → job actuals</span><span class="chip">Overtime hours → job actuals</span><span class="chip">Expenses → job actuals</span><span class="chip">Scope completions → estimate rows</span><span class="chip">Supervisor added to Crew if new</span></div>
+    <h3>Forwarding to managers</h3>
+    <p>An open report has a <strong>📧 Forward to managers</strong> section with one-click buttons for <strong>timesheets</strong>, <strong>expenses</strong>, and <strong>safety forms</strong>. Each opens your default mail client pre-filled — with a summary of that part — to the manager you assigned in <strong>Settings → Report Routing</strong>. Add those managers first on the <strong>Crew</strong> screen.</p>
+    <h3>Incident Report Sign-off</h3>
+    <div class="note note-danger"><span class="note-ic">🚨</span><span>When a report contains an incident report, a red <strong>🚨 INCIDENT</strong> badge appears on the report row. Alberta OH&amp;S requires the employer to investigate reportable incidents and document corrective actions. The sign-off in MorForm creates this record.</span></div>
+    <p>Open the report — a dedicated red sign-off section appears below the safety documents. For each incident:</p>
+    <ol class="steps">
+      <li><h3>Review the incident details</h3><p>The supervisor's incident title, date, and description are shown.</p></li>
+      <li><h3>Enter corrective actions</h3><p>Describe what was done, root cause, who is responsible for follow-up, and by when. Be specific — this is your investigation record.</p></li>
+      <li><h3>Click ✅ Sign Off</h3><p>Records your name, timestamp, and corrective action notes permanently.</p></li>
+      <li><h3>Click 📄 Export PDF</h3><p>Generates a full incident report document including your sign-off. Opens in your browser — use File → Print → Save as PDF. Keep this on file for OHS compliance. Can be provided to an OHS officer on request.</p></li>
+    </ol>
+    <div class="note"><span class="note-ic">ℹ️</span><span>Incident sign-off is separate from report approval. Sign off the incident first, then approve the full report. Sign-off cannot be undone.</span></div>
+    <h3>Updated reports (re-importing)</h3>
+    <p>Supervisors can re-send the same job's report as work progresses — importing the newer file prompts <strong>Replace?</strong> and swaps in the updated report (scope progress and photos update, and it returns to pending for re-review). If the earlier version was already approved, its committed hours and expenses are backed out automatically — re-review and approve the new one. No double counting.</p>
+  </div>
+
+  <div class="hsec" id="overview">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">📈</span><h2 class="hsec-h">Overview</h2></div>
+    <p>Overview is the <strong>company dashboard</strong>. Pick a granularity — day, week, month, or year — and see Revenue, Costs, Income, Labour hours, and estimates Won / Lost for each period, with stat cards for the totals (including your win rate). Below it, every job shows budget vs. actuals — click a job row to open its full dashboard.</p>
+    <h3>How the numbers are built</h3>
+    <table class="htab">
+      <tr><th>Number</th><th>Source</th></tr>
+      <tr><td>Revenue</td><td>Progress draws as you log them, plus the remaining contract value when a job completes — never double-counted</td></tr>
+      <tr><td>Costs</td><td>Approved expenses plus labour hours at your labour cost rate (set in Settings)</td></tr>
+      <tr><td>Income</td><td>Revenue minus costs</td></tr>
+      <tr><td>Won / Lost</td><td>Estimate decisions dated in the period — your win rate over time</td></tr>
+    </table>
+    <h3>💵 Draws &amp; contract value</h3>
+    <p>On the job dashboard, set the job's <strong>contract value</strong> (a Won estimate's total is used automatically) and log <strong>draws</strong> — progress billing — as you invoice the client (e.g. <em>"Draw 2 — rough-in complete"</em>). Draws count as revenue on the Overview dashboard and feed the QuickBooks invoice export.</p>
+    <h3>Job dashboard</h3>
+    <table class="htab">
+      <tr><th>Card</th><th>What it shows</th></tr>
+      <tr><td>Budget</td><td>Estimate total from your estimate</td></tr>
+      <tr><td>Hours logged</td><td>Actual hours committed from approved reports vs. estimated hours</td></tr>
+      <tr><td>Expenses</td><td>Total actual expenses committed, with reimbursable breakdown</td></tr>
+      <tr><td>Scope</td><td>Trades with scope complete out of total trades assigned</td></tr>
+      <tr><td>Reports</td><td>Total reports received, with unreviewed count</td></tr>
+    </table>
+    <p>Below the KPI cards: a progress bar for hours vs. estimate, budget breakdown by Labour / Mat'l / Sub, expense categories, trade scope list, assigned supervisors, and recent report history.</p>
+  </div>
+
+  <div class="hsec" id="connection">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">🔗</span><h2 class="hsec-h">How the Suite Connects</h2></div>
+    <p>MorForm Office, MorForm Manager (mobile), and MorForm (supervisor mobile) are designed to work together with zero accounts or MorForm-run infrastructure. Communication is through email file attachments, or an optional shared Company Cloud Folder in your own Drive/Dropbox/OneDrive.</p>
+    <table class="htab">
+      <tr><th>From</th><th>Flow</th></tr>
+      <tr><td>📱 MM mobile — job spec</td><td>.mordata email attachment → Office Send &amp; Receive job request → estimate → job when Won → .mordata back marks the job ✅ Approved on the phone</td></tr>
+      <tr><td>🖥 MorForm Office or MM mobile</td><td>.morjob email attachment → Supervisor imports on phone</td></tr>
+      <tr><td>📱 MorForm supervisor app</td><td>.morrep email attachment → Manager imports in Office or MM mobile</td></tr>
+      <tr><td>🖥 MorForm Office</td><td>Approves report → commits actuals → updates scope in estimate</td></tr>
+    </table>
+    <div class="note"><span class="note-ic">📎</span><span>MorForm Office and MorForm Manager share the same .morjob / .morrep file format. A supervisor doesn't know or care whether the dispatch came from the desktop or mobile app.</span></div>
+  </div>
+
+  <div class="hsec" id="settings">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">⚙️</span><h2 class="hsec-h">Settings</h2></div>
+    <table class="htab">
+      <tr><th>Section</th><th>What you configure</th></tr>
+      <tr><td>Appearance</td><td>Theme: Light / Dark / Auto (follows Windows). Accent colour — 10 options including Gold, Navy, Steel, Teal, Forest, Slate, Charcoal, Brick, Red, Purple.</td></tr>
+      <tr><td>Company</td><td>Company name, address, city, province, phone, website, and logo. Logo appears on PDF quotes.</td></tr>
+      <tr><td>My Profile</td><td>Your name, job title, email, and phone. Appears as the PM contact in dispatched jobs.</td></tr>
+      <tr><td>PDF &amp; Quotes</td><td>Quote number format (auto Q-YYYY-NNN or manual), validity days, terms text, and signature. Signature editor removes the paper background automatically.</td></tr>
+      <tr><td>Report Routing</td><td>Pick which <strong>Manager</strong> (added on the Crew screen) receives each kind of field report — timesheets, expenses, and safety forms. Drives the one-click 📧 Forward buttons in the report viewer.</td></tr>
+      <tr><td>Accounting (QuickBooks)</td><td>Export your books for QuickBooks without a cloud connection — QBO CSVs and a Desktop IIF file, with configurable account names. See below.</td></tr>
+      <tr><td>Import Templates</td><td>Upload a custom XLSX estimate template to replace the default template for new estimates — or save any estimate as a named template instead.</td></tr>
+      <tr><td>Data &amp; Backup</td><td>Back up all data to a .morbak file and restore from one (older .json backups still import). Moving to a new computer? Back up, copy the .morbak over, then Restore Backup — or use Import from Backup on the first-run setup screen. Data is stored at <span class="mono">%APPDATA%\morform-office\morform-office-data.json</span>. If a saved file ever can't be read on launch, Office shows a recovery screen (Try Again / Restore from Backup) instead of starting empty, so a one-time read glitch can't wipe your data.</td></tr>
+    </table>
+    <h3>🧾 QuickBooks export</h3>
+    <p>Settings → Accounting exports files you import into QuickBooks yourself — no cloud connection. <strong>QBO Invoices CSV</strong> (one invoice line per draw), <strong>QBO Expenses CSV</strong> (approved supervisor expenses), and <strong>QBO Time Activities CSV</strong> (approved hours) import into QuickBooks Online. The <strong>QuickBooks Desktop IIF</strong> file imports via File → Utilities → Import → IIF Files — test in a sample company first, IIF imports can't be undone. Account names are configurable and must match your QuickBooks chart of accounts. Exported draws are stamped, so you're warned before exporting the same draw twice.</p>
+  </div>
+
+  <div class="hsec" id="files">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">📁</span><h2 class="hsec-h">File Formats</h2></div>
+    <table class="htab">
+      <tr><th>Format</th><th>Direction</th><th>Description</th></tr>
+      <tr><td>.morjob</td><td>Office / Manager → Supervisor</td><td>Job dispatch package. Contains job details, contacts, permits, trade scopes, photos, and documents. Office mainly <em>sends</em> these to supervisors, but can also <em>import</em> one in via <strong>Data → Import Job (.morjob)</strong>. JSON format.</td></tr>
+      <tr><td>.morrep</td><td>Supervisor → Office / Manager</td><td>Pay period report. Contains time entries, expenses, safety forms, and scope completion statuses. JSON format.</td></tr>
+      <tr><td>.mordata</td><td>Manager ↔ Office</td><td>Data snapshot between Manager mobile and Office — jobs, specs / job requests, budgets, crew, notes. JSON format.</td></tr>
+      <tr><td>.morbak</td><td>Backup (this app)</td><td>Full-app backup of everything in MorForm Office, for safekeeping or moving to a new computer. Restore via Settings → Data &amp; Backup or the first-run setup screen. App-specific — a mobile backup can't restore into Office. JSON format.</td></tr>
+      <tr><td>.xlsx</td><td>Import / Export</td><td>Estimate import and export. Also used for bulk job import when formatted as the job template.</td></tr>
+      <tr><td>.csv</td><td>Import / Export</td><td>Bulk job import using the MorForm job template, and QuickBooks Online export files (invoices, expenses, time).</td></tr>
+      <tr><td>.json</td><td>Backup</td><td>Full app data backup. All jobs, estimates, crew, contacts, reports, and settings in one file.</td></tr>
+    </table>
+    <div class="note note-tip"><span class="note-ic">💡</span><span>Both .morjob and .morrep are plain JSON files. If you ever need to inspect or troubleshoot one, you can open it in any text editor.</span></div>
+  </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="sf-in">
+    <div>
+      <div class="sf-brandrow"><img class="sf-logo" src="/assets/m-logo.png" alt="MorForm app icon" width="30" height="30"><span class="sf-t">MorForm</span></div>
+      <p class="sf-d">Built for the job site, not the boardroom. Time, safety and job management for construction crews — as apps you own, passing files you control.</p>
+      <p class="sf-trust">no accounts · works offline · your data stays yours</p>
+      <div class="sf-social">
+        <a href="https://www.instagram.com/morform.app/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61590819100585" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/company/morform-app" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@MorForm-app" target="_blank" rel="noopener">YouTube</a>
       </div>
-      <div class="sec-body">
-        <h3>Creating a Job</h3>
-        <p>Click <strong>+ New Job</strong> in the top right. Fill in:</p>
-        <div class="pills">
-          <span class="pill">Job name</span>
-          <span class="pill">Address</span>
-          <span class="pill">Start & end dates</span>
-          <span class="pill">Status</span>
-          <span class="pill">Scope notes</span>
-          <span class="pill">Project Manager</span>
-          <span class="pill">Supervisor</span>
-          <span class="pill">Site contacts</span>
-          <span class="pill">Permits</span>
-          <span class="pill">Photos</span>
-          <span class="pill">Documents (PDF)</span>
-        </div>
-
-        <div class="callout callout-tip">
-          <span class="ico">💡</span>
-          <span>Click anywhere on a job row to open it for editing — no need to hunt for the Edit button. Closing an editor with unsaved changes asks whether to save first.</span>
-        </div>
-
-        <h3>Job Status</h3>
-        <div class="flow">
-          <div class="flow-step">🟢 Active</div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">🔵 Complete</div>
-          <div class="flow-arrow">or</div>
-          <div class="flow-step">🟡 On Hold</div>
-        </div>
-        <p>Change status any time by editing the job. Status affects how it appears in Overview — completing a job also books its remaining contract value as revenue.</p>
-
-        <h3>Deleting &amp; Restoring Jobs</h3>
-        <p>Deleting a job moves it to the <strong>Deleted</strong> tab at the top of the Jobs page rather than removing it outright. It stays there for <strong>30 days</strong> with the days remaining shown — <strong>Restore</strong> it to Active, or <strong>Delete permanently</strong>. After 30 days it's removed automatically.</p>
-
-        <h3>Bulk Add Jobs</h3>
-        <p>Use <strong>📥 Bulk Add Jobs from Spreadsheet</strong> to create multiple jobs at once from a CSV or XLSX — one row per job, handy when first moving an existing job list into MorForm. Download the template from <strong>Settings → Data & Backup</strong> first. Jobs started in MorForm Manager mobile arrive via Send &amp; Receive instead.</p>
-
-        <h3>Site Contacts & Permits</h3>
-        <p>Add site contacts (owner, inspector, safety officer) directly to the job. Add permits with permit type and expiry date. Both are included in the dispatch package sent to the supervisor.</p>
-
-        <div class="callout callout-tip">
-          <span class="ico">💡</span>
-          <span>Photos and PDF documents attached to a job (site plans, drawings) are bundled into the <span class="file-badge">.morjob</span> dispatch. The supervisor sees them on their phone.</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- DISPATCH -->
-    <section id="dispatch">
-      <div class="sec-header">
-        <div class="sec-icon">📤</div>
-        <h2 class="sec-title">Dispatching Jobs</h2>
-      </div>
-      <div class="sec-body">
-        <p>When a job is ready to go to site, dispatch it to a supervisor. They receive a <span class="file-badge">.morjob</span> file by email and import it into the MorForm app on their phone in one tap.</p>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div>
-              <div class="step-title">Open the job and click 📤 Dispatch</div>
-              <div class="step-desc">Found in the job detail view.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div>
-              <div class="step-title">Select a supervisor</div>
-              <div class="step-desc">Choose from your Crew directory. Their email pre-fills in the compose window.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div>
-              <div class="step-title">Choose what to include</div>
-              <div class="step-desc">Contacts, photos, and documents are selectable. Uncheck anything you don't want to send.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">4</div>
-            <div>
-              <div class="step-title">Send Job Package</div>
-              <div class="step-desc">With a Company Cloud Folder connected, the .morjob is dropped straight into the supervisor's inbox folder — it imports on their phone automatically, and the email that opens is just a heads-up (no attaching). Without one, MorForm saves the .morjob file and highlights it in your file explorer, then opens your default mail client with the supervisor's email pre-filled — attach the highlighted file and send.</div>
-            </div>
-          </div>
-        </div>
-
-        <h3>What's in the dispatch package</h3>
-        <div class="pills">
-          <span class="pill">Job name & address</span>
-          <span class="pill">Start & end dates</span>
-          <span class="pill">Scope notes</span>
-          <span class="pill">PM contact info</span>
-          <span class="pill">Site contacts</span>
-          <span class="pill">Trade scopes from estimate</span>
-          <span class="pill">Permits</span>
-          <span class="pill">Site photos</span>
-          <span class="pill">Plans & documents</span>
-        </div>
-
-        <div class="callout callout-warn">
-          <span class="ico">⚠️</span>
-          <span>If the package exceeds ~15 MB you'll be warned. Large PDF drawings are the usual cause — consider compressing them first.</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ESTIMATES -->
-    <section id="estimates">
-      <div class="sec-header">
-        <div class="sec-icon">📊</div>
-        <h2 class="sec-title">Estimates</h2>
-      </div>
-      <div class="sec-body">
-        <p>Estimates are standalone — build one for any bid, whether or not a job exists yet. Create one with <strong>+ New Estimate</strong> on the Estimates screen, or convert a job request sent from Manager mobile (see Send &amp; Receive). When you create one, pick a starting point from the <strong>Start from template</strong> dropdown — no Excel import needed.</p>
-
-        <h3>Estimate pipeline</h3>
-        <div class="flow">
-          <div class="flow-step">Draft</div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">Approved</div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">Quoted</div>
-          <div class="flow-arrow">→</div>
-          <div class="flow-step">🏆 Won / ✖ Lost</div>
-        </div>
-        <p>Mark an estimate <strong>Approved</strong> when the numbers are ready. Exporting a Proposal &amp; Quote (or clicking <strong>📤 Mark Quoted</strong>) moves it to <strong>Quoted</strong>. When the client says yes, click <strong>🏆 Won — Create Job</strong> — the job is created from the estimate automatically, with every trade's scope checklist ready to dispatch. Mark it <strong>✖ Lost</strong> and it's kept for your win/loss stats on the Overview dashboard.</p>
-
-        <h3>Templates</h3>
-        <p>The <strong>Start from template</strong> dropdown is ordered <strong>Blank (MorForm starter)</strong> → a built-in <strong>gallery</strong> (General Contractor — Residential &amp; Commercial, plus Plumbing, Electrical, Structural, Interior Systems, and HVAC) → your own saved templates. The <strong>Blank</strong> sheet shows greyed guideline text so you can see what goes where — type over it or leave fields blank. Set the default for new estimates and 📤 export any template to a fill-in Excel sheet in <strong>Settings → Estimate Templates</strong>.</p>
-        <p>Save any estimate as a <strong>named template</strong> and tag it by job type (e.g. <em>Dental clinic</em>, <em>Whitebox</em>). <strong>💾 Save layout as my template</strong> keeps your divisions, line items, and custom columns for every new estimate.</p>
-        <h3>Smart suggestions</h3>
-        <p>As you fill out estimates and contacts, MorForm learns the <strong>division names, line items, and trades</strong> you use. Division headers, the Description column, and a contact's Role/Trade field all offer a <strong>type-or-pick</strong> dropdown — start typing to reuse an existing name or just type a new one. Line-item suggestions are tuned to the division you're in (e.g. plumbing items under a <em>Plumbing</em> division).</p>
-
-        <h3>Column reference</h3>
-        <table class="tbl">
-          <tr><th>Column</th><th>Description</th></tr>
-          <tr><td><strong>Division</strong></td><td>Optional grouping label (e.g. Electrical) — division header rows organise the sheet</td></tr>
-          <tr><td><strong>Description</strong></td><td>Line item name</td></tr>
-          <tr><td><strong>Contractor / Vendor</strong></td><td>Who is doing the work. Click 📋 to choose from your Contacts & Vendors directory.</td></tr>
-          <tr><td><strong>Wkrs</strong></td><td>Number of workers on this line</td></tr>
-          <tr><td><strong>Hrs</strong></td><td>Hours per day per worker</td></tr>
-          <tr><td><strong>Days</strong></td><td>Number of working days</td></tr>
-          <tr><td><strong>Rate $</strong></td><td>Hourly rate — Labour = Wkrs × Hrs × Days × Rate</td></tr>
-          <tr><td><strong>Mat'l $</strong></td><td>Material cost for this line</td></tr>
-          <tr><td><strong>Sub $</strong></td><td>Subcontractor cost (external quote)</td></tr>
-          <tr><td><strong>Markup %</strong></td><td>Row-level markup override. Leave blank to use the estimate's default markup.</td></tr>
-          <tr><td><strong>Total $</strong></td><td>Sub Total (Labour + Mat'l + Sub) + Markup</td></tr>
-        </table>
-
-        <h3>✏ Edit Layout — custom columns</h3>
-        <p>Click <strong>✏ Edit Layout</strong> in the top bar to change the sheet itself: rename any column, hide ones you don't use, reorder them, or <strong>+ Add column</strong>. New columns can be a <em>dollar amount</em> (adds to the row's Sub Total), a <em>% of the row</em> (like Markup), a <em>% of the whole estimate</em> (added at the bottom — e.g. a fee), or plain <em>words</em>. Custom columns survive XLSX export and re-import.</p>
-
-        <h3>Scope of work (📝)</h3>
-        <p>Click the 📝 icon on any row to add a scope description for that trade. Scope text is included in the <span class="file-badge">.morjob</span> dispatch — the supervisor sees exactly what each trade is on site to do. When a supervisor marks a scope complete it comes back in their <span class="file-badge">.morrep</span> report and updates the estimate automatically.</p>
-        <div class="callout callout-note">
-          <span class="ico">📝</span>
-          <span>The 📝 icon turns <strong style="color:#B29146;">gold</strong> when a scope is written, and <strong style="color:#27ae60;">green</strong> when the supervisor marks it complete. Rows with complete scope have a subtle green background.</span>
-        </div>
-
-        <h3>Division headers (collapsible)</h3>
-        <p>Click <strong>+ Division</strong> to add a collapsible division divider (e.g. <em>Electrical</em>, <em>Finishes</em>). Each division header has a <strong>▼ / ▶</strong> caret to collapse or expand its line items — handy on long estimates — and a <strong>➕</strong> to add a line item inside that division. Divisions organise the sheet but don't affect totals.</p>
-
-        <h3>Default markup</h3>
-        <p>Set a project-wide default markup percentage at the top of the estimate. Individual rows can override it — leave the Markup % field blank on a row to use the default.</p>
-
-        <h3>XLSX import & export</h3>
-        <p>Export any estimate to Excel for sharing or printing. Import an XLSX to load rows from an external spreadsheet — every import shows a <strong>preview first</strong> (divisions and rows) so you can check it before anything is saved.</p>
-        <div class="callout callout-note">
-          <span class="ico">📥</span>
-          <span>Best workflow: <strong>File → Export Blank Estimate Template</strong>, fill it in, and import that file. MorForm-exported files carry a hidden signature so they re-import exactly — no guessing. Other spreadsheets are matched by column names (Division, Description, Contractor, Workers, Hours, Days, Rate, Mat'l, Sub, Markup); if the file doesn't match, the preview warns you before you commit.</span>
-        </div>
-
-        <h3>How to fill in the blank template</h3>
-        <p>In the exported template, fill the columns marked <strong>type here</strong> and leave the rest blank — MorForm calculates Labor and every total for you.</p>
-        <table class="tbl">
-          <tr><th>Column</th><th>What to do</th></tr>
-          <tr><td><strong>Division</strong></td><td><em>Type here</em> — a <strong>division name</strong> on its own row (e.g. In-House). Leave the rest of that row blank.</td></tr>
-          <tr><td><strong>Description</strong></td><td><em>Type here</em> — the line-item name (e.g. Supervision). Leave Division blank on item rows.</td></tr>
-          <tr><td>Contractor/Vendor</td><td>Type here (optional) — who does the work.</td></tr>
-          <tr><td>Workers / Hours / Days / Rate</td><td>Type here — labour inputs; MorForm multiplies them into Labor.</td></tr>
-          <tr><td><strong>Labor</strong></td><td><strong>Leave blank</strong> — calculated automatically.</td></tr>
-          <tr><td>Mat'l / Sub</td><td>Type here (optional) — material and subcontractor dollar amounts.</td></tr>
-          <tr><td>Scope</td><td>Type here (optional) — notes about the work.</td></tr>
-        </table>
-        <p>Don't have a number yet? Leave it blank — empty cells just add $0.</p>
-
-        <div class="callout callout-tip">
-          <span class="ico">💡</span>
-          <span>If you type a vendor name in the estimate that doesn't exist in Contacts yet, it's automatically added as a stub with a <strong>⚠ Add info</strong> badge. Fill in their details in the Contacts screen.</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- PDF -->
-    <section id="pdf">
-      <div class="sec-header">
-        <div class="sec-icon">📄</div>
-        <h2 class="sec-title">Proposal &amp; Quote (PDF / XLSX)</h2>
-      </div>
-      <div class="sec-body">
-        <p>MorForm Office exports client-ready <strong>Proposal &amp; Quote</strong> documents as real PDF or XLSX files, with your logo, terms, and signature.</p>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div>
-              <div class="step-title">Set up PDF settings</div>
-              <div class="step-desc">In Settings → PDF & Quotes — configure your quote number format, validity period, standard terms, and upload a signature photo.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div>
-              <div class="step-title">Approve the estimate, then click 📄 Proposal &amp; Quote</div>
-              <div class="step-desc">Pick PDF or XLSX, set the client name and cover notes, and choose how much price detail the client sees — division subtotals, every line item, or grand total only. Internal costs and markup never appear.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div>
-              <div class="step-title">Save the file</div>
-              <div class="step-desc">The PDF is generated directly — just pick where to save it. Exporting marks the estimate <strong>Quoted</strong> and increments the quote counter.</div>
-            </div>
-          </div>
-        </div>
-
-        <h3>Quote numbering</h3>
-        <div class="callout callout-note">
-          <span class="ico">🔢</span>
-          <span><strong>Auto mode</strong> formats quote numbers as <strong>Q-YYYY-NNN</strong> and increments the counter each time you export. <strong>Manual mode</strong> lets you type a number each time. Use the <em>Override</em> field to set a specific next number — it clears automatically after one use.</span>
-        </div>
-
-        <h3>Signature upload</h3>
-        <p>Take a photo of your handwritten signature on white paper. Settings → PDF & Quotes → Upload Signature opens an editor where you can rotate and crop the photo, then the background is automatically removed to give you a clean transparent signature for quotes.</p>
-      </div>
-    </section>
-
-    <!-- CREW -->
-    <section id="crew">
-      <div class="sec-header">
-        <div class="sec-icon">👷</div>
-        <h2 class="sec-title">Crew</h2>
-      </div>
-      <div class="sec-body">
-        <p>Crew stores your internal team — the people you directly manage. It is separate from Contacts & Vendors, which stores external companies and subcontractors.</p>
-
-        <table class="tbl">
-          <tr><th>Type</th><th>Notes</th></tr>
-          <tr><td><strong>Project Managers</strong></td><td>Assignable to jobs. Their name, email, and phone appear as the PM contact in every dispatched <span class="file-badge">.morjob</span>.</td></tr>
-          <tr><td><strong>Supervisors</strong></td><td>Auto-added when you import their first <span class="file-badge">.morrep</span> report. You can also add them manually before dispatching.</td></tr>
-          <tr><td><strong>Safety Officers</strong></td><td>Internal safety staff — for reference and routing.</td></tr>
-          <tr><td><strong>Managers</strong></td><td>The people you forward field reports to — timesheets, expenses, and safety forms. Add them here, then pick who receives each kind in <strong>Settings → Report Routing</strong>.</td></tr>
-          <tr><td><strong>Employees / Labourers</strong></td><td>Your direct-hire workers.</td></tr>
-          <tr><td><strong>Other Contacts</strong></td><td>Internal contacts who don't fit another category — accountants, architects on retainer, etc.</td></tr>
-        </table>
-
-        <h3>Managers &amp; report routing</h3>
-        <p>Add a <strong>Manager</strong> for each person who should receive field reports — typically a primary manager for timesheets, an account manager for expenses, and a safety manager for safety forms. Then open <strong>Settings → 📧 Report Routing</strong> and choose which manager receives each kind. When a supervisor's report comes in, the report viewer shows a one-click <strong>📧 Forward</strong> button for timesheets, expenses, and safety forms that opens your email pre-filled to the right manager with a summary.</p>
-
-        <div class="callout callout-tip">
-          <span class="ico">💡</span>
-          <span>Supervisors are created automatically the first time you import one of their reports. You don't need to add them manually before they send their first <span class="file-badge">.morrep</span>.</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTS -->
-    <section id="contacts">
-      <div class="sec-header">
-        <div class="sec-icon">🏢</div>
-        <h2 class="sec-title">Contacts & Vendors</h2>
-      </div>
-      <div class="sec-body">
-        <p>Your directory of external companies and individuals. Use it to store subcontractors, material suppliers, inspectors, and clients. Contacts are selectable in Estimates via the 📋 picker in the Contractor/Vendor column.</p>
-
-        <h3>Categories</h3>
-        <div class="pills">
-          <span class="pill">🔧 Subcontractors</span>
-          <span class="pill">📦 Vendors & Suppliers</span>
-          <span class="pill">🔍 Inspectors</span>
-          <span class="pill">🏠 Owners & Clients</span>
-          <span class="pill">👤 Other</span>
-          <span class="pill">📍 Site Contacts</span>
-          <span class="pill">🤝 Trusted Trades</span>
-        </div>
-        <p>Filter by category using the tab row at the top. Search by company name, contact name, role, or email.</p>
-
-        <h3>Adding contacts</h3>
-        <p>Click <strong>+ Add Contact</strong> in the top right, or click any existing card to expand it and edit inline. Fields: company name, contact person, category, role/trade, email, phone, address, notes. The <strong>Role / Trade</strong> field is a type-or-pick dropdown — start typing to reuse a trade you've used before, or type a new one.</p>
-
-        <h3>🤝 Trusted Trades</h3>
-        <p>A vetted network of MorForm partner trades you can pull from when you don't have your own contact for a task — browse and sort by trade and rating, right inside the estimate Contractor/Vendor picker or the Trusted Trades tab. <strong>Coming soon.</strong></p>
-
-        <h3>⚠ Add info badge</h3>
-        <p>When you type a new vendor name into an estimate row that doesn't match any existing contact, a stub entry is created automatically. It appears in Contacts with a yellow <strong>⚠ Add info</strong> badge. Click the badge to open the card and fill in their details. The orange number on the Contacts nav item shows how many stubs are waiting.</p>
-
-        <div class="callout callout-tip">
-          <span class="ico">💡</span>
-          <span>Existing subcontractors from your Crew directory are automatically migrated into Contacts when you first open the Contacts screen.</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEND & RECEIVE -->
-    <section id="inbox">
-      <div class="sec-header">
-        <div class="sec-icon">🔄</div>
-        <h2 class="sec-title">Send &amp; Receive</h2>
-      </div>
-      <div class="sec-body">
-        <p>Everything that moves in or out of MorForm Office lives on this tab (formerly called Inbox) — supervisor reports in, job dispatches out, Manager job requests in, QuickBooks exports out. Supervisors submit pay period reports from the MorForm app on their phone; those arrive in your email as <span class="file-badge">.morrep</span> file attachments.</p>
-        <div class="callout callout-tip"><span class="ico">🧾</span><span>The <strong>QuickBooks Export</strong> row at the bottom of the Import &amp; Export panel offers the same Invoices / Expenses / Time CSVs and Desktop IIF as Settings → Accounting — they're also in the File menu.</span></div>
-
-        <h3>Import from Manager Mobile</h3>
-        <p>MorForm Office can receive a full data snapshot from MorForm Manager mobile. This lets you continue work on a larger screen, or receive a job handoff from another project manager.</p>
-        <div class="steps">
-          <div class="step"><div class="step-num">1</div><div><div class="step-title">On Manager mobile — Settings → Data &amp; Backup → Send to Office / Handoff</div><div class="step-desc">Sends a <span class="file-badge">.mordata</span> file to your email (and optionally other PMs).</div></div></div>
-          <div class="step"><div class="step-num">2</div><div><div class="step-title">Save the .mordata attachment to your computer</div></div></div>
-          <div class="step"><div class="step-num">3</div><div><div class="step-title">In MorForm Office — Settings → Data &amp; Backup → 📱 Import .mordata</div></div></div>
-          <div class="step"><div class="step-num">4</div><div><div class="step-title">Choose Merge or Replace All</div><div class="step-desc"><strong>Merge</strong> adds new jobs, PMs, crew and notes without touching existing data. <strong>Replace All</strong> wipes current data and loads the snapshot — double confirmed before proceeding.</div></div></div>
-        </div>
-        <div class="callout callout-note"><span class="ico">💡</span><span>The <span class="file-badge">.mordata</span> file contains all jobs, specs / job requests, budgets, PMs, supervisors, and notes. Supervisor submission details are included as summaries only.</span></div>
-
-        <h3>Import a dispatched job (.morjob)</h3>
-        <p>A <span class="file-badge">.morjob</span> is a single job dispatched from MorForm Manager mobile or another copy of Office — it carries the job's details, contacts, trade scopes, permits, photos, and documents. Office usually <em>sends</em> these to supervisors, but you can also pull one in (for example, a job a colleague dispatched to you, or one recovered from an old email).</p>
-        <div class="steps">
-          <div class="step"><div class="step-num">1</div><div><div class="step-title">Save the .morjob attachment to your computer</div></div></div>
-          <div class="step"><div class="step-num">2</div><div><div class="step-title">In MorForm Office — Data → 📦 Import Job (.morjob)</div><div class="step-desc">Or use the 📂 Import &amp; Export panel on the Send &amp; Receive tab. Pick the file.</div></div></div>
-          <div class="step"><div class="step-num">3</div><div><div class="step-title">The job lands on your Jobs tab</div><div class="step-desc">With its contacts, trade scopes, permits, photos, and documents attached, and the project manager linked. If a job with the same ID already exists you're asked to <strong>Replace</strong> it; a job sitting in Deleted is offered back as <strong>Restore &amp; Update</strong>.</div></div></div>
-        </div>
-        <div class="callout callout-note"><span class="ico">💡</span><span>A <span class="file-badge">.morjob</span> carries the dispatched job only — not cost or hours data, which live in the estimate. Imported trade scopes ride along on the job's contacts so they survive a re-dispatch.</span></div>
-
-        <h3>☁️ Company Cloud Folder (optional)</h3>
-        <p>Don't want to email files back and forth? Connect a shared folder in your company <strong>Drive / Dropbox / OneDrive</strong> and the apps pass the same <span class="file-badge">.morrep</span> / <span class="file-badge">.mordata</span> files through it instead. There's <strong>no MorForm account and no server to host</strong> — it rides on your own cloud provider's sync app plus the file system, so your data stays in your accounts.</p>
-        <p style="margin-bottom:8px;"><strong>First, choose how accounts work</strong> — tap a card to see its steps:</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
-          <button class="btn" onclick="document.getElementById('cloud-a').style.display='block';document.getElementById('cloud-b').style.display='none';">A · One company account (simplest)</button>
-          <button class="btn" onclick="document.getElementById('cloud-b').style.display='block';document.getElementById('cloud-a').style.display='none';">B · Everyone's own account (private)</button>
-        </div>
-        <div id="cloud-a" style="display:none;border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:12px;">
-          <p style="margin-bottom:6px;"><strong>A · One company account</strong> — one login on every device, no sharing step. <em>Everyone can see all the files</em> (best for small, trusted crews).</p>
-          <ol style="margin:0;padding-left:20px;line-height:1.7;">
-            <li>Make one cloud account for the company (e.g. a Google account just for MorForm).</li>
-            <li>Install that provider's app on the office PC and every phone, signed in with that account.</li>
-            <li>Create a folder called <strong>MorForm</strong> in it.</li>
-            <li>In Office: <strong>Data → Connect Company Cloud Folder</strong> → pick it. On each phone: MorForm → Connect Company Cloud Folder → pick the same folder.</li>
-          </ol>
-        </div>
-        <div id="cloud-b" style="display:none;border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:12px;">
-          <p style="margin-bottom:6px;"><strong>B · Everyone uses their own account</strong> — you share each person only their own folder. <em>Nobody sees anyone else's files.</em> A little more setup; easy to remove someone later.</p>
-          <ol style="margin:0;padding-left:20px;line-height:1.7;">
-            <li>On the office PC, create a folder called <strong>MorForm</strong> in your cloud.</li>
-            <li>Right-click it → <strong>Share</strong> → add each crew member's email with edit access. For strict privacy, share each person their own subfolder instead of the whole folder.</li>
-            <li>Each person opens the invite and chooses <strong>Add to my Drive / Add to my files</strong> so it syncs to their device.</li>
-            <li>In Office: <strong>Data → Connect Company Cloud Folder</strong> → pick it. On each phone: MorForm → Connect Company Cloud Folder → pick the shared folder.</li>
-          </ol>
-        </div>
-        <p style="margin-bottom:8px;"><strong>Then, day to day:</strong></p>
-        <div class="steps">
-          <div class="step"><div class="step-num">1</div><div><div class="step-title">Set it up once in Office</div><div class="step-desc">Have a Drive/Dropbox/OneDrive folder synced on the office PC, then Settings → Data &amp; Backup → <strong>Connect Company Cloud Folder</strong>. Office auto-creates an inbox for each crew member from your contacts.</div></div></div>
-          <div class="step"><div class="step-num">2</div><div><div class="step-title">The crew connect once</div><div class="step-desc">On each phone, the same folder is synced (company cloud account or a shared folder), then in MorForm they tap Connect Company Cloud Folder and pick it. That's the only step they do.</div></div></div>
-          <div class="step"><div class="step-num">3</div><div><div class="step-title">Files flow on their own</div><div class="step-desc">Reports/data dropped into the shared folder import automatically (same Merge / Replace prompts), routed to the right person's inbox and stamped with who sent them — and dispatched jobs go straight to each supervisor's inbox folder. Desktop is automatic; phones (Android and iPhone) scan each time the app opens.</div></div></div>
-        </div>
-        <div class="callout callout-note"><span class="ico">💡</span><span>Email keeps working exactly as before — the cloud folder is an extra channel, not a replacement. A shared folder means everyone with access can see the files; for strict per-person privacy you can lock individual subfolders in your cloud's sharing settings.</span></div>
-        <div class="callout callout-tip"><span class="ico">💾</span><span>Once a cloud folder is connected, <strong>Settings → Data &amp; Backup → Back Up to Cloud Folder</strong> drops a timestamped <span class="file-badge">.morbak</span> backup into a <strong>backups</strong> subfolder in one tap — no save dialog. It syncs through your cloud app like everything else, and stays out of the crew inboxes so no app tries to import it.</span></div>
-
-        <h3>📐 Job requests from Manager mobile</h3>
-        <p>When a PM specs a job in MorForm Manager (job → type → subtype → trades &amp; scope) and taps <strong>Send to Office</strong>, the spec arrives in the .mordata import and lands here as a <strong>job request</strong>. One click converts it into a full estimate — every trade becomes a division with its scope checklist attached. The job itself is created when the estimate is <strong>Won</strong> — under the <em>same job id the PM's phone uses</em>, so sending a .mordata back (Data → Send Data to Manager) marks the job ✅ Approved in their app and the supervisor's .morrep reports match the job in both places.</p>
-
-        <h3>Importing a report</h3>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div>
-              <div class="step-title">Save the attachment</div>
-              <div class="step-desc">In your email client, save the .morrep file to your computer (e.g. Downloads folder).</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div>
-              <div class="step-title">Click 📥 Import .morrep</div>
-              <div class="step-desc">Browse to the saved file and open it. The report appears in the Inbox list.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div>
-              <div class="step-title">Review</div>
-              <div class="step-desc">Click the report to open it. Review hours (regular and overtime), expenses, safety documents, trade scope progress, and the site photo grid.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">4</div>
-            <div>
-              <div class="step-title">Approve</div>
-              <div class="step-desc">Click <strong>Approve</strong> to commit hours and expenses to the job's actuals. Scope completions reported by the supervisor are applied to the estimate. The report is marked reviewed.</div>
-            </div>
-          </div>
-        </div>
-
-        <h3>What gets committed on approval</h3>
-        <div class="pills">
-          <span class="pill">Regular hours → job actuals</span>
-          <span class="pill">Overtime hours → job actuals</span>
-          <span class="pill">Expenses → job actuals</span>
-          <span class="pill">Scope completions → estimate rows</span>
-          <span class="pill">Supervisor added to Crew if new</span>
-        </div>
-
-        <h3>Forwarding to managers</h3>
-        <p>An open report has a <strong>📧 Forward to managers</strong> section with one-click buttons for <strong>timesheets</strong>, <strong>expenses</strong>, and <strong>safety forms</strong>. Each opens your default mail client pre-filled — with a summary of that part — to the manager you assigned in <strong>Settings → Report Routing</strong>. Add those managers first on the <strong>Crew</strong> screen.</p>
-
-        <h3>Jobs created in the field</h3>
-        <p>If a supervisor created a job themselves in their app (instead of receiving a dispatch) and sends a report for it, Office <strong>creates that job automatically</strong> — the import alert names it, and it appears on the Jobs tab with a <strong>📱 from field</strong> tag, ready for you to fill in the address, client, and estimate. Future reports for that job match it exactly, and approval commits hours and expenses to it like any other job.</p>
-
-        <h3>💳 Expense batches</h3>
-        <p>Supervisors can send their expenses <strong>with receipt photos</strong> from Reports → Expenses → 📤 Send to Office in their app. The batch spans all their jobs and appears in Send &amp; Receive as a <strong>💳 Expense batch</strong> row. Review it to see every expense with its receipt (click a thumbnail to zoom), then <strong>Approve &amp; Commit</strong> — each expense commits to its own job's actuals, and anything already counted from an approved pay-period report is skipped automatically, so nothing double-counts.</p>
-
-        <h3>🦺 The Safety tab</h3>
-        <p>Every safety document your supervisors send — FLHAs, site hazard inspections, incident reports, emergency response plans, and scanned paper forms — collects on the dedicated <strong>Safety</strong> tab. Documents arrive automatically inside pay-period reports or as <strong>safety batches</strong> (Reports → Safety → 📤 Send to Office in the supervisor app, which includes the complete forms and scanned pages across all jobs). Filter by type, job, and date; click any row to view the full form; export a formatted <strong>PDF</strong> for your records. Each job's dashboard also shows a Safety card with that job's documents, and the red badge on the Safety nav item counts incidents still awaiting sign-off.</p>
-
-        <h3>Incident Report Sign-off</h3>
-        <div class="callout callout-imp">
-          <span class="ico">🚨</span>
-          <span>When a report contains an incident report, a red <strong>🚨 INCIDENT</strong> badge appears on the report row. Alberta OH&S requires the employer to investigate reportable incidents and document corrective actions. The sign-off in MorForm creates this record.</span>
-        </div>
-        <p>Open the report — a dedicated red sign-off section appears below the safety documents. For each incident:</p>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div>
-              <div class="step-title">Review the incident details</div>
-              <div class="step-desc">The supervisor's incident title, date, and description are shown.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div>
-              <div class="step-title">Enter corrective actions</div>
-              <div class="step-desc">Describe what was done, root cause, who is responsible for follow-up, and by when. Be specific — this is your investigation record.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div>
-              <div class="step-title">Click ✅ Sign Off</div>
-              <div class="step-desc">Records your name, timestamp, and corrective action notes permanently.</div>
-            </div>
-          </div>
-          <div class="step">
-            <div class="step-num">4</div>
-            <div>
-              <div class="step-title">Click 📄 Export PDF</div>
-              <div class="step-desc">Generates a full incident report document including your sign-off. Opens in your browser — use File → Print → Save as PDF. Keep this on file for OHS compliance. Can be provided to an OHS officer on request.</div>
-            </div>
-          </div>
-        </div>
-        <div class="callout callout-note">
-          <span class="ico">ℹ️</span>
-          <span>Incident sign-off is separate from report approval. Sign off the incident first, then approve the full report. Sign-off cannot be undone.</span>
-        </div>
-
-        <h3>Updated reports (re-importing)</h3>
-        <p>Supervisors can re-send the same job's report as work progresses — importing the newer file prompts <strong>Replace?</strong> and swaps in the updated report (scope progress and photos update, and it returns to pending for re-review). If the earlier version was already approved, its committed hours and expenses are backed out automatically — re-review and approve the new one. No double counting.</p>
-      </div>
-    </section>
-
-    <!-- OVERVIEW -->
-    <section id="overview">
-      <div class="sec-header">
-        <div class="sec-icon">📈</div>
-        <h2 class="sec-title">Overview</h2>
-      </div>
-      <div class="sec-body">
-        <p>Overview is the <strong>company dashboard</strong>. Pick a granularity — day, week, month, or year — and see Revenue, Costs, Income, Labour hours, and estimates Won / Lost for each period, with stat cards for the totals (including your win rate). Below it, every job shows budget vs. actuals — click a job row to open its full dashboard.</p>
-
-        <h3>How the numbers are built</h3>
-        <table class="tbl">
-          <tr><th>Number</th><th>Source</th></tr>
-          <tr><td><strong>Revenue</strong></td><td>Progress draws as you log them, plus the remaining contract value when a job completes — never double-counted</td></tr>
-          <tr><td><strong>Costs</strong></td><td>Approved expenses plus labour hours at your labour cost rate (set in Settings)</td></tr>
-          <tr><td><strong>Income</strong></td><td>Revenue minus costs</td></tr>
-          <tr><td><strong>Won / Lost</strong></td><td>Estimate decisions dated in the period — your win rate over time</td></tr>
-        </table>
-
-        <h3>💵 Draws &amp; contract value</h3>
-        <p>On the job dashboard, set the job's <strong>contract value</strong> (a Won estimate's total is used automatically) and log <strong>draws</strong> — progress billing — as you invoice the client (e.g. <em>"Draw 2 — rough-in complete"</em>). Draws count as revenue on the Overview dashboard and feed the QuickBooks invoice export.</p>
-
-        <h3>Job dashboard</h3>
-        <p>The job dashboard shows:</p>
-        <table class="tbl">
-          <tr><th>Card</th><th>What it shows</th></tr>
-          <tr><td><strong>Budget</strong></td><td>Estimate total from your estimate</td></tr>
-          <tr><td><strong>Hours logged</strong></td><td>Actual hours committed from approved reports vs. estimated hours</td></tr>
-          <tr><td><strong>Expenses</strong></td><td>Total actual expenses committed, with reimbursable breakdown</td></tr>
-          <tr><td><strong>Scope</strong></td><td>Trades with scope complete out of total trades assigned</td></tr>
-          <tr><td><strong>Reports</strong></td><td>Total reports received, with unreviewed count</td></tr>
-        </table>
-        <p>Below the KPI cards: a progress bar for hours vs. estimate, budget breakdown by Labour / Mat'l / Sub, expense categories, trade scope list, assigned supervisors, and recent report history.</p>
-      </div>
-    </section>
-
-    <!-- CONNECTION -->
-    <section id="connection">
-      <div class="sec-header">
-        <div class="sec-icon">🔗</div>
-        <h2 class="sec-title">How the Suite Connects</h2>
-      </div>
-      <div class="sec-body">
-        <p>MorForm Office, MorForm Manager (mobile), and MorForm (supervisor mobile) are designed to work together with zero accounts or MorForm-run infrastructure. Communication is through email file attachments, or an optional shared Company Cloud Folder in your own Drive/Dropbox/OneDrive.</p>
-
-        <div class="flow" style="flex-direction:column; align-items:flex-start; gap:0;">
-          <div style="display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid var(--teal-border); width:100%;">
-            <div class="flow-step" style="min-width:160px; text-align:center;">📱 MM mobile<br><span style="font-weight:400;font-size:11px;">job spec</span></div>
-            <div class="flow-arrow">→</div>
-            <div style="font-size:13px;color:var(--text);"><span class="file-badge">.mordata</span> email attachment &nbsp;→&nbsp; Office Send &amp; Receive job request → estimate → job when Won → .mordata back marks the job ✅ Approved on the phone</div>
-          </div>
-          <div style="display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid var(--teal-border); width:100%;">
-            <div class="flow-step" style="min-width:160px; text-align:center;">🖥 MorForm Office<br><span style="font-weight:400;font-size:11px;">or MM mobile</span></div>
-            <div class="flow-arrow">→</div>
-            <div style="font-size:13px;color:var(--text);"><span class="file-badge">.morjob</span> email attachment &nbsp;→&nbsp; Supervisor imports on phone</div>
-          </div>
-          <div style="display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid var(--teal-border); width:100%;">
-            <div class="flow-step" style="min-width:160px; text-align:center;">📱 MorForm<br><span style="font-weight:400;font-size:11px;">supervisor app</span></div>
-            <div class="flow-arrow">→</div>
-            <div style="font-size:13px;color:var(--text);"><span class="file-badge">.morrep</span> email attachment &nbsp;→&nbsp; Manager imports in Office or MM mobile</div>
-          </div>
-          <div style="display:flex; align-items:center; gap:10px; padding:10px 0; width:100%;">
-            <div class="flow-step" style="min-width:160px; text-align:center;">🖥 MorForm Office</div>
-            <div class="flow-arrow">→</div>
-            <div style="font-size:13px;color:var(--text);">Approves report → commits actuals → updates scope in estimate</div>
-          </div>
-        </div>
-
-        <div class="callout callout-note">
-          <span class="ico">📎</span>
-          <span>MorForm Office and MorForm Manager share the same <span class="file-badge">.morjob</span> / <span class="file-badge">.morrep</span> file format. A supervisor doesn't know or care whether the dispatch came from the desktop or mobile app.</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- SETTINGS -->
-    <section id="settings">
-      <div class="sec-header">
-        <div class="sec-icon">⚙️</div>
-        <h2 class="sec-title">Settings</h2>
-      </div>
-      <div class="sec-body">
-        <table class="tbl">
-          <tr><th>Section</th><th>What you configure</th></tr>
-          <tr><td><strong>Appearance</strong></td><td>Theme: Light / Dark / Auto (follows Windows). Accent colour — 10 options including Gold, Navy, Steel, Teal, Forest, Slate, Charcoal, Brick, Red, Purple.</td></tr>
-          <tr><td><strong>Company</strong></td><td>Company name, address, city, province, phone, website, and logo. Logo appears on PDF quotes.</td></tr>
-          <tr><td><strong>My Profile</strong></td><td>Your name, job title, email, and phone. Appears as the PM contact in dispatched jobs.</td></tr>
-          <tr><td><strong>PDF & Quotes</strong></td><td>Quote number format (auto Q-YYYY-NNN or manual), validity days, terms text, and signature. Signature editor removes the paper background automatically.</td></tr>
-          <tr><td><strong>Report Routing</strong></td><td>Pick which <strong>Manager</strong> (added on the Crew screen) receives each kind of field report — timesheets, expenses, and safety forms. Drives the one-click 📧 Forward buttons in the report viewer.</td></tr>
-          <tr><td><strong>Accounting (QuickBooks)</strong></td><td>Export your books for QuickBooks without a cloud connection — QBO CSVs and a Desktop IIF file, with configurable account names. See below.</td></tr>
-          <tr><td><strong>Import Templates</strong></td><td>Upload a custom XLSX estimate template to replace the default template for new estimates — or save any estimate as a named template instead.</td></tr>
-          <tr><td><strong>Data & Backup</strong></td><td>Back up all data to a <span class="file-badge">.morbak</span> file and restore from one (older .json backups still import). Moving to a new computer? Back up, copy the .morbak over, then Restore Backup — or use Import from Backup on the first-run setup screen. Data is stored at <kbd>%APPDATA%\morform-office\morform-office-data.json</kbd>. If a saved file ever can't be read on launch, Office shows a recovery screen (Try Again / Restore from Backup) instead of starting empty, so a one-time read glitch can't wipe your data.</td></tr>
-        </table>
-
-        <h3>🧾 QuickBooks export</h3>
-        <p>Settings → Accounting exports files you import into QuickBooks yourself — no cloud connection. <strong>QBO Invoices CSV</strong> (one invoice line per draw), <strong>QBO Expenses CSV</strong> (approved supervisor expenses), and <strong>QBO Time Activities CSV</strong> (approved hours) import into QuickBooks Online. The <strong>QuickBooks Desktop IIF</strong> file imports via File → Utilities → Import → IIF Files — test in a sample company first, IIF imports can't be undone. Account names are configurable and must match your QuickBooks chart of accounts. Exported draws are stamped, so you're warned before exporting the same draw twice.</p>
-      </div>
-    </section>
-
-    <!-- FILE FORMATS -->
-    <section id="files">
-      <div class="sec-header">
-        <div class="sec-icon">📁</div>
-        <h2 class="sec-title">File Formats</h2>
-      </div>
-      <div class="sec-body">
-        <table class="tbl">
-          <tr><th>Format</th><th>Direction</th><th>Description</th></tr>
-          <tr>
-            <td><span class="file-badge">.morjob</span></td>
-            <td>Office / Manager → Supervisor</td>
-            <td>Job dispatch package. Contains job details, contacts, permits, trade scopes, photos, and documents. Office mainly <em>sends</em> these to supervisors, but can also <em>import</em> one in via <strong>Data → Import Job (.morjob)</strong>. JSON format.</td>
-          </tr>
-          <tr>
-            <td><span class="file-badge">.morrep</span></td>
-            <td>Supervisor → Office / Manager</td>
-            <td>Pay period report. Contains time entries, expenses, safety forms, and scope completion statuses. JSON format.</td>
-          </tr>
-          <tr>
-            <td><span class="file-badge">.mordata</span></td>
-            <td>Manager ↔ Office</td>
-            <td>Data snapshot between Manager mobile and Office — jobs, specs / job requests, budgets, crew, notes. JSON format.</td>
-          </tr>
-          <tr>
-            <td><span class="file-badge">.morbak</span></td>
-            <td>Backup (this app)</td>
-            <td>Full-app backup of everything in MorForm Office, for safekeeping or moving to a new computer. Restore via Settings → Data &amp; Backup or the first-run setup screen. App-specific — a mobile backup can't restore into Office. JSON format.</td>
-          </tr>
-          <tr>
-            <td><span class="file-badge">.xlsx</span></td>
-            <td>Import / Export</td>
-            <td>Estimate import and export. Also used for bulk job import when formatted as the job template.</td>
-          </tr>
-          <tr>
-            <td><span class="file-badge">.csv</span></td>
-            <td>Import / Export</td>
-            <td>Bulk job import using the MorForm job template, and QuickBooks Online export files (invoices, expenses, time).</td>
-          </tr>
-          <tr>
-            <td><span class="file-badge">.json</span></td>
-            <td>Backup</td>
-            <td>Full app data backup. All jobs, estimates, crew, contacts, reports, and settings in one file.</td>
-          </tr>
-        </table>
-        <div class="callout callout-tip">
-          <span class="ico">💡</span>
-          <span>Both <span class="file-badge">.morjob</span> and <span class="file-badge">.morrep</span> are plain JSON files. If you ever need to inspect or troubleshoot one, you can open it in any text editor.</span>
-        </div>
-      </div>
-    </section>
-
-  </main>
-</div>
-
-<footer>
-  <div class="footer-inner">
-    <div>© 2026 Bryce Duhamel &nbsp;·&nbsp; Edmonton, Alberta &nbsp;·&nbsp; <a href="index.html">morform.app</a><div class="mf-social" aria-label="MorForm on social media"><style>.mf-social{display:flex;gap:14px;margin-top:14px;align-items:center;justify-content:center}.mf-social a{display:inline-flex;color:inherit;opacity:.5;transition:opacity .2s}.mf-social a:hover{opacity:1}.mf-social svg{display:block;width:19px;height:19px}</style><a href="https://www.instagram.com/morform.app/" target="_blank" rel="noopener" aria-label="MorForm on Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="https://www.facebook.com/profile.php?id=61590819100585" target="_blank" rel="noopener" aria-label="MorForm on Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a href="https://www.linkedin.com/company/morform-app" target="_blank" rel="noopener" aria-label="MorForm on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div></div>
-    <div class="footer-guides">
-      <a href="morform-help.html">Supervisor Guide</a>
-      <a href="morform-manager-help.html">Manager Guide</a>
-      <a href="flha.html">Free FLHA Form</a>
-      <a href="jha-template.html">JHA template</a>
-      <a href="toolbox-talk-template.html">Toolbox talk</a>
-      <a href="cor-audit-checklist.html">COR checklist</a>
-      <a href="support.html">Support</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="mailto:support@morform.app">support@morform.app</a>
     </div>
+    <nav aria-label="Pages">
+      <p class="sf-h">Pages</p>
+      <a class="sf-l" href="/">Home</a>
+      <a class="sf-l" href="/how-it-works">How it works</a>
+      <a class="sf-l" href="/apps">Apps &amp; Pricing</a>
+      <a class="sf-l" href="/course">Free course</a>
+      <a class="sf-l" href="/faq">FAQ</a>
+    </nav>
+    <nav aria-label="Free guides">
+      <p class="sf-h">Free guides</p>
+      <a class="sf-l" href="/flha.html">Free FLHA form</a>
+      <a class="sf-l" href="/jha-template.html">JHA / JSA template</a>
+      <a class="sf-l" href="/toolbox-talk-template.html">Toolbox talk template</a>
+      <a class="sf-l" href="/cor-audit-checklist.html">COR audit checklist</a>
+      <a class="sf-l" href="/timesheet-template.html">Timesheet template</a>
+      <a class="sf-l" href="/cor-certification-alberta.html">COR in Alberta guide</a>
+    </nav>
+    <nav aria-label="Help">
+      <p class="sf-h">Help</p>
+      <a class="sf-l" href="/morform-help.html">Supervisor guide</a>
+      <a class="sf-l" href="/morform-manager-help.html">Manager guide</a>
+      <a class="sf-l" href="/morform-office-help.html" aria-current="page">Office guide</a>
+      <a class="sf-l" href="/support.html">Support</a>
+      <a class="sf-l" href="mailto:support@morform.app">support@morform.app</a>
+    </nav>
+    <nav aria-label="Legal">
+      <p class="sf-h">Legal</p>
+      <a class="sf-l" href="/morform-privacy.html">MorForm privacy</a>
+      <a class="sf-l" href="/morform-manager-privacy.html">Manager privacy</a>
+      <a class="sf-l" href="/morform-office-privacy.html">Office privacy</a>
+      <a class="sf-l" href="/terms.html">Terms of use</a>
+    </nav>
+  </div>
+  <div class="sf-base">
+    <span>© 2026 Bryce Duhamel · Edmonton, Alberta</span>
+    <span>Built for the job site, not the boardroom.</span>
   </div>
 </footer>
-
-<script>
-  var TOC_STOP = {the:1,a:1,an:1,and:1,or:1,to:1,of:1,for:1,in:1,on:1,at:1,by:1,my:1,me:1,i:1,it:1,is:1,do:1,does:1,how:1,what:1,where:1,when:1,why:1,which:1,who:1,can:1,should:1,would:1,you:1,your:1,with:1,please:1,need:1,want:1,get:1,have:1,has:1,help:1,app:1,about:1,from:1,this:1,that:1,if:1,so:1,are:1,be:1};
-
-  function scrollToSection(id) {
-    var el = document.getElementById(id);
-    if (el) window.scrollTo({ top: el.offsetTop - 70, behavior: 'smooth' });
-  }
-
-  function runSearch(q) {
-    q = q.trim().toLowerCase();
-    var links = document.querySelectorAll('.toc a');
-    var groups = document.querySelectorAll('.toc-group-label');
-    var noRes = document.getElementById('toc-no-results');
-    var tokens = [];
-    if (q) { q.split(/[^a-z0-9]+/).forEach(function(t) { if (t.length >= 2 && !TOC_STOP[t]) tokens.push(t); }); }
-    var matches = [];
-    links.forEach(function(a) {
-      if (!q) { a.style.display = ''; return; }
-      var href = a.getAttribute('href') || '';
-      var id = href.replace('#', '');
-      var section = id ? document.getElementById(id) : null;
-      var hay = (a.textContent + ' ' + (section ? section.textContent : '')).toLowerCase();
-      var score = tokens.length === 0 ? (hay.indexOf(q) !== -1 ? 1 : 0) : 0;
-      if (tokens.length > 0) { tokens.forEach(function(t) { if (hay.indexOf(t) !== -1) score += t.length; }); }
-      a.style.display = score > 0 ? '' : 'none';
-      if (score > 0) matches.push(id);
-    });
-    groups.forEach(function(g) { g.style.display = q ? 'none' : ''; });
-    noRes.style.display = (!matches.length && q) ? 'block' : 'none';
-    if (matches.length === 1) scrollToSection(matches[0]);
-  }
-
-  var searchEl = document.getElementById('toc-search');
-  searchEl.addEventListener('input', function() { runSearch(this.value); });
-  searchEl.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter' && this.value.trim()) {
-      var links = document.querySelectorAll('.toc a');
-      for (var i = 0; i < links.length; i++) {
-        if (links[i].style.display !== 'none') {
-          scrollToSection((links[i].getAttribute('href') || '').replace('#', ''));
-          this.blur();
-          break;
-        }
-      }
-    } else if (e.key === 'Escape') {
-      this.value = '';
-      runSearch('');
-      this.blur();
-    }
-  });
-
-  var scrollSections = document.querySelectorAll('section[id]');
-  var scrollLinks = document.querySelectorAll('.toc a');
-  window.addEventListener('scroll', function() {
-    var cur = '';
-    scrollSections.forEach(function(s) { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
-    scrollLinks.forEach(function(a) { a.classList.toggle('active', a.getAttribute('href') === '#' + cur); });
-  });
-</script>
 </body>
 </html>

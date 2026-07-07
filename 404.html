@@ -1,151 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Page Not Found — MorForm</title>
-<meta name="robots" content="noindex" />
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;500;700;800&display=swap');
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { height: 100%; }
-
-  body {
-    font-family: 'IBM Plex Sans', sans-serif;
-    background: #0f1923;
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 24px;
-  }
-
-  .code {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 72px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.07);
-    letter-spacing: -0.04em;
-    line-height: 1;
-    margin-bottom: 24px;
-    user-select: none;
-  }
-
-  .eyebrow {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: rgba(178,145,70,0.8);
-    margin-bottom: 16px;
-  }
-
-  h1 {
-    font-size: clamp(1.6rem, 5vw, 2.6rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1.15;
-    margin-bottom: 14px;
-  }
-
-  p {
-    font-size: 1rem;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.7;
-    max-width: 440px;
-    margin-bottom: 40px;
-    font-weight: 300;
-  }
-
-  .btn-row {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    background: #325a81;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 22px;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: 'IBM Plex Sans', sans-serif;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.2s;
-  }
-  .btn-primary:hover { background: #264d70; }
-
-  .btn-outline {
-    background: transparent;
-    color: rgba(255,255,255,0.7);
-    border: 1px solid rgba(255,255,255,0.18);
-    border-radius: 8px;
-    padding: 12px 22px;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: 'IBM Plex Sans', sans-serif;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .btn-outline:hover { border-color: rgba(255,255,255,0.45); color: white; }
-
-  .links {
-    margin-top: 48px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.08em;
-  }
-  .links a {
-    color: rgba(255,255,255,0.25);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .links a:hover { color: rgba(255,255,255,0.6); }
-</style>
+<title>Page not found — MorForm</title>
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#0f1923">
+<link rel="icon" href="/assets/m-logo.png">
+<link rel="preload" href="/fonts/IBMPlexSans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-  <div class="code">404</div>
-  <div class="eyebrow">MorForm · Page Not Found</div>
-  <h1>Nothing here.</h1>
-  <p>The page you're looking for doesn't exist or may have moved. Head back to the main site or find what you need below.</p>
-
-  <div class="btn-row">
-    <a href="index.html" class="btn-primary">Back to morform.app</a>
-    <a href="support.html" class="btn-outline">Get support</a>
+<header class="topbar">
+  <div class="tb-in">
+    <a class="tb-brand" href="/" aria-label="MorForm home">
+      <img class="tb-logo" src="/assets/m-logo.png" alt="MorForm app icon" width="32" height="32">
+      <span class="tb-name"><span class="tb-kick">Built for the job site</span><span class="tb-title">MorForm</span></span>
+    </a>
+    <nav class="tb-nav" aria-label="Primary">
+      <a class="tb-link" href="/how-it-works">How it works</a>
+      <a class="tb-link" href="/apps">Apps &amp; Pricing</a>
+      <a class="tb-link" href="/course">Free course</a>
+      <a class="tb-link" href="/flha.html">Free FLHA</a>
+      <a class="tb-link" href="/faq">FAQ</a>
+      <a class="btn btn-gold btn-sm" href="/apps" style="margin-left:8px">Get the apps</a>
+    </nav>
+    <details class="mnav">
+      <summary aria-label="Open menu">Menu ▾</summary>
+      <nav class="mnav-pop" aria-label="Mobile">
+        <a href="/">Home</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/apps">Apps &amp; Pricing</a>
+        <a href="/course">Free course</a>
+        <a href="/flha.html">Free FLHA form</a>
+        <a href="/faq">FAQ</a>
+        <a href="mailto:support@morform.app">Contact</a>
+      </nav>
+    </details>
   </div>
+</header>
 
-  <div class="links">
-    <a href="morform-help.html">Supervisor Guide</a>
-    <a href="morform-manager-help.html">Manager Guide</a>
-    <a href="morform-office-help.html">Office Guide</a>
-    <a href="flha.html">Free FLHA form</a>
-    <a href="jha-template.html">JHA template</a>
-    <a href="toolbox-talk-template.html">Toolbox talk</a>
-    <a href="cor-audit-checklist.html">COR checklist</a>
-    <a href="mailto:support@morform.app">support@morform.app</a>
+<main id="main">
+
+<section class="dark grid-bg pagehero" aria-labelledby="nf-h">
+  <span class="grid-bg-layer" aria-hidden="true"></span>
+  <span class="gold-fade" aria-hidden="true"></span>
+  <div class="sec-in" style="position:relative">
+    <p class="kick">Error 404 — file not found</p>
+    <h1 class="ph-h1" id="nf-h">Nothing at this address</h1>
+    <p class="lede">Either the link has a typo or the page moved. Nothing's lost — everything on the site is one click below.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="/">Back to the homepage →</a>
+      <a class="btn btn-ghost" href="mailto:support@morform.app">Report a broken link</a>
+    </div>
   </div>
+</section>
 
+<section class="sec" aria-labelledby="nf-list-h">
+  <div class="sec-in" style="max-width:640px">
+    <p class="guide-h" id="nf-list-h">Looking for one of these?</p>
+    <div class="guide-list">
+      <a class="guide" href="/how-it-works"><span class="tag">Page</span>How it works</a>
+      <a class="guide" href="/apps"><span class="tag">Page</span>Apps &amp; Pricing</a>
+      <a class="guide" href="/course"><span class="tag">Course</span>How to use MorForm — free course</a>
+      <a class="guide" href="/flha.html"><span class="tag">Form</span>Free FLHA form</a>
+      <a class="guide" href="/faq"><span class="tag">Page</span>FAQ</a>
+      <a class="guide" href="/support.html"><span class="tag">Help</span>Support</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="sitefoot">
+  <div class="sf-in">
+    <div>
+      <div class="sf-brandrow"><img class="sf-logo" src="/assets/m-logo.png" alt="MorForm app icon" width="30" height="30"><span class="sf-t">MorForm</span></div>
+      <p class="sf-d">Built for the job site, not the boardroom. Time, safety and job management for construction crews — as apps you own, passing files you control.</p>
+      <p class="sf-trust">no accounts · works offline · your data stays yours</p>
+      <div class="sf-social">
+        <a href="https://www.instagram.com/morform.app/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61590819100585" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/company/morform-app" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@MorForm-app" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+    <nav aria-label="Pages">
+      <p class="sf-h">Pages</p>
+      <a class="sf-l" href="/">Home</a>
+      <a class="sf-l" href="/how-it-works">How it works</a>
+      <a class="sf-l" href="/apps">Apps &amp; Pricing</a>
+      <a class="sf-l" href="/course">Free course</a>
+      <a class="sf-l" href="/faq">FAQ</a>
+    </nav>
+    <nav aria-label="Free guides">
+      <p class="sf-h">Free guides</p>
+      <a class="sf-l" href="/flha.html">Free FLHA form</a>
+      <a class="sf-l" href="/jha-template.html">JHA / JSA template</a>
+      <a class="sf-l" href="/toolbox-talk-template.html">Toolbox talk template</a>
+      <a class="sf-l" href="/cor-audit-checklist.html">COR audit checklist</a>
+      <a class="sf-l" href="/timesheet-template.html">Timesheet template</a>
+      <a class="sf-l" href="/cor-certification-alberta.html">COR in Alberta guide</a>
+    </nav>
+    <nav aria-label="Help">
+      <p class="sf-h">Help</p>
+      <a class="sf-l" href="/morform-help.html">Supervisor guide</a>
+      <a class="sf-l" href="/morform-manager-help.html">Manager guide</a>
+      <a class="sf-l" href="/morform-office-help.html">Office guide</a>
+      <a class="sf-l" href="/support.html">Support</a>
+      <a class="sf-l" href="mailto:support@morform.app">support@morform.app</a>
+    </nav>
+    <nav aria-label="Legal">
+      <p class="sf-h">Legal</p>
+      <a class="sf-l" href="/morform-privacy.html">MorForm privacy</a>
+      <a class="sf-l" href="/morform-manager-privacy.html">Manager privacy</a>
+      <a class="sf-l" href="/morform-office-privacy.html">Office privacy</a>
+      <a class="sf-l" href="/terms.html">Terms of use</a>
+    </nav>
+  </div>
+  <div class="sf-base">
+    <span>© 2026 Bryce Duhamel · Edmonton, Alberta</span>
+    <span>Built for the job site, not the boardroom.</span>
+  </div>
+</footer>
 </body>
 </html>

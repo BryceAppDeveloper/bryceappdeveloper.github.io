@@ -1,669 +1,419 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="apple-itunes-app" content="app-id=6744827471">
-
-<!-- ── Preconnect ── -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<!-- ── Primary SEO ── -->
 <title>MorForm — Construction Time Tracking, FLHA Safety Forms &amp; Job Management | No Subscription</title>
-<meta name="description" content="Construction apps for supervisors and project managers. Log field time, track expenses, complete FLHA/JHA safety forms and manage job estimates. Sync by email or a shared folder in your own Google Drive, Dropbox or OneDrive — MorForm runs no servers. No MorForm account, no subscription. One-time purchase. iOS, Android &amp; Windows." />
-<meta name="keywords" content="construction app, field time tracking, OHS safety forms, FLHA app, JHA app, job site app, construction time tracker, trades app, supervisor app, project manager app, construction budget, job estimate app, site inspection app, incident report app, OH&S app, OSHA app, construction management, no subscription app, offline construction app, tradespeople app, contractor app, foreman app, field report app, construction expenses, Alberta OHS, safety compliance app, FLHA form app, construction timesheet app, job cost tracking, subtrade management, CSI estimate, construction invoice app, Canada construction app" />
-<meta name="author" content="Bryce Duhamel" />
-<meta name="robots" content="index, follow" />
-<meta name="theme-color" content="#0f1923" />
-<link rel="canonical" href="https://morform.app/" />
-
-<!-- Open Graph / link preview -->
-<meta property="og:type"        content="website" />
-<meta property="og:url"         content="https://morform.app/" />
-<meta property="og:title"       content="MorForm — Construction Time Tracking, OHS Safety Forms &amp; Job Management" />
-<meta property="og:description" content="Three apps for the whole construction crew. Field time tracking, FLHA/JHA safety forms, job estimates, budgets and reports. Sync by email or your own cloud folder — no MorForm servers, no subscription. iOS, Android &amp; Windows." />
-<meta property="og:image"       content="https://morform.app/assets/og-image.jpg" />
-<meta property="og:image:width"  content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:alt"    content="MorForm — construction apps for supervisors and project managers" />
-<meta property="og:site_name"   content="MorForm" />
-<meta property="og:locale"      content="en_CA" />
-
-<!-- Twitter / iMessage card -->
-<meta name="twitter:card"        content="summary_large_image" />
-<meta name="twitter:title"       content="MorForm — Construction Apps. No servers, no subscription, no fees." />
-<meta name="twitter:description" content="Time tracking, FLHA/OHS safety forms, job estimates &amp; field reports for construction crews. One-time purchase. iOS, Android &amp; Windows." />
-<meta name="twitter:image"       content="https://morform.app/assets/og-image.jpg" />
-<meta name="twitter:image:alt"   content="MorForm construction apps — supervisor, manager and desktop" />
-
-<!-- ── Structured Data (JSON-LD) ── -->
+<meta name="description" content="Construction apps for supervisors and project managers. Log field time, track expenses, complete FLHA/JHA safety forms and manage job estimates. Sync by email or a shared folder in your own Google Drive, Dropbox or OneDrive — MorForm runs no servers. No MorForm account, no subscription. One-time purchase. iOS, Android &amp; Windows.">
+<meta name="keywords" content="construction app, field time tracking, OHS safety forms, FLHA app, JHA app, job site app, construction time tracker, trades app, supervisor app, project manager app, construction budget, job estimate app, site inspection app, incident report app, OH&amp;S app, OSHA app, construction management, no subscription app, offline construction app, tradespeople app, contractor app, foreman app, field report app, construction expenses, Alberta OHS, safety compliance app, FLHA form app, construction timesheet app, job cost tracking, subtrade management, CSI estimate, construction invoice app, Canada construction app">
+<meta name="author" content="Bryce Duhamel">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f1923">
+<meta name="apple-itunes-app" content="app-id=6744827471">
+<link rel="canonical" href="https://morform.app/">
+<link rel="icon" href="/assets/m-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://morform.app/">
+<meta property="og:site_name" content="MorForm">
+<meta property="og:locale" content="en_CA">
+<meta property="og:title" content="MorForm — Construction Time Tracking, OHS Safety Forms &amp; Job Management">
+<meta property="og:description" content="Three apps for the whole construction crew. Field time tracking, FLHA/JHA safety forms, job estimates, budgets and reports. Sync by email or your own cloud folder — no MorForm servers, no subscription. iOS, Android &amp; Windows.">
+<meta property="og:image" content="https://morform.app/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MorForm — construction apps for supervisors and project managers">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MorForm — Construction Apps. No servers, no subscription, no fees.">
+<meta name="twitter:description" content="Time tracking, FLHA/OHS safety forms, job estimates &amp; field reports for construction crews. One-time purchase. iOS, Android &amp; Windows.">
+<meta name="twitter:image" content="https://morform.app/assets/og-image.jpg">
+<meta name="twitter:image:alt" content="MorForm construction apps — supervisor, manager and desktop">
+<link rel="preload" href="/fonts/IBMPlexSans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "WebSite",
-      "name": "MorForm",
-      "url": "https://morform.app/",
-      "description": "Construction apps for the whole crew — field time tracking, FLHA/JHA safety forms, job estimates, budgets and reports. Sync by email or your own cloud folder. No MorForm servers, no subscription."
-    },
-    {
-      "@type": "Organization",
-      "name": "MorForm",
-      "url": "https://morform.app/",
-      "logo": "https://morform.app/assets/morform.png",
-      "founder": { "@type": "Person", "name": "Bryce Duhamel" },
-      "foundingDate": "2026",
-      "foundingLocation": { "@type": "Place", "name": "Edmonton, Alberta, Canada" },
-      "address": { "@type": "PostalAddress", "addressLocality": "Edmonton", "addressRegion": "AB", "addressCountry": "CA" },
-      "areaServed": "Worldwide",
-      "contactPoint": { "@type": "ContactPoint", "email": "support@morform.app", "contactType": "customer support" },
-      "sameAs": [
-        "https://apps.apple.com/ca/app/morform/id6744827471",
-        "https://play.google.com/store/apps/details?id=com.bryceduhamel.morform",
-        "https://apps.apple.com/ca/app/morform-manager/id6772639424",
-        "https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion",
-        "https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0",
-        "https://www.instagram.com/morform.app/",
-        "https://www.facebook.com/profile.php?id=61590819100585",
-        "https://www.linkedin.com/company/morform-app",
-        "https://www.youtube.com/@MorForm-app"
-      ]
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "MorForm",
-      "alternateName": "MorForm Supervisor",
-      "operatingSystem": "iOS, Android",
-      "applicationCategory": "BusinessApplication",
-      "description": "Field supervisor app for construction crews. Log daily time by job, track expenses by category, complete FLHA, JHA, site inspection and incident report safety forms. Send reports to your project manager by email or a shared cloud folder. Alberta OH&S and US OSHA compliant. Works offline; no MorForm account required.",
-      "offers": { "@type": "Offer", "price": "6.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
-      "url": "https://morform.app/",
-      "downloadUrl": ["https://apps.apple.com/ca/app/morform/id6744827471", "https://play.google.com/store/apps/details?id=com.bryceduhamel.morform"],
-      "screenshot": [
-        "https://morform.app/assets/mf-screenshot/mf-log-hours.webp",
-        "https://morform.app/assets/mf-screenshot/mf-daytimer.webp",
-        "https://morform.app/assets/mf-screenshot/mf-jobs.webp",
-        "https://morform.app/assets/mf-screenshot/mf-safety.webp",
-        "https://morform.app/assets/mf-screenshot/mf-reports.webp"
-      ],
-      "keywords": "construction time tracking, FLHA app, JHA app, field report app, OHS safety forms, supervisor app, trades app, offline job site app, Alberta OHS, construction timesheet"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "MorForm Manager",
-      "operatingSystem": "iOS, Android",
-      "applicationCategory": "BusinessApplication",
-      "description": "Project manager app for construction field work. Build job specs (job type, subtypes, trades and scope), dispatch jobs to supervisors, track job budgets vs actuals, approve field reports and manage crew safety compliance. Sends job requests to MorForm Office for estimating and quoting. Syncs by email or your own cloud folder; MorForm runs no servers.",
-      "offers": { "@type": "Offer", "price": "34.99", "priceCurrency": "USD", "availability": "https://schema.org/InStock" },
-      "url": "https://morform.app/",
-      "downloadUrl": ["https://apps.apple.com/ca/app/morform-manager/id6772639424", "https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion"],
-      "screenshot": [
-        "https://morform.app/assets/mm-screenshot/mm-estimate.webp",
-        "https://morform.app/assets/mm-screenshot/mm-jobs.webp",
-        "https://morform.app/assets/mm-screenshot/mm-crew.webp",
-        "https://morform.app/assets/mm-screenshot/mm-reports.webp"
-      ],
-      "keywords": "construction project manager app, job estimate app, construction budget app, CSI estimate, crew management, job dispatch, contractor management app, subtrade management"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "name": "MorForm Office",
-      "operatingSystem": "Windows 10, Windows 11",
-      "applicationCategory": "BusinessApplication",
-      "description": "Windows desktop app for construction estimating and back office. Estimate pipeline from draft to won with named templates, custom columns, XLSX import, PDF proposal and quote generation, job dispatch to supervisors, supervisor report review, progress draws, QuickBooks export and a company dashboard.",
-      "offers": { "@type": "Offer", "price": "299.99", "priceCurrency": "CAD", "availability": "https://schema.org/InStock" },
-      "url": "https://morform.app/",
-      "downloadUrl": "https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0",
-      "screenshot": [
-        "https://morform.app/assets/mo-screenshot/mo-overview.webp",
-        "https://morform.app/assets/mo-screenshot/mo-estimates.webp",
-        "https://morform.app/assets/mo-screenshot/mo-contacts.webp",
-        "https://morform.app/assets/mo-screenshot/mo-jobs.webp"
-      ],
-      "keywords": "construction desktop app, CSI estimate builder, construction budget software, Windows construction app, job management software, construction invoice"
-    }
+    {"@type": "Organization", "@id": "https://morform.app/#org", "name": "MorForm", "url": "https://morform.app/", "logo": "https://morform.app/assets/morform.png",
+     "sameAs": ["https://www.instagram.com/morform.app/", "https://www.facebook.com/profile.php?id=61590819100585", "https://www.linkedin.com/company/morform-app", "https://www.youtube.com/@MorForm-app"]},
+    {"@type": "WebSite", "@id": "https://morform.app/#website", "url": "https://morform.app/", "name": "MorForm", "publisher": {"@id": "https://morform.app/#org"}},
+    {"@type": "SoftwareApplication", "name": "MorForm", "operatingSystem": "iOS, Android", "applicationCategory": "BusinessApplication",
+     "description": "Supervisor field app — log hours and expenses by job, complete FLHA/JHA and OHS safety forms, send job reports to your PM.",
+     "url": "https://morform.app/apps",
+     "offers": [{"@type": "Offer", "price": "6.99", "priceCurrency": "USD"}, {"@type": "Offer", "price": "9.99", "priceCurrency": "CAD"}]},
+    {"@type": "SoftwareApplication", "name": "MorForm Manager", "operatingSystem": "iOS, Android", "applicationCategory": "BusinessApplication",
+     "description": "Project manager app — job pipeline with budget bars, specs, dispatching jobs to supervisors, and report approval that locks hours and expenses to actuals.",
+     "url": "https://morform.app/apps",
+     "offers": [{"@type": "Offer", "price": "34.99", "priceCurrency": "USD"}, {"@type": "Offer", "price": "49.99", "priceCurrency": "CAD"}]},
+    {"@type": "SoftwareApplication", "name": "MorForm Office", "operatingSystem": "Windows 10, Windows 11", "applicationCategory": "BusinessApplication",
+     "description": "Windows estimating desk — estimate pipeline from Draft to Won, PDF proposals, job dispatch, supervisor report review and QuickBooks export.",
+     "url": "https://morform.app/apps",
+     "offers": {"@type": "Offer", "price": "299.99", "priceCurrency": "CAD"}},
+    {"@type": "Course", "name": "How to use MorForm", "url": "https://morform.app/course", "isAccessibleForFree": true,
+     "description": "A free ten-part, hands-on course that walks one construction job through the whole MorForm suite — estimate in Office, dispatch in Manager, log time, expenses and safety forms in the field.",
+     "provider": {"@id": "https://morform.app/#org"}},
+    {"@type": "FAQPage", "mainEntity": [
+      {"@type": "Question", "name": "Does MorForm require a subscription?",
+       "acceptedAnswer": {"@type": "Answer", "text": "No. MorForm is a one-time purchase. MorForm (Supervisor) is $6.99 USD ($9.99 CAD). MorForm Manager is $34.99 USD ($49.99 CAD). MorForm Office is $299.99 CAD and includes a 15-day free trial. Pay once, own it forever — no subscription, no renewal, no hidden fees."}},
+      {"@type": "Question", "name": "Does it work offline on job sites?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Yes. All three apps work fully offline. Log time, fill FLHA and safety forms, view job details, and build estimates with no internet connection. Data syncs by email or your connected cloud folder when you're back in range."}},
+      {"@type": "Question", "name": "How do the apps communicate with each other?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Two ways — your choice. By email, managers dispatch jobs as .morjob files, supervisors report back as .morrep files, and Manager and MorForm Office sync full snapshots via .mordata files. Or connect a shared Company Cloud Folder in your own Google Drive, Dropbox or OneDrive. MorForm runs no servers of its own and never sees your cloud login."}},
+      {"@type": "Question", "name": "Does MorForm store my data in the cloud?",
+       "acceptedAnswer": {"@type": "Answer", "text": "Only if you choose to. By default your data stays on your device and moves as email attachments. Optionally, connect a shared folder in your own Google Drive, Dropbox or OneDrive so the crew's devices sync automatically. That folder is yours — MorForm has no servers and never sees your cloud account."}}
+    ]}
   ]
 }
 </script>
-
-<!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=IBM+Plex+Sans:wght@300;400;500;700;800&amp;display=swap">
-<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav>
-  <div class="nav-logo-wrap" id="nav-logo-wrap">
-    <div class="nav-logo" onclick="toggleNavMenu()">
-      <img src="assets/morform.png" alt="MorForm app icon" width="28" height="28" />
-      <span class="nav-logo-text">MorForm</span>
-      <span class="nav-logo-caret">▾</span>
-    </div>
-    <div class="nav-dropdown" id="nav-dropdown">
-
-      <!-- Supervisor -->
-      <div class="nd-group" id="ndg-supervisor">
-        <div class="nd-header" onclick="toggleNdGroup('supervisor')">
-          <div class="nd-header-left">
-            <span class="nd-header-icon">🔵</span>
-            <div>
-              <div class="nd-header-title">MorForm</div>
-              <div class="nd-header-sub">Supervisor · iOS &amp; Android</div>
-            </div>
-          </div>
-          <span class="nd-header-caret">▾</span>
-        </div>
-        <div class="nd-body">
-          <div class="nd-body-inner">
-            <a href="https://apps.apple.com/ca/app/morform/id6744827471" target="_blank" rel="noopener"><span class="nd-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.46 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span>App Store</a>
-            <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morform" target="_blank" rel="noopener"><span class="nd-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76c.3.17.64.24.99.2L15.65 12 12 8.35 3.18 23.76zm16.87-11.19l-2.96-1.67L13.41 12l3.68 3.68 2.96-1.67a1.5 1.5 0 0 0 0-2.64zM2.01 1.05a1.5 1.5 0 0 0-.51 1.14v19.62c0 .45.19.86.51 1.14L14.24 12 2.01 1.05zm10.57 9.57L3.18.24A1.5 1.5 0 0 0 2.17.04L12 12l.58-.38z"/></svg></span>Google Play</a>
-            <a href="morform-help.html"><span class="nd-icon">📖</span>User Guide</a>
-            <a href="flha.html"><span class="nd-icon">📝</span>Free FLHA Form</a>
-            <a href="morform-privacy.html"><span class="nd-icon">🔒</span>Privacy Policy</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="nd-divider"></div>
-
-      <!-- Manager -->
-      <div class="nd-group" id="ndg-manager">
-        <div class="nd-header" onclick="toggleNdGroup('manager')">
-          <div class="nd-header-left">
-            <span class="nd-header-icon">🟡</span>
-            <div>
-              <div class="nd-header-title">MorForm Manager</div>
-              <div class="nd-header-sub">Project Manager · iOS &amp; Android</div>
-            </div>
-          </div>
-          <span class="nd-header-caret">▾</span>
-        </div>
-        <div class="nd-body">
-          <div class="nd-body-inner">
-            <a href="https://apps.apple.com/ca/app/morform-manager/id6772639424" target="_blank" rel="noopener"><span class="nd-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.46 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span>App Store</a>
-            <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion" target="_blank" rel="noopener"><span class="nd-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76c.3.17.64.24.99.2L15.65 12 12 8.35 3.18 23.76zm16.87-11.19l-2.96-1.67L13.41 12l3.68 3.68 2.96-1.67a1.5 1.5 0 0 0 0-2.64zM2.01 1.05a1.5 1.5 0 0 0-.51 1.14v19.62c0 .45.19.86.51 1.14L14.24 12 2.01 1.05zm10.57 9.57L3.18.24A1.5 1.5 0 0 0 2.17.04L12 12l.58-.38z"/></svg></span>Google Play</a>
-            <a href="morform-manager-help.html"><span class="nd-icon">📖</span>User Guide</a>
-            <a href="morform-manager-privacy.html"><span class="nd-icon">🔒</span>Privacy Policy</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="nd-divider"></div>
-
-      <!-- Office -->
-      <div class="nd-group" id="ndg-office">
-        <div class="nd-header" onclick="toggleNdGroup('office')">
-          <div class="nd-header-left">
-            <span class="nd-header-icon">🟢</span>
-            <div>
-              <div class="nd-header-title">MorForm Office</div>
-              <div class="nd-header-sub">Desktop · Windows</div>
-            </div>
-          </div>
-          <span class="nd-header-caret">▾</span>
-        </div>
-        <div class="nd-body">
-          <div class="nd-body-inner">
-            <a href="https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0" target="_blank" rel="noopener"><span class="nd-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg></span>Microsoft Store</a>
-            <a href="morform-office-help.html"><span class="nd-icon">📖</span>User Guide</a>
-            <a href="morform-office-privacy.html"><span class="nd-icon">🔒</span>Privacy Policy</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="nd-divider"></div>
-      <a class="nd-contact" href="mailto:support@morform.app"><span class="nd-icon">✉️</span>Contact</a>
-
-    </div>
+<header class="topbar">
+  <div class="tb-in">
+    <a class="tb-brand" href="/" aria-label="MorForm home">
+      <img class="tb-logo" src="/assets/m-logo.png" alt="MorForm app icon" width="32" height="32">
+      <span class="tb-name"><span class="tb-kick">Built for the job site</span><span class="tb-title">MorForm</span></span>
+    </a>
+    <nav class="tb-nav" aria-label="Primary">
+      <a class="tb-link" href="/how-it-works">How it works</a>
+      <a class="tb-link" href="/apps">Apps &amp; Pricing</a>
+      <a class="tb-link" href="/course">Free course</a>
+      <a class="tb-link" href="/flha.html">Free FLHA</a>
+      <a class="tb-link" href="/faq">FAQ</a>
+      <a class="btn btn-gold btn-sm" href="/apps" style="margin-left:8px">Get the apps</a>
+    </nav>
+    <details class="mnav">
+      <summary aria-label="Open menu">Menu ▾</summary>
+      <nav class="mnav-pop" aria-label="Mobile">
+        <a href="/how-it-works">How it works</a>
+        <a href="/apps">Apps &amp; Pricing</a>
+        <a href="/course">Free course</a>
+        <a href="/flha.html">Free FLHA form</a>
+        <a href="/faq">FAQ</a>
+        <a href="mailto:support@morform.app">Contact</a>
+      </nav>
+    </details>
   </div>
-  <div class="nav-links">
-    <a href="/how-it-works">How it works</a>
-    <a href="/apps">Apps &amp; Pricing</a>
-    <a href="flha.html">Free FLHA</a>
-    <a href="/faq">FAQ</a>
-  </div>
-  <a class="nav-cta" href="/apps">Get the apps ▸</a>
-</nav>
+</header>
 
-<main>
+<main id="main">
 
-<!-- ── Hero ── -->
-<section class="hero" id="hero" aria-label="MorForm construction apps overview">
-  <div class="hero-bg hero-bg-morform" id="bg-morform"></div>
-  <div class="hero-bg hero-bg-manager" id="bg-manager"></div>
-  <div class="hero-bg hero-bg-office"  id="bg-office"></div>
-  <div class="hero-eyebrow">Construction Apps for the Whole Team</div>
-
-  <div class="hero-icons">
-    <!-- MorForm (Supervisor) -->
-    <div class="icon-picker" id="picker-morform">
-      <div class="hero-icon" onclick="togglePicker('morform')">
-        <img src="assets/morform.png" alt="MorForm supervisor app icon — construction time tracking and FLHA safety forms" width="80" height="80" />
+<!-- ======================= HERO ======================= -->
+<section class="dark grid-bg" aria-labelledby="hero-h">
+  <span class="grid-bg-layer" aria-hidden="true"></span>
+  <span class="gold-fade" aria-hidden="true"></span>
+  <div class="hero-in">
+    <div>
+      <p class="kick">One-time purchase · The MorForm suite</p>
+      <h1 class="hero-h" id="hero-h">Time tracking, safety forms &amp; job management — <em class="gld">no subscription</em></h1>
+      <p class="promise">Three apps for the whole crew — log field time and OH&amp;S safety forms, dispatch jobs and budgets, and build estimates on Windows. Sync by email or your own cloud folder.</p>
+      <div class="hmeta">
+        <span class="hm">No MorForm account</span>
+        <span class="hm">Works offline</span>
+        <span class="hm">Email or your own cloud</span>
+        <span class="hm">iOS · Android · Windows</span>
       </div>
-      <div class="icon-label">Supervisor</div>
-      <div class="icon-dropdown">
-        <a href="morform-help.html"><span class="dd-icon">📖</span> User Guide</a>
-        <div class="dd-divider"></div>
-        <a href="morform-privacy.html"><span class="dd-icon">🔒</span> Privacy Policy</a>
-        <div class="dd-divider"></div>
-        <a href="https://apps.apple.com/ca/app/morform/id6744827471" target="_blank" rel="noopener"><span class="dd-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.46 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span> App Store</a>
-        <div class="dd-divider"></div>
-        <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morform" target="_blank" rel="noopener"><span class="dd-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76c.3.17.64.24.99.2L15.65 12 12 8.35 3.18 23.76zm16.87-11.19l-2.96-1.67L13.41 12l3.68 3.68 2.96-1.67a1.5 1.5 0 0 0 0-2.64zM2.01 1.05a1.5 1.5 0 0 0-.51 1.14v19.62c0 .45.19.86.51 1.14L14.24 12 2.01 1.05zm10.57 9.57L3.18.24A1.5 1.5 0 0 0 2.17.04L12 12l.58-.38z"/></svg></span> Google Play</a>
+      <div class="cta-row">
+        <a class="btn btn-gold" href="#apps">See the apps ↓</a>
+        <a class="btn btn-ghost" href="/how-it-works">How it works →</a>
       </div>
+      <p class="trust">no servers · no subscription · your data stays yours</p>
     </div>
-
-    <!-- MorForm Manager -->
-    <div class="icon-picker" id="picker-manager">
-      <div class="hero-icon" onclick="togglePicker('manager')">
-        <img src="assets/morform-manager.jpg" alt="MorForm Manager app icon — construction project management and CSI estimates" width="80" height="80" />
-      </div>
-      <div class="icon-label">Manager</div>
-      <div class="icon-dropdown">
-        <a href="morform-manager-help.html"><span class="dd-icon">📖</span> User Guide</a>
-        <div class="dd-divider"></div>
-        <a href="morform-manager-privacy.html"><span class="dd-icon">🔒</span> Privacy Policy</a>
-        <div class="dd-divider"></div>
-        <a href="https://apps.apple.com/ca/app/morform-manager/id6772639424" target="_blank" rel="noopener"><span class="dd-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.46 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span> App Store</a>
-        <div class="dd-divider"></div>
-        <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion" target="_blank" rel="noopener"><span class="dd-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M3.18 23.76c.3.17.64.24.99.2L15.65 12 12 8.35 3.18 23.76zm16.87-11.19l-2.96-1.67L13.41 12l3.68 3.68 2.96-1.67a1.5 1.5 0 0 0 0-2.64zM2.01 1.05a1.5 1.5 0 0 0-.51 1.14v19.62c0 .45.19.86.51 1.14L14.24 12 2.01 1.05zm10.57 9.57L3.18.24A1.5 1.5 0 0 0 2.17.04L12 12l.58-.38z"/></svg></span> Google Play</a>
-      </div>
-    </div>
-
-    <!-- MorForm Office -->
-    <div class="icon-picker" id="picker-office">
-      <div class="hero-icon" onclick="togglePicker('office')">
-        <img src="assets/morform-office.png" alt="MorForm Office app icon — Windows desktop construction management" width="80" height="80" />
-      </div>
-      <div class="icon-label">Office</div>
-      <div class="icon-dropdown">
-        <a href="https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0" target="_blank" rel="noopener"><span class="dd-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg></span> Microsoft Store</a>
-        <div class="dd-divider"></div>
-        <a href="morform-office-help.html"><span class="dd-icon">📖</span> User Guide</a>
-        <div class="dd-divider"></div>
-        <a href="morform-office-privacy.html"><span class="dd-icon">🔒</span> Privacy Policy</a>
-      </div>
-    </div>
-  </div>
-
-  <h1>Time tracking, safety forms<br>&amp; job management — <span>no subscription</span></h1>
-  <p class="hero-sub">
-    Three apps for the whole crew — log field time and OH&amp;S safety forms, dispatch jobs and budgets,
-    and build estimates on Windows. Sync by email or your own cloud folder. No servers, no subscription.
-  </p>
-  <div class="hero-badges">
-    <span class="badge">No subscription</span>
-    <span class="badge">No MorForm account</span>
-    <span class="badge">We run no servers</span>
-    <span class="badge">Email or your own cloud</span>
-    <span class="badge">Works offline</span>
-    <span class="badge">iOS · Android · Windows</span>
-  </div>
-  <div class="hero-cta">
-    <a href="#apps" class="btn-primary">See the apps ↓</a>
-    <a href="/how-it-works" class="btn-outline">How it works ↗</a>
-    <a href="flha.html" class="btn-outline">📝 Free FLHA form</a>
-  </div>
-</section>
-
-<!-- ── How it works (summary) ── -->
-<div id="how" class="section">
-  <div class="section-label">How it works</div>
-  <h2>No server in the middle</h2>
-  <p class="section-intro" style="margin-bottom:28px;">
-    The apps pass jobs, reports and data as small files — by email, or through a shared folder in your own
-    Google Drive, Dropbox or OneDrive. MorForm runs no servers; either way the files stay in your accounts.
-  </p>
-
-  <div class="mini-loop">
-    <div class="mini-app">
-      <img loading="lazy" src="assets/morform-manager.jpg" alt="MorForm Manager app icon" />
-      <div class="mini-name">Manager</div>
-      <div class="mini-role">Dispatch</div>
-    </div>
-    <div class="mini-arrow"><span class="mtag">.morjob</span><span class="marr">⇄</span><span class="mtag">.morrep</span></div>
-    <div class="mini-app">
-      <img src="assets/morform.png" alt="MorForm Supervisor app icon" />
-      <div class="mini-name">Supervisor</div>
-      <div class="mini-role">Field</div>
-    </div>
-    <div class="mini-arrow"><span class="mtag">.morrep</span><span class="marr">⇄</span><span class="mtag">.morjob</span></div>
-    <div class="mini-app">
-      <img loading="lazy" src="assets/morform-office.png" alt="MorForm Office app icon" />
-      <div class="mini-name">Office</div>
-      <div class="mini-role">Estimating</div>
-    </div>
-  </div>
-  <div style="margin-top:20px;">
-    <a href="/how-it-works" class="more-link">See how it works, file by file →</a>
-  </div>
-</div>
-
-<!-- ── Apps (teaser) ── -->
-<div id="apps" class="apps-section">
-
-  <div style="margin-bottom:24px;">
-    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;">The Apps</div>
-    <h2 style="font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;letter-spacing:-0.02em;color:var(--ink);line-height:1.2;">One purchase. Yours forever.</h2>
-  </div>
-
-  <!-- One hero shot per app -->
-  <div class="teaser-row">
-    <a href="/apps" aria-label="See all MorForm Supervisor screenshots"><img class="shot shot-m" loading="lazy" src="assets/mf-screenshot/mf-log-hours.webp" alt="MorForm Supervisor time tracking screen — log construction hours by job" /></a>
-    <a href="/apps" aria-label="See all MorForm Manager screenshots"><img class="shot shot-m" loading="lazy" src="assets/mm-screenshot/mm-jobs.webp" alt="MorForm Manager jobs dashboard — track jobs from quote to complete" /></a>
-    <a href="/apps" aria-label="See all MorForm Office screenshots"><img class="shot shot-d" loading="lazy" src="assets/mo-screenshot/mo-overview.webp" alt="MorForm Office project overview — budget vs actuals on Windows" /></a>
-  </div>
-  <div style="text-align:center;margin:8px 0 36px;">
-    <a href="/apps" class="more-link">See all features, screenshots &amp; pricing →</a>
-  </div>
-
-  <!-- Compact app cards -->
-  <div class="apps-grid">
-
-    <div class="app-card blue-accent">
-      <div class="app-card-header">
-        <div class="app-card-icon"><img src="assets/morform.png" alt="MorForm supervisor app icon" /></div>
-        <div>
-          <div class="app-card-name">MorForm</div>
-          <div class="app-card-tagline">Supervisor Field App</div>
-          <div class="app-card-price">$6.99 USD &nbsp;·&nbsp; $9.99 CAD &nbsp;·&nbsp; One-time</div>
-        </div>
-      </div>
-      <div class="app-card-features">
-        <div class="feature-row"><span class="dot"></span>Log hours &amp; expenses by job — OT and stat flags</div>
-        <div class="feature-row"><span class="dot"></span>FLHA / JHA, ERP, Site Inspection &amp; Incident Report</div>
-        <div class="feature-row"><span class="dot"></span>Send job reports to your PM in one tap</div>
-      </div>
-      <div class="app-card-footer">
-        <a href="https://apps.apple.com/ca/app/morform/id6744827471" class="store-btn" target="_blank" rel="noopener">
-          <span class="store-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="display:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.46 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span>
-          <span class="store-text-block"><span class="store-line1">Download on the</span><span class="store-line2">App Store</span></span>
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morform" class="store-btn" target="_blank" rel="noopener">
-          <span class="store-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="display:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg></span>
-          <span class="store-text-block"><span class="store-line1">Get it on</span><span class="store-line2">Google Play</span></span>
-        </a>
-        <a href="/apps" class="more-link on-dark" style="padding:8px 2px 0;">Full features →</a>
-      </div>
-    </div>
-
-    <div class="app-card gold-accent">
-      <div class="app-card-header">
-        <div class="app-card-icon"><img loading="lazy" src="assets/morform-manager.jpg" alt="MorForm Manager project manager app icon" /></div>
-        <div>
-          <div class="app-card-name">MorForm Manager</div>
-          <div class="app-card-tagline">Project Manager Mobile App</div>
-          <div class="app-card-price">$34.99 USD &nbsp;·&nbsp; $49.99 CAD &nbsp;·&nbsp; One-time</div>
-        </div>
-      </div>
-      <div class="app-card-features">
-        <div class="feature-row"><span class="dot gold"></span>Job pipeline — Quoting → Complete with budget bars</div>
-        <div class="feature-row"><span class="dot gold"></span>Spec &amp; dispatch jobs to supervisors in one email</div>
-        <div class="feature-row"><span class="dot gold"></span>Approve reports — hours &amp; expenses lock to actuals</div>
-      </div>
-      <div class="app-card-footer">
-        <a href="https://apps.apple.com/ca/app/morform-manager/id6772639424" class="store-btn" target="_blank" rel="noopener">
-          <span class="store-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="display:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.46 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg></span>
-          <span class="store-text-block"><span class="store-line1">Download on the</span><span class="store-line2">App Store</span></span>
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion" class="store-btn" target="_blank" rel="noopener">
-          <span class="store-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="display:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M22.018 13.298l-3.919 2.218-3.515-3.493 3.543-3.521 3.891 2.202a1.49 1.49 0 0 1 0 2.594zM1.337.924a1.486 1.486 0 0 0-.112.568v21.017c0 .217.045.419.124.6l11.155-11.087L1.337.924zm12.207 10.065l3.258-3.238L3.45.195a1.466 1.466 0 0 0-.946-.179l11.04 10.973zm0 2.067l-11 10.933c.298.036.612-.016.906-.183l13.324-7.54-3.23-3.21z"/></svg></span>
-          <span class="store-text-block"><span class="store-line1">Get it on</span><span class="store-line2">Google Play</span></span>
-        </a>
-        <a href="/apps" class="more-link on-dark" style="padding:8px 2px 0;">Full features →</a>
-      </div>
-    </div>
-
-    <div class="app-card teal-accent">
-      <div class="app-card-header">
-        <div class="app-card-icon"><img src="assets/morform-office.png" alt="MorForm Office Windows desktop app icon" /></div>
-        <div>
-          <div class="app-card-name">MorForm Office</div>
-          <div class="app-card-tagline">Windows Desktop App &nbsp;·&nbsp; 🖥 Win 10/11</div>
-          <div class="app-card-price">$299.99 CAD &nbsp;·&nbsp; One-time &nbsp;·&nbsp; 15-day free trial</div>
-        </div>
-      </div>
-      <div class="app-card-features">
-        <div class="feature-row"><span class="dot teal"></span>Estimate pipeline — Draft → Quoted → Won</div>
-        <div class="feature-row"><span class="dot teal"></span>PDF proposals, XLSX import &amp; QuickBooks export</div>
-        <div class="feature-row"><span class="dot teal"></span>Dispatch jobs &amp; review supervisor reports</div>
-      </div>
-      <div class="app-card-footer">
-        <a href="https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0" class="store-btn" target="_blank" rel="noopener">
-          <span class="store-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="display:block" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg></span>
-          <span class="store-text-block"><span class="store-line1">Download from</span><span class="store-line2">Microsoft Store</span></span>
-        </a>
-        <a href="morform-office-help.html" class="store-btn">
-          <span class="store-icon">📖</span>
-          <span class="store-text-block"><span class="store-line1">Read the</span><span class="store-line2">User Guide</span></span>
-        </a>
-        <a href="/apps" class="more-link on-dark" style="padding:8px 2px 0;">Full features →</a>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- ── Comparison ── -->
-<div class="section" style="padding-top:0;" aria-label="MorForm vs old way">
-  <div class="section-label">Why not a spreadsheet?</div>
-  <h2>Old way vs. MorForm</h2>
-  <p class="section-intro">Construction sites have run on paper, email threads, and spreadsheets for decades. MorForm puts it all in one loop.</p>
-  <div class="compare-grid">
-    <div class="compare-col old">
-      <span class="compare-col-label">The old way</span>
-      <ul class="compare-list">
-        <li>Hours tracked on paper, re-entered in Excel at week's end</li>
-        <li>Safety forms printed, signed by hand, scanned and emailed as JPGs</li>
-        <li>Estimates live in a spreadsheet only one person can update</li>
-        <li>Another SaaS tool billed monthly, whether the job runs or not</li>
-      </ul>
-    </div>
-    <div class="compare-col new">
-      <span class="compare-col-label">MorForm</span>
-      <ul class="compare-list">
-        <li>Time logged on site in seconds, exported as a signed PDF</li>
-        <li>FLHA / JHA filled digitally — safety PDFs route automatically</li>
-        <li>Estimate builds the dispatch package — no re-entry, no version drift</li>
-        <li>One-time purchase — no renewal, no account, no monthly bill</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ── Free FLHA ── -->
-<div class="section" id="free-flha" style="padding-top:0;" aria-label="Free FLHA form download">
-  <div class="section-label">Free download</div>
-  <h2>Free FLHA form — fill it online or print it</h2>
-  <p class="section-intro" style="margin-bottom:24px;">
-    No app required. Fill out a Field Level Hazard Assessment right in your browser, sign and print it —
-    or download the blank PDF for the truck. Free for any crew. No sign-up, no watermark.
-  </p>
-  <div class="hero-cta" style="justify-content:flex-start;">
-    <a href="flha.html" class="btn-primary">📝 Open the free FLHA form</a>
-  </div>
-  <p class="section-intro" style="margin:20px 0 0;font-size:0.95rem;">New — also free to print: <a href="jha-template.html" style="color:var(--blue);font-weight:600;">JHA / JSA template</a>, <a href="toolbox-talk-template.html" style="color:var(--blue);font-weight:600;">toolbox talk template</a>, <a href="cor-audit-checklist.html" style="color:var(--blue);font-weight:600;">COR audit checklist</a>, <a href="timesheet-template.html" style="color:var(--blue);font-weight:600;">weekly timesheet template</a>, and <a href="cor-certification-alberta.html" style="color:var(--blue);font-weight:600;">COR in Alberta guide</a>.</p>
-</div>
-
-<!-- ── FAQ (top 4) ── -->
-<section class="nobs" id="faq" style="background:#0c1520;" aria-label="Frequently asked questions">
-  <div class="nobs-inner">
-    <h2 style="margin-bottom:28px;">Common Questions</h2>
-    <div class="faq-list">
-
-      <details>
-        <summary>Does MorForm require a subscription?<span class="faq-plus">+</span></summary>
-        <p>No. MorForm is a one-time purchase. MorForm (Supervisor) is $6.99 USD ($9.99 CAD). MorForm Manager is $34.99 USD ($49.99 CAD). MorForm Office is $299.99 CAD and includes a 15-day free trial. Pay once, own it forever — no subscription, no renewal, no hidden fees.</p>
-      </details>
-
-      <details>
-        <summary>Does it work offline on job sites?<span class="faq-plus">+</span></summary>
-        <p>Yes. All three apps work fully offline. Log time, fill FLHA and safety forms, view job details, and build estimates with no internet connection. Data syncs by email or your connected cloud folder when you're back in range.</p>
-      </details>
-
-      <details>
-        <summary>How do the apps communicate with each other?<span class="faq-plus">+</span></summary>
-        <p>Two ways — your choice. By email, managers dispatch jobs as <strong>.morjob</strong> files, supervisors report back as <strong>.morrep</strong> files, and Manager and MorForm Office sync full snapshots via <strong>.mordata</strong> files. Or connect a shared <strong>Company Cloud Folder</strong> in your own Google Drive, Dropbox or OneDrive. MorForm runs no servers of its own and never sees your cloud login.</p>
-      </details>
-
-      <details>
-        <summary>Does MorForm store my data in the cloud?<span class="faq-plus">+</span></summary>
-        <p>Only if you choose to. By default your data stays on your device and moves as email attachments. Optionally, connect a shared folder in your own Google Drive, Dropbox or OneDrive so the crew's devices sync automatically. That folder is yours — MorForm has no servers and never sees your cloud account.</p>
-      </details>
-
-    </div>
-    <div style="text-align:center;margin-top:28px;">
-      <a href="/faq" class="more-link on-dark">See all FAQs →</a>
+    <div class="collage" aria-hidden="true">
+      <span class="col-tag ct-a"><span class="ct-line"></span>MorForm Office — the estimating desk</span>
+      <img class="col-desk" src="/assets/screens/office-estimate.png" alt="" loading="eager">
+      <img class="col-phone" src="/assets/screens/field-log-hours.png" alt="" loading="eager">
+      <span class="col-tag ct-b">MorForm — the supervisor's logbook<span class="ct-line"></span></span>
     </div>
   </div>
 </section>
 
-<!-- ── Benefits ── -->
-<section class="nobs" aria-label="Why MorForm">
-  <div class="nobs-inner">
-    <h2>No subscription. No servers. No BS.</h2>
-    <p>Built for construction crews who want a tool that works on site and in the office — not another SaaS subscription that stores your data somewhere you can't see.</p>
-    <div class="nobs-grid">
-      <div class="nobs-item">
-        <span class="nobs-icon">📵</span>
-        <div class="nobs-title">Works offline</div>
-        <div class="nobs-desc">Log time, fill safety forms, and view job details — no signal needed on site.</div>
+<!-- ======================= FILE FLOW ======================= -->
+<section class="sec" aria-labelledby="flow-h">
+  <div class="sec-in" style="text-align:center">
+    <p class="kick">How it works</p>
+    <h2 class="h2" id="flow-h">No server in the middle</h2>
+    <p class="lede" style="margin-left:auto;margin-right:auto">The apps pass jobs, reports and data as small files — by email, or through a shared folder in your own Google Drive, Dropbox or OneDrive. MorForm runs no servers; either way the files stay in your accounts.</p>
+    <div class="flow">
+      <div class="node" style="--nc:#0e483c">
+        <img src="/assets/morform-office.png" alt="MorForm Office app icon" width="44" height="44">
+        <span class="node-t">Office</span>
+        <p class="node-r">Estimating · Windows</p>
       </div>
-      <div class="nobs-item">
-        <span class="nobs-icon">📧</span>
-        <div class="nobs-title">No server in the middle</div>
-        <div class="nobs-desc">Data moves as files you control — by email or your own cloud folder. MorForm runs no servers and never sees your cloud login.</div>
+      <div class="conn" aria-hidden="true">
+        <span class="filetag"><b>.mordata</b> ⇄</span>
       </div>
-      <div class="nobs-item">
-        <span class="nobs-icon">🦺</span>
-        <div class="nobs-title">OH&amp;S ready</div>
-        <div class="nobs-desc">FLHA, ERP, Site Inspection, Incident Report — Alberta OH&amp;S and US OSHA references built in.</div>
+      <div class="node" style="--nc:#B29146">
+        <img src="/assets/morform-manager.jpg" alt="MorForm Manager app icon" width="44" height="44">
+        <span class="node-t">Manager</span>
+        <p class="node-r">Dispatch · iOS &amp; Android</p>
       </div>
-      <div class="nobs-item">
-        <span class="nobs-icon">💰</span>
-        <div class="nobs-title">One-time purchase</div>
-        <div class="nobs-desc">Pay once, own it forever. No subscription, no renewal, no hidden fees.</div>
+      <div class="conn" aria-hidden="true">
+        <span class="filetag"><b>.morjob</b> →</span>
+        <span class="filetag">← <b>.morrep</b></span>
       </div>
-      <div class="nobs-item">
-        <span class="nobs-icon">📱</span>
-        <div class="nobs-title">iOS · Android · Windows</div>
-        <div class="nobs-desc">Mobile apps for the field, desktop app for the office. Everything works together.</div>
-      </div>
-      <div class="nobs-item">
-        <span class="nobs-icon">🔒</span>
-        <div class="nobs-title">Your data stays yours</div>
-        <div class="nobs-desc">Lives on your devices — and, if you want, a cloud folder you control. Back up and restore whenever you want.</div>
+      <div class="node" style="--nc:#325a81">
+        <img src="/assets/morform.png" alt="MorForm Supervisor app icon" width="44" height="44">
+        <span class="node-t">Supervisor</span>
+        <p class="node-r">Field · iOS &amp; Android</p>
       </div>
     </div>
+    <p class="flow-cap">Jobs go out as <strong>.morjob</strong> · reports come home as <strong>.morrep</strong> · full handoffs travel as <strong>.mordata</strong></p>
+    <p style="margin-top:22px"><a class="btn btn-line" href="/how-it-works">See how it works, file by file →</a></p>
+  </div>
+</section>
+
+<!-- ======================= APPS & PRICING ======================= -->
+<section class="sec dark" id="apps" aria-labelledby="apps-h">
+  <div class="sec-in">
+    <p class="kick">The apps</p>
+    <h2 class="h2" id="apps-h">One purchase. Yours forever.</h2>
+    <p class="lede">Supervisor for the field, Manager for dispatch and budgets, Office for estimating on Windows. Every one is a one-time purchase — no subscription, no monthly fees.</p>
+    <div class="cards">
+      <article class="card c-sup">
+        <div class="card-head">
+          <img src="/assets/morform.png" alt="MorForm Supervisor app icon" width="46" height="46">
+          <div><h3 class="card-t">MorForm</h3><span class="card-r">Supervisor field app · iOS &amp; Android</span></div>
+        </div>
+        <p class="price">$6.99 USD · $9.99 CAD · one-time</p>
+        <ul class="feats">
+          <li>Log hours &amp; expenses by job — OT and stat flags</li>
+          <li>FLHA / JHA, ERP, Site Inspection &amp; Incident Report</li>
+          <li>Send job reports to your PM in one tap</li>
+        </ul>
+        <div class="store-row">
+          <a class="btn btn-ink btn-sm" target="_blank" rel="noopener" href="https://apps.apple.com/ca/app/morform/id6744827471">App Store ↗</a>
+          <a class="btn btn-ink btn-sm" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morform">Google Play ↗</a>
+        </div>
+        <a class="card-more" href="/apps">Full features →</a>
+      </article>
+      <article class="card c-mgr">
+        <div class="card-head">
+          <img src="/assets/morform-manager.jpg" alt="MorForm Manager app icon" width="46" height="46">
+          <div><h3 class="card-t">MorForm Manager</h3><span class="card-r">Project manager app · iOS &amp; Android</span></div>
+        </div>
+        <p class="price">$34.99 USD · $49.99 CAD · one-time</p>
+        <ul class="feats">
+          <li>Job pipeline — Quoting → Complete with budget bars</li>
+          <li>Spec &amp; dispatch jobs to supervisors in one email</li>
+          <li>Approve reports — hours &amp; expenses lock to actuals</li>
+        </ul>
+        <div class="store-row">
+          <a class="btn btn-ink btn-sm" target="_blank" rel="noopener" href="https://apps.apple.com/ca/app/morform-manager/id6772639424">App Store ↗</a>
+          <a class="btn btn-ink btn-sm" target="_blank" rel="noopener" href="https://play.google.com/store/apps/details?id=com.bryceduhamel.morformgoldversion">Google Play ↗</a>
+        </div>
+        <a class="card-more" href="/apps">Full features →</a>
+      </article>
+      <article class="card c-off">
+        <div class="card-head">
+          <img src="/assets/morform-office.png" alt="MorForm Office app icon" width="46" height="46">
+          <div><h3 class="card-t">MorForm Office</h3><span class="card-r">Windows desktop · Win 10/11</span></div>
+        </div>
+        <p class="price">$299.99 CAD · one-time · 15-day free trial</p>
+        <ul class="feats">
+          <li>Estimate pipeline — Draft → Quoted → Won</li>
+          <li>PDF proposals, XLSX import &amp; QuickBooks export</li>
+          <li>Dispatch jobs &amp; review supervisor reports</li>
+        </ul>
+        <div class="store-row">
+          <a class="btn btn-ink btn-sm" target="_blank" rel="noopener" href="https://apps.microsoft.com/store/detail/morform-office/9MWDMMJRBFZ0">Microsoft Store ↗</a>
+        </div>
+        <a class="card-more" href="/apps">Full features →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= OLD WAY VS MORFORM ======================= -->
+<section class="sec" aria-labelledby="cmp-h">
+  <div class="sec-in">
+    <p class="kick">Why not a spreadsheet?</p>
+    <h2 class="h2" id="cmp-h">Old way vs. MorForm</h2>
+    <p class="lede">Construction sites have run on paper, email threads, and spreadsheets for decades. MorForm puts it all in one loop.</p>
+    <div class="compare">
+      <div class="cmp cmp-old">
+        <p class="cmp-h">The old way</p>
+        <ul>
+          <li>Hours tracked on paper, re-entered in Excel at the end of the week</li>
+          <li>Safety forms printed, signed by hand, scanned and emailed as JPGs</li>
+          <li>Job estimates live in a spreadsheet only one person can update</li>
+          <li>Report emails with 10 loose attachments — no standard format</li>
+          <li>Another SaaS tool billed monthly, whether the job is running or not</li>
+        </ul>
+      </div>
+      <div class="cmp cmp-new">
+        <p class="cmp-h">MorForm</p>
+        <ul>
+          <li>Time logged on site in seconds, exported as a signed PDF in one tap</li>
+          <li>FLHA / JHA filled digitally — safety PDFs route to the right inbox automatically</li>
+          <li>Estimate builds the dispatch package — no re-entry, no version drift</li>
+          <li>One .morrep file: time, expenses, safety forms — all in one attachment</li>
+          <li>One-time purchase — no renewal, no MorForm account, no monthly bill ever</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FREE COURSE ======================= -->
+<section class="sec dark grid-bg" aria-labelledby="course-h">
+  <span class="grid-bg-layer" aria-hidden="true"></span>
+  <div class="sec-in course-band">
+    <div>
+      <p class="kick">Free course</p>
+      <h2 class="h2" id="course-h">Learn the whole loop in about 50 minutes</h2>
+      <p class="lede">"How to use MorForm" walks one real job through the entire suite — estimate it in Office, spec and dispatch it in Manager, then log the hours, receipts and safety forms in the field. Every screen is real, and every list starts empty until you fill it.</p>
+      <div class="cb-stats">
+        <span class="hm">10 parts · ~50 min</span>
+        <span class="hm">Real screens, start to finish</span>
+        <span class="hm">Sample PDFs included</span>
+      </div>
+      <a class="btn btn-gold" href="/course">Start the free course →</a>
+    </div>
+    <div class="course-card">
+      <p class="cc-k">How to use MorForm — the tracks</p>
+      <a class="cc-row" href="/course"><span class="cc-n">01</span><span class="cc-t">Welcome &amp; how MorForm thinks</span><span class="cc-m">~4 min</span></a>
+      <a class="cc-row" href="/course"><span class="cc-n">02–05</span><span class="cc-t">Office — first run, estimating, winning the job</span><span class="cc-m">~20 min</span></a>
+      <a class="cc-row" href="/course"><span class="cc-n">06–07</span><span class="cc-t">Manager — crew, specs, dispatch &amp; your day</span><span class="cc-m">~12 min</span></a>
+      <a class="cc-row" href="/course"><span class="cc-n">08–09</span><span class="cc-t">Field — hours, receipts &amp; safety done right</span><span class="cc-m">~11 min</span></a>
+      <a class="cc-row" href="/course"><span class="cc-n">10</span><span class="cc-t">The full loop — the report comes home</span><span class="cc-m">~3 min</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FREE FLHA + GUIDES ======================= -->
+<section class="sec" aria-labelledby="flha-h">
+  <div class="sec-in flha-grid">
+    <div>
+      <p class="kick">Free download</p>
+      <h2 class="h2" id="flha-h">Free FLHA form — fill it online or print it</h2>
+      <p class="lede">No app required. Fill out a Field Level Hazard Assessment right in your browser, sign and print it — or download the blank PDF for the truck. Free for any crew. No sign-up, no watermark.</p>
+      <a class="btn btn-ink" href="/flha.html">Open the free FLHA form →</a>
+    </div>
+    <div>
+      <p class="guide-h">Also free to print</p>
+      <div class="guide-list">
+        <a class="guide" href="/jha-template.html"><span class="tag">Form</span>JHA / JSA template</a>
+        <a class="guide" href="/toolbox-talk-template.html"><span class="tag">Form</span>Toolbox talk template</a>
+        <a class="guide" href="/cor-audit-checklist.html"><span class="tag">Checklist</span>COR audit checklist</a>
+        <a class="guide" href="/timesheet-template.html"><span class="tag">Form</span>Weekly timesheet template</a>
+        <a class="guide" href="/cor-certification-alberta.html"><span class="tag">Guide</span>COR certification in Alberta</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="sec" style="background:#fff;border-top:1px solid var(--mf-border);border-bottom:1px solid var(--mf-border)" aria-labelledby="faq-h">
+  <div class="faq">
+    <p class="kick">Common questions</p>
+    <h2 class="h2" id="faq-h">Straight answers</h2>
+    <p class="lede">The four questions every crew asks first.</p>
+    <details class="qa">
+      <summary>Does MorForm require a subscription?</summary>
+      <div class="qa-a">No. MorForm is a one-time purchase. MorForm (Supervisor) is $6.99 USD ($9.99 CAD). MorForm Manager is $34.99 USD ($49.99 CAD). MorForm Office is $299.99 CAD and includes a 15-day free trial. Pay once, own it forever — no subscription, no renewal, no hidden fees.</div>
+    </details>
+    <details class="qa">
+      <summary>Does it work offline on job sites?</summary>
+      <div class="qa-a">Yes. All three apps work fully offline. Log time, fill FLHA and safety forms, view job details, and build estimates with no internet connection. Data syncs by email or your connected cloud folder when you're back in range.</div>
+    </details>
+    <details class="qa">
+      <summary>How do the apps communicate with each other?</summary>
+      <div class="qa-a">Two ways — your choice. By email, managers dispatch jobs as <strong>.morjob</strong> files, supervisors report back as <strong>.morrep</strong> files, and Manager and MorForm Office sync full snapshots via <strong>.mordata</strong> files. Or connect a shared <strong>Company Cloud Folder</strong> in your own Google Drive, Dropbox or OneDrive. MorForm runs no servers of its own and never sees your cloud login.</div>
+    </details>
+    <details class="qa">
+      <summary>Does MorForm store my data in the cloud?</summary>
+      <div class="qa-a">Only if you choose to. By default your data stays on your device and moves as email attachments. Optionally, connect a shared folder in your own Google Drive, Dropbox or OneDrive so the crew's devices sync automatically. That folder is yours — MorForm has no servers and never sees your cloud account.</div>
+    </details>
+    <p style="margin-top:20px"><a class="btn btn-line" href="/faq">See all FAQs →</a></p>
+  </div>
+</section>
+
+<!-- ======================= SPEC SHEET ======================= -->
+<section class="sec dark" aria-labelledby="spec-h">
+  <div class="sec-in">
+    <p class="kick">The short version</p>
+    <h2 class="h2" id="spec-h">No subscription. No servers. No BS.</h2>
+    <p class="lede">Built for construction crews who want a tool that works on site and in the office — not another SaaS subscription that stores your data somewhere you can't see.</p>
+    <div class="spec">
+      <div class="sp"><span class="sp-n">01</span><div><h3 class="sp-t">Works offline</h3><p class="sp-d">Log time, fill safety forms, and view job details — no signal needed on site.</p></div></div>
+      <div class="sp"><span class="sp-n">02</span><div><h3 class="sp-t">No server in the middle</h3><p class="sp-d">Data moves as files you control — by email or your own cloud folder. MorForm runs no servers and never sees your cloud login.</p></div></div>
+      <div class="sp"><span class="sp-n">03</span><div><h3 class="sp-t">OH&amp;S ready</h3><p class="sp-d">FLHA, ERP, Site Inspection, Incident Report — Alberta OH&amp;S and US OSHA references built in.</p></div></div>
+      <div class="sp"><span class="sp-n">04</span><div><h3 class="sp-t">One-time purchase</h3><p class="sp-d">Pay once, own it forever. No subscription, no renewal, no hidden fees.</p></div></div>
+      <div class="sp"><span class="sp-n">05</span><div><h3 class="sp-t">iOS · Android · Windows</h3><p class="sp-d">Mobile apps for the field, desktop app for the office. Everything works together.</p></div></div>
+      <div class="sp"><span class="sp-n">06</span><div><h3 class="sp-t">Your data stays yours</h3><p class="sp-d">Lives on your devices — and, if you want, a cloud folder you control. Back up and restore whenever you want.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FINAL CTA ======================= -->
+<section class="sec dark grid-bg cta-band" aria-labelledby="cta-h" style="border-top:1px solid rgba(255,255,255,.08)">
+  <span class="grid-bg-layer" aria-hidden="true"></span>
+  <div class="sec-in" style="position:relative">
+    <h2 class="h2" id="cta-h">Get MorForm for your crew</h2>
+    <p class="lede" style="margin-left:auto;margin-right:auto">One-time purchase — no subscription, no servers. Works offline on every job site, on iOS, Android &amp; Windows.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn btn-gold" href="/apps">See the apps &amp; pricing →</a>
+      <a class="btn btn-ghost" href="/flha.html">Open the free FLHA form</a>
+    </div>
+    <p class="byline">Built by a working site supervisor in Edmonton, Alberta.</p>
   </div>
 </section>
 
 </main>
 
-<!-- ── Closing CTA band ── -->
-<section class="cta-band" aria-label="Get MorForm">
-  <div class="cta-band-inner">
-    <h2>Get MorForm for your crew</h2>
-    <p>One-time purchase — no subscription, no servers. Works offline on every job site, on iOS, Android &amp; Windows.</p>
-    <div class="hero-cta">
-      <a href="/apps" class="btn-primary">See the apps &amp; pricing ↗</a>
-      <a href="flha.html" class="btn-outline">📝 Open the free FLHA form</a>
+<!-- ======================= FOOTER ======================= -->
+<footer class="sitefoot">
+  <div class="sf-in">
+    <div>
+      <div class="sf-brandrow"><img class="sf-logo" src="/assets/m-logo.png" alt="MorForm app icon" width="30" height="30"><span class="sf-t">MorForm</span></div>
+      <p class="sf-d">Built for the job site, not the boardroom. Time, safety and job management for construction crews — as apps you own, passing files you control.</p>
+      <p class="sf-trust">no accounts · works offline · your data stays yours</p>
+      <div class="sf-social">
+        <a href="https://www.instagram.com/morform.app/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61590819100585" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/company/morform-app" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@MorForm-app" target="_blank" rel="noopener">YouTube</a>
+      </div>
     </div>
-    <p class="founder-line">Built by a working site supervisor in Edmonton, Alberta.</p>
+    <nav aria-label="Pages">
+      <p class="sf-h">Pages</p>
+      <a class="sf-l" href="/">Home</a>
+      <a class="sf-l" href="/how-it-works">How it works</a>
+      <a class="sf-l" href="/apps">Apps &amp; Pricing</a>
+      <a class="sf-l" href="/course">Free course</a>
+      <a class="sf-l" href="/faq">FAQ</a>
+    </nav>
+    <nav aria-label="Free guides">
+      <p class="sf-h">Free guides</p>
+      <a class="sf-l" href="/flha.html">Free FLHA form</a>
+      <a class="sf-l" href="/jha-template.html">JHA / JSA template</a>
+      <a class="sf-l" href="/toolbox-talk-template.html">Toolbox talk template</a>
+      <a class="sf-l" href="/cor-audit-checklist.html">COR audit checklist</a>
+      <a class="sf-l" href="/timesheet-template.html">Timesheet template</a>
+      <a class="sf-l" href="/cor-certification-alberta.html">COR in Alberta guide</a>
+    </nav>
+    <nav aria-label="Help">
+      <p class="sf-h">Help</p>
+      <a class="sf-l" href="/morform-help.html">Supervisor guide</a>
+      <a class="sf-l" href="/morform-manager-help.html">Manager guide</a>
+      <a class="sf-l" href="/morform-office-help.html">Office guide</a>
+      <a class="sf-l" href="/support.html">Support</a>
+      <a class="sf-l" href="mailto:support@morform.app">support@morform.app</a>
+    </nav>
+    <nav aria-label="Legal">
+      <p class="sf-h">Legal</p>
+      <a class="sf-l" href="/morform-privacy.html">MorForm privacy</a>
+      <a class="sf-l" href="/morform-manager-privacy.html">Manager privacy</a>
+      <a class="sf-l" href="/morform-office-privacy.html">Office privacy</a>
+      <a class="sf-l" href="/terms.html">Terms of use</a>
+    </nav>
   </div>
-</section>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-logo">MorForm</div>
-      <div class="footer-tagline">Built for the job site, not the boardroom.</div>
-      <div class="footer-copy">&copy; 2026 Bryce Duhamel &nbsp;&middot;&nbsp; Edmonton, Alberta</div>
-      <div class="footer-social" aria-label="MorForm on social media">
-        <a href="https://www.instagram.com/morform.app/" target="_blank" rel="noopener" aria-label="MorForm on Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-        <a href="https://www.facebook.com/profile.php?id=61590819100585" target="_blank" rel="noopener" aria-label="MorForm on Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-        <a href="https://www.linkedin.com/company/morform-app" target="_blank" rel="noopener" aria-label="MorForm on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-        <a href="https://www.youtube.com/@MorForm-app" target="_blank" rel="noopener" aria-label="MorForm on YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-      </div>
-    </div>
-    <div class="footer-cols">
-      <div class="footer-col">
-        <div class="footer-col-head">Pages</div>
-        <a href="/">Home</a>
-        <a href="/how-it-works">How it works</a>
-        <a href="/apps">Apps &amp; Pricing</a>
-        <a href="/faq">FAQ</a>
-        <a href="flha.html">Free FLHA Form</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-head">Free Guides</div>
-        <a href="flha.html">Free FLHA form</a>
-        <a href="jha-template.html">JHA / JSA template</a>
-        <a href="toolbox-talk-template.html">Toolbox talk template</a>
-        <a href="cor-audit-checklist.html">COR audit checklist</a>
-        <a href="timesheet-template.html">Timesheet template</a>
-        <a href="cor-certification-alberta.html">COR in Alberta guide</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-head">Help</div>
-        <a href="morform-help.html">Supervisor Guide</a>
-        <a href="morform-manager-help.html">Manager Guide</a>
-        <a href="morform-office-help.html">Office Guide</a>
-        <a href="support.html">Support</a>
-        <a href="mailto:support@morform.app">support@morform.app</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-col-head">Legal</div>
-        <a href="morform-privacy.html">MorForm Privacy</a>
-        <a href="morform-manager-privacy.html">Manager Privacy</a>
-        <a href="morform-office-privacy.html">Office Privacy</a>
-        <a href="terms.html">Terms of Use</a>
-      </div>
-    </div>
+  <div class="sf-base">
+    <span>© 2026 Bryce Duhamel · Edmonton, Alberta</span>
+    <span>Built for the job site, not the boardroom.</span>
   </div>
 </footer>
-
-<script>
-  // ── Nav logo dropdown ──
-  function toggleNavMenu() { document.getElementById('nav-logo-wrap').classList.toggle('open'); }
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('#nav-logo-wrap')) { document.getElementById('nav-logo-wrap').classList.remove('open'); }
-  });
-  function toggleNdGroup(which) {
-    const group = document.getElementById('ndg-' + which);
-    const isOpen = group.classList.contains('open');
-    ['supervisor','manager','office'].forEach(g => document.getElementById('ndg-' + g).classList.remove('open'));
-    if (!isOpen) group.classList.add('open');
-  }
-
-  // ── Hero app pickers ──
-  const PICKERS = ['morform', 'manager', 'office'];
-  function showBg(which) { PICKERS.forEach(p => document.getElementById('bg-' + p).classList.toggle('visible', p === which)); }
-  function clearBg() { PICKERS.forEach(p => document.getElementById('bg-' + p).classList.remove('visible')); }
-  PICKERS.forEach(p => {
-    const picker = document.getElementById('picker-' + p);
-    const icon   = picker.querySelector('.hero-icon');
-    icon.addEventListener('mouseenter', () => showBg(p));
-    icon.addEventListener('mouseleave', () => {
-      const activeP = PICKERS.find(x => document.getElementById('picker-' + x).classList.contains('active'));
-      activeP ? showBg(activeP) : clearBg();
-    });
-  });
-  function togglePicker(which) {
-    const picker = document.getElementById('picker-' + which);
-    const isOpen = picker.classList.contains('active');
-    PICKERS.forEach(p => document.getElementById('picker-' + p).classList.remove('active'));
-    if (!isOpen) { picker.classList.add('active'); showBg(which); } else { clearBg(); }
-  }
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.icon-picker')) {
-      PICKERS.forEach(p => document.getElementById('picker-' + p).classList.remove('active'));
-      clearBg();
-    }
-  });
-</script>
 </body>
 </html>

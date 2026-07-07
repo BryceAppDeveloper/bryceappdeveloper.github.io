@@ -1,315 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — MorForm Office</title>
-<meta name="description" content="MorForm Office privacy policy. No MorForm account, no MorForm servers, no tracking and no ads — your data is stored locally on your Windows PC and shared only when you send it, by email or a cloud folder you connect." />
-<meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://morform.app/morform-office-privacy.html" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://morform.app/morform-office-privacy.html" />
-<meta property="og:title" content="Privacy Policy — MorForm Office" />
-<meta property="og:description" content="No MorForm account, no MorForm servers, no tracking. Your MorForm Office data stays on your Windows PC." />
-<meta property="og:image" content="https://morform.app/assets/og-image.jpg" />
-<meta property="og:site_name" content="MorForm" />
-<meta property="og:locale" content="en_CA" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Privacy Policy — MorForm Office" />
-<meta name="twitter:description" content="No MorForm account, no MorForm servers, no tracking. Your MorForm Office data stays on your Windows PC." />
-<meta name="twitter:image" content="https://morform.app/assets/og-image.jpg" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&amp;family=IBM+Plex+Sans:wght@300;400;500&amp;display=swap">
-<style>
-
-  :root {
-    --teal: #0e483c;
-    --teal-light: #1a6b58;
-    --teal-dim: #eaf5f2;
-    --ink: #1a1a1a;
-    --muted: #555;
-    --border: #b8d9d2;
-    --bg: #f4faf8;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  body {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 300;
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.75;
-  }
-
-  header {
-    background: #061f19;
-    color: white;
-    padding: 48px 32px 40px;
-    border-bottom: 4px solid var(--teal);
-  }
-
-  header .label {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    opacity: 0.55;
-    margin-bottom: 12px;
-  }
-
-  header h1 {
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: -0.02em;
-    margin-bottom: 6px;
-    color: #e0f5ef;
-  }
-
-  header .meta {
-    font-size: 0.85rem;
-    opacity: 0.5;
-    font-family: 'IBM Plex Mono', monospace;
-  }
-
-  header .platform-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    margin-top: 14px;
-    background: rgba(14,72,60,0.2);
-    border: 1px solid rgba(14,72,60,0.35);
-    border-radius: 20px;
-    padding: 5px 14px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 11px;
-    color: rgba(180,230,215,0.8);
-    letter-spacing: 0.06em;
-  }
-
-  main {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 48px 32px 80px;
-  }
-
-  .intro {
-    background: var(--teal-dim);
-    border-left: 4px solid var(--teal);
-    padding: 20px 24px;
-    border-radius: 0 6px 6px 0;
-    margin-bottom: 48px;
-    font-size: 0.95rem;
-  }
-
-  h2 {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--teal);
-    margin-top: 48px;
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  p { margin-bottom: 14px; font-size: 0.95rem; color: #222; }
-
-  ul { margin: 12px 0 14px 0; padding-left: 0; list-style: none; }
-  ul li {
-    padding: 6px 0 6px 20px;
-    position: relative;
-    font-size: 0.95rem;
-    color: #222;
-    border-bottom: 1px solid var(--border);
-  }
-  ul li:last-child { border-bottom: none; }
-  ul li::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--teal-light);
-    font-family: 'IBM Plex Mono', monospace;
-  }
-
-  .highlight-box {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 20px 24px;
-    margin: 16px 0;
-  }
-  .highlight-box strong {
-    font-weight: 500;
-    color: var(--teal);
-    display: block;
-    margin-bottom: 6px;
-    font-size: 0.9rem;
-  }
-
-  a { color: var(--teal-light); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  footer {
-    background: #1a1a1a;
-    color: rgba(255,255,255,0.5);
-    text-align: center;
-    padding: 24px;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
-  }
-
-  @media (max-width: 600px) {
-    header { padding: 32px 20px; }
-    main { padding: 32px 20px 60px; }
-    header h1 { font-size: 1.5rem; }
-  }
-</style>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "BreadcrumbList",
- "itemListElement": [
-  {
-   "@type": "ListItem",
-   "position": 1,
-   "name": "Home",
-   "item": "https://morform.app/"
-  },
-  {
-   "@type": "ListItem",
-   "position": 2,
-   "name": "MorForm Office Privacy Policy",
-   "item": "https://morform.app/morform-office-privacy.html"
-  }
- ]
-}
-</script>
+<meta name="description" content="MorForm Office privacy policy. No MorForm account, no MorForm servers, no tracking and no ads — your data is stored locally on your Windows PC and shared only when you send it, by email or a cloud folder you connect.">
+<meta name="author" content="Bryce Duhamel">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0f1923">
+<link rel="canonical" href="https://morform.app/morform-office-privacy.html">
+<link rel="icon" href="/assets/m-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://morform.app/morform-office-privacy.html">
+<meta property="og:site_name" content="MorForm">
+<meta property="og:locale" content="en_CA">
+<meta property="og:title" content="Privacy Policy — MorForm Office">
+<meta property="og:description" content="No MorForm account, no MorForm servers, no tracking. Your MorForm Office data stays on your Windows PC.">
+<meta property="og:image" content="https://morform.app/assets/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Privacy Policy — MorForm Office">
+<meta name="twitter:description" content="No MorForm account, no MorForm servers, no tracking. Your MorForm Office data stays on your Windows PC.">
+<meta name="twitter:image" content="https://morform.app/assets/og-image.jpg">
+<link rel="preload" href="/fonts/IBMPlexSans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/IBMPlexMono-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<header>
-  <div class="label">Privacy Policy</div>
-  <h1>MorForm Office</h1>
-  <div class="meta">Effective date: June 6, 2026 &nbsp;·&nbsp; Developer: Bryce Duhamel</div>
-  <div class="platform-badge">🖥 Windows Desktop Application</div>
+<header class="topbar">
+  <div class="tb-in">
+    <a class="tb-brand" href="/" aria-label="MorForm home">
+      <img class="tb-logo" src="/assets/m-logo.png" alt="MorForm app icon" width="32" height="32">
+      <span class="tb-name"><span class="tb-kick">Built for the job site</span><span class="tb-title">MorForm</span></span>
+    </a>
+    <nav class="tb-nav" aria-label="Primary">
+      <a class="tb-link" href="/how-it-works">How it works</a>
+      <a class="tb-link" href="/apps">Apps &amp; Pricing</a>
+      <a class="tb-link" href="/course">Free course</a>
+      <a class="tb-link" href="/flha.html">Free FLHA</a>
+      <a class="tb-link" href="/faq">FAQ</a>
+      <a class="btn btn-gold btn-sm" href="/apps" style="margin-left:8px">Get the apps</a>
+    </nav>
+    <details class="mnav">
+      <summary aria-label="Open menu">Menu ▾</summary>
+      <nav class="mnav-pop" aria-label="Mobile">
+        <a href="/">Home</a>
+        <a href="/how-it-works">How it works</a>
+        <a href="/apps">Apps &amp; Pricing</a>
+        <a href="/course">Free course</a>
+        <a href="/flha.html">Free FLHA form</a>
+        <a href="/faq">FAQ</a>
+        <a href="mailto:support@morform.app">Contact</a>
+      </nav>
+    </details>
+  </div>
 </header>
 
-<main>
+<main id="main">
 
-  <div class="intro">
-    MorForm Office is a Windows desktop application for construction project managers. It does not send, transmit, or sell your personal data to any server, third party, or analytics platform. The information you enter — jobs, estimates, contacts, and imported reports — is stored only on your computer, and is shared only when you explicitly choose to send it — by email, or through a shared cloud folder you connect (see Section 3). No analytics, advertising, or third-party tracking SDKs are used; the app is built with Electron, which transmits no personal data.
+<section class="dark grid-bg pagehero" aria-labelledby="pp-h">
+  <span class="grid-bg-layer" aria-hidden="true"></span>
+  <span class="gold-fade" aria-hidden="true"></span>
+  <div class="sec-in" style="position:relative">
+    <p class="kick">Privacy Policy</p>
+    <h1 class="ph-h1" id="pp-h">MorForm Office</h1>
+    <p class="lede">Effective date: June 6, 2026 · Developer: Bryce Duhamel</p>
+    <p class="hmeta" style="margin:16px 0 0"><span class="hm">🖥 Windows Desktop Application</span></p>
   </div>
+</section>
 
-  <h2>1. Who We Are</h2>
-  <p>MorForm Office is developed and maintained by <strong>Bryce Duhamel</strong>, based in Edmonton, Alberta, Canada. For privacy inquiries, contact: <a href="mailto:privacy@morform.app">privacy@morform.app</a></p>
+<section class="sec" aria-label="Privacy policy">
+  <div class="help-in legal">
 
-  <h2>2. What Data the App Stores</h2>
-  <p>MorForm Office stores the following information locally on your Windows computer only:</p>
-  <ul>
-    <li>Your name, job title, email address, and phone number (entered during setup)</li>
-    <li>Company information — name, address, phone, website, and logo image</li>
-    <li>Job records — names, addresses, scope notes, status, contacts, permits, and associated photos and documents</li>
-    <li>Estimates — CSI division rows, labour, material costs, subcontractor costs, markup, and scope of work</li>
-    <li>Crew directory — project managers, supervisors, safety officers, employees, and contacts you add manually</li>
-    <li>Vendor and subcontractor contact directory</li>
-    <li>Supervisor field reports imported from .morrep files — time entries, expenses, and safety form data</li>
-    <li>PDF quote settings — quote number counter, terms text, and signature image</li>
-    <li>Report routing email addresses for accounting and safety forwarding</li>
-  </ul>
-  <p>All data is stored in a single JSON file at <strong>%APPDATA%\morform-office\morform-office-data.json</strong> on your local machine. The developer operates no server, so none of this data is transmitted to the developer; it leaves your computer only when you choose to share it (see Section 3).</p>
+    <div class="legal-sum">
+      <p>MorForm Office is a Windows desktop application for construction project managers. It does not send, transmit, or sell your personal data to any server, third party, or analytics platform. The information you enter — jobs, estimates, contacts, and imported reports — is stored only on your computer, and is shared only when you explicitly choose to send it — by email, or through a shared cloud folder you connect (see Section 3). No analytics, advertising, or third-party tracking SDKs are used; the app is built with Electron, which transmits no personal data.</p>
+    </div>
 
-  <h2>3. How Data Leaves Your Computer</h2>
-  <p>Data only leaves your computer when you explicitly choose to dispatch a job, approve a supervisor report, or export a file. MorForm Office communicates through your existing email client or, optionally, a shared cloud folder you connect:</p>
+    <h2>1. Who We Are</h2>
+    <p>MorForm Office is developed and maintained by <strong>Bryce Duhamel</strong>, based in Edmonton, Alberta, Canada. For privacy inquiries, contact: <a href="mailto:privacy@morform.app">privacy@morform.app</a></p>
 
-  <div class="highlight-box">
-    <strong>Outgoing (.morjob files)</strong>
-    When you dispatch a job to a supervisor, MorForm Office packages the job details, contacts, permits, scope notes, photos, and documents into a .morjob file and opens your default email client. You control the recipient and whether to send.
+    <h2>2. What Data the App Stores</h2>
+    <p>MorForm Office stores the following information locally on your Windows computer only:</p>
+    <ul>
+      <li>Your name, job title, email address, and phone number (entered during setup)</li>
+      <li>Company information — name, address, phone, website, and logo image</li>
+      <li>Job records — names, addresses, scope notes, status, contacts, permits, and associated photos and documents</li>
+      <li>Estimates — CSI division rows, labour, material costs, subcontractor costs, markup, and scope of work</li>
+      <li>Crew directory — project managers, supervisors, safety officers, employees, and contacts you add manually</li>
+      <li>Vendor and subcontractor contact directory</li>
+      <li>Supervisor field reports imported from .morrep files — time entries, expenses, and safety form data</li>
+      <li>PDF quote settings — quote number counter, terms text, and signature image</li>
+      <li>Report routing email addresses for accounting and safety forwarding</li>
+    </ul>
+    <p>All data is stored in a single JSON file at <strong>%APPDATA%\morform-office\morform-office-data.json</strong> on your local machine. The developer operates no server, so none of this data is transmitted to the developer; it leaves your computer only when you choose to share it (see Section 3).</p>
+
+    <h2>3. How Data Leaves Your Computer</h2>
+    <p>Data only leaves your computer when you explicitly choose to dispatch a job, approve a supervisor report, or export a file. MorForm Office communicates through your existing email client or, optionally, a shared cloud folder you connect:</p>
+    <p><strong>Outgoing (.morjob files)</strong> When you dispatch a job to a supervisor, MorForm Office packages the job details, contacts, permits, scope notes, photos, and documents into a .morjob file and opens your default email client. You control the recipient and whether to send.</p>
+    <p><strong>Incoming (.morrep files)</strong> Supervisor field reports arrive as .morrep email attachments. You save the file to your computer and import it manually. MorForm Office reads the file locally — no data is sent back automatically.</p>
+    <p><strong>Report routing (on approval)</strong> When you approve a supervisor report, MorForm Office can open your email client with a pre-composed expense or safety summary message addressed to your accounting or safety email. You control whether to send.</p>
+    <p><strong>Exported files</strong> XLSX estimates, PDF quotes, and JSON backups are saved to your local file system. You control if and how you share them.</p>
+    <p><strong>Optional Company Cloud Folder sync</strong> Instead of (or in addition to) email, you can connect a shared folder so the same .morjob / .morrep / .mordata files exchange automatically with your crew. MorForm Office reads and writes those files in an ordinary folder on your PC — one that your own cloud provider's app (Google Drive, Dropbox, OneDrive or similar) keeps synced. When you enable this, the files are stored in and synced through that folder under your cloud provider's terms and privacy policy. MorForm operates no server and never receives your cloud account or password. Nothing syncs to any cloud unless you set this up.</p>
+    <p>Aside from a cloud folder you choose to connect, MorForm Office operates no server, API, or cloud storage of its own, and performs no background transmission to the developer.</p>
+
+    <h2>4. Permissions and System Access</h2>
+    <p>MorForm Office requests the following system access:</p>
+    <ul>
+      <li><strong>File system (read/write)</strong> — to read imported files (.morjob, .morrep, XLSX, CSV, images) and save exports, backups, and the local data file</li>
+      <li><strong>Default email client</strong> — to open pre-addressed compose windows when dispatching jobs or routing reports. MorForm Office does not send email directly; it opens your email client with a pre-filled message that you review and send</li>
+      <li><strong>Open file dialog</strong> — to let you browse for files to import</li>
+      <li><strong>Save file dialog</strong> — to let you choose where to save exports</li>
+    </ul>
+    <p>No microphone, camera, location, notification, or network permissions are requested or used.</p>
+
+    <h2>5. Supervisor Report Data</h2>
+    <p>When you import a .morrep file from a supervisor, it may contain that supervisor's personal information including their name, email address, time records, expense data, and safety form submissions. This information is:</p>
+    <ul>
+      <li>Stored locally on your computer only</li>
+      <li>Used solely for project management and payroll reference purposes</li>
+      <li>Never transmitted to any third party or external server</li>
+      <li>Deletable at any time by clearing the app data file or uninstalling the app</li>
+    </ul>
+
+    <h2>6. Third-Party Services</h2>
+    <p>MorForm Office does not integrate with any analytics platforms, advertising networks, crash reporting services, telemetry services, or social media SDKs. The application is built on Electron (Node.js) and uses only standard system APIs.</p>
+    <p>The XLSX library (SheetJS) used for spreadsheet import and export runs entirely locally and does not make any network requests.</p>
+    <p>When you send a dispatch or export via email, it travels through your own email account and provider — subject to your email provider's privacy policy.</p>
+
+    <h2>7. Data Storage and Security</h2>
+    <p>All app data is stored in your Windows user profile directory at <strong>%APPDATA%\morform-office\</strong>. This location is protected by your Windows user account permissions. The developer has no ability to access, view, or retrieve data stored on your computer.</p>
+    <p>You can export a full JSON backup from Settings → Data &amp; Backup at any time, and restore it on any Windows machine running MorForm Office.</p>
+
+    <h2>8. Microsoft Store</h2>
+    <p>MorForm Office is distributed through the Microsoft Store. Microsoft's standard store telemetry and crash reporting may apply according to Microsoft's own privacy policy. MorForm Office itself does not add any additional telemetry beyond what the Microsoft Store platform collects at the OS level.</p>
+
+    <h2>9. Children's Privacy</h2>
+    <p>MorForm Office is a professional tool intended for adults working in the construction industry. It is not directed at children under 13 and does not knowingly collect or store information from minors.</p>
+
+    <h2>10. Your Rights (PIPEDA — Canada)</h2>
+    <p>Under Canada's Personal Information Protection and Electronic Documents Act, you have the right to access, correct, or request deletion of your personal information. Since all data is stored locally on your computer, you can delete it at any time by removing the data file at <strong>%APPDATA%\morform-office\morform-office-data.json</strong> or by uninstalling MorForm Office.</p>
+    <p>For any privacy concerns, contact <a href="mailto:privacy@morform.app">privacy@morform.app</a>.</p>
+
+    <h2>11. Changes to This Policy</h2>
+    <p>If this privacy policy changes, the updated version will be posted at this URL with a revised effective date. Continued use of the application after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>12. Contact</h2>
+    <p>Bryce Duhamel<br>Edmonton, Alberta, Canada<br><a href="mailto:privacy@morform.app">privacy@morform.app</a></p>
+
   </div>
-
-  <div class="highlight-box">
-    <strong>Incoming (.morrep files)</strong>
-    Supervisor field reports arrive as .morrep email attachments. You save the file to your computer and import it manually. MorForm Office reads the file locally — no data is sent back automatically.
-  </div>
-
-  <div class="highlight-box">
-    <strong>Report routing (on approval)</strong>
-    When you approve a supervisor report, MorForm Office can open your email client with a pre-composed expense or safety summary message addressed to your accounting or safety email. You control whether to send.
-  </div>
-
-  <div class="highlight-box">
-    <strong>Exported files</strong>
-    XLSX estimates, PDF quotes, and JSON backups are saved to your local file system. You control if and how you share them.
-  </div>
-
-  <div class="highlight-box">
-    <strong>Optional Company Cloud Folder sync</strong>
-    Instead of (or in addition to) email, you can connect a shared folder so the same .morjob / .morrep / .mordata files exchange automatically with your crew. MorForm Office reads and writes those files in an ordinary folder on your PC — one that your own cloud provider's app (Google Drive, Dropbox, OneDrive or similar) keeps synced. When you enable this, the files are stored in and synced through that folder under your cloud provider's terms and privacy policy. MorForm operates no server and never receives your cloud account or password. Nothing syncs to any cloud unless you set this up.
-  </div>
-
-  <p>Aside from a cloud folder you choose to connect, MorForm Office operates no server, API, or cloud storage of its own, and performs no background transmission to the developer.</p>
-
-  <h2>4. Permissions and System Access</h2>
-  <p>MorForm Office requests the following system access:</p>
-  <ul>
-    <li><strong>File system (read/write)</strong> — to read imported files (.morjob, .morrep, XLSX, CSV, images) and save exports, backups, and the local data file</li>
-    <li><strong>Default email client</strong> — to open pre-addressed compose windows when dispatching jobs or routing reports. MorForm Office does not send email directly; it opens your email client with a pre-filled message that you review and send</li>
-    <li><strong>Open file dialog</strong> — to let you browse for files to import</li>
-    <li><strong>Save file dialog</strong> — to let you choose where to save exports</li>
-  </ul>
-  <p>No microphone, camera, location, notification, or network permissions are requested or used.</p>
-
-  <h2>5. Supervisor Report Data</h2>
-  <p>When you import a .morrep file from a supervisor, it may contain that supervisor's personal information including their name, email address, time records, expense data, and safety form submissions. This information is:</p>
-  <ul>
-    <li>Stored locally on your computer only</li>
-    <li>Used solely for project management and payroll reference purposes</li>
-    <li>Never transmitted to any third party or external server</li>
-    <li>Deletable at any time by clearing the app data file or uninstalling the app</li>
-  </ul>
-
-  <h2>6. Third-Party Services</h2>
-  <p>MorForm Office does not integrate with any analytics platforms, advertising networks, crash reporting services, telemetry services, or social media SDKs. The application is built on Electron (Node.js) and uses only standard system APIs.</p>
-  <p>The XLSX library (SheetJS) used for spreadsheet import and export runs entirely locally and does not make any network requests.</p>
-  <p>When you send a dispatch or export via email, it travels through your own email account and provider — subject to your email provider's privacy policy.</p>
-
-  <h2>7. Data Storage and Security</h2>
-  <p>All app data is stored in your Windows user profile directory at <strong>%APPDATA%\morform-office\</strong>. This location is protected by your Windows user account permissions. The developer has no ability to access, view, or retrieve data stored on your computer.</p>
-  <p>You can export a full JSON backup from Settings → Data &amp; Backup at any time, and restore it on any Windows machine running MorForm Office.</p>
-
-  <h2>8. Microsoft Store</h2>
-  <p>MorForm Office is distributed through the Microsoft Store. Microsoft's standard store telemetry and crash reporting may apply according to Microsoft's own privacy policy. MorForm Office itself does not add any additional telemetry beyond what the Microsoft Store platform collects at the OS level.</p>
-
-  <h2>9. Children's Privacy</h2>
-  <p>MorForm Office is a professional tool intended for adults working in the construction industry. It is not directed at children under 13 and does not knowingly collect or store information from minors.</p>
-
-  <h2>10. Your Rights (PIPEDA — Canada)</h2>
-  <p>Under Canada's Personal Information Protection and Electronic Documents Act, you have the right to access, correct, or request deletion of your personal information. Since all data is stored locally on your computer, you can delete it at any time by removing the data file at <strong>%APPDATA%\morform-office\morform-office-data.json</strong> or by uninstalling MorForm Office.</p>
-  <p>For any privacy concerns, contact <a href="mailto:privacy@morform.app">privacy@morform.app</a>.</p>
-
-  <h2>11. Changes to This Policy</h2>
-  <p>If this privacy policy changes, the updated version will be posted at this URL with a revised effective date. Continued use of the application after changes constitutes acceptance of the updated policy.</p>
-
-  <h2>12. Contact</h2>
-  <p>
-    Bryce Duhamel<br>
-    Edmonton, Alberta, Canada<br>
-    <a href="mailto:privacy@morform.app">privacy@morform.app</a>
-  </p>
+</section>
 
 </main>
 
-<footer>
-  © 2026 Bryce Duhamel &nbsp;·&nbsp; MorForm Office &nbsp;·&nbsp; Edmonton, Alberta, Canada
-  <div style="margin-top:12px;"><a href="index.html">morform.app</a> &nbsp;·&nbsp; <a href="terms.html">Terms of Use</a></div>
-  <div style="margin-top:8px;font-size:12px;">Free guides: <a href="flha.html">FLHA form</a> &nbsp;·&nbsp; <a href="jha-template.html">JHA template</a> &nbsp;·&nbsp; <a href="toolbox-talk-template.html">Toolbox talk</a> &nbsp;·&nbsp; <a href="cor-audit-checklist.html">COR checklist</a></div>
-  <div class="mf-social" aria-label="MorForm on social media"><style>.mf-social{display:flex;gap:14px;margin-top:14px;align-items:center;justify-content:center}.mf-social a{display:inline-flex;color:inherit;opacity:.5;transition:opacity .2s}.mf-social a:hover{opacity:1}.mf-social svg{display:block;width:19px;height:19px}</style><a href="https://www.instagram.com/morform.app/" target="_blank" rel="noopener" aria-label="MorForm on Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="https://www.facebook.com/profile.php?id=61590819100585" target="_blank" rel="noopener" aria-label="MorForm on Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a><a href="https://www.linkedin.com/company/morform-app" target="_blank" rel="noopener" aria-label="MorForm on LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
+<footer class="sitefoot">
+  <div class="sf-in">
+    <div>
+      <div class="sf-brandrow"><img class="sf-logo" src="/assets/m-logo.png" alt="MorForm app icon" width="30" height="30"><span class="sf-t">MorForm</span></div>
+      <p class="sf-d">Built for the job site, not the boardroom. Time, safety and job management for construction crews — as apps you own, passing files you control.</p>
+      <p class="sf-trust">no accounts · works offline · your data stays yours</p>
+      <div class="sf-social">
+        <a href="https://www.instagram.com/morform.app/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/profile.php?id=61590819100585" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.linkedin.com/company/morform-app" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@MorForm-app" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+    <nav aria-label="Pages">
+      <p class="sf-h">Pages</p>
+      <a class="sf-l" href="/">Home</a>
+      <a class="sf-l" href="/how-it-works">How it works</a>
+      <a class="sf-l" href="/apps">Apps &amp; Pricing</a>
+      <a class="sf-l" href="/course">Free course</a>
+      <a class="sf-l" href="/faq">FAQ</a>
+    </nav>
+    <nav aria-label="Free guides">
+      <p class="sf-h">Free guides</p>
+      <a class="sf-l" href="/flha.html">Free FLHA form</a>
+      <a class="sf-l" href="/jha-template.html">JHA / JSA template</a>
+      <a class="sf-l" href="/toolbox-talk-template.html">Toolbox talk template</a>
+      <a class="sf-l" href="/cor-audit-checklist.html">COR audit checklist</a>
+      <a class="sf-l" href="/timesheet-template.html">Timesheet template</a>
+      <a class="sf-l" href="/cor-certification-alberta.html">COR in Alberta guide</a>
+    </nav>
+    <nav aria-label="Help">
+      <p class="sf-h">Help</p>
+      <a class="sf-l" href="/morform-help.html">Supervisor guide</a>
+      <a class="sf-l" href="/morform-manager-help.html">Manager guide</a>
+      <a class="sf-l" href="/morform-office-help.html">Office guide</a>
+      <a class="sf-l" href="/support.html">Support</a>
+      <a class="sf-l" href="mailto:support@morform.app">support@morform.app</a>
+    </nav>
+    <nav aria-label="Legal">
+      <p class="sf-h">Legal</p>
+      <a class="sf-l" href="/morform-privacy.html">MorForm privacy</a>
+      <a class="sf-l" href="/morform-manager-privacy.html">Manager privacy</a>
+      <a class="sf-l" href="/morform-office-privacy.html" aria-current="page">Office privacy</a>
+      <a class="sf-l" href="/terms.html">Terms of use</a>
+    </nav>
+  </div>
+  <div class="sf-base">
+    <span>© 2026 Bryce Duhamel · Edmonton, Alberta</span>
+    <span>Built for the job site, not the boardroom.</span>
+  </div>
 </footer>
-
 </body>
 </html>

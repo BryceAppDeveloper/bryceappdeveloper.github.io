@@ -8,4 +8,5 @@ wrangler.jsonc
 worker.js
 publish.cmd
 CNAME
-morform_glass_carryover.md
+*.md
+.claude
