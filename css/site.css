@@ -67,7 +67,7 @@ a:hover{color:var(--mf-gold-dark)}
 .tb-in{max-width:var(--wrap);margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:20px}
 .tb-brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:#fff}
 .tb-brand:hover{color:#fff}
-.tb-logo{width:32px;height:32px;border-radius:7px;display:block}
+.tb-logo{height:44px;width:auto;max-width:none;display:block}
 .tb-name{display:flex;flex-direction:column;gap:2px}
 .tb-kick{font-family:var(--mf-font-mono);font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mf-gold);line-height:1}
 .tb-title{font-family:var(--mf-font-mono);font-weight:600;font-size:13px;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;line-height:1.1}
@@ -193,7 +193,7 @@ a:hover{color:var(--mf-gold-dark)}
 .sitefoot{background:var(--mf-ink);color:#9fb0c0;padding:54px 20px 26px;border-top:1px solid rgba(255,255,255,.08)}
 .sf-in{max-width:var(--wrap);margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:32px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.1)}
 .sf-brandrow{display:flex;align-items:center;gap:11px;margin:0 0 14px}
-.sf-logo{width:30px;height:30px;border-radius:7px;display:block}
+.sf-logo{height:60px;width:auto;max-width:none;display:block}
 .sf-t{font-family:var(--mf-font-mono);font-weight:600;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:#fff}
 .sf-d{font-size:13.5px;line-height:1.6;max-width:32ch;margin:0 0 14px;font-weight:300}
 .sf-trust{font-family:var(--mf-font-mono);font-size:11px;letter-spacing:.06em;color:#7d8fa0;margin:0 0 16px}
