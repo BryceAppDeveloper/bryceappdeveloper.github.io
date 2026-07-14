@@ -164,7 +164,7 @@
     <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">🏗️</span><h2 class="hsec-h">Jobs</h2></div>
     <h3>Creating a Job</h3>
     <p>Click <strong>+ New Job</strong> in the top right. Fill in:</p>
-    <div class="chips"><span class="chip">Job name</span><span class="chip">Address</span><span class="chip">Start &amp; end dates</span><span class="chip">Status</span><span class="chip">Scope notes</span><span class="chip">Project Manager</span><span class="chip">Supervisor</span><span class="chip">Site contacts</span><span class="chip">Permits</span><span class="chip">Photos</span><span class="chip">Documents (PDF)</span></div>
+    <div class="chips"><span class="chip">Job name</span><span class="chip">Address</span><span class="chip">Start &amp; end dates</span><span class="chip">Status</span><span class="chip">Scope notes</span><span class="chip">Project Manager</span><span class="chip">Supervisor</span><span class="chip">Site contacts</span><span class="chip">Permits</span><span class="chip">Photos</span><span class="chip">Documents (PDF)</span><span class="chip">Drawings &amp; CAD</span></div>
     <div class="note note-tip"><span class="note-ic">💡</span><span>Click anywhere on a job row to open it for editing. No need to hunt for the Edit button. Closing an editor with unsaved changes asks whether to save first.</span></div>
     <h3>Job Status</h3>
     <p class="pipe">🟢 Active → 🔵 Complete or 🟡 On Hold</p>
@@ -178,6 +178,8 @@
     <div class="note note-tip"><span class="note-ic">💡</span><span>Photos and PDF documents attached to a job (site plans, drawings) are bundled into the .morjob dispatch. The supervisor sees them on their phone.</span></div>
     <h3>Field vs In House Attachments</h3>
     <p>Open a job from the Jobs list to see its <strong>📎 Attachments</strong> card, split into two sections. <strong>📤 Field</strong> attachments go out to the supervisor with every dispatch. <strong>🏢 In house</strong> attachments stay in Office and are never sent: contracts, internal pricing, owner correspondence. Each section has its own <strong>＋ Add attachment</strong> button, and the <strong>⇄</strong> button moves a file between sections. Click a photo to view it full size, or a document's 📄 icon to save a copy. Photos and documents added in the job form start in the Field section.</p>
+    <h3>Drawings &amp; CAD</h3>
+    <p>The Attachments card also has a <strong>📐 Drawings &amp; CAD</strong> section for the big files: DWG, DXF, Revit, SketchUp, and full PDF plan sets. These are kept as <strong>real files on your computer</strong> (in the app's attachments folder), not inside your data file, so even huge drawings never slow the app down. <strong>Open</strong> launches a file in its default Windows app, <strong>📂</strong> shows it in your file explorer, and <strong>✕</strong> removes it. At dispatch time you pick which drawings to send with checkboxes, with file sizes shown; nothing is sent unless you tick it. Drawing files are included in <strong>Back Up All Data</strong> backups (you're shown the size first), but skipped by one-tap cloud backups to keep them small.</p>
   </div>
 
   <div class="hsec" id="dispatch">
@@ -186,7 +188,7 @@
     <ol class="steps">
       <li><h3>Open the job and click 📤 Dispatch</h3><p>Found in the job detail view.</p></li>
       <li><h3>Select a supervisor</h3><p>Choose from your Crew directory. Their email pre-fills in the compose window.</p></li>
-      <li><h3>Choose what to include</h3><p>The job's Field attachments are pre-loaded (In house attachments never leave Office), and contacts, photos, and documents are selectable. Uncheck anything you don't want to send, or add one-off files.</p></li>
+      <li><h3>Choose what to include</h3><p>The job's Field attachments are pre-loaded (In house attachments never leave Office), and contacts, photos, and documents are selectable. Uncheck anything you don't want to send, or add one-off files. The job's CAD and drawing files are listed with checkboxes and file sizes: tick the ones the supervisor needs.</p></li>
       <li><h3>Send Job Package</h3><p>With a Company Cloud Folder connected, the .morjob is dropped straight into the supervisor's inbox folder; it imports on their phone automatically, and the email that opens is just a heads-up (no attaching). Without one, MorForm opens an email with the .morjob file <strong>already attached</strong> where your mail app allows it (classic Outlook set as your default email app). On other setups, including the new Outlook, the file is <strong>copied to your clipboard</strong>: click into the email and press Ctrl+V to attach it, then send.</p></li>
     </ol>
     <h3>What's in the dispatch package</h3>
