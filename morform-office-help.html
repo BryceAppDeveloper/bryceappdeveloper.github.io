@@ -91,6 +91,7 @@
         <p class="htoc-h">Team &amp; Contacts</p>
         <a class="htoc-l" href="#crew">👷 Crew</a>
         <a class="htoc-l" href="#contacts">🏢 Contacts &amp; Vendors</a>
+        <a class="htoc-l" href="#materials">📦 Materials</a>
       </div>
       <div>
         <p class="htoc-h">Reports</p>
@@ -122,6 +123,7 @@
       <tr><td>Draws &amp; QuickBooks</td><td>Bill progress draws against contract value, then export invoices, expenses, and time to QuickBooks (Online CSV or Desktop IIF)</td></tr>
       <tr><td>Crew</td><td>Directory of your PMs, supervisors, safety officers, and employees</td></tr>
       <tr><td>Contacts &amp; Vendors</td><td>Subcontractor and supplier directory, linked to estimate rows</td></tr>
+      <tr><td>Materials</td><td>Materials and inventory catalog: stock on hand, low-stock warnings, vendor links, and XLSX import/export</td></tr>
       <tr><td>Send &amp; Receive</td><td>Everything in and out: import and approve supervisor reports (.morrep), receive job requests from Manager mobile, dispatch jobs, and export to QuickBooks</td></tr>
       <tr><td>Settings → Data &amp; Backup</td><td>Import .mordata from Manager mobile to merge or replace jobs, specs, PMs, crew, and notes</td></tr>
       <tr><td>Overview</td><td>Company dashboard: revenue, income, and won/lost by day, week, month, or year, plus budget vs. actuals per job</td></tr>
@@ -150,10 +152,11 @@
       <tr><td>👷 Crew</td><td>Your internal team: PMs, supervisors, safety officers, employees</td></tr>
       <tr><td>🏢 Contacts</td><td>External companies and vendors: subcontractors, suppliers, inspectors, clients</td></tr>
       <tr><td>🔄 Send &amp; Receive</td><td>Everything in and out: supervisor reports, Manager job requests, dispatch, QuickBooks exports, backups</td></tr>
+      <tr><td>📦 Materials</td><td>Materials &amp; inventory catalog: stock counts, low-stock warnings, vendors, XLSX import/export</td></tr>
       <tr><td>📈 Overview</td><td>Company dashboard: revenue, income, win/loss, plus budget vs. actuals per job</td></tr>
       <tr><td>⚙️ Settings</td><td>Appearance, company info, PDF settings, routing, templates, backup</td></tr>
     </table>
-    <div class="note"><span class="note-ic">📬</span><span>The <strong>Send &amp; Receive</strong> badge shows a count of unreviewed reports and new job requests. The <strong>Contacts</strong> badge shows how many vendor entries are missing contact details.</span></div>
+    <div class="note"><span class="note-ic">📬</span><span>The <strong>Send &amp; Receive</strong> badge shows a count of unreviewed reports and new job requests. The <strong>Contacts</strong> badge shows how many vendor entries are missing contact details. The <strong>Materials</strong> badge counts items that have fallen below their minimum stock.</span></div>
     <div class="note"><span class="note-ic">📂</span><span>The top menu bar groups everything: the <strong>File</strong> menu holds estimates &amp; templates, bulk job add, and QuickBooks exports; the <strong>Data</strong> menu holds all MorForm data exchange (.morjob / .morrep / .mordata), backups, and the Company Cloud Folder. Press <strong>F1</strong> or open <strong>Help</strong> for the built-in user guide.</span></div>
   </div>
 
@@ -289,6 +292,22 @@
     <h3>⚠ Add info badge</h3>
     <p>When you type a new vendor name into an estimate row that doesn't match any existing contact, a stub entry is created automatically. It appears in Contacts with a yellow <strong>⚠ Add info</strong> badge. Click the badge to open the card and fill in their details. The orange number on the Contacts nav item shows how many stubs are waiting.</p>
     <div class="note note-tip"><span class="note-ic">💡</span><span>Existing subcontractors from your Crew directory are automatically migrated into Contacts when you first open the Contacts screen.</span></div>
+  </div>
+
+  <div class="hsec" id="materials">
+    <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">📦</span><h2 class="hsec-h">Materials &amp; Inventory</h2></div>
+    <p>The <strong>Materials</strong> tab is your company's materials catalog with live stock counts. Each item tracks:</p>
+    <div class="chips"><span class="chip">Name</span><span class="chip">Category</span><span class="chip">Unit</span><span class="chip">Unit cost</span><span class="chip">Qty on hand</span><span class="chip">Minimum stock</span><span class="chip">Vendor</span><span class="chip">Notes</span></div>
+    <h3>The catalog</h3>
+    <p>Click <strong>+ Add Item</strong> to create an item (starting quantity included). Search and filter by name, category, or vendor, and click any row to edit. Categories and units are type-or-pick: start typing to reuse one you've used before.</p>
+    <h3>Stock adjustments</h3>
+    <p>After an item is created, quantity changes go through <strong>± Adjust</strong>: enter how much came in (positive) or went out (negative), with an optional note like the job it went to. Every adjustment is recorded, and the item editor shows recent history so you always know where stock went.</p>
+    <h3>Low-stock warnings</h3>
+    <p>Give an item a <strong>minimum stock</strong> level and MorForm flags it when the count falls below: the row turns red, a warning banner appears, and the orange badge on the Materials nav item counts everything that needs reordering. Use the <strong>⚠ Low stock only</strong> filter to see just those items.</p>
+    <h3>Import &amp; export (XLSX)</h3>
+    <p><strong>📤 Export XLSX</strong> saves the catalog as a spreadsheet; <strong>📥 Import XLSX</strong> brings one in (.xlsx or .csv). The first row needs headers like <em>Name, Category, Unit, Unit Cost, Qty On Hand, Min Qty, Vendor, Notes</em>. Imports match items by name: existing items are updated, new names are added, and quantity changes are recorded in each item's history.</p>
+    <h3>Vendors</h3>
+    <p>Link each item to a vendor from <strong>Contacts &amp; Vendors</strong> (vendors and subcontractors both appear in the picker). You can also add a new vendor right in the item editor; it's saved to the Contacts screen too, so both lists stay in sync. Vendor names in an imported spreadsheet that aren't in your Contacts yet are created automatically with the yellow <strong>⚠ Add info</strong> badge.</p>
   </div>
 
   <div class="hsec" id="inbox">
