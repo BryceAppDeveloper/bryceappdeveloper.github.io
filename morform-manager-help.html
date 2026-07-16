@@ -114,9 +114,10 @@
     <table class="htab">
       <tr><th>Feature</th><th>What it does</th></tr>
       <tr><td>Jobs Dashboard</td><td>Full pipeline: Quoting → Approved → In Progress → Complete</td></tr>
-      <tr><td>🧱 Job Specs</td><td>Scope a job on site (type → subtype → trades &amp; scope from your saved library) and send it to the office to estimate</td></tr>
-      <tr><td>Dispatch</td><td>Send job info, plans, contacts, permits, and photos to supervisors in one email</td></tr>
-      <tr><td>Inbox</td><td>Receive and approve supervisor pay period reports; approving commits actuals to budgets</td></tr>
+      <tr><td>Job Specs</td><td>Scope a job on site (type → subtype → trades &amp; scope from your saved library) and send it to the office to estimate</td></tr>
+      <tr><td>Dispatch</td><td>Send job info, plans, contacts, permits, and photos to supervisors by email, or dropped straight into their cloud inbox folder</td></tr>
+      <tr><td>Inbox</td><td>Everything coming in: supervisor reports (.morrep) and office updates (.mordata, including client approvals). Approving a report commits actuals to budgets</td></tr>
+      <tr><td>Outbox</td><td>Everything going out: specs to the office, job dispatches to supervisors, full data handoffs</td></tr>
       <tr><td>Crew Directory</td><td>Supervisor roster with full history and safety compliance tracking</td></tr>
       <tr><td>Reports</td><td>Aggregate hours and expenses by job or supervisor across any date range</td></tr>
     </table>
@@ -138,15 +139,14 @@
 
   <div class="hsec" id="nav">
     <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">🧭</span><h2 class="hsec-h">App Navigation</h2></div>
-    <p>Six tabs along the bottom. Tap or swipe to switch. Settings ⚙️ and Reports 📊 are in the top-right header area.</p>
+    <p>Five tabs along the bottom. The active tab is highlighted with a rounded accent pill. Tap or swipe to switch. The Reports chart icon and the Settings gear icon are in the top-right header.</p>
     <table class="htab">
       <tr><th>Tab</th><th>Purpose</th></tr>
-      <tr><td>🏗️ Jobs</td><td>All job sites. Pipeline status, budget vs. actuals, dispatch to supervisors, permits, contacts, documents.</td></tr>
-      <tr><td>👥 Crew</td><td>Your supervisor directory. Hours history, expenses, safety compliance badge, all submitted reports.</td></tr>
-      <tr><td>📥 Inbox</td><td>Everything coming in: supervisor reports (.morrep) and office data (.mordata, including client approvals).</td></tr>
-      <tr><td>📤 Outbox</td><td>Everything going out: specs to the office, job dispatches to supervisors, full data handoffs.</td></tr>
-      <tr><td>🧱 Specs</td><td>Create a job and scope it (type → subtype → trades &amp; scope), then send it to MorForm Office to estimate.</td></tr>
-      <tr><td>📝 Notes</td><td>Tasks with push-notification reminders, plus internal job notes. Visible only to you.</td></tr>
+      <tr><td>Jobs (construction icon)</td><td>All job sites. Pipeline status, budget vs. actuals, dispatch to supervisors, permits, contacts, documents.</td></tr>
+      <tr><td>Crew (people icon)</td><td>Your supervisor directory. Hours history, expenses, safety compliance badge, all submitted reports.</td></tr>
+      <tr><td>Transfer (arrows icon)</td><td>Inbox + Outbox in one tab. Inbox: supervisor reports (.morrep) and office data (.mordata, including client approvals). Outbox: specs to the office, job dispatches, full data handoffs.</td></tr>
+      <tr><td>Specs (brick wall icon)</td><td>Create a job and scope it (type → subtype → trades &amp; scope), then send it to MorForm Office to estimate.</td></tr>
+      <tr><td>Time (calendar icon)</td><td>Log Hours (timesheet by job and day) and the Daytimer calendar (month / week / day, events, reminders, crew dispatch).</td></tr>
     </table>
   </div>
 
@@ -238,7 +238,7 @@
     <h3>Notes &amp; Vendors</h3>
     <p>Tap 📝 on any trade or scope item to attach a job-specific note ("use existing panel", "client supplies fixtures"). The icon lights up when a note is there, and the note travels with the spec to the office and with the dispatch to the supervisor, but it's never saved into your library, so it won't haunt the next job. Vendor and contact details are tucked behind <strong>+ vendor / contact</strong> on each trade. Skip them while scoping; attach the company later from the job's People tab when quotes come in.</p>
     <h3>Sending to the Office</h3>
-    <p>Tap 📤 Send to Office on any spec card (or from the Outbox tab). A small .mordata file goes by email; the office opens it in MorForm Office (File → Import Data from Manager) and the spec lands as a job request. One tap there converts it into a full estimate: every trade becomes a section with its scope checklist attached.</p>
+    <p>Tap 📤 Send to Office on any spec card (or from the Outbox in the Transfer tab). A small .mordata file goes by email; the office opens it in MorForm Office (File → Import Data from Manager) and the spec lands as a job request. One tap there converts it into a full estimate: every trade becomes a section with its scope checklist attached.</p>
     <div class="note"><span class="note-ic">ℹ️</span><span>When the client approves and the estimate is marked Won in Office, the office sends a .mordata back. Import it (Inbox → Import from Office) and the job turns ✅ APPROVED. Until then it shows ⏳ AWAITING APPROVAL.</span></div>
     <div class="note"><span class="note-ic">ℹ️</span><span>The spec's trades and scope items are also what dispatch sends to the supervisor. When they tick off scope on site, their .morrep report updates the spec's progress here.</span></div>
     <div class="note"><span class="note-ic">ℹ️</span><span>Estimates, PDF quotes, client invoicing, and change orders now live in MorForm Office. See the <a href="/morform-office-help.html">Office guide</a>.</span></div>
@@ -259,7 +259,7 @@
 
   <div class="hsec" id="inbox">
     <div class="hsec-head"><span class="hsec-ic" aria-hidden="true">📥</span><h2 class="hsec-h">Inbox: Receiving</h2></div>
-    <p>The Inbox receives from both directions: supervisor reports (.morrep) and office data (.mordata). When a supervisor sends a job report, tap the .morrep attachment in your email. MorForm Manager opens and imports it automatically. Or tap Import in the Inbox tab to pick the file manually.</p>
+    <p>The Inbox receives from both directions: supervisor reports (.morrep) and office data (.mordata). When a supervisor sends a job report, tap the .morrep attachment in your email. MorForm Manager opens and imports it automatically. Or tap Import in the Inbox (Transfer tab) to pick the file manually.</p>
     <h3>Import from Office</h3>
     <p>Tap <strong>🏢 Import from Office (.mordata)</strong> to bring in the office's data, most importantly client approvals. When an estimate is marked Won in MorForm Office, its .mordata marks the matching job here ✅ APPROVED.</p>
     <div class="note note-warn"><span class="note-ic">⚠️</span><span>A job whose spec was sent to the office but isn't approved yet warns before accepting a .morrep ("Import Anyway" is available). Jobs that never went through the office aren't affected.</span></div>
