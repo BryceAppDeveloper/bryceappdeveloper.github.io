@@ -162,22 +162,21 @@
     <h3>Job Detail Tabs</h3>
     <table class="htab">
       <tr><th>Tab</th><th>What's shown</th></tr>
-      <tr><td>Overview</td><td>Project health dashboard: alert banners, stat cards (quote total, hours logged, expenses, reports received), budget burn bars, scope complete progress, field reports list</td></tr>
+      <tr><td>Overview</td><td>Project health dashboard: alert banners, then four tap-to-expand summary cards (Total Estimate, Cost Breakdown, Actuals from Field, Scope). Below the cards: timeline, scope notes, and key contacts with call/email buttons.</td></tr>
       <tr><td>People</td><td>All contacts with edit/delete. Trade contacts from the job spec. + Add Contact button.</td></tr>
-      <tr><td>Budget</td><td>Estimated vs. actual hours, labour cost, and expenses per supervisor. Updates when you approve a report.</td></tr>
       <tr><td>Permits</td><td>All permits with status badges and key dates.</td></tr>
       <tr><td>Files</td><td>All site photos and attached documents.</td></tr>
+      <tr><td>Notes</td><td>Internal job notes: site access, client instructions, scope reminders. Add, edit, delete. The count shows on the tab.</td></tr>
     </table>
     <div class="note"><span class="note-ic">ℹ️</span><span>The Job Cost Summary button generates a one-page PDF showing estimated vs. actual hours, labour, expenses, and breakdown by supervisor. Ideal for client billing or project reviews.</span></div>
-    <h3>Overview Tab: Budget Burn Bars</h3>
+    <h3>Overview Tab: Summary Cards</h3>
+    <p>The Overview leads with four cards. Tap any card to expand its details; tap again to collapse. Each shows a headline number even while collapsed.</p>
     <table class="htab">
       <tr><th>Card</th><th>What it shows</th></tr>
-      <tr><td>Alert banners</td><td>Red if hours are over budget. Orange at 80-99%. Orange if any permits are Pending or Applied.</td></tr>
-      <tr><td>Stat cards</td><td>📋 Quote Total, ⏱️ Hours Logged (with overtime), 💳 Expenses (with reimbursable), 📥 Reports In (with unreviewed count and last-report date), 🛡️ Safety Docs. The same per-job numbers MorForm Office shows on its job dashboard.</td></tr>
-      <tr><td>Hours bar</td><td>Actual vs. estimated hours. Green OK / orange Watch / red Over.</td></tr>
-      <tr><td>Expenses bar</td><td>Actual expenses vs. the job's expense budget.</td></tr>
-      <tr><td>Scope complete bar</td><td>X of Y trades complete. Updates when supervisor reports are approved.</td></tr>
-      <tr><td>Field reports</td><td>Up to 5 most recent .morrep submissions for this job.</td></tr>
+      <tr><td>📋 Total Estimate</td><td>The quote total and status, quote date, and any optional extras. Shows "None yet" until an estimate comes back from MorForm Office.</td></tr>
+      <tr><td>💰 Cost Breakdown</td><td>In-house labour, materials, subtrades, change orders, allowances and markup, totalled. Plus a per-subtrade breakdown and change-order list.</td></tr>
+      <tr><td>📥 Actuals from Field</td><td>Hours logged vs. estimate (green OK / orange Watch / red Over), expenses, amount to reimburse, and the recent reports for this job, each with hours, expenses, safety-doc count, and any site photos the supervisor sent.</td></tr>
+      <tr><td>✅ Scope</td><td>X of Y trades complete with a per-trade checklist showing which scope items are ticked. Shows "No spec" until you build and dispatch a Job Spec.</td></tr>
     </table>
   </div>
 
